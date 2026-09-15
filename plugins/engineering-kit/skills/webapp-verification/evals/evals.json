@@ -1,0 +1,95 @@
+{
+  "skill_name": "webapp-verification",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "I have a local web app running on http://localhost:5173. Explore the sign-in and settings flows, capture any console errors, and summarize the main user-visible flows we should cover with browser tests.",
+      "expected_output": "Uses browser exploration before recommending tests, reports routes and flows checked, notes console errors or lack of errors, and identifies concrete browser-test scenarios.",
+      "files": [],
+      "expectations": [
+        "Explores the running app before proposing test code",
+        "Summarizes user-visible flows and routes that were checked",
+        "Reports console errors or explicitly says none were observed",
+        "Recommends concrete browser test scenarios based on observed behavior",
+        "If the target app or browser tooling is unavailable, the output marks the result blocked/unverified instead of fabricating evidence."
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Generate a Playwright test for this scenario: a user opens the pricing page, switches to annual billing, sees discounted prices, and can start checkout from the Pro plan. Explore the page first and save the test in the existing tests directory.",
+      "expected_output": "Explores the scenario first, writes a Playwright test using stable locators, saves it in the repo's existing test location, runs it, and reports the result or blocker.",
+      "files": [],
+      "expectations": [
+        "Does not write the test before exploring the target page",
+        "Uses stable user-facing locators where available",
+        "Saves the test in the existing Playwright test structure",
+        "Runs the test or reports the exact blocker preventing execution",
+        "If the target app or browser tooling is unavailable, the output marks the result blocked/unverified instead of fabricating evidence."
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "Review the dashboard page for layout problems on desktop and mobile. I care about overlapping text, clipped buttons, console errors, and accessibility basics. Give me evidence and targeted fixes, not a broad redesign.",
+      "expected_output": "Checks at least desktop and mobile viewports, captures evidence for visual or accessibility issues, prioritizes concrete findings, and avoids broad redesign recommendations.",
+      "files": [],
+      "expectations": [
+        "Checks multiple viewport sizes when reviewing layout",
+        "Reports visual issues with browser evidence such as screenshots or observed selectors",
+        "Includes console or accessibility observations when relevant",
+        "Keeps recommendations targeted to the observed issues",
+        "If the target app or browser tooling is unavailable, the output marks the result blocked/unverified instead of fabricating evidence."
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "Verify a backend helper handles null inputs correctly; no browser or UI is involved.",
+      "expected_output": "A boundary response that routes away from webapp verification for non-browser API/function testing.",
+      "files": [],
+      "expectations": [
+        "Identifies there is no browser UI to verify.",
+        "Does not claim browser verification was performed.",
+        "Suggests unit/API tests or code review instead."
+      ]
+    },
+    {
+      "id": 5,
+      "prompt": "I have three coding agents checking different flows in the same local web app on my Mac. Two need separate test accounts and one checks a public page. Set up the browser verification so they can run in parallel without exposing my everyday Chrome profile or filling the disk with duplicate Chrome copies.",
+      "expected_output": "Chooses an available browser surface and deliberate state strategy for the three checks, explains the shared-browser tradeoff, and assigns shutdown ownership without exposing the personal profile or silently turning verification into a machine-setup task.",
+      "files": [],
+      "expectations": [
+        "Keeps the user's everyday Chrome profile out of automation.",
+        "Uses separate browser state for agents with independent test accounts.",
+        "Explains that a shared dedicated browser reduces launches but shares tabs and state.",
+        "Identifies which task owns browser and dev-server shutdown.",
+        "Uses an available host Browser or Chrome skill before adding standalone browser automation.",
+        "Uses the selected tool’s setup guidance for requested browser or MCP configuration; does not invoke the cleanup skill for configuration or silently change machine-wide setup."
+      ]
+    },
+    {
+      "id": 6,
+      "prompt": "Verify the checkout fix in the browser, but I also noticed com.google.Chrome.code_sign_clone is huge after earlier agent runs. Clean up anything no longer needed when you finish.",
+      "expected_output": "Completes or reports the checkout verification separately, then invokes or hands off to dev-machine-cleanup for storage diagnosis and cleanup rather than embedding machine-maintenance instructions in the verification workflow.",
+      "files": [],
+      "expectations": [
+        "Keeps browser verification and workstation cleanup as distinct responsibilities.",
+        "Uses the appropriate browser surface to verify checkout or marks the result unverified.",
+        "Routes Chrome clone diagnosis and cleanup to dev-machine-cleanup.",
+        "Does not delete browser state while Chrome or automation may own it.",
+        "Reports any task-owned browser or dev-server resources left running."
+      ]
+    },
+    {
+      "id": 7,
+      "prompt": "The built-in Browser skill is available. Reproduce the cart-total bug interactively, then add a regression test to this repository's existing Playwright suite and run the smallest relevant test command.",
+      "expected_output": "Uses the host Browser skill for interactive reproduction and the repository Playwright runner for durable coverage, keeping the two Playwright surfaces distinct and avoiding an unnecessary Chrome DevTools MCP setup.",
+      "files": [],
+      "expectations": [
+        "Loads and follows the available Browser skill for interactive reproduction.",
+        "Uses the repository's existing Playwright configuration and test location for the regression test.",
+        "Does not confuse the host browser's Playwright interface with the repository Playwright test runner.",
+        "Runs the targeted repository test or reports the exact blocker.",
+        "Does not add Chrome DevTools MCP when the requested evidence is already available."
+      ]
+    }
+  ]
+}

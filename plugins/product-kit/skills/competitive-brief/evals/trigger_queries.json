@@ -1,0 +1,66 @@
+[
+  {
+    "query": "Using only these supplied fictional vendor facts, compare A and B for 20 seats and 100000 monthly events over one year; no web access. A: $10 per seat/month, includes 50000 events/account/month, then $2 per 1000 extra. B: $150/account/month including 10 seats and 100000 events; extra seats $8/month each. No discounts, taxes or other fees. Both support the required API according to current vendor docs; neither has been tested. Recommend the cheaper fit in at most 180 words, show math and flag quality uncertainty.",
+    "should_trigger": true
+  },
+  {
+    "query": "Write a 150-word build-versus-partner brief from only these facts. Our hard requirement is EU-only processing. Partner A docs promise EU storage but say nothing about processing location. Partner B contract explicitly guarantees EU-only processing; its price is unknown. Building is estimated internally at 6 engineer-months, with no hosting estimate. Recommend the next decision without inventing prices, absence of features, or a numerical ranking.",
+    "should_trigger": true
+  },
+  {
+    "query": "Compare these partners for our product positioning decision.",
+    "should_trigger": true
+  },
+  {
+    "query": "Assess competitor pricing at our expected workload.",
+    "should_trigger": true
+  },
+  {
+    "query": "Create a sourced differentiation brief for these two products.",
+    "should_trigger": true
+  },
+  {
+    "query": "Compare building this feature with buying an integration.",
+    "should_trigger": true
+  },
+  {
+    "query": "Evaluate competitors against our enterprise constraints.",
+    "should_trigger": true
+  },
+  {
+    "query": "Use win/loss notes to recommend a differentiation priority.",
+    "should_trigger": true
+  },
+  {
+    "query": "What is the name of this competitor CEO?",
+    "should_trigger": false
+  },
+  {
+    "query": "Summarize these user interviews.",
+    "should_trigger": false
+  },
+  {
+    "query": "Write a PRD for a chosen feature.",
+    "should_trigger": false
+  },
+  {
+    "query": "Update a roadmap status to done.",
+    "should_trigger": false
+  },
+  {
+    "query": "Fix our pricing calculator bug.",
+    "should_trigger": false
+  },
+  {
+    "query": "Choose button wording for a free-trial action.",
+    "should_trigger": false
+  },
+  {
+    "query": "Calculate the total in this invoice.",
+    "should_trigger": false
+  },
+  {
+    "query": "Review product activation metrics.",
+    "should_trigger": false
+  }
+]

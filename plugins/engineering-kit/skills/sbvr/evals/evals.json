@@ -1,0 +1,128 @@
+{
+  "skill_name": "sbvr",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Formalize these requirements as SBVR: Premium customers may return items within 60 days; standard customers may return items within 30 days; final-sale items cannot be returned.",
+      "expected_output": "Creates SBVR vocabulary, fact types, and behavioral/definitional rules that preserve the stated return windows without assuming they must use the bundled policy-reference convention.",
+      "files": [],
+      "expectations": [
+        "The answer separates vocabulary, fact types, and rules.",
+        "The stated 60-day and 30-day values are preserved; policy concepts are introduced only if configurability or the selected house profile justifies them.",
+        "Rules use valid SBVR keywords such as obligatory, prohibited, permitted, necessary, or impossible.",
+        "The answer avoids system-as-actor and technical implementation terms.",
+        "The answer does not present the bundled validator or Markdown profile as an SBVR requirement."
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Audit this house-profile SBVR spec for threshold leakage, undefined terms, and weak modality.",
+      "expected_output": "A review/audit report with concrete SBVR findings and fixes.",
+      "files": [],
+      "expectations": [
+        "Identifies undefined or inconsistently used terms.",
+        "Flags threshold leakage according to the stated house profile rather than claiming all SBVR rules forbid digits.",
+        "Checks necessity/obligation/prohibition wording.",
+        "Separates validator-checkable issues from semantic review."
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "Produce canonical YAML output for this small vocabulary and rule set.",
+      "expected_output": "A structured YAML-oriented SBVR output following the skill's optional house-profile schema.",
+      "files": [],
+      "expectations": [
+        "Uses a structured vocabulary/rules schema.",
+        "Preserves terms, fact types, and rule identifiers.",
+        "Keeps rule text controlled and unambiguous.",
+        "Mentions validation command where relevant."
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "Update this SBVR rule set by adding two rules and renumbering safely.",
+      "expected_output": "An update workflow that preserves IDs where possible and uses dry-run renumbering before mutation.",
+      "files": [],
+      "expectations": [
+        "Explains update impact before renumbering.",
+        "Uses or recommends renumber.py --dry-run before applying changes.",
+        "Keeps cross-references consistent.",
+        "Reports validation results or limitations."
+      ]
+    },
+    {
+      "id": 5,
+      "prompt": "Run the SBVR validator and explain which findings are mechanical versus needing human business review.",
+      "expected_output": "A house-profile validator review that does not overstate mechanical validation or general SBVR compliance.",
+      "files": [],
+      "expectations": [
+        "Describes validator scope and exit codes.",
+        "Separates syntax/structure findings from semantic policy questions.",
+        "Provides remediation steps.",
+        "Does not claim the validator proves business correctness or general SBVR compliance."
+      ]
+    },
+    {
+      "id": 6,
+      "prompt": "Create an SBVR for a streaming service replacing its legacy platform. Source notes include subscribers, subscriptions, plan tiers, billing, payments, content licensing, licensor statements, the legacy systems LegacyCore and VaultDRM, a migration program, and unresolved mid-cycle proration handling.",
+      "expected_output": "A business-meaning SBVR that extracts and classifies candidates before defining vocabulary, models status lifecycles, keeps the real business concepts, and excludes project/implementation/source-system noise.",
+      "files": [],
+      "expectations": [
+        "Extracts and classifies candidates (or applies a belongs-in-SBVR filter) before defining vocabulary, rather than promoting every noun.",
+        "Keeps supported business concepts such as subscriber, subscription, plan, invoice, payment, content license, and licensor statement.",
+        "Models status-bearing entities (subscription, payment, content license) with the status-enumeration-transition pattern, not as permanent subtypes.",
+        "Excludes LegacyCore, VaultDRM, and migration from core vocabulary unless a business rule directly depends on them, treating them as source/implementation/project artifacts.",
+        "Treats unresolved mid-cycle proration as an open/deferred topic rather than inventing a rule, and treats plan tier as a changeable attribute rather than a permanent subtype.",
+        "Separates confirmed rules from open/deferred discovery items and surfaces the exclusions for review."
+      ]
+    },
+    {
+      "id": 7,
+      "prompt": "Create an SBVR for a library loan process with clear borrower, item, loan, due date, renewal, fine, and hold rules.",
+      "expected_output": "A normal SBVR for a clean domain that does not over-filter legitimate business concepts.",
+      "files": [],
+      "expectations": [
+        "Produces normal vocabulary, fact types, and rules for the loan domain.",
+        "Does not over-filter or drop legitimate business concepts (borrower, item, loan, due date, renewal, fine, hold).",
+        "Preserves stated loan periods or fine rates; uses policy terms only when configurability or the selected artifact profile justifies them.",
+        "Applies the extract/filter passes lightly given the domain is clean and well-specified."
+      ]
+    },
+    {
+      "id": 8,
+      "prompt": "Create an SBVR for a billing process that syncs with a payment processor, CRM, and ERP.",
+      "expected_output": "An SBVR that keeps business billing concepts and rules while moving integration plumbing out of the vocabulary.",
+      "files": [],
+      "expectations": [
+        "Keeps business concepts and rules around invoice, payment, customer, allocation, and reconciliation.",
+        "Moves payment processor, CRM, ERP, API, sync job, and webhook details out of the SBVR unless a business rule directly depends on them.",
+        "Distinguishes business vocabulary from integration/implementation artifacts via classification or a belongs-in-SBVR filter.",
+        "Avoids irrelevant implementation plumbing in business rules without treating every technical term as automatically invalid."
+      ]
+    },
+    {
+      "id": 9,
+      "prompt": "In SBVR, what is a fact type? Give me one example for an order domain.",
+      "expected_output": "A concise explanation and one example, without forcing a full vocabulary document, house profile, validator run, or checklist.",
+      "files": [],
+      "expectations": [
+        "Explains that a fact type represents a kind of relationship or proposition involving concepts.",
+        "Gives one relevant order-domain example.",
+        "Does not force the optional Markdown/YAML profile or validation workflow onto an explanatory question."
+      ]
+    },
+    {
+      "id": 10,
+      "prompt": "Formalize the billing, entitlement, and parental-control rules of a streaming backend into SBVR, grounded in the code rather than guessed. Locate the actual guards and conditionals structurally (e.g. ast-grep or grep for the status checks in `hasActiveAccess`/`canPlayContent`, the `FREE_PLAY_KINDS` set, the kids-mode maturity cap in `isContentAllowedForProfile`, and the `isLocalStripeMode` 403 guard) and formalize what the code enforces. Where a PRD states a requirement the code does not implement (e.g. a grace-period expiry after `past_due`, refunds, or plan upgrade/downgrade), record it as an open/deferred item rather than inventing a rule. Define vocabulary and fact types, then the rules, in `src/domain/{billing,entitlements,parental,plans}.js`.",
+      "expected_output": "An SBVR document that separates vocabulary, fact types, and rules; grounds each rule in code behavior located structurally; uses valid SBVR modality; distinguishes definitional from behavioral rules; tags code-confirmed rules apart from inferred defaults; and lists PRD-vs-code gaps as open/deferred items instead of fabricating rules. Derived from conceptadev/movie-streaming-app @029ab15.",
+      "files": [],
+      "expectations": [
+        "Separates vocabulary, fact types, and rules and uses valid SBVR keywords such as obligatory, prohibited, permitted, necessary, or impossible.",
+        "Grounds rules in the actual guards and conditionals (active/trialing/past_due access, FREE_PLAY_KINDS, kids-mode PG cap, local-complete 403) located structurally rather than guessed.",
+        "Distinguishes definitional/structural rules from behavioral/operative rules.",
+        "Flags code-only inferred defaults (e.g. unknown-maturity-rating fallback, no-profile bypass, hardcoded PG kids ceiling) rather than presenting them as settled policy.",
+        "Records PRD-vs-code gaps (grace-period expiry, refunds, plan upgrade/downgrade) as open or deferred items and does not invent rules to fill them."
+      ]
+    }
+  ]
+}

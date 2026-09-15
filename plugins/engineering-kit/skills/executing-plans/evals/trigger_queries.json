@@ -1,0 +1,66 @@
+[
+  {
+    "query": "Execute the approved implementation plan in plans/oauth.md.",
+    "should_trigger": true
+  },
+  {
+    "query": "Resume the migration plan from its first unfinished task.",
+    "should_trigger": true
+  },
+  {
+    "query": "Implement this written feature plan and verify each acceptance criterion.",
+    "should_trigger": true
+  },
+  {
+    "query": "Continue this multi-step plan after compaction; check what is already complete.",
+    "should_trigger": true
+  },
+  {
+    "query": "Carry out the attached implementation plan and open the authorized PR.",
+    "should_trigger": true
+  },
+  {
+    "query": "Follow this approved rollout implementation plan through tests, stopping before deployment.",
+    "should_trigger": true
+  },
+  {
+    "query": "Execute the remaining dependent tasks in this written refactor plan.",
+    "should_trigger": true
+  },
+  {
+    "query": "Finish the approved plan in this workspace without subagents.",
+    "should_trigger": true
+  },
+  {
+    "query": "Write an implementation plan for this approved specification.",
+    "should_trigger": false
+  },
+  {
+    "query": "Review this plan for risks without implementing it.",
+    "should_trigger": false
+  },
+  {
+    "query": "Help choose between a service and a library.",
+    "should_trigger": false
+  },
+  {
+    "query": "Fix a typo in the README.",
+    "should_trigger": false
+  },
+  {
+    "query": "Review the PR for regressions.",
+    "should_trigger": false
+  },
+  {
+    "query": "Explain TypeScript discriminated unions.",
+    "should_trigger": false
+  },
+  {
+    "query": "Audit conflicting agent instructions.",
+    "should_trigger": false
+  },
+  {
+    "query": "Draft a product specification for an undecided feature.",
+    "should_trigger": false
+  }
+]

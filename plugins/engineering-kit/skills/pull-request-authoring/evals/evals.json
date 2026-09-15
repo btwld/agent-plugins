@@ -1,0 +1,44 @@
+{
+  "skill_name": "pull-request-authoring",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Draft the PR title and description for my already-pushed `fix/session-expiry-231` branch against `main`; do not create it yet. The change fixes sessions that remained valid after a password reset because the verifier compared only token expiry and ignored `credentialsChangedAt`. The diff adds that timestamp check and regression tests. `npm test -- session-verifier` passed. This fully fixes issue #231. Keep it concise and don't mention what tool wrote the code.",
+      "expected_output": "A compact, provider-neutral PR draft with an outcome-oriented title, a fenced Markdown body, a short summary/root-cause explanation, the actual validation command, and `Closes #231` because the supplied context says the default-branch PR fully resolves it.",
+      "files": [],
+      "expectations": [
+        "The title describes the session invalidation fix rather than implementation mechanics or authorship.",
+        "The PR body is wrapped exactly once in a fenced `markdown` block in the conversational response.",
+        "The body is concise and includes only material summary or root-cause context plus the observed validation.",
+        "The body uses `Closes #231` or an equivalent valid closing keyword for the explicitly supplied, fully resolved issue.",
+        "The output contains no claim that an agent, model, provider, or tool authored the change."
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Write a PR for the pushed `settings-mobile-layout` branch. It changes the account settings modal so the actions stack below 640px and the destructive action stays separated. Tests: `pnpm test SettingsModal` passed, and I verified 390x844 and 1440x900 in the browser. Use these uploaded images in the body: before `https://github.com/user-attachments/assets/before-123`, after `https://github.com/user-attachments/assets/after-456`. I did not give you an issue and I don't want you hunting for one. Return the title and Markdown draft only.",
+      "expected_output": "A concise fenced PR description with summary, actual validation, and a focused visual-evidence section using the supplied URLs with useful labels. It should omit issue linkage and avoid searching for or inventing an issue.",
+      "files": [],
+      "expectations": [
+        "The body uses both supplied GitHub attachment URLs and distinguishes before from after with useful alt text or captions.",
+        "The body records the two verified viewports and the passed test without inventing additional validation.",
+        "No issue section, issue number, or suggestion to search the issue tracker appears.",
+        "The description remains compact and does not add empty risk, rollout, migration, or checklist sections.",
+        "The output uses a single fenced `markdown` block and contains no agent or provider attribution."
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "Update the description for existing draft PR #88. The branch changes checkout retry behavior: after a recoverable card-network timeout, the Retry button preserves the cart and returns to payment instead of restarting checkout. `pnpm test checkout-retry` and the Playwright retry flow passed. I recorded `artifacts/checkout-retry.webm`, but it has not been uploaded anywhere. This is behavioral and I want a short demo in the PR. Do not pretend the local path works on GitHub, and do not mark the PR ready.",
+      "expected_output": "A concise draft-PR update with summary and validation plus a demo placeholder or media-pending note. It must not fabricate a GitHub URL or embed the local path as if remote, should keep the PR in draft, and should report the exact local artifact that still needs authorized upload.",
+      "files": [],
+      "expectations": [
+        "The body explains the observable retry behavior rather than narrating file changes.",
+        "The body includes only the two supplied passing validations.",
+        "The output does not use `artifacts/checkout-retry.webm` as a Markdown link or claim the video is already attached.",
+        "The result keeps PR #88 as a draft and identifies authorized upload of the local video as the remaining action.",
+        "The body is shown in exactly one fenced `markdown` block and contains no agent, model, or provider attribution."
+      ]
+    }
+  ]
+}

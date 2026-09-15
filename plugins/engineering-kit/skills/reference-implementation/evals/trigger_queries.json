@@ -1,0 +1,82 @@
+[
+  {
+    "query": "Use the reference-implementation skill to write the canonical interval merge implementation.",
+    "should_trigger": true
+  },
+  {
+    "query": "Audit whether this code deserves to be our golden-path example.",
+    "should_trigger": true
+  },
+  {
+    "query": "Do a quick cleanup pass on this helper.",
+    "should_trigger": false
+  },
+  {
+    "query": "Optimize this parser for raw throughput only.",
+    "should_trigger": false
+  },
+  {
+    "query": "Make this the golden-path example with clear semantic rules and tests.",
+    "should_trigger": true
+  },
+  {
+    "query": "Review this refactor for hidden semantic changes against the reference implementation.",
+    "should_trigger": true
+  },
+  {
+    "query": "Build a lightweight semantic canvas before writing the blessed implementation.",
+    "should_trigger": true
+  },
+  {
+    "query": "Turn this rough algorithm into an authoritative version with traceable behavior rules.",
+    "should_trigger": true
+  },
+  {
+    "query": "Check whether this abstraction belongs in the reference implementation or is over-engineered.",
+    "should_trigger": true
+  },
+  {
+    "query": "Create a canonical sample for this package API that others should follow.",
+    "should_trigger": true
+  },
+  {
+    "query": "Compare this optimized rewrite to the reference and flag semantic drift.",
+    "should_trigger": true
+  },
+  {
+    "query": "Create the blessed implementation for this business rule engine.",
+    "should_trigger": true
+  },
+  {
+    "query": "Review this PR for merge blockers.",
+    "should_trigger": false
+  },
+  {
+    "query": "Search where this algorithm is used.",
+    "should_trigger": false
+  },
+  {
+    "query": "Write a tutorial example that is not meant to be authoritative.",
+    "should_trigger": false
+  },
+  {
+    "query": "Plan a multi-service migration.",
+    "should_trigger": false
+  },
+  {
+    "query": "Generate tests for existing code without reference status.",
+    "should_trigger": false
+  },
+  {
+    "query": "Explain what reference implementation means.",
+    "should_trigger": false
+  },
+  {
+    "query": "Delegate canonical implementation to an agent.",
+    "should_trigger": true
+  },
+  {
+    "query": "Create a marketing demo snippet.",
+    "should_trigger": false
+  }
+]

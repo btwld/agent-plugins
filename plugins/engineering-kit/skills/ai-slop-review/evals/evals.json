@@ -1,0 +1,69 @@
+{
+  "skill_name": "ai-slop-review",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "A contractor delivered the order module using Copilot and it reads like it. Do an AI slop review of `orders/order_service.ts`, `orders/order_service.test.ts`, and `orders/rate_limiter.ts`. Repo facts: TypeScript strict mode is on, ESLint with `@typescript-eslint/recommended` runs in CI, JSDoc is our doc convention, and `PaymentGateway` is a network edge. I want findings with file and line, the snippet, why it is slop, and the fix, plus what you looked at and decided to keep. Review only, do not edit the files.",
+      "expected_output": "A findings report that names the planted slop in order_service.ts (the single-implementation strategy plus factory, the DataHelper/processData naming, the blanket catch around a pure total, the impossible null check on a non-optional string id and the optional chaining on a non-optional order, the restating and chat-voice comments, the orphan TODO and commented-out code) and in the test file (the tautological expect, the not-toThrow-only assertion, the marketing test name, the expected value computed by re-running production logic, the Arrange/Act/Assert narration, and the untested `place` method whose mocks are wired but never asserted on), each with line, verbatim snippet, pattern id, severity, guideline, and fix. It reports rate_limiter.ts as clean, explains that the why-comments, the numbered ordering steps, and the boundary catches that rethrow or report are kept, and does not modify any file.",
+      "files": [
+        "evals/files/orders/order_service.ts",
+        "evals/files/orders/order_service.test.ts",
+        "evals/files/orders/rate_limiter.ts"
+      ],
+      "expectations": [
+        "Reports the blanket catch in `OrderService.total` that returns 0 around a pure computation, with its line and snippet",
+        "Reports the impossible null/undefined check on the non-optional `order.id` and the `order?.items ?? []` on a non-optional parameter as impossible defensive code",
+        "Reports the single-implementation `PriceStrategy` interface and `PriceStrategyFactory` as over-abstraction with the implementation count stated",
+        "Reports `expect(total).toBe(total)` as a tautology",
+        "Either reports the `not.toThrow()`-only `validates orders` test as hollow or explicitly explains why it is kept (the throwing path is asserted separately)",
+        "Reports the test that computes its expected value by re-running the production reduce as a hollow test",
+        "Reports that `OrderService.place` (reserve, charge, release-and-rethrow) has no test at all even though the test file wires up gateway and logger mocks",
+        "Keeps the `dedupe` ordering comment, the numbered reserve-then-charge steps, and the `place` catch that releases, logs, and rethrows, and says why they are kept",
+        "Reports `rate_limiter.ts` as having zero findings rather than manufacturing findings for it",
+        "Every finding in the report carries a path, a line or line range, a verbatim snippet, a pattern id, a severity, and a one-sentence fix",
+        "The response does not edit or rewrite any file"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "we're about to open source packages/api (about 40k lines of TypeScript incl. tests, plus 3k lines of markdown docs). the last 4 months were heavy Claude Code usage and reviewers keep complaining about over-commenting, try/catch everywhere and tests that don't test anything. run the ai slop review on it. i want a findings report i can hand to the team, not fixes. tell me how you're going to run it before you start burning tokens",
+      "expected_output": "A proportionate read-only review plan with scope, repository facts, sequential slices or permitted delegation, citation checks, counterevidence-based validation, and coverage reporting.",
+      "files": [],
+      "expectations": [
+        "Respects user delegation, model, and cost preferences; a line threshold does not force subagents.",
+        "Uses repository facts and relevant calibration before classifying findings.",
+        "Uses sweep and slice helpers where useful, preserving existing working-tree changes.",
+        "Keeps evidence checks and a separate counterevidence pass without a rejection quota.",
+        "Reports confirmed findings and actual coverage without claiming unperformed review.",
+        "Keeps this review-only request read-only."
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "Our PR bot flagged six comments in `orders/rate_limiter.ts` as \"AI-generated filler\" and wants them deleted before merge. The file is the only thing this PR touches. Give me a second opinion using the ai slop review: is any of that actually slop, or is the bot pattern-matching on comment length? Don't change the file.",
+      "expected_output": "A calibrated review that finds no slop in rate_limiter.ts: the class doc adds a real caveat about lazy refill, the refill-before-check comment records an ordering constraint, the flushMetrics catch is at a documented network edge and reports the failure, and the evict doc states a complexity and call-site constraint. It says an empty findings list is the correct result, explains the decision test applied to each comment, and does not invent findings to satisfy the bot.",
+      "files": [
+        "evals/files/orders/rate_limiter.ts"
+      ],
+      "expectations": [
+        "Concludes that the file has no slop findings, or at most a low-severity note, rather than agreeing with the bot",
+        "Explains that the refill-before-check comment and the flushMetrics comment record why-decisions (ordering constraint, best-effort contract at a network edge) and are kept",
+        "Explains that the catch in flushMetrics is at a boundary and reports the failure, so it is not a blanket catch",
+        "Applies the delete-the-comment decision test explicitly to at least one comment",
+        "States that an empty findings list is a valid result and does not manufacture findings",
+        "Does not edit the file"
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "Review a 20000-line package without subagents; the workspace has unrelated edits. Plan the review briefly, then proceed when files are available. A validator confirmed every well-supported finding. Explain whether a rerun is required just because none were rejected.",
+      "expected_output": "Sequential slices preserve the dirty tree and evidence checks; no arbitrary rejection quota triggers a rerun.",
+      "files": [],
+      "expectations": [
+        "Uses sequential review rather than delegation.",
+        "Preserves unrelated edits rather than requiring a clean tree.",
+        "Does not require a minimum rejection rate."
+      ]
+    }
+  ]
+}

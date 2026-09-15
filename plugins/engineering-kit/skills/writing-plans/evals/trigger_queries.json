@@ -1,0 +1,82 @@
+[
+  {
+    "query": "The OAuth migration specification is approved. Convert it into an executable implementation plan with validation steps.",
+    "should_trigger": true
+  },
+  {
+    "query": "Plan the approved multi-file change for payment idempotency. Do not implement it.",
+    "should_trigger": true
+  },
+  {
+    "query": "Break this accepted API versioning design into ordered engineering tasks with exact repository paths.",
+    "should_trigger": true
+  },
+  {
+    "query": "Write a migration plan for replacing the queue client while preserving compatibility and rollback.",
+    "should_trigger": true
+  },
+  {
+    "query": "Create a written handoff plan for this approved schema change across the service and mobile clients.",
+    "should_trigger": true
+  },
+  {
+    "query": "Turn these stable requirements into a dependency-ordered plan for another engineer to execute.",
+    "should_trigger": true
+  },
+  {
+    "query": "Plan the feature-flag rollout for this approved behavior change. Include verification and recovery steps.",
+    "should_trigger": true
+  },
+  {
+    "query": "Create an implementation plan only for adding the new endpoint, persistence model, and integration tests.",
+    "should_trigger": true
+  },
+  {
+    "query": "The architecture is final. Map the work into reviewable tasks for three dependent packages.",
+    "should_trigger": true
+  },
+  {
+    "query": "Write the plan we should commit for this cross-service migration. Keep the steps executable and repository-grounded.",
+    "should_trigger": true
+  },
+  {
+    "query": "Fix this typo and update its existing snapshot test.",
+    "should_trigger": false
+  },
+  {
+    "query": "We have not decided whether this should be a service or a library. Help us choose first.",
+    "should_trigger": false
+  },
+  {
+    "query": "Execute the plan in plans/oauth-migration.md and commit each completed task.",
+    "should_trigger": false
+  },
+  {
+    "query": "Review this pull request for bugs and merge risk.",
+    "should_trigger": false
+  },
+  {
+    "query": "Write a product specification for the new onboarding flow. The requirements are still open.",
+    "should_trigger": false
+  },
+  {
+    "query": "Create an ADR that chooses Kafka or SQS for our event bus.",
+    "should_trigger": false
+  },
+  {
+    "query": "Our checkout test fails only in CI. Diagnose the failure and fix its cause.",
+    "should_trigger": false
+  },
+  {
+    "query": "Create a deployment readiness checklist for tonight's release.",
+    "should_trigger": false
+  },
+  {
+    "query": "Use red-green-refactor to add this small validation rule now.",
+    "should_trigger": false
+  },
+  {
+    "query": "Reconsider the completed reporting service from a clean sheet. We may remove the service boundary.",
+    "should_trigger": false
+  }
+]

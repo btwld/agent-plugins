@@ -1,0 +1,86 @@
+[
+  {
+    "query": "This proposed commit changes our parser's invalid-input behavior and updates the expected exception in the same patch. Should we accept it or is the test just following a regression? Give me a KEEP/REJECT call.",
+    "should_trigger": true
+  },
+  {
+    "query": "Review `git diff v2.8.0...feature/retry-policy` adversarially. Map the observable behavior change, make the strongest prosecution and defense, then tell me whether the branch is genuinely better.",
+    "should_trigger": true
+  },
+  {
+    "query": "The author says this refactor preserves behavior, but three snapshots and two error expectations changed. Audit that claim and decide whether we should keep or reject the change.",
+    "should_trigger": true
+  },
+  {
+    "query": "A proposed change rewrites the cache lookup logic. Is the change safe to keep? Be conservative about falsey values and inspect every changed test expectation.",
+    "should_trigger": true
+  },
+  {
+    "query": "Compare the before/after code in `patches/normalize-ids.diff` as a safety-biased judge. I need the behavioral contract delta, not code style, and a KEEP-WITH-CAVEATS verdict if proof is incomplete.",
+    "should_trigger": true
+  },
+  {
+    "query": "Is this alleged bug fix actually an improvement? The return value, exception type, and unit tests all moved. Prosecute it, defend it, and break the tie toward compatibility.",
+    "should_trigger": true
+  },
+  {
+    "query": "Before I backport commit `9fd13a7`, tell me whether it preserves our API behavior. Pay special attention to the deleted assertions in `client_test.go` and give one keep/reject recommendation.",
+    "should_trigger": true
+  },
+  {
+    "query": "Judge this performance optimization for behavioral safety. It reorders async results and widens a timing tolerance in the tests; decide honestly whether the speedup deserves to survive.",
+    "should_trigger": true
+  },
+  {
+    "query": "I want an adversarial change review of PR #418: what can users observe now, which changed tests encode a real spec update, and should we accept the patch?",
+    "should_trigger": true
+  },
+  {
+    "query": "The new branch clamps out-of-range values instead of rejecting them. Docs still describe rejection, but tests now expect clamping. Analyze both sides and make the release decision.",
+    "should_trigger": true
+  },
+  {
+    "query": "Review this PR for bugs, security issues, and missing tests before merge. Findings first; I don't need a prosecution/defense exercise or a keep-versus-reject judgment of the behavior change.",
+    "should_trigger": false
+  },
+  {
+    "query": "Now that the notification service is built, reconsider whether it should exist at all and propose the simpler architecture you would design today.",
+    "should_trigger": false
+  },
+  {
+    "query": "Refactor `parseLimit` to reduce nesting and duplicate validation, but preserve every public behavior and update the code directly.",
+    "should_trigger": false
+  },
+  {
+    "query": "Fix the regression in this commit, add tests, and prepare the patch for me.",
+    "should_trigger": false
+  },
+  {
+    "query": "Audit whether this implementation is good enough to be our canonical example for every new service team to copy.",
+    "should_trigger": false
+  },
+  {
+    "query": "The importer test fails on CI but passes locally. Reproduce it and find the root cause before suggesting any fix.",
+    "should_trigger": false
+  },
+  {
+    "query": "Search the repository for every caller of `parseDate` and summarize which packages depend on its exception behavior.",
+    "should_trigger": false
+  },
+  {
+    "query": "Write boundary tests for this parser based on its current documented contract; don't review the implementation.",
+    "should_trigger": false
+  },
+  {
+    "query": "Benchmark the old and new cache implementations and tell me which is faster under a 90/10 read-write workload.",
+    "should_trigger": false
+  },
+  {
+    "query": "Cherry-pick commit `4a91d2e` onto my current branch and resolve any conflicts.",
+    "should_trigger": false
+  },
+  {
+    "query": "This branch from Copilot is full of restating comments, try/catch around pure code, and tests that only assert not.toThrow(). Audit it for AI slop and list what to delete; I'm not asking whether the feature itself should merge.",
+    "should_trigger": false
+  }
+]

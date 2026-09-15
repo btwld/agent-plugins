@@ -1,0 +1,19 @@
+{
+  "name": "product-kit",
+  "version": "0.3.2",
+  "description": "Product exploration, evidence synthesis, competitive and friction research, structured PRDs, and connected WBS planning.",
+  "author": {
+    "name": "Concepta"
+  },
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Product Kit",
+    "shortDescription": "Research product opportunities and build connected PRDs and WBS.",
+    "longDescription": "Product exploration, evidence synthesis, competitive and friction research, structured PRDs, and connected WBS planning.",
+    "developerName": "Concepta",
+    "category": "Productivity",
+    "capabilities": [],
+    "defaultPrompt": "Help research or plan a product, using the relevant Product Kit skill and supplied evidence."
+  },
+  "repository": "https://github.com/conceptadev/agent-plugins"
+}

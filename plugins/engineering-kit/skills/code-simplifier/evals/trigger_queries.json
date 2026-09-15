@@ -1,0 +1,82 @@
+[
+  {
+    "query": "$code-simplifier Simplify the code changed in this branch without altering behavior.",
+    "should_trigger": true
+  },
+  {
+    "query": "Use the code-simplifier skill to tighten these recently edited functions.",
+    "should_trigger": true
+  },
+  {
+    "query": "Run $code-simplifier on the current diff and remove any navigation-only wrappers.",
+    "should_trigger": true
+  },
+  {
+    "query": "Please explicitly invoke code-simplifier for a behavior-preserving cleanup pass.",
+    "should_trigger": true
+  },
+  {
+    "query": "$code-simplifier Check whether these one-use helpers own any real responsibility.",
+    "should_trigger": true
+  },
+  {
+    "query": "Use code-simplifier to polish only the files modified in this session.",
+    "should_trigger": true
+  },
+  {
+    "query": "$code-simplifier Collapse equivalent representations in this new renderer path while preserving validation.",
+    "should_trigger": true
+  },
+  {
+    "query": "Invoke the code-simplifier skill and keep failure behavior exactly unchanged.",
+    "should_trigger": true
+  },
+  {
+    "query": "$code-simplifier Decide whether this single-caller normalization helper should remain.",
+    "should_trigger": true
+  },
+  {
+    "query": "Use $code-simplifier for a separate final refinement pass over the recent edit.",
+    "should_trigger": true
+  },
+  {
+    "query": "Clean up this function while you fix the bug.",
+    "should_trigger": false
+  },
+  {
+    "query": "Can you simplify this small conditional and rename the local variable?",
+    "should_trigger": false
+  },
+  {
+    "query": "Refactor these three modules into a new service layer.",
+    "should_trigger": false
+  },
+  {
+    "query": "Review this pull request for bugs and missing tests.",
+    "should_trigger": false
+  },
+  {
+    "query": "Redesign the package architecture from a clean sheet.",
+    "should_trigger": false
+  },
+  {
+    "query": "Implement the feature and keep the code readable.",
+    "should_trigger": false
+  },
+  {
+    "query": "Remove the obsolete API across the repository and migrate every caller.",
+    "should_trigger": false
+  },
+  {
+    "query": "Why does this parser reject an otherwise valid record?",
+    "should_trigger": false
+  },
+  {
+    "query": "Make this reusable Flutter UI section more idiomatic.",
+    "should_trigger": false
+  },
+  {
+    "query": "Run formatting and the test suite before committing.",
+    "should_trigger": false
+  }
+]

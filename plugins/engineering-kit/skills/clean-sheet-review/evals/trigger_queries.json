@@ -1,0 +1,82 @@
+[
+  {
+    "query": "We finished v1 of the export service and it actually works now. If you were starting over with everything we learned, what would you cut or design differently?",
+    "should_trigger": true
+  },
+  {
+    "query": "Reconsider this CLI's whole command surface with fresh eyes - we added flags reactively and the scope feels bloated. Honestly, should this even be a CLI?",
+    "should_trigger": true
+  },
+  {
+    "query": "Here's the auth module we built plus the original plan. Knowing what we now know, write the spec you'd write today and tell me what to keep versus replace.",
+    "should_trigger": true
+  },
+  {
+    "query": "Don't just review the PR for bugs - step back and tell me whether this caching layer should exist at all given how rarely it's hit.",
+    "should_trigger": true
+  },
+  {
+    "query": "I want a clean-sheet take on our notifications architecture. Preserve the real constraints but treat the current design as provisional.",
+    "should_trigger": true
+  },
+  {
+    "query": "We can break the internal API if it helps. Re-examine the plugin loader design from scratch and recommend the simplest thing that covers our two real plugins.",
+    "should_trigger": true
+  },
+  {
+    "query": "If you had to rebuild this rate limiter from zero today, how would you design it? It's already in prod but I'm not attached to the current approach.",
+    "should_trigger": true
+  },
+  {
+    "query": "Look at this data model we shipped and the migration notes. Would you model it the same way now, or split it apart / collapse it into fewer tables?",
+    "should_trigger": true
+  },
+  {
+    "query": "Second-pass review please: the worker is implemented, but we learned the queue is almost always empty. What's the smallest correct version of this?",
+    "should_trigger": true
+  },
+  {
+    "query": "Take everything we now know about the Stripe integration and propose the design you'd actually build, not just a patch on what's there.",
+    "should_trigger": true
+  },
+  {
+    "query": "Review this PR in api/auth/login.ts for bugs, regressions, and missing tests before I merge it.",
+    "should_trigger": false
+  },
+  {
+    "query": "We haven't built anything yet - write a design doc / RFC for the new webhooks feature with goals, alternatives, and rollout.",
+    "should_trigger": false
+  },
+  {
+    "query": "Simplify this 80-line function and reduce the nesting, but keep the behavior exactly the same.",
+    "should_trigger": false
+  },
+  {
+    "query": "Find every call site of legacyClient across the repo so I know what depends on it.",
+    "should_trigger": false
+  },
+  {
+    "query": "This integration test started timing out in CI yesterday. Help me figure out why.",
+    "should_trigger": false
+  },
+  {
+    "query": "Refactor the orders module to extract a pricing service, but don't change any public behavior.",
+    "should_trigger": false
+  },
+  {
+    "query": "Execute the plan in docs/plans/oauth.md and check off each task as you implement it.",
+    "should_trigger": false
+  },
+  {
+    "query": "Summarize the current design of this service in a few bullets for a status update.",
+    "should_trigger": false
+  },
+  {
+    "query": "Do a security-only audit of this endpoint for injection and authorization issues.",
+    "should_trigger": false
+  },
+  {
+    "query": "Add a retry with exponential backoff to this HTTP client call.",
+    "should_trigger": false
+  }
+]

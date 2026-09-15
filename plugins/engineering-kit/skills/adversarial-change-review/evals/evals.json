@@ -1,0 +1,44 @@
+{
+  "skill_name": "adversarial-change-review",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Judge whether commit `4a91d2e` is safe for the planned release. In `src/config/parseLimit.ts:41`, `parseLimit()` used to throw `RangeError` for negative values; the commit now clamps them to zero. `docs/config.md:73` still says negative limits are invalid. In `test/config/parseLimit.test.ts:88`, the author replaced `expect(() => parseLimit(-1)).toThrow(RangeError)` with `expect(parseLimit(-1)).toBe(0)`. There is no linked issue or migration note. Give me the safety-biased KEEP/REJECT judgment and do not edit anything.",
+      "expected_output": "A REJECT verdict that identifies the negative-input contract change, treats the moved expected value as an unjustified weakening rather than independent proof, presents the strongest plausible defense without accepting it as evidence, and names the spec decision or compatibility check needed to reconsider.",
+      "files": [],
+      "expectations": [
+        "The behavior summary distinguishes the new clamp-to-zero behavior from preserved behavior and cites the supplied source or documentation locations",
+        "The changed test at `test/config/parseLimit.test.ts:88` is classified as (c), or (c) unresolved, because it moves with the implementation without independent contract support",
+        "The prosecution and defense are presented as separate strongest-case arguments",
+        "The verdict is REJECT with confidence justified by the documentation and missing migration or decision evidence",
+        "The response names exact evidence that could change the verdict and does not rewrite the code"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Do an adversarial behavior review of this cache fix and tell me if we should keep it. `lib/cache/readThrough.ts:24` changed from `const value = cache.get(key); if (value) return value;` to `if (cache.has(key)) return cache.get(key);`. The loader call is otherwise unchanged. `lib/cache/readThrough.test.ts:61-84` adds cases proving cached `false`, `0`, and an empty string are returned without calling the loader again. The cache API allows all three values. I want prosecution vs defense, changed-test classification, and a clear verdict\u2014review only.",
+      "expected_output": "A high-confidence KEEP verdict that recognizes the old truthiness bug, explains the observable reduction in unnecessary loader calls, classifies the added tests as legitimate tracking or strengthened coverage, and still articulates a real but weak prosecution case such as the extra lookup or a possible mutation race if applicable.",
+      "files": [],
+      "expectations": [
+        "The behavior summary identifies that cached falsey values now count as hits and the loader is no longer called for them",
+        "The review does not invent a regression merely to satisfy the adversarial posture",
+        "The changed or added tests are classified as (b) legitimate tracking change or stronger discriminating coverage, with a source link",
+        "The prosecution and defense are both substantive and remain separate",
+        "The verdict is KEEP with high or well-supported medium confidence and concrete locations"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "Review this proposed parser change. `packages/importer/date.ts:52` changes invalid dates from throwing `InvalidDateError` to returning `null`; `packages/importer/date.test.ts:109` changes the corresponding expected exception to `null`. The linked issue says this lets batch imports skip bad rows, and `packages/importer/batch.ts:144` already filters null dates. I cannot verify whether any other package imports `parseDate`, and there is no public API document in the material I have. Decide KEEP, REJECT, or KEEP-WITH-CAVEATS and tell me exactly what would settle it. No code changes.",
+      "expected_output": "A cautious verdict that recognizes the evidenced batch-import improvement but does not claim global compatibility. It should classify the test change provisionally, identify unknown callers as the central uncertainty, and specify a caller search plus error-contract or compatibility test as the evidence needed before safe adoption.",
+      "files": [],
+      "expectations": [
+        "The behavior summary states the throw-to-null contract change and separates the verified batch caller from unverified consumers",
+        "The changed test is classified as (b) only for the intended batch behavior or as (c) unresolved for the wider contract, with the uncertainty explained",
+        "The strongest prosecution centers on callers that may rely on `InvalidDateError`, while the defense cites the linked issue and null-filtering batch path",
+        "The verdict is safety-biased and does not give an unconditional high-confidence KEEP",
+        "The response asks for an exact caller search and a compatibility/specification check or focused test to resolve doubt"
+      ]
+    }
+  ]
+}

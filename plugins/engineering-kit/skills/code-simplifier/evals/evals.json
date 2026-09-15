@@ -1,0 +1,46 @@
+{
+  "skill_name": "code-simplifier",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "$code-simplifier Copy the attached typed_renderer_case.dart into your output, simplify the callback-to-render path without changing behavior, and run it with `dart --enable-asserts`. Preserve the assured typed boundary but remove layers that only forward or copy the same fields.",
+      "expected_output": "A modified, runnable fixture that removes navigation-only forwarding and same-shape conversion while preserving the meaningful typed boundary.",
+      "files": [
+        "evals/files/typed_renderer_case.dart"
+      ],
+      "expectations": [
+        "Traces the callback-to-widget path before editing individual declarations.",
+        "Requires each retained helper and representation to demonstrate a distinct responsibility.",
+        "Removes or inlines forwarding and same-shape conversion when they own no invariant, semantics, ownership, lifecycle, or public boundary.",
+        "Does not replace the shallow function with a namespace class, factory, or another equally shallow abstraction.",
+        "Runs the fixture and reports the actual behavior-preservation result."
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "$code-simplifier Copy the attached normalize_record_case.dart into your output and simplify it without changing failures or ownership. `_normalizeRecord` has one caller, but inspect what it owns before deciding whether to inline it. Run the result with `dart --enable-asserts`.",
+      "expected_output": "A modified, runnable fixture that keeps the one-call normalization boundary because it owns validation and ownership semantics while simplifying only incidental code.",
+      "files": [
+        "evals/files/normalize_record_case.dart"
+      ],
+      "expectations": [
+        "Treats one caller as a reason to inspect rather than automatic grounds for inlining.",
+        "Keeps the boundary because it owns cross-field invariants and an ownership transition.",
+        "Simplifies internal control flow or naming only where failure behavior remains exact.",
+        "Runs the fixture and verifies the existing failures and immutability behavior."
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "$code-simplifier Polish these three nearby call sites. Each directly constructs the same two-field value, but there is no shared rule and the names are already clear. Should we extract a helper to remove the repeated syntax?",
+      "expected_output": "A restrained simplification that leaves harmless repeated syntax when a helper would add navigation without centralizing meaning.",
+      "files": [],
+      "expectations": [
+        "Distinguishes repeated syntax from duplicated meaning.",
+        "Declines to extract a helper solely to reduce line count.",
+        "Checks whether a real shared invariant or future change point exists before introducing a layer.",
+        "Keeps the response proportional to the localized cleanup."
+      ]
+    }
+  ]
+}

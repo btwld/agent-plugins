@@ -1,0 +1,61 @@
+{
+  "skill_name": "clean-sheet-review",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "We shipped a ConfigProvider with a plugin registry so any module can register a config source at runtime. In practice only two sources exist (env vars and one YAML file) and they never change after startup. Now that it's built, what would you simplify or replace?",
+      "expected_output": "A clean-sheet review that lands on a Simplify verdict, reframes the problem neutrally, names what to preserve, and proposes removing the unused extension point.",
+      "files": [],
+      "expectations": [
+        "Leads with one verdict (here, Simplify or Refine) plus a short reason, not a generic review.",
+        "Reframes the problem and marks runtime registration as a current design choice, not a requirement.",
+        "Names what the current approach gets right and preserves it.",
+        "Separates a correctness concern (precedence/ordering) from a simplicity preference (unused extension point).",
+        "Recommends removing the registry only when no real second use case exists, and flags any compatibility caveat before deleting a public interface."
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Before I expand this, review our configuration loader with fresh eyes. At startup, one function reads environment variables and one YAML file in a fixed documented precedence order, validates the merged values into one immutable typed Config object, and returns it. The application has no runtime updates, plugin registry, public extension API, or third source. Tests cover precedence, missing required values, malformed YAML, and type errors. Would you design it differently today?",
+      "expected_output": "A Keep verdict that resists rewriting a complete minimal design, stays short, and confines itself to a verification follow-up rather than inventing new architecture.",
+      "files": [],
+      "expectations": [
+        "Reaches a Keep verdict and explicitly declines to redesign.",
+        "Stays concise and omits the proposal/migration sections that a Keep verdict does not need.",
+        "Names what is already correct (one startup path, fixed precedence, typed immutable output, and focused error coverage).",
+        "Surfaces at most a small verification follow-up rather than speculative redesign.",
+        "Does not reward novelty or add abstractions the evidence does not justify.",
+        "Does not add a registry, provider interface, runtime reload system, dependency container, or other extension mechanism without a demonstrated need."
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "Review the attached plan and partial implementation for a new 'reporting microservice'. We're allowed to change scope and the internal API. Given what we learned building it, write the spec you'd write today and tell us what to keep, change, or drop, plus how to get there.",
+      "expected_output": "A combined-mode clean-sheet review with an independent minimal design, an explicit current-to-proposed comparison, a revised spec, and a reversible migration path.",
+      "files": [
+        "evals/files/reporting_plan.md",
+        "evals/files/reporting_service.dart"
+      ],
+      "expectations": [
+        "Builds a neutral problem brief before proposing a design, classifying items (required outcome, constraint, commitment, assumption).",
+        "Produces an independent minimal design rather than editing the current architecture, including explicit non-goals.",
+        "Questions whether a separate microservice is warranted instead of assuming the artifact is a requirement.",
+        "Gives a per-element comparison (keep / change / remove / add / defer) and a single verdict.",
+        "Provides a revised specification and a smallest-reversible-steps migration path, noting which prior decision is superseded."
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "Clean-sheet this completed typed-renderer refactor. The assured map is wrapped by a typed view, copied field-for-field into a private presentation object, passed through a one-use build function, and finally used by a widget. Behavior and validation are correct, and we may change private implementation shape. What should survive?",
+      "expected_output": "A process-first review that traces the requirement-to-render path, preserves the assurance boundary, and removes only representations or forwarding hops that have no distinct responsibility.",
+      "files": [],
+      "expectations": [
+        "Leads with one sized verdict and distinguishes behavioral correctness from implementation directness.",
+        "Traces responsibilities and data flow before recommending classes, functions, constructors, or other artifacts.",
+        "Preserves the assured typed boundary when it prevents raw-map access from leaking into widgets.",
+        "Challenges the field-for-field presentation copy and one-use forwarding hop by asking what invariant or semantics each owns.",
+        "Does not prescribe factories, top-level functions, or any other declaration form as a universal solution."
+      ]
+    }
+  ]
+}

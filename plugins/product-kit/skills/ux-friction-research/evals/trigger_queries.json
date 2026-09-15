@@ -1,0 +1,78 @@
+[
+  {
+    "query": "Find recent public complaints about Notion's mobile offline workflow for field researchers; tell me which issues have credible current evidence.",
+    "should_trigger": true
+  },
+  {
+    "query": "Can you look through community posts and reviews for Figma onboarding friction among first-time designers? Separate repeated posts from independent experiences.",
+    "should_trigger": true
+  },
+  {
+    "query": "Research whether parents report difficulty changing recurring bookings in ClassPass; focus on the last six months and show sources.",
+    "should_trigger": true
+  },
+  {
+    "query": "Look for public evidence that small-team admins struggle with Slack guest invitations. Include successful accounts and fixes, not just complaints.",
+    "should_trigger": true
+  },
+  {
+    "query": "Before we prioritize export improvements, investigate what Scrivener users publicly report about exporting manuscripts and distinguish workflow confusion from actual errors.",
+    "should_trigger": true
+  },
+  {
+    "query": "Find dated user reports about Linear's notification settings for engineering managers and explain what we should verify next.",
+    "should_trigger": true
+  },
+  {
+    "query": "Search app reviews and support discussions for Todoist accessibility friction affecting keyboard users. Don't infer how common it is from review counts.",
+    "should_trigger": true
+  },
+  {
+    "query": "There are old posts saying Zoom scheduling is confusing. Research whether current public reports still support that for teachers and flag anything outdated.",
+    "should_trigger": true
+  },
+  {
+    "query": "Synthesize these twelve supplied customer interview transcripts into onboarding themes; no additional public research is needed.",
+    "should_trigger": false
+  },
+  {
+    "query": "Create an interview guide to understand teachers' problems with onboarding in our notes app.",
+    "should_trigger": false
+  },
+  {
+    "query": "Audit the attached onboarding screenshots for confusing hierarchy and copy; work from the interface itself.",
+    "should_trigger": false
+  },
+  {
+    "query": "Compare Slack and Teams pricing, guest limits, and supported integrations for a purchase decision.",
+    "should_trigger": false
+  },
+  {
+    "query": "Reproduce this invite failure in our local app and write a regression test; the steps are attached.",
+    "should_trigger": false
+  },
+  {
+    "query": "Rewrite these five support replies to be clearer and more empathetic without changing their meaning.",
+    "should_trigger": false
+  },
+  {
+    "query": "Use our supplied survey CSV to summarize reported onboarding difficulty by plan and explain the sample limitations.",
+    "should_trigger": false
+  },
+  {
+    "query": "Generate fictional teacher personas and imagined complaints to brainstorm onboarding ideas; don't present them as research.",
+    "should_trigger": false
+  },
+  {
+    "query": "Review this supplied friction log for duplicate reports, stale claims, and unsupported resolved statuses. Do not search the web.",
+    "should_trigger": true
+  },
+  {
+    "query": "Create a friction log from the public onboarding reports you just assessed, retaining evidence and next checks.",
+    "should_trigger": true
+  },
+  {
+    "query": "Maintain our Jira sprint backlog and assign tasks to the team.",
+    "should_trigger": false
+  }
+]

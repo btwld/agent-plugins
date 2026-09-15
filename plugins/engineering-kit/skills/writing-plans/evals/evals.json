@@ -1,0 +1,42 @@
+{
+  "skill_name": "writing-plans",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Write an implementation plan only; do not modify files. The approved change adds idempotency to POST /payments in an existing NestJS service. The controller is src/payments/payments.controller.ts, business logic is in payments.service.ts, persistence uses Prisma, and tests use Jest. A repeated key must return the original result for 24 hours, and the key/result write must be atomic with payment creation. No plan output path has been specified.",
+      "expected_output": "An executable, dependency-aware plan that maps the approved behavior to the named files, schema and test changes, validation commands, and rollback concerns without inventing a plan directory or implementing the feature.",
+      "files": [],
+      "expectations": [
+        "The plan preserves the atomicity and 24-hour replay requirements and maps them to persistence, service, controller, and test work.",
+        "The plan orders schema or data-model work before code that depends on it and identifies focused Jest and Prisma validation.",
+        "The output does not claim to have modified files or impose an unrequested plan directory.",
+        "The plan is specific enough to execute but does not require a commit after every tiny action or force a subagent handoff."
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Please make an implementation plan for correcting one typo in the empty-state string and updating its existing snapshot test. The string and snapshot are already identified, and there are no behavior or API changes.",
+      "expected_output": "A very short plan or checklist that recognizes a formal multi-task implementation document would be disproportionate for this reversible two-file edit.",
+      "files": [],
+      "expectations": [
+        "The output keeps the plan to the smallest useful checklist rather than manufacturing multiple components or phases.",
+        "The output includes changing the string, updating the existing snapshot, and running the focused test.",
+        "The output does not require TDD ceremony, a new design document, a worktree, subagents, or multiple commits.",
+        "The output does not introduce unrelated refactoring or testing scope."
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "Write an implementation plan only for adding asynchronous CSV exports to a reporting service. Approved requirements: a user can request an export and retrieve only their own result; existing synchronous JSON reports remain unchanged; failed jobs expose a retriable failure state. Supplied repository facts: jobs use the existing queue abstraction in src/jobs; reporting routes live in src/reports; repository tests use pytest. Storage provider, retention period, and production rollout mechanism are not supplied, and live inspection is unavailable. Return a dependency-ordered plan with acceptance coverage and bounded discovery tasks; do not implement, create tickets, or deploy.",
+      "expected_output": "A scoped implementation plan preserving the supplied requirements and repository facts while identifying missing storage and rollout decisions without inventing contracts.",
+      "files": [],
+      "expectations": [
+        "Traces export ownership, job failure handling, and unchanged JSON reporting to implementation tasks and focused tests.",
+        "Orders shared job/result contracts before the workers and reporting routes that consume them.",
+        "Keeps storage, retention, and rollout choices unresolved or proposed rather than inventing providers or deadlines.",
+        "Uses supplied component paths and pytest without claiming repository inspection or fabricated exact file names.",
+        "Does not implement, publish, create tickets, or require a particular planning directory or orchestration system."
+      ]
+    }
+  ]
+}

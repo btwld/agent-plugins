@@ -1,0 +1,66 @@
+[
+  {
+    "query": "Give me exactly three list-only ideas to reduce abandoned team invites. Admins cannot find Invite in Settings; keep the current backend and do not ask questions.",
+    "should_trigger": true
+  },
+  {
+    "query": "We plan an AI meeting summary product for five-person agencies. Stress-test the assumption that owners will pay without first trying it; suggest the cheapest useful check.",
+    "should_trigger": true
+  },
+  {
+    "query": "Explore why first-time project owners never invite teammates.",
+    "should_trigger": true
+  },
+  {
+    "query": "Suggest alternatives to adding another onboarding wizard.",
+    "should_trigger": true
+  },
+  {
+    "query": "Challenge our idea to match the competitor feature for feature.",
+    "should_trigger": true
+  },
+  {
+    "query": "Find a small product or process change for late approval requests.",
+    "should_trigger": true
+  },
+  {
+    "query": "Compare two strategic bets for a niche scheduling app.",
+    "should_trigger": true
+  },
+  {
+    "query": "Help me frame an uncertain activation problem before writing a spec.",
+    "should_trigger": true
+  },
+  {
+    "query": "Fix this SQL query syntax error.",
+    "should_trigger": false
+  },
+  {
+    "query": "Implement the already-approved API change in this repository.",
+    "should_trigger": false
+  },
+  {
+    "query": "Review the keyboard focus order of this dialog.",
+    "should_trigger": false
+  },
+  {
+    "query": "Choose an existing component token for this button.",
+    "should_trigger": false
+  },
+  {
+    "query": "Write one label for a Save Draft button.",
+    "should_trigger": false
+  },
+  {
+    "query": "Find all callers of deprecatedFunction in this repository.",
+    "should_trigger": false
+  },
+  {
+    "query": "Diagnose why my local test process crashes.",
+    "should_trigger": false
+  },
+  {
+    "query": "Explain how the Dart nullable type syntax works.",
+    "should_trigger": false
+  }
+]

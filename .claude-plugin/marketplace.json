@@ -1,0 +1,20 @@
+{
+  "name": "conceptadev",
+  "owner": {
+    "name": "Concepta",
+    "url": "https://github.com/conceptadev"
+  },
+  "plugins": [
+    {
+      "name": "product-kit",
+      "source": "./plugins/product-kit",
+      "description": "Product exploration, evidence synthesis, competitive and friction research, structured PRDs, and connected WBS planning."
+    },
+    {
+      "name": "engineering-kit",
+      "source": "./plugins/engineering-kit",
+      "description": "Engineering architecture, implementation planning, focused reviews, business rules, and web-app verification."
+    }
+  ],
+  "description": "Private Concepta plugins for product and engineering workflows."
+}

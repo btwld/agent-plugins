@@ -1,0 +1,82 @@
+[
+  {
+    "query": "Open http://localhost:5173 and verify the settings flow actually works.",
+    "should_trigger": true
+  },
+  {
+    "query": "Check this local app in Playwright, capture screenshots, and report console errors.",
+    "should_trigger": true
+  },
+  {
+    "query": "Verify the checkout flow actually works after my frontend changes.",
+    "should_trigger": true
+  },
+  {
+    "query": "Inspect the responsive layout at mobile and desktop widths and provide browser evidence.",
+    "should_trigger": true
+  },
+  {
+    "query": "Generate a regression test in the existing Playwright suite after exploring the real UI.",
+    "should_trigger": true
+  },
+  {
+    "query": "Debug why clicking Save does nothing in the browser and capture the failing request.",
+    "should_trigger": true
+  },
+  {
+    "query": "Open the staging URL and check network failures during login.",
+    "should_trigger": true
+  },
+  {
+    "query": "Check visible accessibility issues and keyboard flow for this page.",
+    "should_trigger": true
+  },
+  {
+    "query": "Three agents need to verify different signed-in flows in this local app at the same time; choose safe browser state and prove each flow works.",
+    "should_trigger": true
+  },
+  {
+    "query": "Use the state already open in my Chrome tab to reproduce this staging UI bug, then add a repository Playwright test for the fix.",
+    "should_trigger": true
+  },
+  {
+    "query": "Review this React component for bugs without running the app.",
+    "should_trigger": false
+  },
+  {
+    "query": "Verify this backend API function handles nulls correctly.",
+    "should_trigger": false
+  },
+  {
+    "query": "Run unit tests only; no browser or UI is involved.",
+    "should_trigger": false
+  },
+  {
+    "query": "Explain how Playwright locators work and show a short example.",
+    "should_trigger": false
+  },
+  {
+    "query": "Create Flutter integration tests for this mobile screen.",
+    "should_trigger": false
+  },
+  {
+    "query": "Configure Chrome DevTools MCP globally for Cursor and Claude, but do not test an application yet.",
+    "should_trigger": false
+  },
+  {
+    "query": "My Mac is low on space; inspect and clean stale Chrome code-sign clones, and no web app needs verification.",
+    "should_trigger": false
+  },
+  {
+    "query": "Open several competitor websites and summarize their pricing plans for my research notes.",
+    "should_trigger": false
+  },
+  {
+    "query": "Install Playwright and download every supported browser for a future project; there is no app to test yet.",
+    "should_trigger": false
+  },
+  {
+    "query": "Use my logged-in Chrome tab to submit this reimbursement form for me.",
+    "should_trigger": false
+  }
+]

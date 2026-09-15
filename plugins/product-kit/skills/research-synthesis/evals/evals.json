@@ -1,0 +1,27 @@
+{
+  "skill_name": "research-synthesis",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Synthesize the supplied research fixture into one next product action in under 500 words. Do not ask follow-up questions. Preserve contradictory evidence and distinguish duplicate records, synthetic personas, and measurement changes.",
+      "expected_output": "A scoped, evidence-backed response following the request.",
+      "files": [
+        "evals/files/invite-study.md"
+      ],
+      "expectations": [
+        "Preserves contradictory evidence and does not count duplicate or synthetic records as independent participants.",
+        "Avoids unsupported prevalence or causal claims and recommends a bounded next action."
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "From these interviews, report only supported findings: P1 says export is slow; P2 says export is fast; P3 has never exported. One support ticket is a duplicate of P1. Can we claim most customers need faster exports? Recommend the next check.",
+      "expected_output": "A scoped, evidence-backed response following the request.",
+      "files": [],
+      "expectations": [
+        "Preserves contradictory evidence and does not count duplicate or synthetic records as independent participants.",
+        "Avoids unsupported prevalence or causal claims and recommends a bounded next action."
+      ]
+    }
+  ]
+}

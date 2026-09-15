@@ -1,0 +1,42 @@
+{
+  "skill_name": "architecture",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Create an architecture decision for our event bus. We are already on AWS, peak at about 5,000 events per second, require ordering only within one customer, have three engineers, no Kafka operations experience, and need to ship in eight weeks. Compare Kafka and SQS and recommend one.",
+      "expected_output": "A decision-ready ADR that recommends an option from the stated constraints, makes the material trade-offs and consequences explicit, and identifies assumptions that could change the decision.",
+      "files": [],
+      "expectations": [
+        "The output makes one clear recommendation and ties it to the eight-week schedule, team experience, AWS environment, throughput, and per-customer ordering requirement.",
+        "The output compares Kafka and SQS on operational burden, ordering semantics, throughput, and future flexibility without presenting unverified prices, quotas, throughput ceilings, retention periods, or vendor capabilities as current facts; an uninspected documentation URL does not count as verification.",
+        "The output states material consequences, risks, and at least one assumption or threshold that would justify revisiting the decision.",
+        "The output does not mention unavailable connector placeholders or require a connected knowledge base or project tracker.",
+        "The output does not invent an author, decider, email address, or approval authority that the prompt did not provide."
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Evaluate this proposed design without turning it into a full rewrite: our small billing product has an API service, a separate worker, Postgres, and Redis-backed jobs. The proposal adds a second database solely for reporting. We need daily reports, can tolerate data being one hour old, and have one backend team. Tell me whether the added database is justified and what evidence is missing.",
+      "expected_output": "A focused evaluation of the proposed reporting database that separates observed constraints from assumptions, gives a verdict, and names evidence needed before committing to the added component.",
+      "files": [],
+      "expectations": [
+        "The output evaluates the proposed second database rather than automatically producing a blank ADR template or redesigning the entire billing system.",
+        "The output distinguishes stated facts from missing evidence such as reporting workload, query impact, data volume, or operational ownership.",
+        "The output gives a clear provisional verdict and explains what new evidence would reverse it.",
+        "The response is proportional to the focused decision and avoids unrelated implementation tasks."
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "For a single-process internal admin tool used by ten people, should we use SQLite or provision Postgres? Writes are low-volume, nightly file backup is acceptable, and we expect the tool to remain internal for at least a year. Give me the smallest useful architecture decision.",
+      "expected_output": "A concise, decision-ready recommendation sized to a low-risk internal tool, including the few conditions that would trigger reconsideration.",
+      "files": [],
+      "expectations": [
+        "The output recommends one option using the stated concurrency, operational, backup, and time-horizon constraints.",
+        "The output remains concise and does not pad the answer with a full enterprise ADR ceremony.",
+        "The output names concrete change conditions that would justify moving to the other option.",
+        "The output does not invent additional services, migration projects, or requirements."
+      ]
+    }
+  ]
+}

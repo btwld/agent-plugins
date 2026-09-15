@@ -1,0 +1,63 @@
+{
+  "skill_name": "reference-implementation",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Create a reference implementation for merging intervals. It should be canonical, easy to audit, and include tests for edge cases.",
+      "expected_output": "Uses a compact semantic contract, one-owner rule mapping, behavior-first tests, and avoids fake abstractions or ceremonial artifacts.",
+      "files": [],
+      "expectations": [
+        "The answer defines interval semantics and boundary behavior before implementation details.",
+        "Important semantic rules have one authoritative owner; any repeated enforcement is deliberate, traceable, and tested for agreement.",
+        "The implementation avoids abstractions that only add shape.",
+        "Does not require a canvas or phase breakdown when the implementation is already easy to reason about directly.",
+        "Tests cover golden examples, edge cases, and ordering/tie behavior.",
+        "The final audit checks semantic traceability and change safety."
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Audit the attached parser and behavior tests and decide whether it deserves to be the reference implementation. Cite file and line evidence.",
+      "expected_output": "A fixture-backed audit that checks semantic clarity, authoritative rule ownership, traceability, tests, and abstraction rent.",
+      "files": [
+        "evals/files/reference_parser.dart",
+        "evals/files/reference_parser_test.dart"
+      ],
+      "expectations": [
+        "Evaluates correctness and distinguishes an authoritative rule definition from deliberate enforcement at separate boundaries.",
+        "Flags hidden assumptions and missing behavior tests.",
+        "Rejects reference status if evidence is insufficient.",
+        "Provides concrete remediation only for evidence-backed gaps."
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "Compare the attached before and after parser implementations and their tests for hidden semantic drift. Cite the exact evidence.",
+      "expected_output": "A fixture-backed semantic-drift review comparing behavior rules rather than only code shape.",
+      "files": [
+        "evals/files/parser_before.dart",
+        "evals/files/parser_after.dart",
+        "evals/files/parser_test.dart"
+      ],
+      "expectations": [
+        "Compares new behavior against named reference rules.",
+        "Flags drift even if tests still pass superficially.",
+        "Distinguishes acceptable implementation changes from semantic changes.",
+        "Recommends targeted tests for drift cases."
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "Audit a canonical Flutter renderer refactor that now follows this path: assured JSON map -> map-backed extension-type view -> field-for-field presentation object -> one-use build helper -> widget. The tests pass and the wire behavior is unchanged. Decide whether this deserves to be the reference implementation.",
+      "expected_output": "A reference-quality audit that traces the complete implementation path and requires each representation and call hop to own distinct meaning.",
+      "files": [],
+      "expectations": [
+        "Preserves the assurance boundary and behavior-level tests rather than optimizing only for line count.",
+        "Traces representative callers to the widget instead of reviewing each declaration in isolation.",
+        "Flags a same-shape conversion or forwarding helper when it owns no semantics, invariant, ownership, lifecycle, or authority.",
+        "Treats a single caller as inspection evidence rather than an automatic deletion rule.",
+        "Separates implementation-shape drift from wire or behavioral drift."
+      ]
+    }
+  ]
+}

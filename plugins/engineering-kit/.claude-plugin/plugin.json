@@ -1,0 +1,11 @@
+{
+  "name": "engineering-kit",
+  "version": "0.1.1",
+  "description": "Engineering architecture, implementation planning, focused reviews, business rules, and web-app verification.",
+  "author": {
+    "name": "Concepta"
+  },
+  "license": "BSD-3-Clause AND MIT AND Apache-2.0",
+  "repository": "https://github.com/conceptadev/agent-plugins",
+  "skills": "./skills/"
+}

@@ -1,0 +1,10 @@
+{
+  "name": "product-kit",
+  "version": "0.3.2",
+  "description": "Product exploration, evidence synthesis, competitive and friction research, structured PRDs, and connected WBS planning.",
+  "author": {
+    "name": "Concepta"
+  },
+  "repository": "https://github.com/conceptadev/agent-plugins",
+  "skills": "./skills/"
+}

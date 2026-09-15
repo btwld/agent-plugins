@@ -1,0 +1,54 @@
+{
+  "skill_name": "ux-friction-research",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Evaluate this tiny simulated public-source search for fictional Clipnest, for solo editors asking whether export trouble merits a current check. Do not browse: these are fixture excerpts standing in for inspected pages, not a live search. As of 2026-09-12: https://example.test/clipnest/community/11 (2026-09-08), reporter Ana, desktop 2.1: 'My export stalls at 99%; restarting let it finish.' https://example.test/clipnest/mirror/11 (2026-09-09) republishes Ana's same post verbatim. https://example.test/clipnest/docs/export (2026-09-10) says export is supported, with no reliability claim. Give a finding and next check in under 150 words.",
+      "expected_output": "A scoped, linked finding based on one independent report, with no claim of live browsing, prevalence, or reproduction.",
+      "files": [],
+      "expectations": [
+        "Treats the mirror as a duplicate and identifies one independent reporter.",
+        "Links the original report and distinguishes supported export capability from reliability.",
+        "Proposes a bounded current export check without claiming prevalence or reproduction.",
+        "Makes clear the answer is based on simulated supplied source excerpts rather than a live search."
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Prepare a concise research finding for fictional Teamboard mobile admins deciding whether to prioritize invite-flow work. This is a simulated public-source research exercise; do not browse. Treat these as inspected fixture pages as of 2026-09-12: https://example.test/t/1 dated 2026-03-02 reports Android 3.0 invite button hidden by keyboard, blocking team setup. https://example.test/t/releases dated 2026-07-01 says Android 3.2 fixed that keyboard overlap. https://example.test/t/2 dated 2026-09-04 reports Android 3.2 invites work after closing the keyboard; reporter plan unknown. https://example.test/t/3 dated 2026-09-05 says iOS 3.2 setup worked without trouble. https://example.test/t/4 dated 2026-09-06, a mobile admin on Starter, complains extra seats cost too much but says invites worked. Rank supported issues and recommend the next decision within 220 words.",
+      "expected_output": "A dated, source-linked assessment distinguishing historical and potentially current friction, contrary experiences, platform differences and pricing dissatisfaction.",
+      "files": [],
+      "expectations": [
+        "Does not present the March report as proof of a current defect after the documented fix.",
+        "Preserves the September Android workaround and iOS success without claiming universal failure or full resolution.",
+        "Separates pricing dissatisfaction from invite usability and notes platform or plan uncertainty.",
+        "Recommends bounded Android 3.2 verification rather than asserting root cause or automatically rebuilding the invite flow.",
+        "Uses source links and identifies the fixture-based scope."
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "Research public onboarding friction for fictional Newleaf Notes among teachers. For this boundary test, browsing is unavailable and no inspected public pages are supplied. The only item is a search-result snippet saying 'everyone hates setup' with no accessible URL, date, identifiable author, or product version. I need the top five current problems with percentages. Give the most useful honest response in under 150 words; do not invent sources or launch a study.",
+      "expected_output": "An explicit evidence limitation and small next step, refusing unsupported counts, current claims and percentages without abandoning useful guidance.",
+      "files": [],
+      "expectations": [
+        "Does not invent five findings, sources, percentages, or current product behavior.",
+        "Explains that an uninspectable snippet cannot support attributed current findings or population prevalence.",
+        "States browsing is unavailable and proposes a bounded source-gathering next step.",
+        "Does not claim no friction exists or that research or a user study was completed."
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "Review this fictional supplied friction log only; do not browse or change records. FR-01: export stalls, one report by Ana dated 2026-09-01, desktop 2.1, not reproduced, source S1. FR-02: the same Ana report mirrored on S2, counted as another user; no independent evidence. FR-03: onboarding overlap marked resolved solely from vendor release notes; no retest, with a later customer workaround report S3. Owner and priority are unset. Return proposed corrections and next checks, not a PRD or tickets.",
+      "expected_output": "A supplied-log review preserving IDs, deduplicating evidence and separating a vendor fix claim from verified resolution, without new research or invented commitments.",
+      "files": [],
+      "expectations": [
+        "Preserves FR-01 and FR-02 identities while linking the duplicate to the retained finding; counts only one independent export reporter.",
+        "Does not call export failure reproduced or invent prevalence, owners, or severity scores.",
+        "Challenges FR-03 resolved status with the later report and recommends bounded verification without claiming it was performed.",
+        "Does not browse, modify source records, create approved requirements, or create tickets."
+      ]
+    }
+  ]
+}

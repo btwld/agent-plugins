@@ -1,0 +1,35 @@
+{
+  "name": "engineering-kit",
+  "version": "0.1.1",
+  "description": "Engineering architecture, implementation planning, focused reviews, business rules, and web-app verification.",
+  "author": {
+    "name": "Concepta"
+  },
+  "license": "BSD-3-Clause AND MIT AND Apache-2.0",
+  "keywords": [
+    "skills",
+    "codex",
+    "claude-code",
+    "engineering",
+    "architecture",
+    "planning"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Engineering Kit",
+    "shortDescription": "Architecture, implementation plans, reviews, and verification.",
+    "longDescription": "Engineering architecture, implementation planning, focused reviews, business rules, and web-app verification.",
+    "developerName": "Concepta",
+    "category": "Coding",
+    "capabilities": [
+      "Read",
+      "Write"
+    ],
+    "defaultPrompt": [
+      "Help me make and document an architecture decision.",
+      "Create an implementation plan for this approved specification.",
+      "Re-examine this existing solution from a clean sheet."
+    ]
+  },
+  "repository": "https://github.com/conceptadev/agent-plugins"
+}

@@ -1,0 +1,115 @@
+{
+  "project": {
+    "name": "Example project",
+    "subtitle": "Work breakdown and delivery review",
+    "status": "Illustrative example - not an approved project schedule",
+    "owner": "Unassigned",
+    "baseline": "Fictional example for template demonstration",
+    "start": "2026-10-05",
+    "end": "2026-11-30"
+  },
+  "stages": [
+    {"id": "review", "name": "Review", "color": "#0F8B8D"},
+    {"id": "decide", "name": "Decide", "color": "#3978C6"},
+    {"id": "agree", "name": "Agree example", "color": "#D99A19"},
+    {"id": "build", "name": "Build", "color": "#35ACBE"},
+    {"id": "verify", "name": "Verify", "color": "#8966BD"}
+  ],
+  "releases": [
+    {"id": "r1", "name": "Release 1", "start": "2026-10-05", "end": "2026-11-02"},
+    {"id": "r2", "name": "Release 2", "start": "2026-10-26", "end": "2026-11-30"}
+  ],
+  "groups": [
+    {"id": "1.0", "name": "Shared foundation"},
+    {"id": "2.0", "name": "Product delivery"},
+    {"id": "3.0", "name": "Validation and release"},
+    {"id": "4.0", "name": "Later optional and excluded scope"}
+  ],
+  "packages": [
+    {
+      "id": "1.1", "group": "1.0", "name": "Environments", "owner": "Platform team",
+      "deliverable": "A working build and deployment environment.",
+      "done": "Deploy a sample build and demonstrate recovery.",
+      "disposition": "Current", "release": "r1", "dependencies": [], "requirements": ["REQ-001"],
+      "stages": [
+        {"stage": "review", "start": "2026-10-05", "end": "2026-10-07"},
+        {"stage": "decide", "start": "2026-10-07", "end": "2026-10-08"},
+        {"stage": "agree", "start": "2026-10-08", "end": "2026-10-09"},
+        {"stage": "build", "start": "2026-10-09", "end": "2026-10-15"},
+        {"stage": "verify", "start": "2026-10-15", "end": "2026-10-19"}
+      ]
+    },
+    {
+      "id": "1.2", "group": "1.0", "name": "Identity", "owner": "Platform team",
+      "deliverable": "Role-based access for the example application.",
+      "done": "Approved role scenarios pass access checks.",
+      "disposition": "Current", "release": "r1", "dependencies": [], "requirements": ["REQ-002"],
+      "stages": [
+        {"stage": "review", "start": "2026-10-05", "end": "2026-10-08"},
+        {"stage": "decide", "start": "2026-10-08", "end": "2026-10-09"},
+        {"stage": "agree", "start": "2026-10-09", "end": "2026-10-12"},
+        {"stage": "build", "start": "2026-10-12", "end": "2026-10-22"},
+        {"stage": "verify", "start": "2026-10-22", "end": "2026-10-26"}
+      ]
+    },
+    {
+      "id": "2.1", "group": "2.0", "name": "Core workflow", "owner": "Product team",
+      "deliverable": "One complete operating workflow with retained history.",
+      "done": "The agreed end-to-end example passes with evidence retained.",
+      "disposition": "Current", "release": "r2", "dependencies": ["1.1", "1.2"], "requirements": ["REQ-003"],
+      "stages": [
+        {"stage": "review", "start": "2026-10-26", "end": "2026-10-28"},
+        {"stage": "decide", "start": "2026-10-28", "end": "2026-10-29"},
+        {"stage": "agree", "start": "2026-10-29", "end": "2026-11-02"},
+        {"stage": "build", "start": "2026-11-02", "end": "2026-11-09"},
+        {"stage": "verify", "start": "2026-11-09", "end": "2026-11-12"}
+      ]
+    },
+    {
+      "id": "2.2", "group": "2.0", "name": "Reporting", "owner": "Product team",
+      "deliverable": "An operational report using the agreed record definitions.",
+      "done": "Report values reconcile to the agreed sample records.",
+      "disposition": "Current", "release": "r2", "dependencies": ["1.2"], "requirements": ["REQ-004"],
+      "stages": [
+        {"stage": "review", "start": "2026-10-26", "end": "2026-10-29"},
+        {"stage": "agree", "start": "2026-10-29", "end": "2026-11-02"},
+        {"stage": "build", "start": "2026-11-02", "end": "2026-11-09"},
+        {"stage": "verify", "start": "2026-11-09", "end": "2026-11-12"}
+      ]
+    },
+    {
+      "id": "3.1", "group": "3.0", "name": "User acceptance testing", "owner": "Business reviewers",
+      "deliverable": "Reviewed acceptance scenarios and recorded results.",
+      "done": "Required scenarios pass or receive explicit recorded disposition.",
+      "disposition": "Current", "release": "r2", "dependencies": ["2.1", "2.2"], "requirements": ["REQ-005"],
+      "stages": [{"stage": "verify", "start": "2026-11-12", "end": "2026-11-23"}]
+    },
+    {
+      "id": "3.2", "group": "3.0", "name": "Launch readiness", "owner": "Release owner",
+      "deliverable": "A reviewed release and rollback decision.",
+      "done": "Acceptance evidence, support readiness, and rollback are reviewed.",
+      "disposition": "Current", "release": "r2", "dependencies": ["3.1"], "requirements": ["REQ-006"],
+      "stages": [{"stage": "verify", "start": "2026-11-23", "end": "2026-11-30"}]
+    },
+    {
+      "id": "4.1", "group": "4.0", "name": "Historical archive", "owner": "Unassigned",
+      "deliverable": "Potential later historical-record import.",
+      "done": "Scope and acceptance criteria must be agreed before scheduling.",
+      "disposition": "Deferred", "release": null, "dependencies": [], "requirements": ["REQ-007"], "stages": []
+    }
+  ],
+  "milestones": [
+    {"id": "G1", "name": "Foundation acceptance", "date": "2026-11-02", "release": "r1", "requires": ["1.1", "1.2"], "owner": "Release owner", "evidence": "Environment and identity checks pass.", "status": "Pending"},
+    {"id": "G2", "name": "UAT ready", "date": "2026-11-12", "release": "r2", "requires": ["2.1", "2.2"], "owner": "Business reviewers", "evidence": "Workflow and report verification is complete.", "status": "Pending"},
+    {"id": "G3", "name": "Release acceptance", "date": "2026-11-30", "release": "r2", "requires": ["3.1", "3.2"], "owner": "Release owner", "evidence": "Acceptance and operational readiness evidence is reviewed.", "status": "Pending"}
+  ],
+  "requirements": [
+    {"id": "REQ-001", "title": "Deployment environment", "statement": "The system shall support a repeatable deployment process.", "disposition": "Current", "source": "Fictional baseline section 1"},
+    {"id": "REQ-002", "title": "Role-based access", "statement": "The system shall enforce the agreed role permissions.", "disposition": "Current", "source": "Fictional baseline section 2"},
+    {"id": "REQ-003", "title": "Operating workflow", "statement": "The system shall retain the history of the operating workflow.", "disposition": "Current", "source": "Fictional baseline section 3"},
+    {"id": "REQ-004", "title": "Operational report", "statement": "The system shall report the agreed operating totals.", "disposition": "Current", "source": "Fictional baseline section 4"},
+    {"id": "REQ-005", "title": "Acceptance evidence", "statement": "The release shall retain acceptance scenario results.", "disposition": "Current", "source": "Fictional baseline section 5"},
+    {"id": "REQ-006", "title": "Rollback readiness", "statement": "The release shall include a reviewed rollback procedure.", "disposition": "Current", "source": "Fictional baseline section 6"},
+    {"id": "REQ-007", "title": "Historical import", "statement": "A later scope may import historical records after explicit approval.", "disposition": "Deferred", "source": "Fictional baseline section 7"}
+  ]
+}

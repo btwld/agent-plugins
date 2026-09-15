@@ -1,0 +1,25 @@
+{
+  "skill_name": "product-brainstorming",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Give me exactly three list-only ideas to reduce abandoned team invites. Admins cannot find Invite in Settings; keep the current backend and do not ask questions.",
+      "expected_output": "A scoped, evidence-backed response following the request.",
+      "files": [],
+      "expectations": [
+        "Follows the requested count and output mode without unnecessary intake.",
+        "Distinguishes product hypotheses from user evidence."
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "We plan an AI meeting summary product for five-person agencies. Stress-test the assumption that owners will pay without first trying it; suggest the cheapest useful check.",
+      "expected_output": "A scoped, evidence-backed response following the request.",
+      "files": [],
+      "expectations": [
+        "Follows the requested count and output mode without unnecessary intake.",
+        "Distinguishes product hypotheses from user evidence."
+      ]
+    }
+  ]
+}

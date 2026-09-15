@@ -1,0 +1,27 @@
+{
+  "skill_name": "competitive-brief",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Using only these supplied fictional vendor facts, compare A and B for 20 seats and 100000 monthly events over one year; no web access. A: $10 per seat/month, includes 50000 events/account/month, then $2 per 1000 extra. B: $150/account/month including 10 seats and 100000 events; extra seats $8/month each. No discounts, taxes or other fees. Both support the required API according to current vendor docs; neither has been tested. Recommend the cheaper fit in at most 180 words, show math and flag quality uncertainty.",
+      "expected_output": "A correct, scoped response meeting the stated expectations.",
+      "files": [],
+      "expectations": [
+        "Computes A $300/month $3600/year; B $230/month $2760/year.",
+        "Recommends B on supplied price assumptions, $840/year cheaper.",
+        "Separates vendor API claims from tested quality and does not browse or invent facts."
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Write a 150-word build-versus-partner brief from only these facts. Our hard requirement is EU-only processing. Partner A docs promise EU storage but say nothing about processing location. Partner B contract explicitly guarantees EU-only processing; its price is unknown. Building is estimated internally at 6 engineer-months, with no hosting estimate. Recommend the next decision without inventing prices, absence of features, or a numerical ranking.",
+      "expected_output": "A correct, scoped response meeting the stated expectations.",
+      "files": [],
+      "expectations": [
+        "Does not equate EU storage with EU-only processing.",
+        "Treats B cost and A processing as unknown rather than unsupported certainty.",
+        "Gives a bounded next decision and fair comparison without invented totals."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+[
+  {
+    "query": "this PR from copilot has comments on every other line and try/catch wrapped around everything, can you audit it for ai slop before I review it properly? branch is feature/inventory-sync",
+    "should_trigger": true
+  },
+  {
+    "query": "We're open-sourcing lib/ and test/ next month. Go through them for LLM-generated cruft: restating comments, Manager/Helper classes with one caller, tests that can't fail. Findings only, no edits.",
+    "should_trigger": true
+  },
+  {
+    "query": "are these tests in packages/billing/__tests__ actually testing anything? half of them look generated and just assert not.toThrow()",
+    "should_trigger": true
+  },
+  {
+    "query": "the intern used chatgpt for src/reports/. how much of it is over-engineered or hollow? i want a list with file:line and what to delete, i'll do the edits myself",
+    "should_trigger": true
+  },
+  {
+    "query": "Review the diff main...feature/checkout for AI tells: 'Note:' comments, defensive null checks on non-nullable types, impossible catches. Only flag lines the PR touched.",
+    "should_trigger": true
+  },
+  {
+    "query": "docs/ is full of 'In this section we will explore the powerful, seamless API' filler after the last doc generation pass. audit the markdown for slop and tell me what to cut",
+    "should_trigger": true
+  },
+  {
+    "query": "run the ai slop review on the whole repo, findings report only. 60k lines of dart, analysis_options is strict, don't flag stuff the analyzer already catches",
+    "should_trigger": true
+  },
+  {
+    "query": "Our PR bot says these 8 comments in rate_limiter.ts are AI filler and must go. Second opinion? Some of them explain ordering constraints and I don't want them deleted by pattern matching.",
+    "should_trigger": true
+  },
+  {
+    "query": "is src/payments over-abstracted? there's a PriceStrategyFactory that returns the only strategy, a DataHelper, and every method has a 3-line jsdoc that repeats the signature. flag what a careful engineer would rip out",
+    "should_trigger": true
+  },
+  {
+    "query": "three months of heavy claude code usage on services/api and reviewers say it reads like slop now. give me an evidence-backed cleanup list ranked by severity, and be honest about what's fine",
+    "should_trigger": true
+  },
+  {
+    "query": "Judge whether commit 4a91d2e is worth keeping. It changes parseLimit from throwing on negatives to clamping, and the test expectation moved with it. KEEP or REJECT?",
+    "should_trigger": false
+  },
+  {
+    "query": "Review this PR for bugs, security issues, and missing edge cases before merge. I don't care about comment style.",
+    "should_trigger": false
+  },
+  {
+    "query": "$code-simplifier on OrderService.place, keep behavior identical",
+    "should_trigger": false
+  },
+  {
+    "query": "Rewrite the README so it sounds less like ChatGPT wrote it. Keep the same sections, just make the prose human.",
+    "should_trigger": false
+  },
+  {
+    "query": "Delete every comment in src/legacy/ and remove the unused helper classes, then run the tests and commit.",
+    "should_trigger": false
+  },
+  {
+    "query": "Can you tell whether this file was written by an AI or a human? I need to report authorship for a compliance audit.",
+    "should_trigger": false
+  },
+  {
+    "query": "Set up ESLint rules to ban console.log, empty catch blocks, and unused vars across the monorepo.",
+    "should_trigger": false
+  },
+  {
+    "query": "Now that the notification service is built, reconsider whether it should exist at all and propose the simpler design you'd build today.",
+    "should_trigger": false
+  },
+  {
+    "query": "How much did Claude Code spend on the checkout feature last month? Break it down by branch.",
+    "should_trigger": false
+  },
+  {
+    "query": "The importer test passes locally but fails on CI with a timeout. Find the root cause.",
+    "should_trigger": false
+  }
+]

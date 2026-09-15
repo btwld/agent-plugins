@@ -1,0 +1,7 @@
+Use only the supplied evidence. Recommend one next product action about a team-invite flow. Keep the report under 500 words and do not ask follow-up questions. Separate observations from interpretation; retain contradictory evidence and avoid treating duplicates or synthetic personas as participants.
+
+Study, Aug 20-22: four convenience-sampled admins from existing customers, P1-P4. P1 failed to find Invite in settings; session observer saw two wrong clicks; P1 said exactly "I expected Invite beside Members." P2 found Invite immediately and said exactly "Settings was where I looked first." P3 found it after 40 seconds and said exactly "I use this once a quarter." P4 found Invite but an expired invite link prevented completion. P4 said exactly "The link was already expired." P1 also opened support ticket T7 describing the same session; this is not another participant. Ticket T8 has an unknown author reporting a failed invite and might be P4; identity cannot be resolved. There are no data on all-user prevalence or engineering effort.
+
+Product analytics: week before, 80 completions / 100 starts; week after, 54 / 60. Starting-event instrumentation changed between weeks, with no reconciliation yet. A navigation redesign launched during the same week, but there was no randomization.
+
+Separately a model generated 20 synthetic personas; 18 predicted they would prefer Invite beside Members. These were never interviewed. The product lead favors moving Invite and asks whether the evidence proves it will improve conversion.

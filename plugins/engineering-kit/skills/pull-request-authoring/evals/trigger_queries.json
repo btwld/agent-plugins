@@ -1,0 +1,82 @@
+[
+  {
+    "query": "The branch is already pushed. Open a draft PR against main and write a concise description from the full diff and the tests we ran.",
+    "should_trigger": true
+  },
+  {
+    "query": "Draft a title and PR body for `fix/session-expiry-231`; it fully resolves #231, but don't create anything yet.",
+    "should_trigger": true
+  },
+  {
+    "query": "Update the current PR description so it explains the behavior change and actual validation without mentioning any coding assistant.",
+    "should_trigger": true
+  },
+  {
+    "query": "Create the pull request from my pushed branch. There's already a repository template—fill it concisely and omit irrelevant optional sections.",
+    "should_trigger": true
+  },
+  {
+    "query": "Write the PR for this responsive settings change and include the before/after screenshot URLs I supplied. There is no linked issue.",
+    "should_trigger": true
+  },
+  {
+    "query": "This checkout change is easiest to understand as a flow. Prepare a draft PR with the short demo video I recorded and keep it draft until the attachment is uploaded.",
+    "should_trigger": true
+  },
+  {
+    "query": "My branch is on origin and CI passed. Please open a ready PR with a short summary, test evidence, and `Closes #804` because this fully fixes that issue.",
+    "should_trigger": true
+  },
+  {
+    "query": "The current PR body is a huge file-by-file changelog. Rewrite it into a concise explanation of outcome, impact, and validation.",
+    "should_trigger": true
+  },
+  {
+    "query": "Before creating a duplicate, check whether this pushed head branch already has a PR and update its title and body if it does.",
+    "should_trigger": true
+  },
+  {
+    "query": "Give me the exact Markdown description for this PR in a fenced block; use only the issue number and test results I provided.",
+    "should_trigger": true
+  },
+  {
+    "query": "Stage everything, commit it, push the new branch, and open a draft pull request.",
+    "should_trigger": false
+  },
+  {
+    "query": "Review PR #88 for correctness bugs, regressions, and missing tests before merge.",
+    "should_trigger": false
+  },
+  {
+    "query": "The GitHub Actions checks on this PR are red. Find the failing job and fix the CI problem.",
+    "should_trigger": false
+  },
+  {
+    "query": "Address the reviewer's inline comments on PR #52 and push the requested code changes.",
+    "should_trigger": false
+  },
+  {
+    "query": "Summarize the open pull requests in this repository and tell me which ones need attention.",
+    "should_trigger": false
+  },
+  {
+    "query": "Search all GitHub issues for something that might be related to my current branch.",
+    "should_trigger": false
+  },
+  {
+    "query": "Run the web app and capture before-and-after screenshots of the settings page; don't write a PR yet.",
+    "should_trigger": false
+  },
+  {
+    "query": "Create a bug report issue with reproduction steps and environment details.",
+    "should_trigger": false
+  },
+  {
+    "query": "Write release notes from the last ten merged PRs for version 2.4.0.",
+    "should_trigger": false
+  },
+  {
+    "query": "Explain what changed in PR #104 for a non-technical stakeholder, but don't edit the PR.",
+    "should_trigger": false
+  }
+]

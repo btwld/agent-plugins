@@ -1,0 +1,66 @@
+[
+  {
+    "query": "Synthesize the supplied research fixture into one next product action in under 500 words. Do not ask follow-up questions. Preserve contradictory evidence and distinguish duplicate records, synthetic personas, and measurement changes.",
+    "should_trigger": true
+  },
+  {
+    "query": "From these interviews, report only supported findings: P1 says export is slow; P2 says export is fast; P3 has never exported. One support ticket is a duplicate of P1. Can we claim most customers need faster exports? Recommend the next check.",
+    "should_trigger": true
+  },
+  {
+    "query": "Find themes across customer interview notes.",
+    "should_trigger": true
+  },
+  {
+    "query": "Summarize conflicting usability observations into a product decision.",
+    "should_trigger": true
+  },
+  {
+    "query": "Combine survey comments and support evidence without double-counting users.",
+    "should_trigger": true
+  },
+  {
+    "query": "Identify evidence-backed opportunities from these session transcripts.",
+    "should_trigger": true
+  },
+  {
+    "query": "Distill onboarding feedback and explain confidence limits.",
+    "should_trigger": true
+  },
+  {
+    "query": "Compare qualitative findings with the supplied cohort metrics.",
+    "should_trigger": true
+  },
+  {
+    "query": "Fix this SQL query syntax error.",
+    "should_trigger": false
+  },
+  {
+    "query": "Implement the already-approved API change in this repository.",
+    "should_trigger": false
+  },
+  {
+    "query": "Plan an interview study; there are no collected observations to analyze.",
+    "should_trigger": false
+  },
+  {
+    "query": "Choose an existing component token for this button.",
+    "should_trigger": false
+  },
+  {
+    "query": "Write one label for a Save Draft button.",
+    "should_trigger": false
+  },
+  {
+    "query": "Find all callers of deprecatedFunction in this repository.",
+    "should_trigger": false
+  },
+  {
+    "query": "Diagnose why my local test process crashes.",
+    "should_trigger": false
+  },
+  {
+    "query": "Explain how the Dart nullable type syntax works.",
+    "should_trigger": false
+  }
+]

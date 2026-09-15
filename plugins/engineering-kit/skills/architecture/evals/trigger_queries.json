@@ -1,0 +1,82 @@
+[
+  {
+    "query": "Choose between SQS and Kafka for our event pipeline. Record the decision and the conditions that would change it.",
+    "should_trigger": true
+  },
+  {
+    "query": "Write an ADR for whether customer data should belong to the billing service or the account service.",
+    "should_trigger": true
+  },
+  {
+    "query": "Evaluate our proposal to add a second database for analytics. Give one recommendation with the accepted trade-off.",
+    "should_trigger": true
+  },
+  {
+    "query": "We must choose REST or gRPC between two internal services. Latency and team experience are the main constraints.",
+    "should_trigger": true
+  },
+  {
+    "query": "Should this capability remain in the monolith or become a service? Document the boundary decision.",
+    "should_trigger": true
+  },
+  {
+    "query": "Compare DynamoDB and Postgres for this workload. State the evidence we still need before the final decision.",
+    "should_trigger": true
+  },
+  {
+    "query": "Record why we selected an event-driven boundary for order fulfillment and when we should reconsider it.",
+    "should_trigger": true
+  },
+  {
+    "query": "Review this proposed cache architecture. I need a focused accept, reject, or revise decision.",
+    "should_trigger": true
+  },
+  {
+    "query": "Choose where encryption keys should be managed across these two components. The decision will affect every client.",
+    "should_trigger": true
+  },
+  {
+    "query": "Create the smallest useful technical decision for SQLite versus Postgres in our internal tool.",
+    "should_trigger": true
+  },
+  {
+    "query": "Review this pull request for correctness, security defects, and missing regression tests.",
+    "should_trigger": false
+  },
+  {
+    "query": "We already built this plugin registry. Reconsider whether the registry should exist at all.",
+    "should_trigger": false
+  },
+  {
+    "query": "Design the complete notification platform, including APIs, storage, queues, scaling, and operational ownership.",
+    "should_trigger": false
+  },
+  {
+    "query": "Implement the approved database choice and run the existing migration tests.",
+    "should_trigger": false
+  },
+  {
+    "query": "Write a product requirements document for a new customer notification feature.",
+    "should_trigger": false
+  },
+  {
+    "query": "The service started returning 500 errors after deployment. Find the root cause.",
+    "should_trigger": false
+  },
+  {
+    "query": "Create a test strategy for the payment migration. Include unit, integration, and rollback coverage.",
+    "should_trigger": false
+  },
+  {
+    "query": "Change this one configuration value and run the focused test.",
+    "should_trigger": false
+  },
+  {
+    "query": "Summarize this existing architecture for a stakeholder update. Do not evaluate or change it.",
+    "should_trigger": false
+  },
+  {
+    "query": "Create an implementation plan for the approved API migration. The architecture decision is complete.",
+    "should_trigger": false
+  }
+]

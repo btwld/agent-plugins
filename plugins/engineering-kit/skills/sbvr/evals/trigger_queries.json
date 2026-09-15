@@ -1,0 +1,82 @@
+[
+  {
+    "query": "Use the sbvr skill to formalize these lending requirements into vocabulary and business rules.",
+    "should_trigger": true
+  },
+  {
+    "query": "Audit this controlled vocabulary and business rules spec for threshold leakage.",
+    "should_trigger": true
+  },
+  {
+    "query": "Write a Zod schema for validating this API request body.",
+    "should_trigger": false
+  },
+  {
+    "query": "Proofread this business rules essay for grammar.",
+    "should_trigger": false
+  },
+  {
+    "query": "Create structured natural-language rules for refund eligibility with definitional and behavioral rules.",
+    "should_trigger": true
+  },
+  {
+    "query": "Update this business vocabulary and renumber rules after adding a new policy.",
+    "should_trigger": true
+  },
+  {
+    "query": "Produce YAML output for these SBVR terms and rules.",
+    "should_trigger": true
+  },
+  {
+    "query": "Review a controlled vocabulary document for fact type consistency.",
+    "should_trigger": true
+  },
+  {
+    "query": "Convert stakeholder requirements into SBVR-style obligations and necessities.",
+    "should_trigger": true
+  },
+  {
+    "query": "Validate this SBVR file and explain validator findings versus human-rule issues.",
+    "should_trigger": true
+  },
+  {
+    "query": "Split these business rules into modules without leaking numeric thresholds into prose.",
+    "should_trigger": true
+  },
+  {
+    "query": "Formalize eligibility rules using terms, fact types, and derivations.",
+    "should_trigger": true
+  },
+  {
+    "query": "Write database constraints for this table.",
+    "should_trigger": false
+  },
+  {
+    "query": "Generate OpenAPI validation rules.",
+    "should_trigger": false
+  },
+  {
+    "query": "Explain what business rules are in an essay.",
+    "should_trigger": false
+  },
+  {
+    "query": "Write a CEL policy expression.",
+    "should_trigger": false
+  },
+  {
+    "query": "Create TypeScript enums for these statuses only.",
+    "should_trigger": false
+  },
+  {
+    "query": "Review legal contract language for enforceability.",
+    "should_trigger": false
+  },
+  {
+    "query": "Refactor this validation service.",
+    "should_trigger": false
+  },
+  {
+    "query": "Summarize stakeholder interview notes.",
+    "should_trigger": false
+  }
+]

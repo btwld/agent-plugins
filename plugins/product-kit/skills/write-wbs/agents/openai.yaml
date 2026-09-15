@@ -1,0 +1,3 @@
+interface:
+  display_name: "Write WBS"
+  short_description: "Create linked work breakdowns and delivery reviews"
