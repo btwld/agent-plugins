@@ -1,0 +1,27 @@
+{
+  "skill_name": "ux-copy",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Return exactly one error message of at most 65 characters, nothing else. A payment failed; the cause is unknown. Users can retry. Do not blame the bank or card, or promise it will work.",
+      "expected_output": "A correct, scoped response meeting the stated expectations.",
+      "files": [],
+      "expectations": [
+        "Exactly one message and no explanation.",
+        "At most 65 characters.",
+        "States failure and available retry without fabricated cause or promise."
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Write only a confirmation title and two button labels. The user is removing 3 downloaded offline copies; the originals remain in cloud storage and can be downloaded again. Avoid saying permanent deletion.",
+      "expected_output": "A correct, scoped response meeting the stated expectations.",
+      "files": [],
+      "expectations": [
+        "Distinguishes offline copies from cloud originals.",
+        "No false permanent deletion claim.",
+        "Only the requested title and two labels."
+      ]
+    }
+  ]
+}

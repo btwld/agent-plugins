@@ -1,0 +1,27 @@
+{
+  "skill_name": "frontend-design",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "An existing account-settings page uses navy #14283F, Inter, 8px spacing, and native-looking controls. Redesign only the empty API-keys section for administrators who need to create their first key. Preserve the brand and all functionality. Give a concrete design in at most 120 words, no code. The known behavior is Create key, reveal it once, then show name and creation date. Do not invent features or performance claims.",
+      "expected_output": "A correct, scoped response meeting the stated expectations.",
+      "files": [],
+      "expectations": [
+        "Preserves supplied visual identity and operational task.",
+        "Explains hierarchy and useful state/action with no invented capabilities.",
+        "Returns at most 120 words without blocking approval."
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Give a brief visual direction for a new public library event page aimed at older readers. The brief explicitly requests warm cream, a serif heading, terracotta accents, and quiet rectangular cards. Keep the provided style; name layout, readable type and responsive/accessibility choices in at most 130 words. This is a direction proposal only.",
+      "expected_output": "A correct, scoped response meeting the stated expectations.",
+      "files": [],
+      "expectations": [
+        "Honors the explicitly requested palette, type and cards.",
+        "Addresses readable hierarchy and small-screen/access needs.",
+        "Does not demand a separate approval or implementation workflow."
+      ]
+    }
+  ]
+}

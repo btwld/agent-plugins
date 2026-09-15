@@ -1,0 +1,25 @@
+{
+  "skill_name": "user-research",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Plan a 20-minute usability session to learn whether admins can find Invite. We can recruit four existing customers this week. Supply neutral tasks and observable success criteria; do not promise population prevalence or conduct synthetic interviews.",
+      "expected_output": "A scoped, evidence-backed response following the request.",
+      "files": [],
+      "expectations": [
+        "Provides neutral tasks or questions suited to the research decision.",
+        "Does not promise population or causal conclusions from an unsuitable sample."
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "We want a causal claim about a checkout change, but have only interviews with five fans. Recommend a feasible study approach and the missing experiment inputs; do not invent a powered sample size.",
+      "expected_output": "A scoped, evidence-backed response following the request.",
+      "files": [],
+      "expectations": [
+        "Provides neutral tasks or questions suited to the research decision.",
+        "Does not promise population or causal conclusions from an unsuitable sample."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "name": "design-kit",
+  "version": "0.1.0",
+  "description": "Visual interface design, critique, UX copy, design systems, accessibility, and user research planning.",
+  "author": {
+    "name": "Concepta"
+  },
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Design Kit",
+    "shortDescription": "Interface design and research",
+    "longDescription": "Visual interface design, critique, UX copy, design systems, accessibility, and user research planning.",
+    "developerName": "Concepta",
+    "category": "Productivity",
+    "capabilities": [
+      "Read",
+      "Write"
+    ],
+    "defaultPrompt": [
+      "Design or critique an interface, refine its copy and components, or plan a user study."
+    ]
+  },
+  "license": "BSD-3-Clause AND Apache-2.0",
+  "repository": "https://github.com/conceptadev/agent-plugins"
+}

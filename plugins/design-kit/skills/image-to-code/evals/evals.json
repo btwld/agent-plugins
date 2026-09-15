@@ -1,0 +1,38 @@
+{
+  "skill_name": "image-to-code",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Plan a faithful implementation of a supplied 390px-wide settings screenshot in the existing Vue project. The visible image contains a title and a single Notifications toggle; toggle behavior is explicitly local demo state. No image or browser tool is available in this test. Give a concise scoped plan and evidence limits; no tools.",
+      "expected_output": "A scoped, evidence-grounded response satisfying the listed expectations.",
+      "files": [],
+      "expectations": [
+        "Preserves Vue and local demo scope.",
+        "Does not claim actual image inspection or rendered verification.",
+        "Does not add auth APIs or routes."
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "We selected a reference image for a desktop invoice table. Existing stack is React. Approved requirements: sort rows by amount and show a local filter; supplied logo must stay. Write a short implementation approach only, distinguishing reference facts from inferred mobile adaptation. No image is attached in this test and no tools are allowed.",
+      "expected_output": "A scoped, evidence-grounded response satisfying the listed expectations.",
+      "files": [],
+      "expectations": [
+        "Keeps React, logo and the two specified interactions.",
+        "Marks mobile adaptation as implementation choice.",
+        "Does not claim inspected pixels or completed fidelity."
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "The filename is luxury-checkout.png but the file is missing. Please report whether your implementation matches it. No browser capture or implementation image was supplied. Answer briefly without tools.",
+      "expected_output": "A scoped, evidence-grounded response satisfying the listed expectations.",
+      "files": [],
+      "expectations": [
+        "Cannot verify fidelity from a filename or absent artifacts.",
+        "Does not invent visual properties.",
+        "States the evidence needed."
+      ]
+    }
+  ]
+}

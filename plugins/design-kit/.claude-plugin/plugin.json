@@ -1,0 +1,11 @@
+{
+  "name": "design-kit",
+  "version": "0.1.0",
+  "description": "Visual interface design, critique, UX copy, design systems, accessibility, and user research planning.",
+  "author": {
+    "name": "Concepta"
+  },
+  "skills": "./skills/",
+  "license": "BSD-3-Clause AND Apache-2.0",
+  "repository": "https://github.com/conceptadev/agent-plugins"
+}

@@ -1,0 +1,70 @@
+[
+  {
+    "query": "Implement this selected screenshot in our React app.",
+    "should_trigger": true
+  },
+  {
+    "query": "Turn this approved mockup image into a responsive page.",
+    "should_trigger": true
+  },
+  {
+    "query": "Recreate the attached settings screen faithfully.",
+    "should_trigger": true
+  },
+  {
+    "query": "Build this component from the supplied image.",
+    "should_trigger": true
+  },
+  {
+    "query": "Translate this screenshot into Vue using our existing assets.",
+    "should_trigger": true
+  },
+  {
+    "query": "Implement the chosen visual concept without redesigning it.",
+    "should_trigger": true
+  },
+  {
+    "query": "Create a functional local prototype matching this PNG.",
+    "should_trigger": true
+  },
+  {
+    "query": "Use image-to-code for the approved desktop mockup.",
+    "should_trigger": true
+  },
+  {
+    "query": "Fix a backend database migration.",
+    "should_trigger": false
+  },
+  {
+    "query": "Write a product requirements document.",
+    "should_trigger": false
+  },
+  {
+    "query": "Review this pull request for security bugs.",
+    "should_trigger": false
+  },
+  {
+    "query": "Plan user interviews for next month.",
+    "should_trigger": false
+  },
+  {
+    "query": "Deploy this existing prototype.",
+    "should_trigger": false
+  },
+  {
+    "query": "Translate these error messages to French.",
+    "should_trigger": false
+  },
+  {
+    "query": "Explain the difference between these skill names without using them.",
+    "should_trigger": false
+  },
+  {
+    "query": "Run the API unit tests.",
+    "should_trigger": false
+  },
+  {
+    "query": "Design a new direction with no selected reference image.",
+    "should_trigger": false
+  }
+]

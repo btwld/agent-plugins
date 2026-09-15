@@ -1,0 +1,66 @@
+[
+  {
+    "query": "Critique this described checkout mockup in at most 150 words, feedback only. The primary Pay button looks identical to a Cancel link; total price appears below the fold after Pay; input labels disappear once typing starts. We have no screenshot, DOM, colors, or interactive access. Focus on usability, mark limits of evidence, and give prioritized practical changes.",
+    "should_trigger": true
+  },
+  {
+    "query": "A prototype test log says: 4 of 6 participants found Save, 2 tapped the similarly styled Reset first; Reset immediately clears a draft without recovery. Review only action hierarchy and error recovery. Use 3 concise bullets. Do not generalize these six people to all users.",
+    "should_trigger": true
+  },
+  {
+    "query": "Critique this onboarding flow, feedback only.",
+    "should_trigger": true
+  },
+  {
+    "query": "Review the visual hierarchy in this mockup.",
+    "should_trigger": true
+  },
+  {
+    "query": "Assess navigation clarity in the supplied prototype.",
+    "should_trigger": true
+  },
+  {
+    "query": "Tell me where this settings design confuses users.",
+    "should_trigger": true
+  },
+  {
+    "query": "Prioritize usability issues from these screenshots.",
+    "should_trigger": true
+  },
+  {
+    "query": "Review this screen against the supplied design system.",
+    "should_trigger": true
+  },
+  {
+    "query": "Build the approved landing page.",
+    "should_trigger": false
+  },
+  {
+    "query": "Write a product strategy brief.",
+    "should_trigger": false
+  },
+  {
+    "query": "Perform a WCAG criterion-based audit.",
+    "should_trigger": false
+  },
+  {
+    "query": "Create an interview recruitment plan.",
+    "should_trigger": false
+  },
+  {
+    "query": "Fix a runtime authentication bug.",
+    "should_trigger": false
+  },
+  {
+    "query": "Rewrite one button label only.",
+    "should_trigger": false
+  },
+  {
+    "query": "Document the Button component API.",
+    "should_trigger": false
+  },
+  {
+    "query": "Review this pull request for code defects.",
+    "should_trigger": false
+  }
+]

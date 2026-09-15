@@ -1,0 +1,70 @@
+[
+  {
+    "query": "Compare this implementation screenshot against the approved mockup.",
+    "should_trigger": true
+  },
+  {
+    "query": "Verify visual fidelity against the selected design.",
+    "should_trigger": true
+  },
+  {
+    "query": "Check whether the rendered page matches this reference.",
+    "should_trigger": true
+  },
+  {
+    "query": "Find spacing and typography differences between these two screens.",
+    "should_trigger": true
+  },
+  {
+    "query": "Recheck visual alignment after the CSS fixes.",
+    "should_trigger": true
+  },
+  {
+    "query": "Audit implementation fidelity at the reference viewport.",
+    "should_trigger": true
+  },
+  {
+    "query": "Verify the mobile layout against its approved screenshot.",
+    "should_trigger": true
+  },
+  {
+    "query": "Use design-verification to check the target and actual render.",
+    "should_trigger": true
+  },
+  {
+    "query": "Fix a backend database migration.",
+    "should_trigger": false
+  },
+  {
+    "query": "Write a product requirements document.",
+    "should_trigger": false
+  },
+  {
+    "query": "Review this pull request for security bugs.",
+    "should_trigger": false
+  },
+  {
+    "query": "Plan user interviews for next month.",
+    "should_trigger": false
+  },
+  {
+    "query": "Deploy this existing prototype.",
+    "should_trigger": false
+  },
+  {
+    "query": "Translate these error messages to French.",
+    "should_trigger": false
+  },
+  {
+    "query": "Explain the difference between these skill names without using them.",
+    "should_trigger": false
+  },
+  {
+    "query": "Run the API unit tests.",
+    "should_trigger": false
+  },
+  {
+    "query": "Critique whether this single wireframe is easy to use.",
+    "should_trigger": false
+  }
+]

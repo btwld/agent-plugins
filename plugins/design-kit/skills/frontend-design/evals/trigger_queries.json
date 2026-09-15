@@ -1,0 +1,66 @@
+[
+  {
+    "query": "An existing account-settings page uses navy #14283F, Inter, 8px spacing, and native-looking controls. Redesign only the empty API-keys section for administrators who need to create their first key. Preserve the brand and all functionality. Give a concrete design in at most 120 words, no code. The known behavior is Create key, reveal it once, then show name and creation date. Do not invent features or performance claims.",
+    "should_trigger": true
+  },
+  {
+    "query": "Give a brief visual direction for a new public library event page aimed at older readers. The brief explicitly requests warm cream, a serif heading, terracotta accents, and quiet rectangular cards. Keep the provided style; name layout, readable type and responsive/accessibility choices in at most 130 words. This is a direction proposal only.",
+    "should_trigger": true
+  },
+  {
+    "query": "Design a new library event page with a clear visual identity.",
+    "should_trigger": true
+  },
+  {
+    "query": "Redesign our pricing page around the supplied brand.",
+    "should_trigger": true
+  },
+  {
+    "query": "Improve the visual hierarchy of this dashboard implementation.",
+    "should_trigger": true
+  },
+  {
+    "query": "Create an intentional typography and layout direction for a portfolio.",
+    "should_trigger": true
+  },
+  {
+    "query": "Build the provided landing-page design with responsive behavior.",
+    "should_trigger": true
+  },
+  {
+    "query": "Refine this interface while preserving our tokens.",
+    "should_trigger": true
+  },
+  {
+    "query": "Fix a TypeScript nullability error without UI changes.",
+    "should_trigger": false
+  },
+  {
+    "query": "Review this UI mockup without implementing it.",
+    "should_trigger": false
+  },
+  {
+    "query": "Write one payment error message.",
+    "should_trigger": false
+  },
+  {
+    "query": "Plan a user interview study.",
+    "should_trigger": false
+  },
+  {
+    "query": "Write a product requirements document.",
+    "should_trigger": false
+  },
+  {
+    "query": "Run an accessibility conformance review only.",
+    "should_trigger": false
+  },
+  {
+    "query": "Implement backend pagination.",
+    "should_trigger": false
+  },
+  {
+    "query": "Change the database schema.",
+    "should_trigger": false
+  }
+]

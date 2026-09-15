@@ -1,0 +1,27 @@
+{
+  "skill_name": "design-critique",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Critique this described checkout mockup in at most 150 words, feedback only. The primary Pay button looks identical to a Cancel link; total price appears below the fold after Pay; input labels disappear once typing starts. We have no screenshot, DOM, colors, or interactive access. Focus on usability, mark limits of evidence, and give prioritized practical changes.",
+      "expected_output": "A correct, scoped response meeting the stated expectations.",
+      "files": [],
+      "expectations": [
+        "Prioritizes the payment/action and price clarity risks.",
+        "Does not claim measured contrast, tested keyboard behavior, or conformance.",
+        "Gives scoped feedback, not edits or forced research."
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "A prototype test log says: 4 of 6 participants found Save, 2 tapped the similarly styled Reset first; Reset immediately clears a draft without recovery. Review only action hierarchy and error recovery. Use 3 concise bullets. Do not generalize these six people to all users.",
+      "expected_output": "A correct, scoped response meeting the stated expectations.",
+      "files": [],
+      "expectations": [
+        "Identifies mistaken destructive action and recovery concern.",
+        "Links recommendations to observed test evidence.",
+        "Respects 3-bullet scope without population claims."
+      ]
+    }
+  ]
+}

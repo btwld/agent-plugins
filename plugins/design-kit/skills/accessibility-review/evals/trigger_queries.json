@@ -1,0 +1,66 @@
+[
+  {
+    "query": "For a WCAG 2.2 AA review, an isolated button has a rectangular 30 by 30 CSS pixel pointer target. Does the 44 by 44 criterion make it an AA failure? Distinguish the relevant criteria and limit the conclusion to target size.",
+    "should_trigger": true
+  },
+  {
+    "query": "We have only a screenshot and an automated scan with zero findings. Can we call the checkout WCAG conformant? Explain the missing evidence and priority manual checks without inventing test results.",
+    "should_trigger": true
+  },
+  {
+    "query": "Audit keyboard access and focus in a running dialog.",
+    "should_trigger": true
+  },
+  {
+    "query": "Review accessible names of these form controls.",
+    "should_trigger": true
+  },
+  {
+    "query": "Check text contrast using measured colors and font size.",
+    "should_trigger": true
+  },
+  {
+    "query": "Assess reflow barriers at a narrow viewport.",
+    "should_trigger": true
+  },
+  {
+    "query": "Evaluate screen-reader announcements after a form error.",
+    "should_trigger": true
+  },
+  {
+    "query": "Prioritize observed accessibility barriers in this user flow.",
+    "should_trigger": true
+  },
+  {
+    "query": "Write a PRD for team SSO from this customer brief.",
+    "should_trigger": false
+  },
+  {
+    "query": "Summarize four completed interviews into product findings.",
+    "should_trigger": false
+  },
+  {
+    "query": "Prepare a quarterly roadmap update from these priorities.",
+    "should_trigger": false
+  },
+  {
+    "query": "Review the authorization logic in this API diff.",
+    "should_trigger": false
+  },
+  {
+    "query": "Calculate paid conversion rates for these two cohorts.",
+    "should_trigger": false
+  },
+  {
+    "query": "Generate a weekly stakeholder status email.",
+    "should_trigger": false
+  },
+  {
+    "query": "Debug an intermittent database connection error.",
+    "should_trigger": false
+  },
+  {
+    "query": "Continue this agent session normally; no manual context handoff is needed.",
+    "should_trigger": false
+  }
+]

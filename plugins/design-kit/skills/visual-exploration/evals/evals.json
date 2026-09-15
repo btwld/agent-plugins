@@ -1,0 +1,38 @@
+{
+  "skill_name": "visual-exploration",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "A narrow mobile toolbar needs two text-only visual directions. Keep the existing navy palette, labels Save and Cancel, and no new actions. Describe hierarchy and layout tradeoffs in 120 words; no tools.",
+      "expected_output": "A scoped, evidence-grounded response satisfying the listed expectations.",
+      "files": [],
+      "expectations": [
+        "Exactly two directions, not a compulsory three.",
+        "Changes structure or emphasis while preserving labels and palette.",
+        "Does not generate images or implement code."
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "We need three concept directions for a clinic booking screen. Our brief says patients choose a date and appointment slot; no payment, ratings, or health claims. Image generation is unavailable in this test. Provide a concise text-only fallback explicitly labeled as such, using distinct layouts and respecting the feature scope.",
+      "expected_output": "A scoped, evidence-grounded response satisfying the listed expectations.",
+      "files": [],
+      "expectations": [
+        "Labels concepts as text-only and does not claim generated images.",
+        "Gives three meaningful structural alternatives.",
+        "Does not invent payment, ratings or medical claims."
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "Implement the already selected mockup exactly; do not generate more concepts. The mockup file is unavailable in this test. In under 100 words explain the next step; no tools.",
+      "expected_output": "A scoped, evidence-grounded response satisfying the listed expectations.",
+      "files": [],
+      "expectations": [
+        "Does not require another ideation or selection round.",
+        "Identifies the unavailable mockup as evidence needed for faithful implementation.",
+        "Does not claim work has been built."
+      ]
+    }
+  ]
+}

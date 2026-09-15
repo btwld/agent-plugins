@@ -1,0 +1,66 @@
+[
+  {
+    "query": "Return exactly one error message of at most 65 characters, nothing else. A payment failed; the cause is unknown. Users can retry. Do not blame the bank or card, or promise it will work.",
+    "should_trigger": true
+  },
+  {
+    "query": "Write only a confirmation title and two button labels. The user is removing 3 downloaded offline copies; the originals remain in cloud storage and can be downloaded again. Avoid saying permanent deletion.",
+    "should_trigger": true
+  },
+  {
+    "query": "Rewrite this empty-state message to explain how to start.",
+    "should_trigger": true
+  },
+  {
+    "query": "Name this CTA based on the confirmed action.",
+    "should_trigger": true
+  },
+  {
+    "query": "Review our confirmation wording for clarity.",
+    "should_trigger": true
+  },
+  {
+    "query": "Shorten these form errors to fit 80 characters.",
+    "should_trigger": true
+  },
+  {
+    "query": "Make the loading-state text accurate.",
+    "should_trigger": true
+  },
+  {
+    "query": "Align these onboarding labels with our terminology.",
+    "should_trigger": true
+  },
+  {
+    "query": "Write an investor update.",
+    "should_trigger": false
+  },
+  {
+    "query": "Draft a marketing campaign.",
+    "should_trigger": false
+  },
+  {
+    "query": "Fix form validation logic without wording changes.",
+    "should_trigger": false
+  },
+  {
+    "query": "Audit keyboard navigation.",
+    "should_trigger": false
+  },
+  {
+    "query": "Review spacing across the dashboard.",
+    "should_trigger": false
+  },
+  {
+    "query": "Compare competitor pricing.",
+    "should_trigger": false
+  },
+  {
+    "query": "Translate a long product article.",
+    "should_trigger": false
+  },
+  {
+    "query": "Write a full PRD.",
+    "should_trigger": false
+  }
+]

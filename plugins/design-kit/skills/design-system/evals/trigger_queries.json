@@ -1,0 +1,66 @@
+[
+  {
+    "query": "Audit this supplied component contract in at most 150 words; do not edit. tokens.ts defines space.md=16. Card uses padding:16px; its docs say spacing=space.md. Button docs promise disabled and loading, but the implementation only has disabled:boolean and onClick; no loading prop/state exists. The 1px border is intentionally literal. Name concrete discrepancies and unknowns without inventing APIs or a score.",
+    "should_trigger": true
+  },
+  {
+    "query": "Document the actual Badge component using only this evidence: props tone: info|success, default info; text:string required. Colors use status.info and status.success. It renders span with text, no event handlers. The Figma file separately shows warning but code has no warning variant. Produce a concise contract, identifying the mismatch; do not implement or propose extra variants.",
+    "should_trigger": true
+  },
+  {
+    "query": "Audit our component variants against their documentation.",
+    "should_trigger": true
+  },
+  {
+    "query": "Document the actual Button API and states.",
+    "should_trigger": true
+  },
+  {
+    "query": "Extend the existing token system for a supported dark theme.",
+    "should_trigger": true
+  },
+  {
+    "query": "Find inconsistent semantic tokens across these components.",
+    "should_trigger": true
+  },
+  {
+    "query": "Review a component proposal for fit with our system.",
+    "should_trigger": true
+  },
+  {
+    "query": "Document migration implications of this token rename.",
+    "should_trigger": true
+  },
+  {
+    "query": "Fix one padding value as requested without auditing the system.",
+    "should_trigger": false
+  },
+  {
+    "query": "Create a brand-new campaign visual concept.",
+    "should_trigger": false
+  },
+  {
+    "query": "Review an onboarding task flow.",
+    "should_trigger": false
+  },
+  {
+    "query": "Write an empty-state label.",
+    "should_trigger": false
+  },
+  {
+    "query": "Audit WCAG compliance.",
+    "should_trigger": false
+  },
+  {
+    "query": "Implement backend error handling.",
+    "should_trigger": false
+  },
+  {
+    "query": "Plan a usability study.",
+    "should_trigger": false
+  },
+  {
+    "query": "Generate a weekly stakeholder update.",
+    "should_trigger": false
+  }
+]

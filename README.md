@@ -9,6 +9,7 @@ repository; there is no upstream import, tracking, or merge workflow.
 | --- | --- | --- | --- |
 | [Product Kit](plugins/product-kit/README.md) | Research, requirements, PRDs, and delivery breakdowns | 6 | 0.3.2 |
 | [Engineering Kit](plugins/engineering-kit/README.md) | Technical decisions, implementation, reviews, and verification | 11 | 0.1.1 |
+| [Design Kit](plugins/design-kit/README.md) | Interface design, critique, accessibility, UX copy, and research planning | 10 | 0.1.0 |
 
 Product Kit owns the shared requirements, questions, and decisions. Engineering
 Kit turns settled scope into implementation work without creating a second
@@ -20,8 +21,7 @@ Binary assets are listed by hash; install plugins from their folders, not the sn
 
 ## Install
 
-Clone or register this repository. Install either or
-both kits in the client you use.
+Clone or register this repository. Install the kits in the client you use.
 
 ### Codex
 
@@ -29,6 +29,7 @@ both kits in the client you use.
 codex plugin marketplace add https://github.com/conceptadev/agent-plugins.git
 codex plugin add product-kit@conceptadev
 codex plugin add engineering-kit@conceptadev
+codex plugin add design-kit@conceptadev
 ```
 
 ### Claude Code
@@ -37,6 +38,7 @@ codex plugin add engineering-kit@conceptadev
 claude plugin marketplace add https://github.com/conceptadev/agent-plugins.git
 claude plugin install product-kit@conceptadev
 claude plugin install engineering-kit@conceptadev
+claude plugin install design-kit@conceptadev
 ```
 
 Start a new session afterward. In Codex, request the relevant skill. Claude
@@ -74,6 +76,7 @@ python3 -m unittest discover -s plugins/engineering-kit/tests
 python3 -m unittest discover -s tests
 claude plugin validate plugins/product-kit --strict
 claude plugin validate plugins/engineering-kit --strict
+claude plugin validate plugins/design-kit --strict
 claude plugin validate . --strict
 ```
 

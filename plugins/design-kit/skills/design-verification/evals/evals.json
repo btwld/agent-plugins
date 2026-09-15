@@ -1,0 +1,38 @@
+{
+  "skill_name": "design-verification",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Visual verification triage only. Supplied measurement log: reference content is 390x844 CSS px exported at 2x; implementation is 390x844 CSS px captured at 1x. No images are attached. Should the 780px versus 390px image width itself be filed as a layout defect? Answer under 100 words, no tools.",
+      "expected_output": "A scoped, evidence-grounded response satisfying the listed expectations.",
+      "files": [],
+      "expectations": [
+        "Identifies image density mismatch rather than a proven layout defect.",
+        "Recommends normalizing density before comparison.",
+        "Does not claim visual fidelity without images."
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Review supplied evidence only: a test log reports the approved reference label is Save and the rendered control says Delete; it reports matching viewport and theme. The images themselves are not attached. Explain severity, a scoped correction and what remains unverified, in 120 words. Review only; no tools.",
+      "expected_output": "A scoped, evidence-grounded response satisfying the listed expectations.",
+      "files": [],
+      "expectations": [
+        "Flags reported semantic copy mismatch as material.",
+        "Attributes findings to the supplied log rather than claimed image inspection.",
+        "Does not edit or claim verified visual pass."
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "A developer changed CSS to fix a clipped title. The only implementation screenshot is from before the fix. Can we mark the visual issue resolved? Brief answer, no tools.",
+      "expected_output": "A scoped, evidence-grounded response satisfying the listed expectations.",
+      "files": [],
+      "expectations": [
+        "Requires fresh post-fix rendered evidence.",
+        "Does not treat code edits alone as visual proof.",
+        "Does not expand into a redesign."
+      ]
+    }
+  ]
+}

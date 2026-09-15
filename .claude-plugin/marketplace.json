@@ -14,6 +14,10 @@
       "name": "engineering-kit",
       "source": "./plugins/engineering-kit",
       "description": "Engineering architecture, implementation planning, focused reviews, business rules, and web-app verification."
+    },
+    {
+      "name": "design-kit",
+      "source": "./plugins/design-kit"
     }
   ],
   "description": "Private Concepta plugins for product and engineering workflows."

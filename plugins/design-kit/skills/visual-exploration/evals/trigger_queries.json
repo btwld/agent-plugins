@@ -1,0 +1,70 @@
+[
+  {
+    "query": "Explore two visual directions for this screen.",
+    "should_trigger": true
+  },
+  {
+    "query": "Generate visual alternatives grounded in our current app screenshots.",
+    "should_trigger": true
+  },
+  {
+    "query": "Show three different layout concepts for onboarding.",
+    "should_trigger": true
+  },
+  {
+    "query": "Explore hierarchy variants for this mobile toolbar.",
+    "should_trigger": true
+  },
+  {
+    "query": "Create image-based UI concepts from this brief.",
+    "should_trigger": true
+  },
+  {
+    "query": "Compare possible visual directions before implementation.",
+    "should_trigger": true
+  },
+  {
+    "query": "Develop two dashboard compositions with the same design tokens.",
+    "should_trigger": true
+  },
+  {
+    "query": "Use visual-exploration to propose distinct interface concepts.",
+    "should_trigger": true
+  },
+  {
+    "query": "Fix a backend database migration.",
+    "should_trigger": false
+  },
+  {
+    "query": "Write a product requirements document.",
+    "should_trigger": false
+  },
+  {
+    "query": "Review this pull request for security bugs.",
+    "should_trigger": false
+  },
+  {
+    "query": "Plan user interviews for next month.",
+    "should_trigger": false
+  },
+  {
+    "query": "Deploy this existing prototype.",
+    "should_trigger": false
+  },
+  {
+    "query": "Translate these error messages to French.",
+    "should_trigger": false
+  },
+  {
+    "query": "Explain the difference between these skill names without using them.",
+    "should_trigger": false
+  },
+  {
+    "query": "Run the API unit tests.",
+    "should_trigger": false
+  },
+  {
+    "query": "Implement the already chosen image without exploring alternatives.",
+    "should_trigger": false
+  }
+]

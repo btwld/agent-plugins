@@ -5,6 +5,7 @@ import unittest
 
 ROOT = Path(__file__).resolve().parents[1]
 SKILLS = {
+    'design-kit': {'design-system', 'image-to-code', 'accessibility-review', 'design-verification', 'frontend-design', 'ux-copy', 'visual-exploration', 'design-critique', 'user-research', 'url-to-code'},
     'product-kit': {'product-brainstorming', 'research-synthesis',
                     'competitive-brief', 'ux-friction-research', 'write-prd', 'write-wbs'},
     'engineering-kit': {'adversarial-change-review', 'ai-slop-review', 'architecture',

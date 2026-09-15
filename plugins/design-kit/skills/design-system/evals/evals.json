@@ -1,0 +1,27 @@
+{
+  "skill_name": "design-system",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Audit this supplied component contract in at most 150 words; do not edit. tokens.ts defines space.md=16. Card uses padding:16px; its docs say spacing=space.md. Button docs promise disabled and loading, but the implementation only has disabled:boolean and onClick; no loading prop/state exists. The 1px border is intentionally literal. Name concrete discrepancies and unknowns without inventing APIs or a score.",
+      "expected_output": "A correct, scoped response meeting the stated expectations.",
+      "files": [],
+      "expectations": [
+        "Prioritizes documented-but-unimplemented loading behavior.",
+        "Distinguishes repeated semantic spacing from intentional border literal.",
+        "No fabricated props, measurements, or completeness score."
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Document the actual Badge component using only this evidence: props tone: info|success, default info; text:string required. Colors use status.info and status.success. It renders span with text, no event handlers. The Figma file separately shows warning but code has no warning variant. Produce a concise contract, identifying the mismatch; do not implement or propose extra variants.",
+      "expected_output": "A correct, scoped response meeting the stated expectations.",
+      "files": [],
+      "expectations": [
+        "Documents only supported props and default.",
+        "Calls out Figma/code warning mismatch without claiming support.",
+        "Does not invent interaction or component API."
+      ]
+    }
+  ]
+}

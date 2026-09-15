@@ -1,0 +1,66 @@
+[
+  {
+    "query": "Plan a 20-minute usability session to learn whether admins can find Invite. We can recruit four existing customers this week. Supply neutral tasks and observable success criteria; do not promise population prevalence or conduct synthetic interviews.",
+    "should_trigger": true
+  },
+  {
+    "query": "We want a causal claim about a checkout change, but have only interviews with five fans. Recommend a feasible study approach and the missing experiment inputs; do not invent a powered sample size.",
+    "should_trigger": true
+  },
+  {
+    "query": "Write neutral questions about recent purchasing behavior.",
+    "should_trigger": true
+  },
+  {
+    "query": "Choose a method for studying a weekly workflow over time.",
+    "should_trigger": true
+  },
+  {
+    "query": "Design a survey without leading answer options.",
+    "should_trigger": true
+  },
+  {
+    "query": "Define recruitment criteria for a usability study.",
+    "should_trigger": true
+  },
+  {
+    "query": "Create a consent and observation outline for user sessions.",
+    "should_trigger": true
+  },
+  {
+    "query": "Plan card sorting for a confusing navigation structure.",
+    "should_trigger": true
+  },
+  {
+    "query": "Write a PRD for team SSO from this customer brief.",
+    "should_trigger": false
+  },
+  {
+    "query": "Analyze already-completed interviews and recommend the next product action; do not plan a study.",
+    "should_trigger": false
+  },
+  {
+    "query": "Prepare a quarterly roadmap update from these priorities.",
+    "should_trigger": false
+  },
+  {
+    "query": "Review the authorization logic in this API diff.",
+    "should_trigger": false
+  },
+  {
+    "query": "Calculate paid conversion rates for these two cohorts.",
+    "should_trigger": false
+  },
+  {
+    "query": "Generate a weekly stakeholder status email.",
+    "should_trigger": false
+  },
+  {
+    "query": "Debug an intermittent database connection error.",
+    "should_trigger": false
+  },
+  {
+    "query": "Continue this agent session normally; no manual context handoff is needed.",
+    "should_trigger": false
+  }
+]

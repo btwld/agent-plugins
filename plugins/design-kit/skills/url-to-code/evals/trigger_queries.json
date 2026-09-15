@@ -1,0 +1,70 @@
+[
+  {
+    "query": "Recreate this live URL as a local prototype.",
+    "should_trigger": true
+  },
+  {
+    "query": "Clone this website homepage faithfully.",
+    "should_trigger": true
+  },
+  {
+    "query": "Inspect this site and implement the same gallery locally.",
+    "should_trigger": true
+  },
+  {
+    "query": "Reproduce the visible booking flow from this URL.",
+    "should_trigger": true
+  },
+  {
+    "query": "Build a local frontend matching this live website.",
+    "should_trigger": true
+  },
+  {
+    "query": "Capture this page then recreate its layout and tabs.",
+    "should_trigger": true
+  },
+  {
+    "query": "Clone the requested two pages into our existing app.",
+    "should_trigger": true
+  },
+  {
+    "query": "Use url-to-code to recreate the supplied site.",
+    "should_trigger": true
+  },
+  {
+    "query": "Fix a backend database migration.",
+    "should_trigger": false
+  },
+  {
+    "query": "Write a product requirements document.",
+    "should_trigger": false
+  },
+  {
+    "query": "Review this pull request for security bugs.",
+    "should_trigger": false
+  },
+  {
+    "query": "Plan user interviews for next month.",
+    "should_trigger": false
+  },
+  {
+    "query": "Deploy this existing prototype.",
+    "should_trigger": false
+  },
+  {
+    "query": "Translate these error messages to French.",
+    "should_trigger": false
+  },
+  {
+    "query": "Explain the difference between these skill names without using them.",
+    "should_trigger": false
+  },
+  {
+    "query": "Run the API unit tests.",
+    "should_trigger": false
+  },
+  {
+    "query": "Redesign our homepage with inspiration from a competitor.",
+    "should_trigger": false
+  }
+]

@@ -1,0 +1,25 @@
+{
+  "skill_name": "accessibility-review",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "For a WCAG 2.2 AA review, an isolated button has a rectangular 30 by 30 CSS pixel pointer target. Does the 44 by 44 criterion make it an AA failure? Distinguish the relevant criteria and limit the conclusion to target size.",
+      "expected_output": "A scoped, evidence-backed response following the request.",
+      "files": [],
+      "expectations": [
+        "Distinguishes the requested standard and criterion levels accurately.",
+        "Limits conclusions to measured or tested scope and identifies unperformed checks."
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "We have only a screenshot and an automated scan with zero findings. Can we call the checkout WCAG conformant? Explain the missing evidence and priority manual checks without inventing test results.",
+      "expected_output": "A scoped, evidence-backed response following the request.",
+      "files": [],
+      "expectations": [
+        "Distinguishes the requested standard and criterion levels accurately.",
+        "Limits conclusions to measured or tested scope and identifies unperformed checks."
+      ]
+    }
+  ]
+}

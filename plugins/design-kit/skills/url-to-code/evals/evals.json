@@ -1,0 +1,38 @@
+{
+  "skill_name": "url-to-code",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Plan a local recreation of a supplied product page in our existing Svelte project. Scope: one page and a working local image gallery, no checkout. No browsing is available in this test. Explain the approach and limits in 120 words; no tools.",
+      "expected_output": "A scoped, evidence-grounded response satisfying the listed expectations.",
+      "files": [],
+      "expectations": [
+        "Preserves Svelte, one-page gallery scope and excludes checkout.",
+        "Requires inspection before claiming faithful recreation.",
+        "Does not claim a source capture or completed app."
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "We want to recreate an account dashboard from a live URL. The browser currently shows a login wall; screenshots from behind login are unavailable. Give the appropriate concise response without tools; do not invent the dashboard.",
+      "expected_output": "A scoped, evidence-grounded response satisfying the listed expectations.",
+      "files": [],
+      "expectations": [
+        "Explains source access gap.",
+        "Does not treat login page as the requested dashboard.",
+        "Does not claim faithful implementation or request credentials in chat."
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "Make a new landing page inspired by example.com, with our own brand and product. We explicitly want a redesign, not a copy. Explain the appropriate next step in under 100 words, no tools.",
+      "expected_output": "A scoped, evidence-grounded response satisfying the listed expectations.",
+      "files": [],
+      "expectations": [
+        "Recognizes a design request rather than faithful cloning.",
+        "Preserves new brand and product direction.",
+        "Does not demand exact source reproduction."
+      ]
+    }
+  ]
+}
