@@ -26,7 +26,7 @@ Clone or register this repository. Install the kits in the client you use.
 ### Codex
 
 ```sh
-codex plugin marketplace add https://github.com/conceptadev/agent-plugins.git
+codex plugin marketplace add https://github.com/btwld/agent-plugins.git
 codex plugin add product-kit@conceptadev
 codex plugin add engineering-kit@conceptadev
 codex plugin add design-kit@conceptadev
@@ -35,7 +35,7 @@ codex plugin add design-kit@conceptadev
 ### Claude Code
 
 ```sh
-claude plugin marketplace add https://github.com/conceptadev/agent-plugins.git
+claude plugin marketplace add https://github.com/btwld/agent-plugins.git
 claude plugin install product-kit@conceptadev
 claude plugin install engineering-kit@conceptadev
 claude plugin install design-kit@conceptadev
