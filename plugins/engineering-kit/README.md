@@ -1,13 +1,14 @@
 # Engineering Kit
 
 Engineering workflows for Codex and Claude Code, installed as
-`engineering-kit@conceptadev`. The kit contains 11 focused skills and their helpers.
+`engineering-kit@conceptadev`. The kit contains 12 focused skills and their helpers.
 
 ## Skills
 
 | Skill | Outcome |
 | --- | --- |
 | [architecture](skills/architecture/SKILL.md) | A grounded technical choice or architecture decision record |
+| [modular-nestjs](skills/modular-nestjs/SKILL.md) | File placement and implementation rules for a modular NestJS API |
 | [writing-plans](skills/writing-plans/SKILL.md) | An executable implementation plan from settled requirements |
 | [executing-plans](skills/executing-plans/SKILL.md) | Carry out an existing authorized implementation plan |
 | [webapp-verification](skills/webapp-verification/SKILL.md) | Browser evidence and appropriate regression coverage |

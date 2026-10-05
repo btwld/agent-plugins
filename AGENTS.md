@@ -9,7 +9,8 @@ tracking, import/merge workflows, or synchronization with another skills reposit
 - Product Kit owns exploration, research, PRDs, requirements/questions, and WBS.
   Reuse its record contract rather than duplicating requirements or resolutions.
 - Engineering Kit owns technical decisions, implementation plans and execution,
-  specialized reviews, business-rule modeling, and verification. Keep delivery
+  adopted implementation conventions, specialized reviews, business-rule modeling,
+  and verification. Keep delivery
   breakdowns distinct from implementation plans; no automatic handoff is required.
 - Design Kit owns interface design, critique, accessibility, UX copy, and study planning.
   Product Kit owns research synthesis; Engineering Kit owns functional verification.

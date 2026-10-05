@@ -10,8 +10,9 @@ SKILLS = {
                     'competitive-brief', 'ux-friction-research', 'write-prd', 'write-wbs'},
     'engineering-kit': {'adversarial-change-review', 'ai-slop-review', 'architecture',
                         'clean-sheet-review', 'code-simplifier', 'executing-plans',
-                        'pull-request-authoring', 'reference-implementation', 'sbvr',
-                        'webapp-verification', 'writing-plans'},
+                        'modular-nestjs', 'pull-request-authoring',
+                        'reference-implementation', 'sbvr', 'webapp-verification',
+                        'writing-plans'},
 }
 
 
