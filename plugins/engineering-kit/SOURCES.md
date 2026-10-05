@@ -12,6 +12,7 @@ Skills, helpers, and fixtures derive from [Leo Farias's skills](https://github.c
 | `writing-plans`, `executing-plans` | [Superpowers](https://github.com/obra/superpowers), respective `skills/` directories, `b36e0829c6d0140e93cfef2ca599b1b07d4a7797` | [MIT](licenses/superpowers-MIT.txt) |
 | `code-simplifier` | [Anthropic Code Simplifier](https://github.com/anthropics/claude-plugins-official), `plugins/code-simplifier/agents/code-simplifier.md`, `ceb9b72b4c4c20ad39efce780edd0aabe80ebce3` | [Apache-2.0](licenses/anthropic-code-simplifier-Apache-2.0.txt) |
 | Remaining skills and local adaptations | Leo Farias | [BSD-3-Clause](LICENSE) |
+| `modular-nestjs` | Original to this kit. No external skill source | [BSD-3-Clause](LICENSE) |
 
 Concepta's publisher metadata does not replace the original copyright notices.
 No external source repository or plugin is required to run these skills.

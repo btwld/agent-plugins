@@ -8,7 +8,7 @@ repository; there is no upstream import, tracking, or merge workflow.
 | Plugin | Purpose | Skills | Version |
 | --- | --- | --- | --- |
 | [Product Kit](plugins/product-kit/README.md) | Research, requirements, PRDs, and delivery breakdowns | 6 | 0.3.2 |
-| [Engineering Kit](plugins/engineering-kit/README.md) | Technical decisions, implementation, reviews, and verification | 11 | 0.1.1 |
+| [Engineering Kit](plugins/engineering-kit/README.md) | Technical decisions, implementation, reviews, and verification | 12 | 0.2.0 |
 | [Design Kit](plugins/design-kit/README.md) | Interface design, critique, accessibility, UX copy, and research planning | 10 | 0.1.0 |
 
 Product Kit owns the shared requirements, questions, and decisions. Engineering

@@ -1,6 +1,6 @@
 {
   "name": "engineering-kit",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "Engineering architecture, implementation planning, focused reviews, business rules, and web-app verification.",
   "author": {
     "name": "Concepta"
@@ -12,7 +12,8 @@
     "claude-code",
     "engineering",
     "architecture",
-    "planning"
+    "planning",
+    "nestjs"
   ],
   "skills": "./skills/",
   "interface": {
@@ -27,6 +28,7 @@
     ],
     "defaultPrompt": [
       "Help me make and document an architecture decision.",
+      "Place a new NestJS endpoint using the modular NestJS rules.",
       "Create an implementation plan for this approved specification.",
       "Re-examine this existing solution from a clean sheet."
     ]

@@ -1,0 +1,42 @@
+{
+  "skill_name": "modular-nestjs",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Add POST /api/orders/:id/cancel to a NestJS API that follows modular NestJS. Do not implement the business rule yet. The repository already has the foundation: auth decorators, TransactionRunner, the contracts package, and the acceptance ratchet. Cancellation is allowed only for an OPEN order in the caller's active context, writes an audit event, and returns the order id and status. Tell me which files to add and what the contract-phase stub and use-case test must do.",
+      "expected_output": "A contract-phase slice whose paths come from the orders URL, with schemas, a service stub that throws the not-implemented exception, and a failing success test. No repository rule yet.",
+      "files": [],
+      "expectations": [
+        "Places the route in apps/api/src/orders and the schemas in packages/contracts/src/orders.",
+        "The controller only maps the route to one service call, takes the principal from the session, and declares a permission decorator and a schema on the id param.",
+        "The service stub throws UseCaseNotImplementedException and does not open a transaction or import the ORM.",
+        "The use-case test lives in orders/e2e, expects the successful cancel to fail until implementation, and includes the denied cases that apply.",
+        "Does not invent a product name, a tenancy model, or a domain folder above the module."
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Our NestJS API already follows modular NestJS. Implement cancel order now. The contract-phase test expects 200 and status CANCELED. The order row must change only when its status is still OPEN. The audit event must commit with the status change. An unknown id and an order in another context must both return 404.",
+      "expected_output": "An implementation that uses one transaction, a conditional update, a module not-found exception, and no ORM import in the service.",
+      "files": [],
+      "expectations": [
+        "The command calls TransactionRunner.run once and passes that context to the repository and the audit write.",
+        "The status change is a conditional update on OPEN, not a read-check-write.",
+        "A missing row and a row outside the active context both become the module not-found exception.",
+        "The repository stays private to the module, returns an entity or a boolean, and the service converts the result to the contract type.",
+        "Does not add @ManyToMany, a DTO class, a NestJS HTTP exception, or a skipped test."
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "We have an existing NestJS app that uses class-validator DTOs, a shared src/modules folder, and Prisma. Add one field to the existing cats update DTO. Do not adopt a new architecture.",
+      "expected_output": "A small change that follows the existing DTO layout and does not rewrite the application into modular NestJS.",
+      "files": [],
+      "expectations": [
+        "Keeps the existing DTO, folder, and Prisma patterns.",
+        "Does not introduce a contracts package, TransactionRunner, Zod schemas, or a new module layout.",
+        "States that modular NestJS was not applied because the repository has not adopted it and the user did not ask for a conversion."
+      ]
+    }
+  ]
+}

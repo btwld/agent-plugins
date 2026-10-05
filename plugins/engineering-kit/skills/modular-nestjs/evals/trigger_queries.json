@@ -1,0 +1,74 @@
+[
+  {
+    "query": "Add POST /api/users/:id/deactivate using the modular NestJS rules. Put the files where the URL says they go.",
+    "should_trigger": true
+  },
+  {
+    "query": "Where do the orders repository, entity, and contract schema live in a modular NestJS API?",
+    "should_trigger": true
+  },
+  {
+    "query": "Scaffold the foundation for a new NestJS API that follows the modular NestJS guide, before the first feature.",
+    "should_trigger": true
+  },
+  {
+    "query": "The contract phase for products is next. Add the Zod schema, the service stub, and the failing use-case test.",
+    "should_trigger": true
+  },
+  {
+    "query": "Review this NestJS module against the modular NestJS file and transaction rules.",
+    "should_trigger": true
+  },
+  {
+    "query": "This users service is over 300 lines. Split it into a modular NestJS topic without splitting by verb.",
+    "should_trigger": true
+  },
+  {
+    "query": "A command writes a user and an audit event. How should the transaction and the module boundary work?",
+    "should_trigger": true
+  },
+  {
+    "query": "Replace this @ManyToMany with the join entity the modular NestJS guide requires.",
+    "should_trigger": true
+  },
+  {
+    "query": "Choose NestJS or Hono for the new public API and record the decision.",
+    "should_trigger": false
+  },
+  {
+    "query": "Write an ADR for whether orders and payments share a database.",
+    "should_trigger": false
+  },
+  {
+    "query": "Add one optional field to our existing class-validator DTO. Keep the current NestJS layout.",
+    "should_trigger": false
+  },
+  {
+    "query": "Fix the empty-state copy on the React orders page.",
+    "should_trigger": false
+  },
+  {
+    "query": "Turn the approved payment idempotency spec into an implementation plan. Do not place files yet.",
+    "should_trigger": false
+  },
+  {
+    "query": "Execute the plan in docs/plans/cancel-order.md and commit each task.",
+    "should_trigger": false
+  },
+  {
+    "query": "Review this pull request for bugs and missing tests.",
+    "should_trigger": false
+  },
+  {
+    "query": "Write the business vocabulary and rules for order cancellation in SBVR.",
+    "should_trigger": false
+  },
+  {
+    "query": "The checkout test fails only in CI. Find the cause.",
+    "should_trigger": false
+  },
+  {
+    "query": "Create a product requirements document for the new export feature.",
+    "should_trigger": false
+  }
+]
