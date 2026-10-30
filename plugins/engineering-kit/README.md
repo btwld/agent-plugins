@@ -1,27 +1,31 @@
 # Engineering Kit
 
 Engineering workflows for Codex and Claude Code, installed as
-`engineering-kit@conceptadev`. The kit contains 11 focused skills and their helpers.
+`engineering-kit@conceptadev`. The kit contains 14 focused skills and their helpers.
 
 ## Skills
 
 | Skill | Outcome |
 | --- | --- |
-| [architecture](skills/architecture/SKILL.md) | A grounded technical choice or architecture decision record |
+| [architecture](skills/architecture/SKILL.md) | A grounded technical choice, API contract design, or architecture decision record |
 | [writing-plans](skills/writing-plans/SKILL.md) | An executable implementation plan from settled requirements |
 | [executing-plans](skills/executing-plans/SKILL.md) | Carry out an existing authorized implementation plan |
-| [webapp-verification](skills/webapp-verification/SKILL.md) | Browser evidence and appropriate regression coverage |
-| [pull-request-authoring](skills/pull-request-authoring/SKILL.md) | A grounded PR title/body and authorized PR creation or update |
-| [adversarial-change-review](skills/adversarial-change-review/SKILL.md) | An evidence-backed keep/reject judgment on a particular change |
-| [ai-slop-review](skills/ai-slop-review/SKILL.md) | Validated findings about unnecessary generated-code patterns |
-| [clean-sheet-review](skills/clean-sheet-review/SKILL.md) | Reconsider an existing solution's scope and design |
-| [code-simplifier](skills/code-simplifier/SKILL.md) | Explicitly requested behavior-preserving refinement |
+| [code-review](skills/code-review/SKILL.md) | Unified review for defects, regressions, AI slop, structural quality, and change verdicts |
+| [clean-sheet-review](skills/clean-sheet-review/SKILL.md) | Reconsider an existing solution's scope and design from first principles |
+| [code-simplifier](skills/code-simplifier/SKILL.md) | Explicitly requested behavior-preserving refinement and slop removal |
+| [pr-authoring](skills/pr-authoring/SKILL.md) | A grounded PR title/body and authorized PR creation or update |
+| [pr-prep](skills/pr-prep/SKILL.md) | Logical dependency-ordered commit reorganization with tree-identity proof |
+| [pr-canvas](skills/pr-canvas/SKILL.md) | Interactive HTML pull request walkthrough in the browser |
+| [pr-comments](skills/pr-comments/SKILL.md) | Verified triage and action ordering for active PR review comments |
+| [ci-loop](skills/ci-loop/SKILL.md) | Watch PR checks, diagnose failing CI runs, and iterate until green |
+| [verify](skills/verify/SKILL.md) | Falsifiable baseline-versus-treatment verification (`VERIFIED`, `NOT VERIFIED`, `INCONCLUSIVE`) |
 | [reference-implementation](skills/reference-implementation/SKILL.md) | A canonical implementation suitable for reuse |
 | [sbvr](skills/sbvr/SKILL.md) | Structured business vocabulary and rules |
 
 Choose a skill for the requested outcome. Routine coding and reviews need no
-wrapper workflow. `code-simplifier` retains explicit-only invocation, including
-its Codex invocation policy. Other workflows keep their existing scope boundaries.
+wrapper workflow. `code-simplifier` and `pr-canvas` retain explicit-only invocation,
+including their Codex and Claude invocation policies. Other workflows keep their
+existing scope boundaries.
 
 Product Kit owns PRDs, requirements/questions, and WBS delivery breakdowns.
 Engineering planning turns settled scope into implementation steps; it does not

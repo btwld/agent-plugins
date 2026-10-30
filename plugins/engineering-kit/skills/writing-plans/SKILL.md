@@ -42,7 +42,25 @@ If repository access or required artifacts are unavailable, say so plainly. Buil
 
 ## Choose the output location
 
-Honor a user-specified path first, then an established repository convention. If neither exists, return the plan in the conversation unless the user explicitly asked for a saved artifact. Do not create a new planning directory or impose source-specific path names merely because this skill was used.
+Honor a user-specified path first, then explicit repository instructions. Otherwise, save a plan that will be kept, executed later, or handed off under `~/.agents/projects/<project>/`. This is the user's home directory, outside every checkout and worktree; a plan returned only for discussion can stay in the conversation.
+
+Use this shared layout, creating only the directories needed:
+
+```text
+~/.agents/projects/<project>/
+  plans/<yyyy-mm-dd>-<slug>.md     # plan, progress, decisions, and handoff notes
+  notes/<yyyy-mm-dd>-<slug>.md     # standalone notes for work without a plan
+  reviews/<yyyy-mm-dd>-<slug>.md   # reviews the user wants kept
+  evidence/<yyyy-mm-dd>-<slug>/   # supporting probes, captures, and logs
+```
+
+Resolve `<project>` from the `origin` remote's owner and repository name, joined with a hyphen and without `.git`, such as `btwld-jam`. HTTPS and SSH URLs for the same repository use the same folder. Without `origin`, use the main worktree's directory name from `git worktree list --porcelain`, not the current linked worktree's name; outside Git, use the working directory's name. Reuse an established project folder. If unrelated repositories would share a name, qualify it with the host or namespace before saving.
+
+Before creating a record, look for one matching the work's goal and provenance. A plan belongs to a work item, which may span several worktrees; keep worktree paths in its provenance rather than adding a worktree folder to the storage layout. Continue the same record across branches, worktrees, sessions, and dates; do not select a plan solely because it is newest. Use distinct slugs for independent work, including work started on the same day. Use the same date-and-slug stem for related plans, reviews, and evidence, and link them from the plan. Keep notes for planned work in that plan; `notes/` is for work with no plan, not a second progress tracker.
+
+Start saved Markdown records with YAML front matter containing `kind` (`plan`, `note`, or `review`), `date` (creation date in `yyyy-mm-dd` form), `repository` (owner/repository, or the main directory's absolute path without `origin`), `branch`, `commit` (full HEAD hash), `worktree` (absolute path to the checkout where the record was created), `skill`, `session` (session or transcript id), and `status` (`draft`, `approved`, or `superseded`). Record creation provenance; use YAML `null` for unavailable values rather than inventing them. Keep later worktree, branch, commit, and session changes in dated progress notes, along with completed work, remaining work, and evidence links. Read the latest contents before updating a shared record and preserve other contributors' notes.
+
+When a client requires its own plan-mode file, follow that restriction and save a durable copy here as soon as the client permits it; identify the saved path as the record for continued work. Preserve an existing source copy when repository instructions, PRs, or other records cite it. Do not silently move or delete those sources. Include the saved path in the response or handoff so the next session can find it. Avoid `docs/` and ignored folders inside a checkout for agent records unless the user or repository instructions specify that location.
 
 ## Build an executable sequence
 
@@ -74,7 +92,8 @@ Include these only when the change needs them:
 - security and permission boundaries;
 - observability or operational verification;
 - documentation and consumer communication;
-- staged rollout and post-deployment checks.
+- staged rollout and post-deployment checks;
+- for a replacement or rewrite: the chosen replacement and compatibility strategy, which legacy behavior and characterization tests must survive, and when the old code can safely be removed. Side-by-side implementation and compatibility layers are options to evaluate against actual commitments.
 
 For ordinary changes, focused automated tests and the repository's standard validation commands are usually enough.
 

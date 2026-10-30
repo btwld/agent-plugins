@@ -78,5 +78,17 @@
   {
     "query": "Create an implementation plan for the approved API migration. The architecture decision is complete.",
     "should_trigger": false
+  },
+  {
+    "query": "We chose to redesign our API. Work out consumer examples, errors, compatibility, and testable requirements.",
+    "should_trigger": true
+  },
+  {
+    "query": "Lock down and settle this chosen pagination API contract with consumer examples and testable requirements.",
+    "should_trigger": true
+  },
+  {
+    "query": "Ignore the current solution shape and propose what we would build today for this app purpose, including ADR impact.",
+    "should_trigger": false
   }
 ]

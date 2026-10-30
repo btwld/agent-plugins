@@ -56,6 +56,38 @@
         "Challenges the field-for-field presentation copy and one-use forwarding hop by asking what invariant or semantics each owns.",
         "Does not prescribe factories, top-level functions, or any other declaration form as a universal solution."
       ]
+    },
+    {
+      "id": 5,
+      "prompt": "Review our reporting solution from first principles and propose what should change, including document impact. Purpose: give 12 staff a daily CSV from the existing Postgres data; a daily job inside the app is supported and affordable. Current code copies data hourly into a separate reporting service and database. ADR-007 chose that split solely for a BI vendor we no longer use; the decision says no other isolation requirement exists. docs/reporting.md teaches the old flow. There are no external consumers and the internal interface may change. We have tests for column order and authorization. This supplied description is all the evidence; do not inspect a repository or edit files.",
+      "expected_output": "A proportionate response that satisfies the stated scope and expectations.",
+      "files": [],
+      "expectations": [
+        "Derives proposal from daily CSV purpose rather than preserving the service because of ADR-007.",
+        "Retains column order and authorization requirements.",
+        "Explains migration and document impact, proposes revisiting/superseding ADR-007 without claiming it already changed."
+      ]
+    },
+    {
+      "id": 6,
+      "prompt": "Reconsider our invoice export from its purpose: let customers retrieve invoices. Current architecture uses a worker and versioned export schema. ADR-012 cites signed customer contracts requiring schema v1 and seven-year access to old exports; those obligations still apply. A synchronous endpoint might simplify the code, but no latency/load evidence is available. We may change internal design, not those external obligations. Give a fresh proposal and its impact; review only. Treat supplied facts as the only evidence.",
+      "expected_output": "A proportionate response that satisfies the stated scope and expectations.",
+      "files": [],
+      "expectations": [
+        "Preserves schema v1 and historical access obligations while reconsidering implementation choices.",
+        "Does not invent load/latency evidence or assert the worker can safely be removed.",
+        "Distinguishes proposed design, worthwhile action now, and ADR/document consequences."
+      ]
+    },
+    {
+      "id": 7,
+      "prompt": "Would you build our startup configuration loader differently today? One function reads env and YAML with fixed precedence, validates them into immutable Config, and returns it. No runtime updates or public extension API exist. Tests cover precedence, missing values, malformed YAML, and type errors. Provide a short answer; no edits. These facts are complete for this design question.",
+      "expected_output": "A proportionate response that satisfies the stated scope and expectations.",
+      "files": [],
+      "expectations": [
+        "Recommends Keep and preserves the simple startup design.",
+        "Does not invent features or a migration project; stays concise."
+      ]
     }
   ]
 }

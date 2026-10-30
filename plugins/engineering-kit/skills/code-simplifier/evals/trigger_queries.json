@@ -40,6 +40,10 @@
     "should_trigger": true
   },
   {
+    "query": "Deslop the changes in this branch with code-simplifier and keep behavior identical.",
+    "should_trigger": true
+  },
+  {
     "query": "Clean up this function while you fix the bug.",
     "should_trigger": false
   },

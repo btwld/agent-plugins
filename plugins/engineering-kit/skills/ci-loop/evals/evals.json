@@ -1,0 +1,39 @@
+{
+  "skill_name": "ci-loop",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Loop on CI for the current branch's PR: inspect `gh pr checks`, diagnose the failing job, apply a minimal fix without bypassing hooks, and tell me the status.",
+      "expected_output": "Uses `gh pr checks --json name,bucket,state,workflow,link` as the source of truth, inspects the failed run logs via `gh run view --log-failed` or the external check link, applies a minimal scoped fix, and reports CI status.",
+      "files": [],
+      "expectations": [
+        "Uses `gh pr checks` as the source of truth for PR-attached checks rather than relying solely on `gh run list`.",
+        "Inspects failing job logs (`gh run view <run-id> --log-failed`) or external check links before editing.",
+        "Scopes the fix to a single actionable failure cause and does not use `--no-verify`.",
+        "Reports the primary failing job, fixes applied, and current CI status."
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "PR checks are still pending on my branch; use ci-loop to watch them fail-fast and diagnose any failure that appears.",
+      "expected_output": "Checks current PR check state first, watches pending checks with `gh pr checks --watch --fail-fast`, and diagnoses any failure or reports green status.",
+      "files": [],
+      "expectations": [
+        "Inspects current PR checks before starting a watch.",
+        "Uses `gh pr checks --watch --fail-fast` for pending checks.",
+        "Distinguishes PR-caused failures from unrelated main branch failures or flakes."
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "Fix CI on this PR: one external Vercel preview check failed and one GitHub Actions unit test job failed.",
+      "expected_output": "Inspects both the GitHub Actions failure log and the external check link from `gh pr checks`, fixes one actionable root error at a time, and re-checks the full PR check set.",
+      "files": [],
+      "expectations": [
+        "Reads `gh pr checks --json name,bucket,state,workflow,link` to see both GitHub Actions and external checks.",
+        "Fixes one actionable root error at a time with minimal changes.",
+        "Re-evaluates the full PR check set after changes."
+      ]
+    }
+  ]
+}

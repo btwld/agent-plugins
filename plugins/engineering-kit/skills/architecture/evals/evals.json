@@ -37,6 +37,17 @@
         "The output names concrete change conditions that would justify moving to the other option.",
         "The output does not invent additional services, migration projects, or requirements."
       ]
+    },
+    {
+      "id": 4,
+      "prompt": "We already chose to redesign our internal pagination API. Work through the contract with me: provide a consumer example, decisions/open questions, and testable requirements. Product need: enumerate records without skipping any when new records are inserted. Existing consumers use page-number calls; a contractual partner must retain those calls for six months, so a compatibility adapter may be needed. Maximum page size is undecided; choose no arbitrary limit. Do not implement or commit. No repo is available; do not claim compilation.",
+      "expected_output": "A proportionate response that satisfies the stated scope and expectations.",
+      "files": [],
+      "expectations": [
+        "Provides concrete consumer-facing example and observable pagination requirements.",
+        "Preserves six-month compatibility and leaves page-size policy open.",
+        "Keeps decisions distinct from proposals; no invented compilation, edits, commits, or mandatory handoff."
+      ]
     }
   ]
 }

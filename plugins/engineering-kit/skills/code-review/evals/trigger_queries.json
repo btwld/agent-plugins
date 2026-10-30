@@ -1,0 +1,102 @@
+[
+  {
+    "query": "Review this patch.",
+    "should_trigger": true
+  },
+  {
+    "query": "Review PR #88 for correctness bugs, regressions, and missing tests before merge. Findings first; I don't need a prosecution/defense exercise.",
+    "should_trigger": true
+  },
+  {
+    "query": "Look at my staged checkout changes versus the unstaged cart.ts edits and the untracked debug fixture. Review the staged snapshot for defects only.",
+    "should_trigger": true
+  },
+  {
+    "query": "Here's a pasted before/after of parseLimit. Review the actual snippet for regressions and say what the tests miss. Don't open a PR.",
+    "should_trigger": true
+  },
+  {
+    "query": "this PR from copilot has comments on every other line and try/catch wrapped around everything, can you audit it for ai slop before I review it properly? branch is feature/inventory-sync",
+    "should_trigger": true
+  },
+  {
+    "query": "are these tests in packages/billing/__tests__ actually testing anything? half of them look generated and just assert not.toThrow()",
+    "should_trigger": true
+  },
+  {
+    "query": "This upstream commit changes our parser's invalid-input behavior and updates the expected exception in the same patch. Should we cherry-pick it or is the test just following a regression? Give me a KEEP/REJECT call.",
+    "should_trigger": true
+  },
+  {
+    "query": "Run an AI slop review on services/api. I want the finder-then-validator slop report, findings only.",
+    "should_trigger": true
+  },
+  {
+    "query": "Run an adversarial change review on PR #418: what can users observe now, which changed tests encode a real spec update, and should we accept the patch?",
+    "should_trigger": true
+  },
+  {
+    "query": "This Copilot branch is full of restating comments and the author also moved the paging test expectation. Audit the slop and tell me whether we should keep or reject the behavior change.",
+    "should_trigger": true
+  },
+  {
+    "query": "Review git diff main...feature/checkout for defensive null checks on non-nullable types and also decide if the clamp-instead-of-throw change is worth merging.",
+    "should_trigger": true
+  },
+  {
+    "query": "Working tree has unrelated edits. Review commit 9fd13a7 for the off-by-one in pageItems and the missing empty-list test.",
+    "should_trigger": true
+  },
+  {
+    "query": "Our PR bot says these comments in rate_limiter.ts are AI filler. Second opinion with an AI slop review? I don't want why-comments deleted by pattern matching.",
+    "should_trigger": true
+  },
+  {
+    "query": "Now that the notification service is built, reconsider whether it should exist at all and propose the simpler architecture you would design today.",
+    "should_trigger": false
+  },
+  {
+    "query": "$code-simplifier on OrderService.place, keep behavior identical",
+    "should_trigger": false
+  },
+  {
+    "query": "The branch is already pushed. Open a draft PR against main and write a concise description from the full diff and the tests we ran.",
+    "should_trigger": false
+  },
+  {
+    "query": "Audit whether this implementation is good enough to be our canonical example for every new service team to copy.",
+    "should_trigger": false
+  },
+  {
+    "query": "Turn the locked API decisions into an executable implementation plan before anyone writes code.",
+    "should_trigger": false
+  },
+  {
+    "query": "Execute the plan in docs/plans/oauth.md and check off each task as you implement it.",
+    "should_trigger": false
+  },
+  {
+    "query": "We haven't built anything yet - write a design doc / RFC for the new webhooks feature with goals, alternatives, and rollout.",
+    "should_trigger": false
+  },
+  {
+    "query": "The importer test fails on CI but passes locally. Reproduce it and find the root cause before suggesting any fix.",
+    "should_trigger": false
+  },
+  {
+    "query": "Fix the regression in this commit, add tests, and prepare the patch for me.",
+    "should_trigger": false
+  },
+  {
+    "query": "Can you tell whether this file was written by an AI or a human? I need to report authorship for a compliance audit.",
+    "should_trigger": false
+  },
+  {
+    "query": "Rewrite the README so it sounds less like ChatGPT wrote it. Keep the same sections, just make the prose human.",
+    "should_trigger": false
+  },
+  {
+    "query": "Benchmark the old and new cache implementations and tell me which is faster under a 90/10 read-write workload.",
+    "should_trigger": false
+  }
+]

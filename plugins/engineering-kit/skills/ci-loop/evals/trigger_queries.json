@@ -1,0 +1,66 @@
+[
+  {
+    "query": "loop on CI for this PR until all required checks are green",
+    "should_trigger": true
+  },
+  {
+    "query": "watch gh pr checks on my branch and fix any CI failures that come up",
+    "should_trigger": true
+  },
+  {
+    "query": "fix CI on the active pull request",
+    "should_trigger": true
+  },
+  {
+    "query": "use ci-loop to diagnose the failing GitHub Actions and external PR checks",
+    "should_trigger": true
+  },
+  {
+    "query": "our PR checks are red, inspect the failing CI logs and apply a minimal fix",
+    "should_trigger": true
+  },
+  {
+    "query": "monitor PR checks with fail-fast and iterate until CI passes",
+    "should_trigger": true
+  },
+  {
+    "query": "check why PR CI is failing via gh pr checks and fix the broken job",
+    "should_trigger": true
+  },
+  {
+    "query": "watch the pending PR checks and fix any test or lint failure in CI",
+    "should_trigger": true
+  },
+  {
+    "query": "draft a pull request description and title for this branch",
+    "should_trigger": false
+  },
+  {
+    "query": "review this local patch for AI slop and tautological tests",
+    "should_trigger": false
+  },
+  {
+    "query": "summarize the commits I authored over the last week",
+    "should_trigger": false
+  },
+  {
+    "query": "build an interactive HTML PR review canvas for PR #12",
+    "should_trigger": false
+  },
+  {
+    "query": "clean up noisy WIP commits on this branch into logical commits",
+    "should_trigger": false
+  },
+  {
+    "query": "write an ADR for our authentication token rotation design",
+    "should_trigger": false
+  },
+  {
+    "query": "execute step 2 of the written implementation plan",
+    "should_trigger": false
+  },
+  {
+    "query": "formalize domain rules in SBVR",
+    "should_trigger": false
+  }
+]

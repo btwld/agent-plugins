@@ -9,7 +9,7 @@
       "expectations": [
         "The plan preserves the atomicity and 24-hour replay requirements and maps them to persistence, service, controller, and test work.",
         "The plan orders schema or data-model work before code that depends on it and identifies focused Jest and Prisma validation.",
-        "The output does not claim to have modified files or impose an unrequested plan directory.",
+        "The output does not claim to have modified files and does not create or require a hard-coded docs/superpowers plan path.",
         "The plan is specific enough to execute but does not require a commit after every tiny action or force a subagent handoff."
       ]
     },
@@ -27,15 +27,18 @@
     },
     {
       "id": 3,
-      "prompt": "Write an implementation plan only for adding asynchronous CSV exports to a reporting service. Approved requirements: a user can request an export and retrieve only their own result; existing synchronous JSON reports remain unchanged; failed jobs expose a retriable failure state. Supplied repository facts: jobs use the existing queue abstraction in src/jobs; reporting routes live in src/reports; repository tests use pytest. Storage provider, retention period, and production rollout mechanism are not supplied, and live inspection is unavailable. Return a dependency-ordered plan with acceptance coverage and bounded discovery tasks; do not implement, create tickets, or deploy.",
-      "expected_output": "A scoped implementation plan preserving the supplied requirements and repository facts while identifying missing storage and rollout decisions without inventing contracts.",
-      "files": [],
+      "prompt": "Create a plan for adding an owned engineering plugin that works in both Claude Code and Codex. It will initially import two externally maintained skills with exact repository and commit provenance, include one existing native skill, and remain inactive until structural and behavioral validation pass. After preserving the exact baselines, adapt the imported skills only where doing so demonstrably improves their purpose. The current plugins must remain recoverable and no remote push is authorized. Use the attached sanitized pre-pilot repository context; live repository inspection is unavailable, so do not claim to run tools or inspect anything beyond that fixture. Keep the plan under 1,500 words and do not implement anything.",
+      "expected_output": "A reversible pilot plan that separates scaffolding, exact imports, local adaptations, validation, and cutover; handles both platform manifests and upstream licenses; and respects the no-push/no-cutover boundary.",
+      "files": [
+        "evals/files/repo-context.md"
+      ],
       "expectations": [
-        "Traces export ownership, job failure handling, and unchanged JSON reporting to implementation tasks and focused tests.",
-        "Orders shared job/result contracts before the workers and reporting routes that consume them.",
-        "Keeps storage, retention, and rollout choices unresolved or proposed rather than inventing providers or deadlines.",
-        "Uses supplied component paths and pytest without claiming repository inspection or fabricated exact file names.",
-        "Does not implement, publish, create tickets, or require a particular planning directory or orchestration system."
+        "The plan separates plugin scaffolding, byte-identical upstream imports, local adaptation, validation, and eventual cutover into reviewable checkpoints.",
+        "The plan records repository URL, source path, exact commit, update policy, and required license or attribution handling for imported skills.",
+        "The plan covers both Claude Code and Codex manifests and preserves globally unique skill ownership.",
+        "The plan does not push, install over, disable, or remove the existing live plugins before validation.",
+        "The plan does not invent repository files, skill names, commit history, configuration, or tool output that the prompt did not provide and the evaluator could not inspect.",
+        "The plan does not require Superpowers-specific output paths, subskills, worktrees, or per-action commits that the request did not select."
       ]
     }
   ]

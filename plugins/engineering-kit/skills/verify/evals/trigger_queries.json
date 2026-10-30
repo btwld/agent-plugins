@@ -1,0 +1,66 @@
+[
+  {
+    "query": "verify this claim with baseline and treatment evidence: memory usage drops below 50MB",
+    "should_trigger": true
+  },
+  {
+    "query": "prove it works: run a before/after repro showing this patch fixes the 500 error",
+    "should_trigger": true
+  },
+  {
+    "query": "use verify to test whether p95 latency improved by at least 20%",
+    "should_trigger": true
+  },
+  {
+    "query": "did this fix the race condition? show me falsifiable baseline vs treatment evidence",
+    "should_trigger": true
+  },
+  {
+    "query": "verify this bug fix by capturing the broken repro on main and the fixed output on HEAD",
+    "should_trigger": true
+  },
+  {
+    "query": "run verify and return a VERIFIED, NOT VERIFIED, or INCONCLUSIVE verdict",
+    "should_trigger": true
+  },
+  {
+    "query": "measure baseline and treatment heap snapshots to verify the memory leak is gone",
+    "should_trigger": true
+  },
+  {
+    "query": "prove with local before-and-after artifacts that the API response time regression is resolved",
+    "should_trigger": true
+  },
+  {
+    "query": "write an architecture decision record for our caching strategy",
+    "should_trigger": false
+  },
+  {
+    "query": "draft a pull request title and description from my branch commits",
+    "should_trigger": false
+  },
+  {
+    "query": "summarize the git commits I authored over the last 7 days",
+    "should_trigger": false
+  },
+  {
+    "query": "fetch and group reviewer comments from the active PR",
+    "should_trigger": false
+  },
+  {
+    "query": "clean up noisy WIP commits on this branch into logical commits",
+    "should_trigger": false
+  },
+  {
+    "query": "resolve git merge conflicts in src/config.ts",
+    "should_trigger": false
+  },
+  {
+    "query": "formalize these domain rules in SBVR",
+    "should_trigger": false
+  },
+  {
+    "query": "generate an interactive HTML PR review canvas",
+    "should_trigger": false
+  }
+]

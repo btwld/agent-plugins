@@ -27,7 +27,7 @@ Reuse assets when their use is permitted; access to an asset alone does not esta
 
 ## Verify the recreation
 
-Run the local app, compare captured source and local implementation at the same viewport and state, and test the scoped flow locally. Use the separate design-verification skill for a dedicated fidelity review when useful; general browser behavior testing belongs to webapp-verification.
+Run the local app, compare captured source and local implementation at the same viewport and state, and test the scoped flow locally. Use the separate design-verification skill for a dedicated fidelity review when useful; general browser behavior testing uses the available host browser or Playwright tooling.
 
 Correct observed material differences within scope and recapture after fixes. Do not claim successful fidelity without inspecting both artifacts. If source or local rendering is blocked, identify which part is implemented and which remains unverified. Avoid repeated retries without a new approach.
 

@@ -1,0 +1,66 @@
+[
+  {
+    "query": "get the PR comments on the active pull request and summarize what I need to fix",
+    "should_trigger": true
+  },
+  {
+    "query": "fetch and triage reviewer feedback on PR #88 by priority",
+    "should_trigger": true
+  },
+  {
+    "query": "use pr-comments to list all unresolved review threads on this branch's PR",
+    "should_trigger": true
+  },
+  {
+    "query": "what comments did reviewers leave on my pull request?",
+    "should_trigger": true
+  },
+  {
+    "query": "pull the GitHub PR review comments and group them into an action list",
+    "should_trigger": true
+  },
+  {
+    "query": "check the inline review comments and discussion on the current PR",
+    "should_trigger": true
+  },
+  {
+    "query": "summarize the review feedback on this PR and highlight open questions",
+    "should_trigger": true
+  },
+  {
+    "query": "fetch the latest PR comments from GitHub and order them by severity",
+    "should_trigger": true
+  },
+  {
+    "query": "review my local uncommitted diff for bugs and hollow tests",
+    "should_trigger": false
+  },
+  {
+    "query": "write a pull request title and description for this branch",
+    "should_trigger": false
+  },
+  {
+    "query": "resolve the git merge conflicts in src/index.ts",
+    "should_trigger": false
+  },
+  {
+    "query": "summarize my authored git commits from the past 7 days",
+    "should_trigger": false
+  },
+  {
+    "query": "drive this interactive CLI inside a tmux harness",
+    "should_trigger": false
+  },
+  {
+    "query": "write a multi-step implementation plan from this specification",
+    "should_trigger": false
+  },
+  {
+    "query": "choose between gRPC and REST in an architecture decision record",
+    "should_trigger": false
+  },
+  {
+    "query": "formalize these business rules using SBVR notation",
+    "should_trigger": false
+  }
+]

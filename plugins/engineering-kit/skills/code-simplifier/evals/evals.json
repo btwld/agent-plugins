@@ -41,6 +41,19 @@
         "Checks whether a real shared invariant or future change point exists before introducing a layer.",
         "Keeps the response proportional to the localized cleanup."
       ]
+    },
+    {
+      "id": 4,
+      "prompt": "$code-simplifier Deslop this recently modified handler without changing behavior: it has step-by-step narrating comments, an apology comment explaining a confusing `flag2` boolean mode we just added, an internal try/catch that swallows errors on an already-validated typed input, a `@ts-ignore` with an `as any` cast, and one why-comment documenting an ordering constraint with the payment gateway.",
+      "expected_output": "A behavior-preserving cleanup that removes the narrating comments, reshapes the confusing boolean mode so the apology comment can be deleted, removes the impossible internal catch and unsafe cast/suppression, and preserves the external why-comment and real boundary behavior.",
+      "files": [],
+      "expectations": [
+        "Removes narrating comments that restate the code while preserving the why-comment about the payment gateway ordering constraint.",
+        "Reshapes or renames the in-scope `flag2` boolean mode so the apology comment is no longer needed and deletes the comment.",
+        "Removes the redundant internal try/catch or impossible guard on already-validated typed state without removing real boundary error handling.",
+        "Replaces the `@ts-ignore` and `as any` cast with the narrow declared type.",
+        "Preserves observable behavior, verifies with the narrowest applicable check, and keeps the summary concise (1-3 sentences)."
+      ]
     }
   ]
 }

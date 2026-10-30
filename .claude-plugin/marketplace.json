@@ -13,7 +13,7 @@
     {
       "name": "engineering-kit",
       "source": "./plugins/engineering-kit",
-      "description": "Engineering architecture, implementation planning, focused reviews, business rules, and web-app verification."
+      "description": "Engineering architecture, implementation planning, unified code and structural review, PR and CI workflows, business rules, and falsifiable verification."
     },
     {
       "name": "design-kit",

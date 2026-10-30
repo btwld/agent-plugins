@@ -1,0 +1,39 @@
+{
+  "skill_name": "pr-comments",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Fetch the review comments on the active pull request, group them by severity and actionability, and give me a prioritized action list without editing code yet.",
+      "expected_output": "Resolves the active PR, fetches inline review comments and discussion threads via `gh`, verifies them against current code, and outputs a prioritized action list.",
+      "files": [],
+      "expectations": [
+        "Resolves the active pull request for the branch using `gh`.",
+        "Fetches both inline review comments and PR review/discussion comments.",
+        "Groups feedback by severity and actionability.",
+        "Remains read-only and lists open questions when edits were not requested."
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Use pr-comments on PR #104 to see what reviewers and bots flagged, filter out threads that are already fixed on HEAD, and summarize what still needs action.",
+      "expected_output": "Fetches PR #104 comments, checks each against HEAD, separates resolved/outdated items from actionable items, and orders the remaining work by priority.",
+      "files": [],
+      "expectations": [
+        "Fetches review comments and discussion threads for PR #104.",
+        "Checks cited files/lines against the current code to distinguish outdated threads from live issues.",
+        "Returns a prioritized action list and open questions."
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "Get the PR comments on my current branch and apply fixes for the high-priority actionable items.",
+      "expected_output": "Fetches and groups the PR comments, applies focused fixes for the confirmed actionable items, and reports the changes.",
+      "files": [],
+      "expectations": [
+        "Summarizes and prioritizes the fetched PR feedback first.",
+        "Applies fixes only because the user explicitly requested them.",
+        "Reports the addressed items and any remaining open questions."
+      ]
+    }
+  ]
+}

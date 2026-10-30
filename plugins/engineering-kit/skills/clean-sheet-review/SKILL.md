@@ -1,100 +1,124 @@
 ---
 name: clean-sheet-review
 description: >-
-  Use when a plan, spec, API, architecture, or implementation already exists and the user wants it
-  re-examined from a clean sheet — a fresh-eyes redo that may reconsider scope, public API,
-  dependencies, or whether the artifact should exist at all. Trigger on "if you built this again,
-  how would you do it" or "what would you simplify or replace now that it's built". Returns one
-  sized verdict: keep, refine, simplify, redesign, split, or stop. Prefer native diff review for routine
-  PR bug-finding and architecture or native system modeling for first-time design. Not for approved edits
-  whose scope and design are fixed.
+  Use when an existing plan, spec, API, architecture, or implementation should be reconsidered
+  from its purpose and first principles: "from first principles", "take a step back", "if we built
+  this today", "what should survive", or "rethink this without being bound by previous design
+  decisions". Derive a fresh proposal from
+  real requirements, compare it with the existing solution, and explain code, migration, and
+  document impact. Return keep, refine, simplify, redesign, split, or stop. Prefer code-review
+  for defects within a fixed design, architecture for focused decisions or developing a chosen
+  API contract, and ordinary execution for an already-approved refactor. Not for first-time
+  product discovery or an unrequested rewrite.
 ---
 
 # Clean-Sheet Solution Review
 
-Re-evaluate an existing plan, spec, API, architecture, or implementation from a clean sheet. Keep the facts and real constraints learned so far, but treat the current scope and design as provisional, and return the smallest correct solution plus a justified verdict.
+Reconsider an existing solution from the app's purpose, users, and required outcomes. Treat its
+current shape as a hypothesis. Use the evidence learned from building it to propose the smallest
+correct solution and judge whether changing to it is worthwhile.
 
-This is a deliberate second pass, not a routine line-by-line code review. Its job is to counter attachment to the first design — the sunk-cost pull of "we already built it" — while still respecting the evidence that building it produced.
+## Confirm the scope
 
-## Scope after activation
+A meaningful solution must exist, and the user must have authorized reconsidering some part of its
+scope, API, architecture, data model, or framing. Keep any fixed dimensions fixed. Clarify only when
+uncertainty could change the recommendation or compatibility impact; otherwise state assumptions.
+A request to refactor while preserving behavior does not by itself authorize reopening the contract.
 
-Use this skill only when a meaningful solution already exists **and** the user has given permission to reconsider at least one of scope, public API, architecture, data model, or problem framing. When that permission is ambiguous, clarify it rather than assuming a rewrite is wanted.
+- Use `code-review` for defects, regressions, or missing tests within a fixed design.
+- Use `architecture` for a focused technical decision, initial design decision, or details of a
+  chosen API contract. A clean-sheet review can itself propose a design of any relevant size;
+  multiple public surfaces do not require another skill.
+- Use ordinary engineering execution for approved edits; `code-simplifier` remains an explicitly
+  requested refinement pass. No sequence of skills or delegation is required.
 
-Do not turn a normal review into a redesign. Hand off instead when:
+## Establish purpose and real constraints
 
-- Scope, behavior, and API are fixed and the user wants bug, regression, or risk findings -> native diff review.
-- No prior solution exists yet and the user wants a first design -> `architecture` for a decision/ADR or native system modeling for a broader system.
-- Scope and design are fixed and the user already wants the edit implemented -> use ordinary
-  engineering execution; use `code-simplifier` only when the user explicitly invokes it as a
-  separate cleanup pass.
-- The user wants a single-axis audit (security-only, performance-only, accessibility-only) and has not asked to reopen the design.
+Read available requirements and relevant repository evidence. For implemented work, trace at least
+one real consumer through its effects; caller workarounds often expose a mismatch the internals hide.
+For a plan with no code, check scenarios, contracts, and acceptance criteria. Never imply inspection
+or execution that did not happen.
 
-## What you're working with
+Separate the required outcomes, users, non-goals, hard constraints, external commitments, observed
+facts, assumptions, and current design choices. Scale this brief to the problem. "It is a library"
+or "there is a registry" describes today's solution unless evidence makes it a requirement.
+Do not turn an omitted detail into a defect or invent product purpose when it is unknown.
 
-Pick the mode from what you actually have; the mode changes the evidence available, not the standard:
+ADRs and prior decisions explain why the current solution exists; their choices do not automatically
+constrain the proposal. Extract any still-binding obligation and test whether its original reason
+still holds. Preserve the obligation while considering different ways to satisfy it. User constraints
+and applicable repository operating instructions continue to govern your actions. Prior approval is
+neither proof that a design is best today nor permission to violate a real external commitment.
 
-- **Plan mode:** a plan or spec exists, no code yet. Test it for internal consistency, missing behavior, undefined terms, and unverifiable acceptance criteria.
-- **Implementation mode:** working or partial code and tests exist. Trace requirements to real code paths and run what you safely can.
-- **Combined mode:** plan plus implementation plus the lessons from building it — the richest evidence.
+## Derive the proposal, then compare
 
-Use any evidence available: the decisions so far, the current plan or design notes, source/tests/schemas/config/docs, a branch or diff, observed failures or user feedback, and hard constraints (compatibility, migration, schedule, security, cost, platform). When you can read the repo, inspect the artifacts before concluding — verified evidence is the whole point of a second pass, so do not infer what you can check directly. Treat details omitted from a short prompt as unknown, not as defects in the existing design.
+Reason from purpose and constraints before choosing which current types or layers to preserve.
+Ask what you would build if every current requirement had been a day-one assumption rather than
+bolted onto an earlier shape. Sketch the caller's ideal usage and core data structures first so
+downstream control flow becomes obvious and special-case branching disappears. A short mental
+cross-check is sufficient for an obviously sound small design; a substantial redesign needs an
+explicit independent proposal (and, when the design space is open, 2–3 genuinely distinct options
+including subtraction) before the current-to-proposed comparison.
 
-## The core moves
+Trace each proposed capability to an outcome or invariant. Challenge unnecessary concepts and
+forwarding layers, but retain boundaries that own semantics, lifecycle, authority, failure behavior,
+or external obligations. Screen candidate shapes against shallow pass-through wrappers, leaked
+internals, temporal splits, split ownership, and leaving two ways to do one task. One caller, a
+familiar pattern, fewer types, or a single universal primitive
+is not sufficient evidence for a design decision. Do not manufacture novelty to justify the review.
+Use an isolated subagent only when the user explicitly requests delegated or parallel review.
 
-Every clean-sheet review, whatever its size, does four things:
+Compare the proposal with actual code, consumers, tests, and prior decisions. For material elements,
+state keep / change / remove / add / defer and why. Distinguish correctness defects from preferences;
+try to disprove suspected problems using counterevidence. Keep evidence that supports the current
+solution, and revise assumptions if inspection reveals new facts.
 
-1. **Separate requirements from design choices.** Do not let "we built it as a library / service / registry / schema" masquerade as a requirement — naming the artifact is often where the first design quietly over-committed. An unspecified dimension is reconsiderable unless changing it breaks a clear external commitment.
-2. **Judge the current design on evidence, not attachment.** Inspect what is actually there; keep correctness defects separate from maintainability preferences; and evaluate each decision against the information that existed when it was made rather than criticizing prior authors. Missing evidence can justify a verification question, but it does not prove a defect.
-3. **Return one clear verdict with a brief reason** — typically **keep**, **refine**, **simplify**, **redesign**, **split**, or **stop**. Say the primary reason, the most important tradeoff, and what of the current approach survives. Use **keep** when the stated mechanism fits the demonstrated requirements and only normal implementation checks remain. Use **refine** only when evidence shows a material gap that changes the design or contract. Optional hardening, another valid implementation, or a new requirement introduced by the review does not change **keep** to **refine**.
-4. **Price the change.** A redesign must clear its combined implementation-and-migration cost — "cleaner" alone does not justify a rewrite. Keep is a valid and common answer; never recommend a rewrite just because a review was requested. Backward compatibility is not automatically a wall — verify whether it is a hard constraint or a migration cost before treating it as one.
+Check functional correctness and relevant failure scenarios. Add concurrency, security, performance,
+operational, and migration analysis only where they could change the decision. A premortem or an
+alternative design is useful when it tests a material uncertainty, not as a required report section.
 
-## Optional techniques — reach for what the problem needs
+## Assess impact and recommend
 
-Scale the second pass to the artifact. A sound design heading for **Keep** needs almost none of these; a "rewrite the reporting service" needs most. Use a technique when it changes the call, not by default.
+Price implementation and transition costs alongside the benefit. Cover affected behavior, APIs,
+stored data, callers, rollout/recovery, tests, and operational ownership only where applicable.
+A cleaner target alone does not justify migrating to it; distinguish the design you would choose
+from scratch from the action worth taking now.
 
-- **Neutral problem brief** — rewrite the problem without the current solution, classifying each item as required outcome / hard constraint / external commitment / observed evidence / current design choice / assumption / unknown. Use it when requirements and design choices are tangled; it is the sharpest tool for move 1.
-- **Independent clean-sheet design** — when heading toward simplify or redesign, design from the
-  brief rather than by editing the current architecture. Write the independent design before
-  comparing it with the current one. Use an isolated subagent only when the user explicitly asks
-  for delegated or parallel review. Aim for the narrowest useful scope and interface that covers
-  demonstrated needs. Describe responsibilities and data flow before choosing artifact names, so
-  the new design does not merely replace one set of layers with another.
-- **Subtraction pass** — trace the shortest path from each requirement to its outcome through both
-  designs. For every concept, representation, conversion, delegation hop, extension point, and
-  public surface, ask what requirement, invariant, or proven use would fail if it disappeared.
-  Collapse anything whose removal changes only navigation or syntax; keep a boundary when it owns
-  distinct semantics, lifecycle, authority, failure behavior, or an external commitment.
-- **Premortem** — assume it shipped and later failed; name the material plausible causes, the
-  earliest signal each produces, and a prevention/detection/containment measure. Use it only when
-  it could change the verdict, and do not invent unlikely risks to justify extra architecture.
-- **Correctness & failure-mode sweep** — cover functional correctness always; other dimensions (invariants, boundary/partial/duplicate inputs, error recovery and idempotency, data ownership and migration, concurrency, security boundaries, performance limits, compatibility, testability) only where evidence makes them relevant to the verdict. Turn vague quality claims into concrete scenarios — replace "must scale" with a workload, an environment, and a measurable limit. Do not expand a compact design summary into a full hardening review unless the user asks for one.
-- **Current-to-proposed comparison** — assign each material element an action: keep / change / remove / add / defer.
-- **Revised specification** — only when the user asks: problem, goals, non-goals, consumers, core concepts and invariants, inputs/outputs, public interface, required behavior including errors and edge cases, data/file format, compatibility and migration rules, acceptance tests, and deferred capabilities — each public operation tracing to a use case or invariant. Then state which prior decision is superseded and why.
+Identify the inspected ADRs, specs, guides, and examples that would need amendment or supersession,
+and the reason. If documents are unavailable, name the document category to inspect rather than
+inventing identifiers. A recommendation proposes superseding a decision; it does not mark that
+record superseded or imply user approval. Preserve the decision history when changes are authorized.
 
-## Output
+Give one verdict with a short reason:
 
-Return Markdown. Lead with the verdict and a short reason, then include only the sections the verdict needs. For **keep**, use exactly this compact shape and stop at 120 words:
+- **Keep:** the solution fits the demonstrated need; ordinary implementation checks or optional
+  hardening do not require a new design.
+- **Refine:** a material contract or design gap needs a bounded correction.
+- **Simplify:** reduce internal complexity while preserving the public contract.
+- **Redesign:** change the public contract or fundamental design; name the migration impact.
+- **Split:** distinct responsibilities or obligations justify separation.
+- **Stop:** the capability lacks a sufficient need or cannot justify its cost.
 
-```markdown
-**Verdict: Keep.** <Why the demonstrated invariants are sufficient.>
+For a requested revised spec, provide the relevant goals, non-goals, consumers, interface and data
+contracts, invariants, errors, compatibility, acceptance criteria, and open decisions. Keep unresolved
+choices visible; scope the work across turns when needed. Once a direction is chosen, `architecture`
+can help resolve its detailed decisions, and `writing-plans` can turn settled requirements into tasks.
+These are available next steps, not automatic handoffs.
 
-- **Verify:** <The one condition that could overturn the verdict, or "No material condition remains.">
-```
+## Report and authorization
 
-Do not add a hardening list, alternative design, revised specification, or implementation advice unless the user asks for it.
+Lead with the verdict and reason. For **Keep**, default to a short explanation of the demonstrated
+fit and at most one verification condition; omit speculative hardening or redesign. If the user
+requested a detailed comparison or document-impact analysis, include it even when the verdict is Keep.
+For change, include the purpose, proposal, comparison, material impact, and uncertainty proportionally.
 
-Include, proportionally, the verdict; a neutral reframe; what should survive; correctness defects and
-design preferences kept distinct; and any assumption that could change the decision. Add a proposal,
-comparison, or migration path only when the verdict needs it, and a revised specification only when
-the user asks for one.
+When the user asks to keep a review, save it at `~/.agents/projects/<project>/reviews/<yyyy-mm-dd>-<slug>.md`
+using the shared project identity and provenance fields from `writing-plans` with `kind: review`, and
+link supporting files under the matching `~/.agents/projects/<project>/evidence/<yyyy-mm-dd>-<slug>/`,
+unless the user or repository instructions specify another location.
 
-## Clarifying question policy
-
-Ask only for missing facts that could invert the recommendation or change safety, compatibility, or
-output structure — for example, whether a published API may break or stored data must stay readable.
-Batch the material questions into one concise request when practical. Otherwise proceed on stated
-assumptions and say how the recommendation would change if they are wrong.
-
-## Review-only by default
-
-Default to review only — do not modify files, APIs, data, or external systems. When the user explicitly asks you to implement: complete the review and lock the verdict first, convert the chosen direction into the smallest change sequence, apply only those changes, add or update tests that show both corrected and preserved behavior, run the relevant validation, and report what changed and the compatibility impact honestly. Never silently ship a breaking redesign when the user asked only for analysis.
+Default to review only. When edits are authorized, act within that scope, subtract dead or
+superseded internal paths and migrate internal callers so old and new ways do not coexist without a
+compatibility requirement, preserve unrelated work, verify changed and preserved behavior, and report
+actual checks and compatibility effects. A review request does not authorize rewriting code or ADRs,
+committing, pushing, merging, or publishing.

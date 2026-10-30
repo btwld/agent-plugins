@@ -3,10 +3,12 @@ name: architecture
 description: >-
   Use when choosing, evaluating, or recording a consequential technical design decision from
   concrete requirements and constraints—for example a technology selection, component boundary,
-  data ownership choice, or architecture decision record. Produce a recommendation sized to the
+  data ownership choice, architecture decision record, or developing a chosen API design into
+  consumer examples and testable requirements.
+  Produce a recommendation sized to the
   decision and make its trade-offs and reconsideration conditions explicit. Prefer
   clean-sheet-review when the user wants an existing solution's entire framing or scope reopened;
-  do not use for routine code review or an already-approved implementation task.
+  do not use for routine code review (use code-review) or an already-approved implementation task.
 ---
 
 <!-- Derived from anthropics/knowledge-work-plugins and modified by Leo Farias for engineering-kit. See ../../SOURCES.md. -->
@@ -21,9 +23,12 @@ Choose the lightest output that makes the decision usable:
 
 - **Compact recommendation:** a bounded, reversible choice with a small number of consequences.
 - **Architecture decision record (ADR):** a consequential or long-lived choice that needs a durable record or approval.
+- **API contract design:** a chosen design direction needs consumer examples, precise behavior,
+  and testable requirements. Read [api-contract-design.md](references/api-contract-design.md)
+  for that work; it applies to initial contracts and approved redesigns.
 - **Proposal evaluation:** an architecture already exists and the user wants its decision quality assessed without reopening the whole solution.
 
-When the user requests a specific format, use it. Do not turn an evaluation into a blank ADR template or a focused decision into a full system redesign.
+When the user requests a specific format, use it. Do not turn an evaluation into a blank ADR template or a focused decision into a full system redesign. When a design has its own decision record, cite it rather than creating a competing record. A proposal may recommend superseding an ADR; update its accepted status only when that decision is authorized, preserving history.
 
 ## Establish the decision frame
 
@@ -59,7 +64,7 @@ Make one recommendation. Explain the primary reason, the material trade-off bein
 
 Lead with the recommendation and a short reason. For a compact decision or evaluation, include only the sections needed to show the frame, trade-offs, consequences, missing evidence, and reconsideration conditions.
 
-For a durable ADR, use this structure unless the repository already has a convention:
+Keep durable ADRs in the repository's decision-record folder (for example `docs/decisions/`) so they remain part of its versioned design history; do not store them in `~/.agents/`. For a durable ADR, use this structure unless the repository already has a convention:
 
 ```markdown
 # ADR-[number]: [Decision]

@@ -1,0 +1,66 @@
+[
+  {
+    "query": "$pr-canvas generate an interactive HTML review walkthrough for PR #42",
+    "should_trigger": true
+  },
+  {
+    "query": "use pr-canvas to build a visual browser walkthrough of this GitHub PR",
+    "should_trigger": true
+  },
+  {
+    "query": "run `/engineering-kit:pr-canvas` on https://github.com/org/repo/pull/99",
+    "should_trigger": true
+  },
+  {
+    "query": "create a pr-canvas HTML page with moved-code detection for PR #15",
+    "should_trigger": true
+  },
+  {
+    "query": "$pr-canvas walk me through PR #210 in an interactive HTML page",
+    "should_trigger": true
+  },
+  {
+    "query": "use the pr-canvas skill to render this pull request in the browser",
+    "should_trigger": true
+  },
+  {
+    "query": "generate a dark-mode HTML PR review canvas for pull request #73",
+    "should_trigger": true
+  },
+  {
+    "query": "$pr-canvas build an annotated HTML diff walkthrough for this PR",
+    "should_trigger": true
+  },
+  {
+    "query": "review this diff in chat and list any bugs or regressions",
+    "should_trigger": false
+  },
+  {
+    "query": "draft a pull request title and description for my branch",
+    "should_trigger": false
+  },
+  {
+    "query": "watch CI checks on this PR until they pass",
+    "should_trigger": false
+  },
+  {
+    "query": "resolve the merge conflicts in our lockfile",
+    "should_trigger": false
+  },
+  {
+    "query": "summarize the commits I authored over the last week",
+    "should_trigger": false
+  },
+  {
+    "query": "check compiler errors across the TypeScript build",
+    "should_trigger": false
+  },
+  {
+    "query": "write an executable implementation plan from this spec",
+    "should_trigger": false
+  },
+  {
+    "query": "formalize these business rules in SBVR",
+    "should_trigger": false
+  }
+]

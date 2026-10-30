@@ -1,0 +1,37 @@
+{
+  "skill_name": "verify",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Verify this claim: 'Our parser patch reduces cold-parse latency by at least 30% on `fixtures/large.json`.'",
+      "expected_output": "Restates the claim falsifiably with metric and threshold, measures baseline on the parent commit/merge-base and treatment on the patched state under identical conditions, compares raw numbers, and returns `VERIFIED`, `NOT VERIFIED`, or `INCONCLUSIVE` in the required output shape.",
+      "files": [],
+      "expectations": [
+        "Restates the claim in falsifiable form with condition, metric, and threshold.",
+        "Captures both baseline and treatment measurements under the same environment and input.",
+        "Outputs the exact `VERIFIED | NOT VERIFIED | INCONCLUSIVE` block with `Claim:`, `Evidence:`, and `Reasoning:`."
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Verify this: 'The code is much cleaner now.'",
+      "expected_output": "Refuses to issue a fake verification for a vague non-measurable claim and asks for a concrete falsifiable behavioral or performance claim first.",
+      "files": [],
+      "expectations": [
+        "Declines to run `verify` on a vague stylistic claim like 'the code is cleaner'.",
+        "Asks the user for a measurable, falsifiable claim or observable behavior to test."
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "Did this fix the CLI crash when passing `--empty`? Prove it works with verify.",
+      "expected_output": "Reproduces the crash on the baseline commit, runs the exact same `--empty` command on the treatment state, compares exit codes and stderr transcripts, and returns a structured `VERIFIED` or `NOT VERIFIED` verdict.",
+      "files": [],
+      "expectations": [
+        "Captures the failing repro on the baseline state and the passing output on the treatment state.",
+        "Reports concrete baseline vs treatment evidence (exit code, output transcript).",
+        "Does not soften a negative or inconclusive result."
+      ]
+    }
+  ]
+}

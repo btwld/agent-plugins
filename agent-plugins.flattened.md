@@ -7,7 +7,7 @@ Includes all three kits and their provider manifests, skills, fixtures, referenc
 scripts, and license notices. Binary assets are inventoried by SHA-256.
 Git history, local caches, and `.context` are excluded.
 
-**Text files:** 166 · **Binary assets:** 7
+**Text files:** 188 · **Binary assets:** 7
 
 ## Contents
 
@@ -61,32 +61,41 @@ Git history, local caches, and `.context` are excluded.
 - `plugins/engineering-kit/README.md`
 - `plugins/engineering-kit/SOURCES.md`
 - `plugins/engineering-kit/licenses/anthropic-code-simplifier-Apache-2.0.txt`
+- `plugins/engineering-kit/licenses/cursor-team-kit-MIT.txt`
 - `plugins/engineering-kit/licenses/knowledge-work-Apache-2.0.txt`
 - `plugins/engineering-kit/licenses/superpowers-MIT.txt`
-- `plugins/engineering-kit/skills/adversarial-change-review/SKILL.md`
-- `plugins/engineering-kit/skills/adversarial-change-review/evals/evals.json`
-- `plugins/engineering-kit/skills/adversarial-change-review/evals/trigger_queries.json`
-- `plugins/engineering-kit/skills/ai-slop-review/SKILL.md`
-- `plugins/engineering-kit/skills/ai-slop-review/evals/evals.json`
-- `plugins/engineering-kit/skills/ai-slop-review/evals/files/orders/order_service.test.ts`
-- `plugins/engineering-kit/skills/ai-slop-review/evals/files/orders/order_service.ts`
-- `plugins/engineering-kit/skills/ai-slop-review/evals/files/orders/rate_limiter.ts`
-- `plugins/engineering-kit/skills/ai-slop-review/evals/trigger_queries.json`
-- `plugins/engineering-kit/skills/ai-slop-review/references/orchestration.md`
-- `plugins/engineering-kit/skills/ai-slop-review/references/prompts.md`
-- `plugins/engineering-kit/skills/ai-slop-review/references/rubric.md`
-- `plugins/engineering-kit/skills/ai-slop-review/scripts/_scope.py`
-- `plugins/engineering-kit/skills/ai-slop-review/scripts/check_findings.py`
-- `plugins/engineering-kit/skills/ai-slop-review/scripts/slice.py`
-- `plugins/engineering-kit/skills/ai-slop-review/scripts/sweep.py`
 - `plugins/engineering-kit/skills/architecture/SKILL.md`
 - `plugins/engineering-kit/skills/architecture/evals/evals.json`
 - `plugins/engineering-kit/skills/architecture/evals/trigger_queries.json`
+- `plugins/engineering-kit/skills/architecture/references/api-contract-design.md`
+- `plugins/engineering-kit/skills/ci-loop/SKILL.md`
+- `plugins/engineering-kit/skills/ci-loop/evals/evals.json`
+- `plugins/engineering-kit/skills/ci-loop/evals/trigger_queries.json`
 - `plugins/engineering-kit/skills/clean-sheet-review/SKILL.md`
 - `plugins/engineering-kit/skills/clean-sheet-review/evals/evals.json`
 - `plugins/engineering-kit/skills/clean-sheet-review/evals/files/reporting_plan.md`
 - `plugins/engineering-kit/skills/clean-sheet-review/evals/files/reporting_service.dart`
 - `plugins/engineering-kit/skills/clean-sheet-review/evals/trigger_queries.json`
+- `plugins/engineering-kit/skills/code-review/SKILL.md`
+- `plugins/engineering-kit/skills/code-review/evals/evals.json`
+- `plugins/engineering-kit/skills/code-review/evals/files/checkout/cart.test.ts`
+- `plugins/engineering-kit/skills/code-review/evals/files/checkout/cart.ts`
+- `plugins/engineering-kit/skills/code-review/evals/files/orders/order_service.test.ts`
+- `plugins/engineering-kit/skills/code-review/evals/files/orders/order_service.ts`
+- `plugins/engineering-kit/skills/code-review/evals/files/orders/rate_limiter.ts`
+- `plugins/engineering-kit/skills/code-review/evals/files/patch/parse_discount.test.ts`
+- `plugins/engineering-kit/skills/code-review/evals/files/patch/parse_discount.ts`
+- `plugins/engineering-kit/skills/code-review/evals/trigger_queries.json`
+- `plugins/engineering-kit/skills/code-review/references/ai-slop.md`
+- `plugins/engineering-kit/skills/code-review/references/change-verdict.md`
+- `plugins/engineering-kit/skills/code-review/references/orchestration.md`
+- `plugins/engineering-kit/skills/code-review/references/prompts.md`
+- `plugins/engineering-kit/skills/code-review/references/rubric.md`
+- `plugins/engineering-kit/skills/code-review/references/structural-quality.md`
+- `plugins/engineering-kit/skills/code-review/scripts/_scope.py`
+- `plugins/engineering-kit/skills/code-review/scripts/check_findings.py`
+- `plugins/engineering-kit/skills/code-review/scripts/slice.py`
+- `plugins/engineering-kit/skills/code-review/scripts/sweep.py`
 - `plugins/engineering-kit/skills/code-simplifier/SKILL.md`
 - `plugins/engineering-kit/skills/code-simplifier/agents/openai.yaml`
 - `plugins/engineering-kit/skills/code-simplifier/evals/evals.json`
@@ -96,9 +105,22 @@ Git history, local caches, and `.context` are excluded.
 - `plugins/engineering-kit/skills/executing-plans/SKILL.md`
 - `plugins/engineering-kit/skills/executing-plans/evals/evals.json`
 - `plugins/engineering-kit/skills/executing-plans/evals/trigger_queries.json`
-- `plugins/engineering-kit/skills/pull-request-authoring/SKILL.md`
-- `plugins/engineering-kit/skills/pull-request-authoring/evals/evals.json`
-- `plugins/engineering-kit/skills/pull-request-authoring/evals/trigger_queries.json`
+- `plugins/engineering-kit/skills/pr-authoring/SKILL.md`
+- `plugins/engineering-kit/skills/pr-authoring/evals/evals.json`
+- `plugins/engineering-kit/skills/pr-authoring/evals/trigger_queries.json`
+- `plugins/engineering-kit/skills/pr-canvas/SKILL.md`
+- `plugins/engineering-kit/skills/pr-canvas/agents/openai.yaml`
+- `plugins/engineering-kit/skills/pr-canvas/assets/renderer.js`
+- `plugins/engineering-kit/skills/pr-canvas/assets/styles.css`
+- `plugins/engineering-kit/skills/pr-canvas/assets/template.html`
+- `plugins/engineering-kit/skills/pr-canvas/evals/evals.json`
+- `plugins/engineering-kit/skills/pr-canvas/evals/trigger_queries.json`
+- `plugins/engineering-kit/skills/pr-comments/SKILL.md`
+- `plugins/engineering-kit/skills/pr-comments/evals/evals.json`
+- `plugins/engineering-kit/skills/pr-comments/evals/trigger_queries.json`
+- `plugins/engineering-kit/skills/pr-prep/SKILL.md`
+- `plugins/engineering-kit/skills/pr-prep/evals/evals.json`
+- `plugins/engineering-kit/skills/pr-prep/evals/trigger_queries.json`
 - `plugins/engineering-kit/skills/reference-implementation/SKILL.md`
 - `plugins/engineering-kit/skills/reference-implementation/evals/evals.json`
 - `plugins/engineering-kit/skills/reference-implementation/evals/files/parser_after.dart`
@@ -120,14 +142,14 @@ Git history, local caches, and `.context` are excluded.
 - `plugins/engineering-kit/skills/sbvr/references/output-formats.md`
 - `plugins/engineering-kit/skills/sbvr/scripts/renumber.py`
 - `plugins/engineering-kit/skills/sbvr/scripts/validate.py`
-- `plugins/engineering-kit/skills/webapp-verification/SKILL.md`
-- `plugins/engineering-kit/skills/webapp-verification/evals/evals.json`
-- `plugins/engineering-kit/skills/webapp-verification/evals/trigger_queries.json`
-- `plugins/engineering-kit/skills/webapp-verification/references/browser-runtime.md`
+- `plugins/engineering-kit/skills/verify/SKILL.md`
+- `plugins/engineering-kit/skills/verify/evals/evals.json`
+- `plugins/engineering-kit/skills/verify/evals/trigger_queries.json`
 - `plugins/engineering-kit/skills/writing-plans/SKILL.md`
 - `plugins/engineering-kit/skills/writing-plans/evals/evals.json`
+- `plugins/engineering-kit/skills/writing-plans/evals/files/repo-context.md`
 - `plugins/engineering-kit/skills/writing-plans/evals/trigger_queries.json`
-- `plugins/engineering-kit/tests/test_ai_slop_review_scripts.py`
+- `plugins/engineering-kit/tests/test_code_review_scripts.py`
 - `plugins/engineering-kit/tests/test_sbvr_renumber.py`
 - `plugins/engineering-kit/tests/test_sbvr_validate.py`
 - `plugins/product-kit/.claude-plugin/plugin.json`
@@ -246,7 +268,7 @@ Git history, local caches, and `.context` are excluded.
   "name": "conceptadev",
   "owner": {
     "name": "Concepta",
-    "url": "https://github.com/conceptadev"
+    "url": "https://github.com/btwld"
   },
   "plugins": [
     {
@@ -257,7 +279,7 @@ Git history, local caches, and `.context` are excluded.
     {
       "name": "engineering-kit",
       "source": "./plugins/engineering-kit",
-      "description": "Engineering architecture, implementation planning, focused reviews, business rules, and web-app verification."
+      "description": "Engineering architecture, implementation planning, unified code and structural review, PR and CI workflows, business rules, and falsifiable verification."
     },
     {
       "name": "design-kit",
@@ -334,8 +356,8 @@ repository; there is no upstream import, tracking, or merge workflow.
 | Plugin | Purpose | Skills | Version |
 | --- | --- | --- | --- |
 | [Product Kit](plugins/product-kit/README.md) | Research, requirements, PRDs, and delivery breakdowns | 6 | 0.3.2 |
-| [Engineering Kit](plugins/engineering-kit/README.md) | Technical decisions, implementation, reviews, and verification | 11 | 0.1.1 |
-| [Design Kit](plugins/design-kit/README.md) | Interface design, critique, accessibility, UX copy, and research planning | 10 | 0.1.0 |
+| [Engineering Kit](plugins/engineering-kit/README.md) | Technical decisions, implementation, reviews, PR/CI workflows, and verification | 14 | 0.2.0 |
+| [Design Kit](plugins/design-kit/README.md) | Interface design, critique, accessibility, UX copy, and research planning | 10 | 0.1.1 |
 
 Product Kit owns the shared requirements, questions, and decisions. Engineering
 Kit turns settled scope into implementation work without creating a second
@@ -352,7 +374,7 @@ Clone or register this repository. Install the kits in the client you use.
 ### Codex
 
 ```sh
-codex plugin marketplace add https://github.com/conceptadev/agent-plugins.git
+codex plugin marketplace add https://github.com/btwld/agent-plugins.git
 codex plugin add product-kit@conceptadev
 codex plugin add engineering-kit@conceptadev
 codex plugin add design-kit@conceptadev
@@ -361,7 +383,7 @@ codex plugin add design-kit@conceptadev
 ### Claude Code
 
 ```sh
-claude plugin marketplace add https://github.com/conceptadev/agent-plugins.git
+claude plugin marketplace add https://github.com/btwld/agent-plugins.git
 claude plugin install product-kit@conceptadev
 claude plugin install engineering-kit@conceptadev
 claude plugin install design-kit@conceptadev
@@ -471,7 +493,7 @@ local cache directory. Re-register the URL above when that is the intended sourc
 ````
 {
   "name": "design-kit",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Visual interface design, critique, UX copy, design systems, accessibility, and user research planning.",
   "author": {
     "name": "Concepta"
@@ -487,7 +509,7 @@ local cache directory. Re-register the URL above when that is the intended sourc
 ````
 {
   "name": "design-kit",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Visual interface design, critique, UX copy, design systems, accessibility, and user research planning.",
   "author": {
     "name": "Concepta"
@@ -2123,7 +2145,7 @@ Reuse assets when their use is permitted; access to an asset alone does not esta
 
 ## Verify the recreation
 
-Run the local app, compare captured source and local implementation at the same viewport and state, and test the scoped flow locally. Use the separate design-verification skill for a dedicated fidelity review when useful; general browser behavior testing belongs to webapp-verification.
+Run the local app, compare captured source and local implementation at the same viewport and state, and test the scoped flow locally. Use the separate design-verification skill for a dedicated fidelity review when useful; general browser behavior testing uses the available host browser or Playwright tooling.
 
 Correct observed material differences within scope and recapture after fixes. Do not claim successful fidelity without inspecting both artifacts. If source or local rendering is blocked, identify which part is implemented and which remains unverified. Avoid repeated retries without a new approach.
 
@@ -2681,8 +2703,8 @@ Show the concepts with a concise comparison and the decision each supports. End 
 ````
 {
   "name": "engineering-kit",
-  "version": "0.1.1",
-  "description": "Engineering architecture, implementation planning, focused reviews, business rules, and web-app verification.",
+  "version": "0.2.0",
+  "description": "Engineering architecture, implementation planning, unified code and structural review, PR and CI workflows, business rules, and falsifiable verification.",
   "author": {
     "name": "Concepta"
   },
@@ -2697,8 +2719,8 @@ Show the concepts with a concise comparison and the decision each supports. End 
 ````
 {
   "name": "engineering-kit",
-  "version": "0.1.1",
-  "description": "Engineering architecture, implementation planning, focused reviews, business rules, and web-app verification.",
+  "version": "0.2.0",
+  "description": "Engineering architecture, implementation planning, unified code and structural review, PR and CI workflows, business rules, and falsifiable verification.",
   "author": {
     "name": "Concepta"
   },
@@ -2715,7 +2737,7 @@ Show the concepts with a concise comparison and the decision each supports. End 
   "interface": {
     "displayName": "Engineering Kit",
     "shortDescription": "Architecture, implementation plans, reviews, and verification.",
-    "longDescription": "Engineering architecture, implementation planning, focused reviews, business rules, and web-app verification.",
+    "longDescription": "Engineering architecture, implementation planning, unified code and structural review, PR and CI workflows, business rules, and falsifiable verification.",
     "developerName": "Concepta",
     "category": "Coding",
     "capabilities": [
@@ -2771,27 +2793,31 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 # Engineering Kit
 
 Engineering workflows for Codex and Claude Code, installed as
-`engineering-kit@conceptadev`. The kit contains 11 focused skills and their helpers.
+`engineering-kit@conceptadev`. The kit contains 14 focused skills and their helpers.
 
 ## Skills
 
 | Skill | Outcome |
 | --- | --- |
-| [architecture](skills/architecture/SKILL.md) | A grounded technical choice or architecture decision record |
+| [architecture](skills/architecture/SKILL.md) | A grounded technical choice, API contract design, or architecture decision record |
 | [writing-plans](skills/writing-plans/SKILL.md) | An executable implementation plan from settled requirements |
 | [executing-plans](skills/executing-plans/SKILL.md) | Carry out an existing authorized implementation plan |
-| [webapp-verification](skills/webapp-verification/SKILL.md) | Browser evidence and appropriate regression coverage |
-| [pull-request-authoring](skills/pull-request-authoring/SKILL.md) | A grounded PR title/body and authorized PR creation or update |
-| [adversarial-change-review](skills/adversarial-change-review/SKILL.md) | An evidence-backed keep/reject judgment on a particular change |
-| [ai-slop-review](skills/ai-slop-review/SKILL.md) | Validated findings about unnecessary generated-code patterns |
-| [clean-sheet-review](skills/clean-sheet-review/SKILL.md) | Reconsider an existing solution's scope and design |
-| [code-simplifier](skills/code-simplifier/SKILL.md) | Explicitly requested behavior-preserving refinement |
+| [code-review](skills/code-review/SKILL.md) | Unified review for defects, regressions, AI slop, structural quality, and change verdicts |
+| [clean-sheet-review](skills/clean-sheet-review/SKILL.md) | Reconsider an existing solution's scope and design from first principles |
+| [code-simplifier](skills/code-simplifier/SKILL.md) | Explicitly requested behavior-preserving refinement and slop removal |
+| [pr-authoring](skills/pr-authoring/SKILL.md) | A grounded PR title/body and authorized PR creation or update |
+| [pr-prep](skills/pr-prep/SKILL.md) | Logical dependency-ordered commit reorganization with tree-identity proof |
+| [pr-canvas](skills/pr-canvas/SKILL.md) | Interactive HTML pull request walkthrough in the browser |
+| [pr-comments](skills/pr-comments/SKILL.md) | Verified triage and action ordering for active PR review comments |
+| [ci-loop](skills/ci-loop/SKILL.md) | Watch PR checks, diagnose failing CI runs, and iterate until green |
+| [verify](skills/verify/SKILL.md) | Falsifiable baseline-versus-treatment verification (`VERIFIED`, `NOT VERIFIED`, `INCONCLUSIVE`) |
 | [reference-implementation](skills/reference-implementation/SKILL.md) | A canonical implementation suitable for reuse |
 | [sbvr](skills/sbvr/SKILL.md) | Structured business vocabulary and rules |
 
 Choose a skill for the requested outcome. Routine coding and reviews need no
-wrapper workflow. `code-simplifier` retains explicit-only invocation, including
-its Codex invocation policy. Other workflows keep their existing scope boundaries.
+wrapper workflow. `code-simplifier` and `pr-canvas` retain explicit-only invocation,
+including their Codex and Claude invocation policies. Other workflows keep their
+existing scope boundaries.
 
 Product Kit owns PRDs, requirements/questions, and WBS delivery breakdowns.
 Engineering planning turns settled scope into implementation steps; it does not
@@ -2843,13 +2869,14 @@ This file records origins and licenses only. The kit is maintained directly in
 this repository.
 
 Skills, helpers, and fixtures derive from [Leo Farias's skills](https://github.com/leoafarias/skills),
-`plugins/engineering-kit`, commit `08bc3fbb6fe738d48604828262be47382c5879b7`.
+`plugins/engineering-kit`, commit `6030de126ba8d3cb069648d6bdd38f72530b771d`.
 
 | Content | Earlier source and baseline | License |
 | --- | --- | --- |
 | `architecture` | [Anthropic Knowledge Work](https://github.com/anthropics/knowledge-work-plugins), `engineering/skills/architecture`, `d463f6f0dce59a99c4869598324aac25b28ad4f9` | [Apache-2.0](licenses/knowledge-work-Apache-2.0.txt) |
 | `writing-plans`, `executing-plans` | [Superpowers](https://github.com/obra/superpowers), respective `skills/` directories, `b36e0829c6d0140e93cfef2ca599b1b07d4a7797` | [MIT](licenses/superpowers-MIT.txt) |
 | `code-simplifier` | [Anthropic Code Simplifier](https://github.com/anthropics/claude-plugins-official), `plugins/code-simplifier/agents/code-simplifier.md`, `ceb9b72b4c4c20ad39efce780edd0aabe80ebce3` | [Apache-2.0](licenses/anthropic-code-simplifier-Apache-2.0.txt) |
+| `ci-loop`, `pr-canvas`, `pr-comments`, `pr-prep`, `verify` | [Cursor Plugins](https://github.com/cursor/plugins), `cursor-team-kit/skills/`, `ddf824aff1e55ba14bd666b30bce3fc69962abe6` | [MIT](licenses/cursor-team-kit-MIT.txt) |
 | Remaining skills and local adaptations | Leo Farias | [BSD-3-Clause](LICENSE) |
 
 Concepta's publisher metadata does not replace the original copyright notices.
@@ -3061,6 +3088,32 @@ No external source repository or plugin is required to run these skills.
    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
    See the License for the specific language governing permissions and
    limitations under the License.
+````
+
+## plugins/engineering-kit/licenses/cursor-team-kit-MIT.txt
+
+````
+MIT License
+
+Copyright (c) 2026 Cursor
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
 ````
 
 ## plugins/engineering-kit/licenses/knowledge-work-Apache-2.0.txt
@@ -3296,486 +3349,978 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 ````
 
-## plugins/engineering-kit/skills/adversarial-change-review/SKILL.md
+## plugins/engineering-kit/skills/architecture/SKILL.md
 
 ````
 ---
-name: adversarial-change-review
+name: architecture
 description: >-
-  Use when the user wants a safety-biased, evidence-backed judgment of whether a specific code
-  change is a genuine improvement worth keeping, merging, or porting — especially when expected
-  values or tests changed, behavior preservation is disputed, or the user asks for prosecution
-  versus defense. Scrutinizes the diff and changed tests, then returns KEEP, REJECT, or
-  KEEP-WITH-CAVEATS. Prefer native diff review for routine PR bug-finding without a change-worthiness
-  verdict, and ai-slop-review for auditing files for AI-generated slop (restating comments,
-  blanket catches, hollow tests) without judging one change. Not for implementing the requested
-  edits.
+  Use when choosing, evaluating, or recording a consequential technical design decision from
+  concrete requirements and constraints—for example a technology selection, component boundary,
+  data ownership choice, architecture decision record, or developing a chosen API design into
+  consumer examples and testable requirements.
+  Produce a recommendation sized to the
+  decision and make its trade-offs and reconsideration conditions explicit. Prefer
+  clean-sheet-review when the user wants an existing solution's entire framing or scope reopened;
+  do not use for routine code review (use code-review) or an already-approved implementation task.
 ---
 
-# Adversarial Change Review
+<!-- Derived from anthropics/knowledge-work-plugins and modified by Leo Farias for engineering-kit. See ../../SOURCES.md. -->
 
-Judge whether a specific code change deserves to survive. Put the burden of proof on behavior-changing code, while keeping every claim tied to evidence. A lack of proof is uncertainty—not proof that a regression exists—but unresolved uncertainty should count against risky, irreversible, or broad changes.
+# Architecture Decisions
 
-This is a review-only workflow. Inspect and test when useful, but do not edit or rewrite the code under review.
+Turn a material technical choice into a decision that another person can understand, challenge, and revisit. Preserve the user's real constraints; do not manufacture architecture ceremony for a small or reversible choice.
 
-## Required outcome
+## Size the decision
 
-Produce a verdict backed by four things:
+Choose the lightest output that makes the decision usable:
 
-- an explicit account of observable behavior before and after the change
-- independent strongest-case arguments for rejection and acceptance
-- a classification for every added, modified, deleted, or materially weakened test
-- concrete evidence that would resolve each remaining uncertainty
+- **Compact recommendation:** a bounded, reversible choice with a small number of consequences.
+- **Architecture decision record (ADR):** a consequential or long-lived choice that needs a durable record or approval.
+- **API contract design:** a chosen design direction needs consumer examples, precise behavior,
+  and testable requirements. Read [api-contract-design.md](references/api-contract-design.md)
+  for that work; it applies to initial contracts and approved redesigns.
+- **Proposal evaluation:** an architecture already exists and the user wants its decision quality assessed without reopening the whole solution.
 
-Do not reward a change merely for being clever, simpler, or faster. Those qualities justify keeping it only when its behavior is correct for the intended contract and its tradeoffs are acceptable.
+When the user requests a specific format, use it. Do not turn an evaluation into a blank ADR template or a focused decision into a full system redesign. When a design has its own decision record, cite it rather than creating a competing record. A proposal may recommend superseding an ADR; update its accepted status only when that decision is authorized, preserving history.
 
-## Gather the evidence needed for the decision
+## Establish the decision frame
 
-Start from the actual review target: a git range, commit, pull request, patch, or pasted before/after code. If no target is available, ask for it; the verdict cannot be inferred from a description of the change alone.
+Inspect relevant repository artifacts, design notes, constraints, and observed behavior when they are available. Summarize:
 
-Read the diff, then inspect only the surrounding evidence needed to verify its claims:
+- the outcome being decided;
+- hard constraints and external commitments;
+- the decision drivers that distinguish viable options;
+- assumptions and unknowns that could change the result.
 
-- the complete changed function or component and the invariants it relies on
-- callers, consumers, and public interfaces that make the changed behavior observable
-- tests, specifications, issue or decision context, documentation, schemas, and compatibility promises
-- error and rollback paths, state transitions, concurrency boundaries, and persisted data where relevant
-- history when it clarifies whether behavior is established or accidental
+Ask at most one clarifying question when the missing answer could invert the recommendation. Otherwise proceed with an explicit assumption and say how a different answer would affect the decision.
 
-Run focused read-only checks or tests when they materially reduce uncertainty. Do not substitute a passing suite for behavioral reasoning: tests can preserve the wrong expectation, omit the affected path, or be weakened in the same change.
+Keep requirements separate from the current implementation. Treat latency, scale, reliability, cost, team expertise, delivery time, compatibility, security, and operational ownership as decision drivers only when the available evidence makes them relevant.
 
-State what could not be inspected or verified. Never invent a line number; for deleted code, cite the deleted location or diff hunk as precisely as the available tooling permits.
+## Protect evidence and identity
 
-## Reconstruct the behavior delta
+Vendor capabilities and prices change. Verify exact service prices, quotas, throughput limits, retention periods, provisioning times, and migration durations from a current authoritative source inspected during the current task before quoting them. A remembered value or an uninspected documentation URL is not verification. When verification is unavailable, compare qualitatively and list the fact that must be checked; do not substitute remembered numbers. Saying an unsupported number should be verified does not make it usable—omit the number entirely unless the response can cite the source it actually inspected.
 
-Describe effects in terms a caller, user, operator, or persisted system could observe. Check the dimensions relevant to the change:
+Do not include an Author, Deciders, Approvers, or contact field unless the user or a relevant artifact explicitly supplied that identity for this decision. Never use account, profile, machine, or environment identity as decision-record content.
 
-- returned values, emitted output, state changes, and side effects
-- accepted and rejected inputs, null/empty/boundary handling, and equality or identity semantics
-- error type, message, timing, retryability, and fallback behavior
-- ordering, determinism, concurrency, cancellation, and lifecycle behavior
-- public API, wire format, storage format, configuration, and compatibility
-- performance characteristics when latency, memory, work amplification, or resource use crosses a meaningful contract or operational limit
+## Compare viable options
 
-Classify each material edit as:
+Consider the status quo when it is genuinely viable. Compare serious options against the same decision drivers rather than listing generic pros and cons.
 
-- **Behavior-preserving:** available evidence supports the same observable contract.
-- **Behavior-changing:** an observable result or operational characteristic differs.
-- **Unverified:** preservation or intent depends on evidence that is unavailable or inconclusive.
+- Tie assessments to the stated environment and workload.
+- Distinguish verified facts, reasonable estimates, and unresolved assumptions.
+- Avoid invented precision. Unless the user supplied a figure or it was verified from a current authoritative source inspected during the current task, do not quote exact service prices, quotas, throughput limits, retention periods, provisioning times, or migration durations. Do not present a vendor capability as current merely because a documentation URL is known. Compare qualitatively and name the lookup or measurement needed instead.
+- Do not force multiple alternatives when a hard constraint leaves only one viable choice.
 
-Rank the delta by blast radius: external or persisted contracts first, shared internal contracts next, and local implementation details last. Keep cosmetic and mechanical changes out of the behavioral case unless they alter generated artifacts, tooling behavior, or another observable surface.
+Make one recommendation. Explain the primary reason, the material trade-off being accepted, and why the rejected option is not preferred under the present constraints.
 
-## Make two independent cases
+## Present the result
 
-Keep the prosecution and defense as separate passes so one does not prematurely compromise the other.
+Lead with the recommendation and a short reason. For a compact decision or evaluation, include only the sections needed to show the frame, trade-offs, consequences, missing evidence, and reconsideration conditions.
 
-### Prosecution
-
-Assume the change is unsafe until its behavioral claims are demonstrated. Build the strongest evidence-backed case that it should be rejected. Look especially for:
-
-- dropped guards, widened conditions, off-by-one boundaries, and null/empty changes
-- error-path, retry, timeout, transaction, or cleanup changes
-- equality, identity, coercion, ordering, and default-value shifts
-- compatibility breaks hidden inside a refactor or optimization
-- tests that changed in the same direction as the implementation without independent support for the new contract
-
-Do not soften this pass, but do not manufacture defects. Distinguish a demonstrated regression from a plausible risk and from missing evidence.
-
-### Defense
-
-Assume the change is a correct, intentional improvement and build the strongest evidence-backed case for keeping it. Look for:
-
-- a documented contract or decision that the old behavior violated
-- a concrete bug reproduced before and prevented after
-- stronger invariants, narrower failure modes, or improved compatibility
-- tests that add discriminating coverage instead of merely ratifying the implementation
-- a measured operational benefit whose behavioral tradeoff is understood
-
-The defense should answer the prosecution's strongest point when evidence allows. If it cannot, say so rather than inventing intent.
-
-When the user explicitly asks for delegated or parallel reviewers, isolate these passes through the available orchestration workflow and synthesize them here. Otherwise perform two clearly separated local passes.
-
-## Triage findings by observability and severity
-
-Report only concrete findings or material uncertainties. For each item, give the location, the before/after behavior, who or what can observe it, and why it affects the verdict.
-
-Separate:
-
-- **Observable contract changes:** public behavior, persisted data, cross-module contracts, security or authorization boundaries, operational limits, and user-visible failures.
-- **Internal-only changes:** implementation details with no demonstrated consumer impact.
-- **Does not matter:** cosmetic or mechanical deltas with no meaningful behavioral consequence.
-
-Order findings by expected harm and blast radius. Uncertainty is not a severity by itself; explain the concrete failure it leaves unresolved and how likely or costly that failure would be.
-
-## Scrutinize changed tests
-
-Inventory every added, modified, or deleted test, skipped case, changed expected value, removed assertion, loosened matcher, broader exception expectation, snapshot rewrite, widened tolerance, and reduced fixture coverage. Cross-reference each with the source or contract change that supposedly requires it.
-
-Classify each test change:
-
-- **(a) Intended contract update:** independent product, specification, compatibility, or decision evidence explicitly changes what the system should do; the test now encodes that revised contract.
-- **(b) Legitimate tracking change:** an evidenced and intentional source change requires the expectation to move, and the revised test still discriminates correct from incorrect behavior.
-- **(c) Unjustified weakening:** the change reduces regression detection, removes coverage, or moves an expectation with the implementation without enough independent support for the new behavior.
-
-Category (c) describes the effect of the test change, not the author's motive. If the evidence cannot distinguish (b) from (c), classify it provisionally as **(c), unresolved** and name the missing spec, reproduction, or invariant that would settle it.
-
-Call out deleted assertions and weakened expectations prominently. A source change with no corresponding test can also be a material gap, but do not pretend an unchanged test belongs in the changed-test inventory.
-
-## Reach the verdict
-
-Choose one recommendation:
-
-- **KEEP:** evidence supports the intended improvement, no material observable regression remains unresolved, and changed tests faithfully protect the contract.
-- **REJECT:** evidence demonstrates a regression or contract break, or the change's risk is too high for its unsupported behavioral claim.
-- **KEEP-WITH-CAVEATS:** the change is probably beneficial and no demonstrated regression requires rejection, but bounded follow-up evidence, compatibility work, or monitoring is still necessary.
-
-Do not use KEEP-WITH-CAVEATS to hide a merge blocker. If the caveat must be resolved before the change is safe, recommend REJECT until it is resolved.
-
-State confidence as high, medium, or low and tie it to evidence quality, coverage, and unresolved scope—not rhetorical certainty. Ties and unprovable preservation lean toward caution in proportion to blast radius and reversibility.
-
-## Report structure
-
-Use these sections for a substantive review:
+Keep durable ADRs in the repository's decision-record folder (for example `docs/decisions/`) so they remain part of its versioned design history; do not store them in `~/.agents/`. For a durable ADR, use this structure unless the repository already has a convention:
 
 ```markdown
-## 1. Behavior-change summary
-- Behavior-changing:
-- Behavior-preserving:
-- Unverified:
+# ADR-[number]: [Decision]
 
-## 2. Triaged findings
-1. [Severity] `path/to/file:line` Finding
-   Observable impact: ...
-   Evidence: ...
+**Status:** Proposed | Accepted | Deprecated | Superseded
+**Date:** [date]
 
-## 3. Changed-test analysis
-| Test/location | Change | Class | Source/contract link | Judgment |
-|---|---|---|---|---|
+## Context
+[Decision, constraints, drivers, and material unknowns]
 
-## 4. Prosecution vs Defense
-### Prosecution
-...
-### Defense
-...
+## Decision
+[Chosen option and rationale]
 
-## 5. Verdict
-- Recommendation: KEEP / REJECT / KEEP-WITH-CAVEATS
-- Confidence: High / Medium / Low — reason
-- Risky spots: `path/to/file:line`, ...
-- Evidence that would resolve doubt: exact test, specification, value, or invariant to confirm
+## Options considered
+[Comparable evidence and trade-offs for each viable option]
+
+## Consequences
+[What becomes easier, harder, riskier, or newly required]
+
+## Reconsider when
+[Observable thresholds or changed assumptions that should reopen the decision]
 ```
 
-Keep empty categories brief. If no tests changed, say so in section 3. Cite concrete `file:line` locations throughout, and label inferences and unavailable evidence explicitly.
+Add owners, approvers, implementation follow-ups, or links only when the user or repository needs them. Do not infer names, identities, email addresses, or decision authority from account or machine context; omit those fields unless the user or a relevant artifact supplied them. Do not create project-tracker tasks, modify implementation files, or imply approval unless the user requested those actions.
+
+## Final check
+
+Before returning the decision, verify that the recommendation follows from the stated drivers, material uncertainty is visible, consequences include the downside being accepted, and the reconsideration conditions are concrete enough to recognize later. Remove any unverified vendor number and any identity field not explicitly grounded in the request or inspected artifacts.
 ````
 
-## plugins/engineering-kit/skills/adversarial-change-review/evals/evals.json
+## plugins/engineering-kit/skills/architecture/evals/evals.json
 
 ````
 {
-  "skill_name": "adversarial-change-review",
+  "skill_name": "architecture",
   "evals": [
     {
       "id": 1,
-      "prompt": "Judge whether commit `4a91d2e` is safe for the planned release. In `src/config/parseLimit.ts:41`, `parseLimit()` used to throw `RangeError` for negative values; the commit now clamps them to zero. `docs/config.md:73` still says negative limits are invalid. In `test/config/parseLimit.test.ts:88`, the author replaced `expect(() => parseLimit(-1)).toThrow(RangeError)` with `expect(parseLimit(-1)).toBe(0)`. There is no linked issue or migration note. Give me the safety-biased KEEP/REJECT judgment and do not edit anything.",
-      "expected_output": "A REJECT verdict that identifies the negative-input contract change, treats the moved expected value as an unjustified weakening rather than independent proof, presents the strongest plausible defense without accepting it as evidence, and names the spec decision or compatibility check needed to reconsider.",
+      "prompt": "Create an architecture decision for our event bus. We are already on AWS, peak at about 5,000 events per second, require ordering only within one customer, have three engineers, no Kafka operations experience, and need to ship in eight weeks. Compare Kafka and SQS and recommend one.",
+      "expected_output": "A decision-ready ADR that recommends an option from the stated constraints, makes the material trade-offs and consequences explicit, and identifies assumptions that could change the decision.",
       "files": [],
       "expectations": [
-        "The behavior summary distinguishes the new clamp-to-zero behavior from preserved behavior and cites the supplied source or documentation locations",
-        "The changed test at `test/config/parseLimit.test.ts:88` is classified as (c), or (c) unresolved, because it moves with the implementation without independent contract support",
-        "The prosecution and defense are presented as separate strongest-case arguments",
-        "The verdict is REJECT with confidence justified by the documentation and missing migration or decision evidence",
-        "The response names exact evidence that could change the verdict and does not rewrite the code"
+        "The output makes one clear recommendation and ties it to the eight-week schedule, team experience, AWS environment, throughput, and per-customer ordering requirement.",
+        "The output compares Kafka and SQS on operational burden, ordering semantics, throughput, and future flexibility without presenting unverified prices, quotas, throughput ceilings, retention periods, or vendor capabilities as current facts; an uninspected documentation URL does not count as verification.",
+        "The output states material consequences, risks, and at least one assumption or threshold that would justify revisiting the decision.",
+        "The output does not mention unavailable connector placeholders or require a connected knowledge base or project tracker.",
+        "The output does not invent an author, decider, email address, or approval authority that the prompt did not provide."
       ]
     },
     {
       "id": 2,
-      "prompt": "Do an adversarial behavior review of this cache fix and tell me if we should keep it. `lib/cache/readThrough.ts:24` changed from `const value = cache.get(key); if (value) return value;` to `if (cache.has(key)) return cache.get(key);`. The loader call is otherwise unchanged. `lib/cache/readThrough.test.ts:61-84` adds cases proving cached `false`, `0`, and an empty string are returned without calling the loader again. The cache API allows all three values. I want prosecution vs defense, changed-test classification, and a clear verdict\u2014review only.",
-      "expected_output": "A high-confidence KEEP verdict that recognizes the old truthiness bug, explains the observable reduction in unnecessary loader calls, classifies the added tests as legitimate tracking or strengthened coverage, and still articulates a real but weak prosecution case such as the extra lookup or a possible mutation race if applicable.",
+      "prompt": "Evaluate this proposed design without turning it into a full rewrite: our small billing product has an API service, a separate worker, Postgres, and Redis-backed jobs. The proposal adds a second database solely for reporting. We need daily reports, can tolerate data being one hour old, and have one backend team. Tell me whether the added database is justified and what evidence is missing.",
+      "expected_output": "A focused evaluation of the proposed reporting database that separates observed constraints from assumptions, gives a verdict, and names evidence needed before committing to the added component.",
       "files": [],
       "expectations": [
-        "The behavior summary identifies that cached falsey values now count as hits and the loader is no longer called for them",
-        "The review does not invent a regression merely to satisfy the adversarial posture",
-        "The changed or added tests are classified as (b) legitimate tracking change or stronger discriminating coverage, with a source link",
-        "The prosecution and defense are both substantive and remain separate",
-        "The verdict is KEEP with high or well-supported medium confidence and concrete locations"
+        "The output evaluates the proposed second database rather than automatically producing a blank ADR template or redesigning the entire billing system.",
+        "The output distinguishes stated facts from missing evidence such as reporting workload, query impact, data volume, or operational ownership.",
+        "The output gives a clear provisional verdict and explains what new evidence would reverse it.",
+        "The response is proportional to the focused decision and avoids unrelated implementation tasks."
       ]
     },
     {
       "id": 3,
-      "prompt": "Review this proposed parser change. `packages/importer/date.ts:52` changes invalid dates from throwing `InvalidDateError` to returning `null`; `packages/importer/date.test.ts:109` changes the corresponding expected exception to `null`. The linked issue says this lets batch imports skip bad rows, and `packages/importer/batch.ts:144` already filters null dates. I cannot verify whether any other package imports `parseDate`, and there is no public API document in the material I have. Decide KEEP, REJECT, or KEEP-WITH-CAVEATS and tell me exactly what would settle it. No code changes.",
-      "expected_output": "A cautious verdict that recognizes the evidenced batch-import improvement but does not claim global compatibility. It should classify the test change provisionally, identify unknown callers as the central uncertainty, and specify a caller search plus error-contract or compatibility test as the evidence needed before safe adoption.",
+      "prompt": "For a single-process internal admin tool used by ten people, should we use SQLite or provision Postgres? Writes are low-volume, nightly file backup is acceptable, and we expect the tool to remain internal for at least a year. Give me the smallest useful architecture decision.",
+      "expected_output": "A concise, decision-ready recommendation sized to a low-risk internal tool, including the few conditions that would trigger reconsideration.",
       "files": [],
       "expectations": [
-        "The behavior summary states the throw-to-null contract change and separates the verified batch caller from unverified consumers",
-        "The changed test is classified as (b) only for the intended batch behavior or as (c) unresolved for the wider contract, with the uncertainty explained",
-        "The strongest prosecution centers on callers that may rely on `InvalidDateError`, while the defense cites the linked issue and null-filtering batch path",
-        "The verdict is safety-biased and does not give an unconditional high-confidence KEEP",
-        "The response asks for an exact caller search and a compatibility/specification check or focused test to resolve doubt"
+        "The output recommends one option using the stated concurrency, operational, backup, and time-horizon constraints.",
+        "The output remains concise and does not pad the answer with a full enterprise ADR ceremony.",
+        "The output names concrete change conditions that would justify moving to the other option.",
+        "The output does not invent additional services, migration projects, or requirements."
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "We already chose to redesign our internal pagination API. Work through the contract with me: provide a consumer example, decisions/open questions, and testable requirements. Product need: enumerate records without skipping any when new records are inserted. Existing consumers use page-number calls; a contractual partner must retain those calls for six months, so a compatibility adapter may be needed. Maximum page size is undecided; choose no arbitrary limit. Do not implement or commit. No repo is available; do not claim compilation.",
+      "expected_output": "A proportionate response that satisfies the stated scope and expectations.",
+      "files": [],
+      "expectations": [
+        "Provides concrete consumer-facing example and observable pagination requirements.",
+        "Preserves six-month compatibility and leaves page-size policy open.",
+        "Keeps decisions distinct from proposals; no invented compilation, edits, commits, or mandatory handoff."
       ]
     }
   ]
 }
 ````
 
-## plugins/engineering-kit/skills/adversarial-change-review/evals/trigger_queries.json
+## plugins/engineering-kit/skills/architecture/evals/trigger_queries.json
 
 ````
 [
   {
-    "query": "This proposed commit changes our parser's invalid-input behavior and updates the expected exception in the same patch. Should we accept it or is the test just following a regression? Give me a KEEP/REJECT call.",
+    "query": "Choose between SQS and Kafka for our event pipeline. Record the decision and the conditions that would change it.",
     "should_trigger": true
   },
   {
-    "query": "Review `git diff v2.8.0...feature/retry-policy` adversarially. Map the observable behavior change, make the strongest prosecution and defense, then tell me whether the branch is genuinely better.",
+    "query": "Write an ADR for whether customer data should belong to the billing service or the account service.",
     "should_trigger": true
   },
   {
-    "query": "The author says this refactor preserves behavior, but three snapshots and two error expectations changed. Audit that claim and decide whether we should keep or reject the change.",
+    "query": "Evaluate our proposal to add a second database for analytics. Give one recommendation with the accepted trade-off.",
     "should_trigger": true
   },
   {
-    "query": "A proposed change rewrites the cache lookup logic. Is the change safe to keep? Be conservative about falsey values and inspect every changed test expectation.",
+    "query": "We must choose REST or gRPC between two internal services. Latency and team experience are the main constraints.",
     "should_trigger": true
   },
   {
-    "query": "Compare the before/after code in `patches/normalize-ids.diff` as a safety-biased judge. I need the behavioral contract delta, not code style, and a KEEP-WITH-CAVEATS verdict if proof is incomplete.",
+    "query": "Should this capability remain in the monolith or become a service? Document the boundary decision.",
     "should_trigger": true
   },
   {
-    "query": "Is this alleged bug fix actually an improvement? The return value, exception type, and unit tests all moved. Prosecute it, defend it, and break the tie toward compatibility.",
+    "query": "Compare DynamoDB and Postgres for this workload. State the evidence we still need before the final decision.",
     "should_trigger": true
   },
   {
-    "query": "Before I backport commit `9fd13a7`, tell me whether it preserves our API behavior. Pay special attention to the deleted assertions in `client_test.go` and give one keep/reject recommendation.",
+    "query": "Record why we selected an event-driven boundary for order fulfillment and when we should reconsider it.",
     "should_trigger": true
   },
   {
-    "query": "Judge this performance optimization for behavioral safety. It reorders async results and widens a timing tolerance in the tests; decide honestly whether the speedup deserves to survive.",
+    "query": "Review this proposed cache architecture. I need a focused accept, reject, or revise decision.",
     "should_trigger": true
   },
   {
-    "query": "I want an adversarial change review of PR #418: what can users observe now, which changed tests encode a real spec update, and should we accept the patch?",
+    "query": "Choose where encryption keys should be managed across these two components. The decision will affect every client.",
     "should_trigger": true
   },
   {
-    "query": "The new branch clamps out-of-range values instead of rejecting them. Docs still describe rejection, but tests now expect clamping. Analyze both sides and make the release decision.",
+    "query": "Create the smallest useful technical decision for SQLite versus Postgres in our internal tool.",
     "should_trigger": true
   },
   {
-    "query": "Review this PR for bugs, security issues, and missing tests before merge. Findings first; I don't need a prosecution/defense exercise or a keep-versus-reject judgment of the behavior change.",
+    "query": "Review this pull request for correctness, security defects, and missing regression tests.",
     "should_trigger": false
   },
   {
-    "query": "Now that the notification service is built, reconsider whether it should exist at all and propose the simpler architecture you would design today.",
+    "query": "We already built this plugin registry. Reconsider whether the registry should exist at all.",
     "should_trigger": false
   },
   {
-    "query": "Refactor `parseLimit` to reduce nesting and duplicate validation, but preserve every public behavior and update the code directly.",
+    "query": "Design the complete notification platform, including APIs, storage, queues, scaling, and operational ownership.",
     "should_trigger": false
   },
   {
-    "query": "Fix the regression in this commit, add tests, and prepare the patch for me.",
+    "query": "Implement the approved database choice and run the existing migration tests.",
     "should_trigger": false
   },
   {
-    "query": "Audit whether this implementation is good enough to be our canonical example for every new service team to copy.",
+    "query": "Write a product requirements document for a new customer notification feature.",
     "should_trigger": false
   },
   {
-    "query": "The importer test fails on CI but passes locally. Reproduce it and find the root cause before suggesting any fix.",
+    "query": "The service started returning 500 errors after deployment. Find the root cause.",
     "should_trigger": false
   },
   {
-    "query": "Search the repository for every caller of `parseDate` and summarize which packages depend on its exception behavior.",
+    "query": "Create a test strategy for the payment migration. Include unit, integration, and rollback coverage.",
     "should_trigger": false
   },
   {
-    "query": "Write boundary tests for this parser based on its current documented contract; don't review the implementation.",
+    "query": "Change this one configuration value and run the focused test.",
     "should_trigger": false
   },
   {
-    "query": "Benchmark the old and new cache implementations and tell me which is faster under a 90/10 read-write workload.",
+    "query": "Summarize this existing architecture for a stakeholder update. Do not evaluate or change it.",
     "should_trigger": false
   },
   {
-    "query": "Cherry-pick commit `4a91d2e` onto my current branch and resolve any conflicts.",
+    "query": "Create an implementation plan for the approved API migration. The architecture decision is complete.",
     "should_trigger": false
   },
   {
-    "query": "This branch from Copilot is full of restating comments, try/catch around pure code, and tests that only assert not.toThrow(). Audit it for AI slop and list what to delete; I'm not asking whether the feature itself should merge.",
+    "query": "We chose to redesign our API. Work out consumer examples, errors, compatibility, and testable requirements.",
+    "should_trigger": true
+  },
+  {
+    "query": "Lock down and settle this chosen pagination API contract with consumer examples and testable requirements.",
+    "should_trigger": true
+  },
+  {
+    "query": "Ignore the current solution shape and propose what we would build today for this app purpose, including ADR impact.",
     "should_trigger": false
   }
 ]
 ````
 
-## plugins/engineering-kit/skills/ai-slop-review/SKILL.md
+## plugins/engineering-kit/skills/architecture/references/api-contract-design.md
+
+````
+# API contract design
+
+Use this guidance when a design direction is chosen and the consumer-facing contract needs to
+become concrete. It applies to a new API or an approved redesign. If the unresolved question is
+whether the existing solution should exist or be redesigned, use clean-sheet-review first only
+when the user asked for that reconsideration.
+
+## Start with the consumer
+
+Establish the outcome, consumers, fixed constraints, and compatibility obligations. Inspect the
+current signatures, a real caller, and relevant lifecycle or data flow when code exists. Keep
+current facts separate from proposed behavior and unavailable evidence.
+
+Show a minimal example of what a consumer would write, then a representative scenario that tests
+the difficult part of the contract. Choose scenarios from the product; do not impose a CRUD app,
+registry, universal primitive, or preferred framework pattern. Explain the concepts and trade-offs
+in the consumer's language. Use framework conventions when they fit the constraints.
+
+## Settle behavior and open decisions
+
+Make inputs, outputs, invariants, ownership, errors, ordering, and lifecycle rules explicit where
+relevant. Trace each public operation to a demonstrated need. Preserve useful boundaries; remove
+concepts only when their responsibility disappears or is covered elsewhere.
+
+Record agreed decisions with reasons and keep unresolved questions distinct. Use IDs or a small
+table when cross-references help. Ask about the next consequential uncertainty rather than walking
+every decision through a fixed ceremony. New evidence can reopen an agreed choice: explain the
+impact and seek the needed decision instead of silently changing the contract or treating it as
+permanently locked.
+
+Keep one design record following repository conventions. Maintained API guides and ADRs belong in
+the repository; working notes and plans use writing-plans' shared artifact convention unless a
+location is specified. Link related records and preserve decision history. Do not commit records,
+change accepted ADR status, or imply approval without authorization.
+
+## Make the contract verifiable
+
+Write requirements that an observable example or test can check. Cover representative consumers,
+important errors and boundaries, and any migration obligations. Label example code as proposed
+until it has actually compiled and run; a clear guide is not evidence of an implemented API.
+Use a traceability table or export inventory only when drift or scope makes it useful.
+
+Compare the proposed contract with current consumers and documentation. Name affected signatures,
+examples, tests, stored formats, and ADRs; distinguish proposed supersession from an accepted change.
+Choose compatibility, replacement, rollout, and rollback strategies from the actual commitments.
+Parallel replacement, shims, and immediate removal are options with costs, not universal rules.
+
+End with the usable contract, agreed choices, unresolved blockers, and evidence still needed. When
+the user wants implementation planning, writing-plans can turn the settled requirements into tasks.
+Do not force a new skill invocation, agent handoff, implementation, or publication.
+````
+
+## plugins/engineering-kit/skills/ci-loop/SKILL.md
 
 ````
 ---
-name: ai-slop-review
-description: >-
-  Use when the user wants code, comments, docs, or tests audited for AI-generated slop across a
-  PR, directory, package, or whole repository: restating or tutorial-voice comments, blanket
-  catches, impossible defensive code, over-abstraction, generic names, dead ceremony, stale lint
-  suppressions, hollow tests, or markdown filler. Trigger on "AI slop", "looks LLM-generated",
-  "Copilot/Claude cruft", "over-commented", "defensive noise", or "are these tests real". Runs a
-  review-only, evidence-gated finder-then-validator pass and reports only findings that survive
-  with path, lines, snippet, and fix. Prefer adversarial-change-review for a keep/reject verdict
-  on one change's behavior and native diff review for ordinary bug-finding. Review-only unless fixes are explicitly requested.
+name: ci-loop
+description: >
+  Use when watching pull request CI checks, diagnosing failing PR checks (`fix-ci`), and iterating
+  on focused fixes until all required PR checks are green using `gh pr checks` as the source of
+  truth. Do not use for authoring a new pull request description or performing a static code review
+  without CI checks.
 ---
 
-# AI Slop Review
+# Loop on CI
 
-Find the places where generated code is worse than a careful engineer would ship, prove each
-one with a cited snippet, try to disprove it, and report only what survives. The default output is a
-findings report; implement fixes only when the user has requested them. The bar for every finding is the code, never its origin: "an LLM
-wrote this" is not a finding, and neither is voice alone.
+## Trigger
 
-## Size the review to the scope
+Need to watch a branch or pull request, diagnose failing CI checks, and iterate on fixes until all required checks are green.
 
-Start from the actual target: a diff range, pull request, directory, package, or repository.
-Estimate the scope and choose a proportionate execution mode. Work inline or in sequential
-slices by default. Use subagents only when permitted and useful, respecting the user's model,
-cost, and concurrency preferences. A large line count alone does not authorize delegation.
-For a large scope, [orchestration.md](references/orchestration.md) provides slicing and evidence
-contracts that also work sequentially. Preserve coverage and report unread files honestly.
+Use `gh pr checks` as the source of truth. It includes all PR-attached checks, while `gh run list` only covers GitHub Actions.
 
-Record the starting worktree state and leave unrelated edits in place. A read-only review does
-not require stashing, resetting, committing, or cleaning the working tree.
+## Workflow
 
-For a diff, only touched hunks are in scope. Read the whole file for context, because slop is
-judged against the file's conventions, but a finding on an untouched line carries
-`"preexisting": true` and lands in a separate optional bucket. A pull request is not
-responsible for the cruft around it.
+1. Resolve the PR for the current branch (`gh pr view --json number,url,headRefName`).
+2. Inspect current PR checks (`gh pr checks --json name,bucket,state,workflow,link`) before waiting.
+3. If checks already failed, inspect failed jobs and extract the first actionable root error. Use `gh run view <run-id> --log-failed` when the check links to a GitHub Actions run; otherwise use the external check link to identify the failing command or service.
+4. If checks are pending, watch with `gh pr checks --watch --fail-fast`.
+5. Apply the smallest safe fix for one actionable failure at a time; when push is authorized, push and re-check the full PR check set until green.
 
-## Establish repo facts before reading
-
-Inspect the relevant repository conventions before classifying findings. Record the facts
-needed for the review, sharing them with any permitted delegated reviewers:
-
-- **Linter and formatter configuration** and what it enforces. Anything the analyzer already
-  flags is out of scope; name the rule and move on.
-- **Doc-comment requirements.** When the repository requires a doc on every public member, its
-  existence is never slop; only its content can be.
-- **Layer and boundary rules** from `CLAUDE.md`, `AGENTS.md`, `CONTRIBUTING`, or architecture
-  docs. S13 architecture findings come only from boundaries the repository states.
-- **Test harnesses** the repository documents. A harness or fake the repository does not
-  document is a finding; the documented ones are not.
-- **Out-of-scope paths:** generated, vendored, golden, third-party, and anything the user excludes.
-- **Compatibility promises.** A prerelease removes obsolete shapes; a stable library shims them.
-  Legacy aliases are S12 only where no promise exists.
-
-For a broad or uncertain review, use representative report and keep examples as described in
-[rubric.md](references/rubric.md). Scale calibration to the task; do not manufacture examples to
-meet a quota. Over-reporting on restating comments and chat voice is a known failure mode.
-
-## Run the mechanical sweep first
-
-With `<skill>` set to this skill's directory and `<workspace>` a directory outside the repo:
+## Commands
 
 ```bash
-git diff --name-only <range> > <workspace>/changed.txt            # diff scope only
-python3 <skill>/scripts/sweep.py --root . --out <workspace> [--files <workspace>/changed.txt]
+# Resolve the active PR
+gh pr view --json number,url,headRefName
+
+# Inspect all attached checks
+gh pr checks --json name,bucket,state,workflow,link
+
+# Watch pending checks and fail fast
+gh pr checks --watch --fail-fast
+
+# GitHub Actions logs, when the failing check links to a GHA run
+gh run view <run-id> --log-failed
 ```
 
-The sweep writes hit lists per rubric pattern (catch-alls, suppressions, step narration, chat
-voice, history narration, tag-style docs, helper and manager names, emoji, commented-out code,
-legacy shims), stale Dart lint suppressions when `analysis_options.yaml` is present, and
-per-test-file hints (marketing names, Arrange/Act/Assert narration, does-not-throw-only,
-tautologies, not-null-only, expected values computed from the input instead of a literal, files
-with more tests than assertions). Hits are leads. Every hit
-is triaged as reported or not_slop with a one-line reason; a hit you cannot justify is not_slop.
-Searches run once and cannot miss a pattern; the judgment is what the finder adds.
+## Guardrails
 
-## Find
+- Keep each fix scoped to a single failure cause when possible.
+- Prefer minimal, low-risk changes before broader refactors.
+- Do not bypass hooks (`--no-verify`) to force progress.
+- If the failure is clearly unrelated to the PR and appears fixed on `main`, merge or rebase onto latest `main` instead of bloating the PR with unrelated fixes.
+- If failures are flaky, retry once and report flake evidence.
+- Re-run `gh pr checks --json name,bucket,state,workflow,link` after every push; the check set can change.
 
-Load the lens block you are applying from [rubric.md](references/rubric.md) and work one lens
-at a time: comments and docs (C), code shape (K), tests (T). Mixing lenses in one pass produces
-shallower reads and a validator that cannot specialize.
+## Output
 
-- Read every in-scope file to its last line and keep a `{path, lines_read}` ledger. File-read
-  tools truncate long files; the ledger makes a partial read visible instead of silent.
-- For each candidate, name the pattern and apply its decision test before deciding. If the test
-  does not clearly fail, do not report. The tests are questions ("delete the comment; did the
-  reader lose anything?", "if the code were broken the obvious way, would this test fail?"),
-  and the answer goes in `why`.
-- For S5 and S6, read the types and narrowing in scope. For S7, count the implementations or
-  call sites and state the number. For S12 suppressions, check the linter configuration.
-- For tests, read each body, then invert the view: list the unit's public entry points and which
-  tests exercise them. An entry point with an obvious failure path and no test is S10 too, and
-  reading test bodies alone never surfaces it.
-- Every finding carries path, start and end line, a verbatim snippet of at most four lines, the
-  guideline it violates, a one- or two-sentence `why`, and a one-sentence fix. Severity defaults
-  from the rule; move it one step only with a reason.
-- An empty findings list is a correct result for clean code. Do not manufacture findings to
-  justify the pass.
-
-Write findings as JSON in the finder contract from [orchestration.md](references/orchestration.md)
-even for an inline review, one file per lens under `<workspace>/findings/` with agent ids such
-as `C-inline`; the gate and the validator both read that shape.
-
-## Gate every citation
-
-```bash
-python3 <skill>/scripts/check_findings.py --root . --no-slices [--diff-range <range>] <workspace>/findings/*.json
-python3 <skill>/scripts/check_findings.py --root . --workspace <workspace> <workspace>/findings/*.json   # delegated
-```
-
-The gate verifies that each snippet exists within one line of its cited range, the pattern is in
-the agent's lens, severity and confidence are valid, every slice file was read to its last line,
-and, with a diff range, every finding sits inside a changed hunk or is marked preexisting. Fix or
-drop what fails before validation; a validator's time is the most expensive in the run.
-
-## Validate by trying to disprove
-
-The second pass sees only the structured fields: id, path, lines, pattern, severity, confidence,
-snippet, guideline, fix. Never the finder's `why`. Its job is to defeat each charge, in order:
-is it a why-comment; does a doc requirement or caveat justify it; is the catch at a boundary that
-reports; is the guarded state actually impossible given the types; how many implementations are
-there; would the test fail on the obvious break; does the linter already enforce it; is it the
-file's consistent convention. Verdicts are confirm, downgrade, reject, or reclassify, each with a
-one-sentence reason grounded in the cited code.
-
-Inline, do this yourself after finishing the find pass, from the stripped view, and be harsh on
-S1, S2, S3, and S9. Delegated, one validator per roughly three finders of the same lens, using the
-validator prompt in [prompts.md](references/prompts.md).
-
-Judge validation by its evidence and counterarguments, not a required rejection rate. All findings
-may legitimately survive, or none may. Revisit a pass when concrete unsupported conclusions or
-missed counterevidence justify it. A P1 survives only at high confidence.
-
-## Report
-
-Lead with confirmed P1s, then P2s grouped by file, each with pattern id, path, lines, snippet,
-and fix, then P3s clustered by file with counts. The pattern id is what lets a team batch fixes
-and check a charge against the rubric, so keep it in the report and not only in the JSON. Include a few sample rejections with their reasons so the reader
-can judge the validation, the files with zero findings, and anything not fully read. For a
-delegated run, write `REPORT.md` in the workspace with the per-lens and per-pattern counts from
-orchestration.md.
-
-Keep review-only requests read-only. If the user already requested fixes, apply supported changes
-within that scope without asking again. Comment deletions can be grouped; behavior changes need
-focused verification of the affected and preserved behavior. When
-the user then wants a keep-or-reject judgment on such a fix, that is adversarial-change-review's
-job, not this skill's.
-
-## Supporting files
-
-| Read | When |
-|---|---|
-| [rubric.md](references/rubric.md) | Before any find or validate pass: the fourteen patterns, decision tests, never-report list, severity, guideline sources by language, calibration method |
-| [orchestration.md](references/orchestration.md) | Large reviews: optional slicing, sequential or permitted delegated work, output contracts, validation, and coverage |
-| [prompts.md](references/prompts.md) | Composing self-contained finder, sweep, and validator prompts for subagents |
-| `scripts/slice.py` | Delegated runs: cut the scope into slices one agent can read in full, with a coverage check |
-| `scripts/sweep.py` | Every run: mechanical hit lists and test hints |
-| `scripts/check_findings.py` | Every run: the citation, lens, coverage, and diff-range gate for finder and validator JSON |
-| `scripts/_scope.py` | Not run directly: the file-gathering and language classification the three scripts share |
+- Primary failing job and current CI status
+- Failure summary and fixes applied in iteration order
+- PR URL once checks are green
 ````
 
-## plugins/engineering-kit/skills/ai-slop-review/evals/evals.json
+## plugins/engineering-kit/skills/ci-loop/evals/evals.json
 
 ````
 {
-  "skill_name": "ai-slop-review",
+  "skill_name": "ci-loop",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Loop on CI for the current branch's PR: inspect `gh pr checks`, diagnose the failing job, apply a minimal fix without bypassing hooks, and tell me the status.",
+      "expected_output": "Uses `gh pr checks --json name,bucket,state,workflow,link` as the source of truth, inspects the failed run logs via `gh run view --log-failed` or the external check link, applies a minimal scoped fix, and reports CI status.",
+      "files": [],
+      "expectations": [
+        "Uses `gh pr checks` as the source of truth for PR-attached checks rather than relying solely on `gh run list`.",
+        "Inspects failing job logs (`gh run view <run-id> --log-failed`) or external check links before editing.",
+        "Scopes the fix to a single actionable failure cause and does not use `--no-verify`.",
+        "Reports the primary failing job, fixes applied, and current CI status."
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "PR checks are still pending on my branch; use ci-loop to watch them fail-fast and diagnose any failure that appears.",
+      "expected_output": "Checks current PR check state first, watches pending checks with `gh pr checks --watch --fail-fast`, and diagnoses any failure or reports green status.",
+      "files": [],
+      "expectations": [
+        "Inspects current PR checks before starting a watch.",
+        "Uses `gh pr checks --watch --fail-fast` for pending checks.",
+        "Distinguishes PR-caused failures from unrelated main branch failures or flakes."
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "Fix CI on this PR: one external Vercel preview check failed and one GitHub Actions unit test job failed.",
+      "expected_output": "Inspects both the GitHub Actions failure log and the external check link from `gh pr checks`, fixes one actionable root error at a time, and re-checks the full PR check set.",
+      "files": [],
+      "expectations": [
+        "Reads `gh pr checks --json name,bucket,state,workflow,link` to see both GitHub Actions and external checks.",
+        "Fixes one actionable root error at a time with minimal changes.",
+        "Re-evaluates the full PR check set after changes."
+      ]
+    }
+  ]
+}
+````
+
+## plugins/engineering-kit/skills/ci-loop/evals/trigger_queries.json
+
+````
+[
+  {
+    "query": "loop on CI for this PR until all required checks are green",
+    "should_trigger": true
+  },
+  {
+    "query": "watch gh pr checks on my branch and fix any CI failures that come up",
+    "should_trigger": true
+  },
+  {
+    "query": "fix CI on the active pull request",
+    "should_trigger": true
+  },
+  {
+    "query": "use ci-loop to diagnose the failing GitHub Actions and external PR checks",
+    "should_trigger": true
+  },
+  {
+    "query": "our PR checks are red, inspect the failing CI logs and apply a minimal fix",
+    "should_trigger": true
+  },
+  {
+    "query": "monitor PR checks with fail-fast and iterate until CI passes",
+    "should_trigger": true
+  },
+  {
+    "query": "check why PR CI is failing via gh pr checks and fix the broken job",
+    "should_trigger": true
+  },
+  {
+    "query": "watch the pending PR checks and fix any test or lint failure in CI",
+    "should_trigger": true
+  },
+  {
+    "query": "draft a pull request description and title for this branch",
+    "should_trigger": false
+  },
+  {
+    "query": "review this local patch for AI slop and tautological tests",
+    "should_trigger": false
+  },
+  {
+    "query": "summarize the commits I authored over the last week",
+    "should_trigger": false
+  },
+  {
+    "query": "build an interactive HTML PR review canvas for PR #12",
+    "should_trigger": false
+  },
+  {
+    "query": "clean up noisy WIP commits on this branch into logical commits",
+    "should_trigger": false
+  },
+  {
+    "query": "write an ADR for our authentication token rotation design",
+    "should_trigger": false
+  },
+  {
+    "query": "execute step 2 of the written implementation plan",
+    "should_trigger": false
+  },
+  {
+    "query": "formalize domain rules in SBVR",
+    "should_trigger": false
+  }
+]
+````
+
+## plugins/engineering-kit/skills/clean-sheet-review/SKILL.md
+
+````
+---
+name: clean-sheet-review
+description: >-
+  Use when an existing plan, spec, API, architecture, or implementation should be reconsidered
+  from its purpose and first principles: "from first principles", "take a step back", "if we built
+  this today", "what should survive", or "rethink this without being bound by previous design
+  decisions". Derive a fresh proposal from
+  real requirements, compare it with the existing solution, and explain code, migration, and
+  document impact. Return keep, refine, simplify, redesign, split, or stop. Prefer code-review
+  for defects within a fixed design, architecture for focused decisions or developing a chosen
+  API contract, and ordinary execution for an already-approved refactor. Not for first-time
+  product discovery or an unrequested rewrite.
+---
+
+# Clean-Sheet Solution Review
+
+Reconsider an existing solution from the app's purpose, users, and required outcomes. Treat its
+current shape as a hypothesis. Use the evidence learned from building it to propose the smallest
+correct solution and judge whether changing to it is worthwhile.
+
+## Confirm the scope
+
+A meaningful solution must exist, and the user must have authorized reconsidering some part of its
+scope, API, architecture, data model, or framing. Keep any fixed dimensions fixed. Clarify only when
+uncertainty could change the recommendation or compatibility impact; otherwise state assumptions.
+A request to refactor while preserving behavior does not by itself authorize reopening the contract.
+
+- Use `code-review` for defects, regressions, or missing tests within a fixed design.
+- Use `architecture` for a focused technical decision, initial design decision, or details of a
+  chosen API contract. A clean-sheet review can itself propose a design of any relevant size;
+  multiple public surfaces do not require another skill.
+- Use ordinary engineering execution for approved edits; `code-simplifier` remains an explicitly
+  requested refinement pass. No sequence of skills or delegation is required.
+
+## Establish purpose and real constraints
+
+Read available requirements and relevant repository evidence. For implemented work, trace at least
+one real consumer through its effects; caller workarounds often expose a mismatch the internals hide.
+For a plan with no code, check scenarios, contracts, and acceptance criteria. Never imply inspection
+or execution that did not happen.
+
+Separate the required outcomes, users, non-goals, hard constraints, external commitments, observed
+facts, assumptions, and current design choices. Scale this brief to the problem. "It is a library"
+or "there is a registry" describes today's solution unless evidence makes it a requirement.
+Do not turn an omitted detail into a defect or invent product purpose when it is unknown.
+
+ADRs and prior decisions explain why the current solution exists; their choices do not automatically
+constrain the proposal. Extract any still-binding obligation and test whether its original reason
+still holds. Preserve the obligation while considering different ways to satisfy it. User constraints
+and applicable repository operating instructions continue to govern your actions. Prior approval is
+neither proof that a design is best today nor permission to violate a real external commitment.
+
+## Derive the proposal, then compare
+
+Reason from purpose and constraints before choosing which current types or layers to preserve.
+Ask what you would build if every current requirement had been a day-one assumption rather than
+bolted onto an earlier shape. Sketch the caller's ideal usage and core data structures first so
+downstream control flow becomes obvious and special-case branching disappears. A short mental
+cross-check is sufficient for an obviously sound small design; a substantial redesign needs an
+explicit independent proposal (and, when the design space is open, 2–3 genuinely distinct options
+including subtraction) before the current-to-proposed comparison.
+
+Trace each proposed capability to an outcome or invariant. Challenge unnecessary concepts and
+forwarding layers, but retain boundaries that own semantics, lifecycle, authority, failure behavior,
+or external obligations. Screen candidate shapes against shallow pass-through wrappers, leaked
+internals, temporal splits, split ownership, and leaving two ways to do one task. One caller, a
+familiar pattern, fewer types, or a single universal primitive
+is not sufficient evidence for a design decision. Do not manufacture novelty to justify the review.
+Use an isolated subagent only when the user explicitly requests delegated or parallel review.
+
+Compare the proposal with actual code, consumers, tests, and prior decisions. For material elements,
+state keep / change / remove / add / defer and why. Distinguish correctness defects from preferences;
+try to disprove suspected problems using counterevidence. Keep evidence that supports the current
+solution, and revise assumptions if inspection reveals new facts.
+
+Check functional correctness and relevant failure scenarios. Add concurrency, security, performance,
+operational, and migration analysis only where they could change the decision. A premortem or an
+alternative design is useful when it tests a material uncertainty, not as a required report section.
+
+## Assess impact and recommend
+
+Price implementation and transition costs alongside the benefit. Cover affected behavior, APIs,
+stored data, callers, rollout/recovery, tests, and operational ownership only where applicable.
+A cleaner target alone does not justify migrating to it; distinguish the design you would choose
+from scratch from the action worth taking now.
+
+Identify the inspected ADRs, specs, guides, and examples that would need amendment or supersession,
+and the reason. If documents are unavailable, name the document category to inspect rather than
+inventing identifiers. A recommendation proposes superseding a decision; it does not mark that
+record superseded or imply user approval. Preserve the decision history when changes are authorized.
+
+Give one verdict with a short reason:
+
+- **Keep:** the solution fits the demonstrated need; ordinary implementation checks or optional
+  hardening do not require a new design.
+- **Refine:** a material contract or design gap needs a bounded correction.
+- **Simplify:** reduce internal complexity while preserving the public contract.
+- **Redesign:** change the public contract or fundamental design; name the migration impact.
+- **Split:** distinct responsibilities or obligations justify separation.
+- **Stop:** the capability lacks a sufficient need or cannot justify its cost.
+
+For a requested revised spec, provide the relevant goals, non-goals, consumers, interface and data
+contracts, invariants, errors, compatibility, acceptance criteria, and open decisions. Keep unresolved
+choices visible; scope the work across turns when needed. Once a direction is chosen, `architecture`
+can help resolve its detailed decisions, and `writing-plans` can turn settled requirements into tasks.
+These are available next steps, not automatic handoffs.
+
+## Report and authorization
+
+Lead with the verdict and reason. For **Keep**, default to a short explanation of the demonstrated
+fit and at most one verification condition; omit speculative hardening or redesign. If the user
+requested a detailed comparison or document-impact analysis, include it even when the verdict is Keep.
+For change, include the purpose, proposal, comparison, material impact, and uncertainty proportionally.
+
+When the user asks to keep a review, save it at `~/.agents/projects/<project>/reviews/<yyyy-mm-dd>-<slug>.md`
+using the shared project identity and provenance fields from `writing-plans` with `kind: review`, and
+link supporting files under the matching `~/.agents/projects/<project>/evidence/<yyyy-mm-dd>-<slug>/`,
+unless the user or repository instructions specify another location.
+
+Default to review only. When edits are authorized, act within that scope, subtract dead or
+superseded internal paths and migrate internal callers so old and new ways do not coexist without a
+compatibility requirement, preserve unrelated work, verify changed and preserved behavior, and report
+actual checks and compatibility effects. A review request does not authorize rewriting code or ADRs,
+committing, pushing, merging, or publishing.
+````
+
+## plugins/engineering-kit/skills/clean-sheet-review/evals/evals.json
+
+````
+{
+  "skill_name": "clean-sheet-review",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "We shipped a ConfigProvider with a plugin registry so any module can register a config source at runtime. In practice only two sources exist (env vars and one YAML file) and they never change after startup. Now that it's built, what would you simplify or replace?",
+      "expected_output": "A clean-sheet review that lands on a Simplify verdict, reframes the problem neutrally, names what to preserve, and proposes removing the unused extension point.",
+      "files": [],
+      "expectations": [
+        "Leads with one verdict (here, Simplify or Refine) plus a short reason, not a generic review.",
+        "Reframes the problem and marks runtime registration as a current design choice, not a requirement.",
+        "Names what the current approach gets right and preserves it.",
+        "Separates a correctness concern (precedence/ordering) from a simplicity preference (unused extension point).",
+        "Recommends removing the registry only when no real second use case exists, and flags any compatibility caveat before deleting a public interface."
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Before I expand this, review our configuration loader with fresh eyes. At startup, one function reads environment variables and one YAML file in a fixed documented precedence order, validates the merged values into one immutable typed Config object, and returns it. The application has no runtime updates, plugin registry, public extension API, or third source. Tests cover precedence, missing required values, malformed YAML, and type errors. Would you design it differently today?",
+      "expected_output": "A Keep verdict that resists rewriting a complete minimal design, stays short, and confines itself to a verification follow-up rather than inventing new architecture.",
+      "files": [],
+      "expectations": [
+        "Reaches a Keep verdict and explicitly declines to redesign.",
+        "Stays concise and omits the proposal/migration sections that a Keep verdict does not need.",
+        "Names what is already correct (one startup path, fixed precedence, typed immutable output, and focused error coverage).",
+        "Surfaces at most a small verification follow-up rather than speculative redesign.",
+        "Does not reward novelty or add abstractions the evidence does not justify.",
+        "Does not add a registry, provider interface, runtime reload system, dependency container, or other extension mechanism without a demonstrated need."
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "Review the attached plan and partial implementation for a new 'reporting microservice'. We're allowed to change scope and the internal API. Given what we learned building it, write the spec you'd write today and tell us what to keep, change, or drop, plus how to get there.",
+      "expected_output": "A combined-mode clean-sheet review with an independent minimal design, an explicit current-to-proposed comparison, a revised spec, and a reversible migration path.",
+      "files": [
+        "evals/files/reporting_plan.md",
+        "evals/files/reporting_service.dart"
+      ],
+      "expectations": [
+        "Builds a neutral problem brief before proposing a design, classifying items (required outcome, constraint, commitment, assumption).",
+        "Produces an independent minimal design rather than editing the current architecture, including explicit non-goals.",
+        "Questions whether a separate microservice is warranted instead of assuming the artifact is a requirement.",
+        "Gives a per-element comparison (keep / change / remove / add / defer) and a single verdict.",
+        "Provides a revised specification and a smallest-reversible-steps migration path, noting which prior decision is superseded."
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "Clean-sheet this completed typed-renderer refactor. The assured map is wrapped by a typed view, copied field-for-field into a private presentation object, passed through a one-use build function, and finally used by a widget. Behavior and validation are correct, and we may change private implementation shape. What should survive?",
+      "expected_output": "A process-first review that traces the requirement-to-render path, preserves the assurance boundary, and removes only representations or forwarding hops that have no distinct responsibility.",
+      "files": [],
+      "expectations": [
+        "Leads with one sized verdict and distinguishes behavioral correctness from implementation directness.",
+        "Traces responsibilities and data flow before recommending classes, functions, constructors, or other artifacts.",
+        "Preserves the assured typed boundary when it prevents raw-map access from leaking into widgets.",
+        "Challenges the field-for-field presentation copy and one-use forwarding hop by asking what invariant or semantics each owns.",
+        "Does not prescribe factories, top-level functions, or any other declaration form as a universal solution."
+      ]
+    },
+    {
+      "id": 5,
+      "prompt": "Review our reporting solution from first principles and propose what should change, including document impact. Purpose: give 12 staff a daily CSV from the existing Postgres data; a daily job inside the app is supported and affordable. Current code copies data hourly into a separate reporting service and database. ADR-007 chose that split solely for a BI vendor we no longer use; the decision says no other isolation requirement exists. docs/reporting.md teaches the old flow. There are no external consumers and the internal interface may change. We have tests for column order and authorization. This supplied description is all the evidence; do not inspect a repository or edit files.",
+      "expected_output": "A proportionate response that satisfies the stated scope and expectations.",
+      "files": [],
+      "expectations": [
+        "Derives proposal from daily CSV purpose rather than preserving the service because of ADR-007.",
+        "Retains column order and authorization requirements.",
+        "Explains migration and document impact, proposes revisiting/superseding ADR-007 without claiming it already changed."
+      ]
+    },
+    {
+      "id": 6,
+      "prompt": "Reconsider our invoice export from its purpose: let customers retrieve invoices. Current architecture uses a worker and versioned export schema. ADR-012 cites signed customer contracts requiring schema v1 and seven-year access to old exports; those obligations still apply. A synchronous endpoint might simplify the code, but no latency/load evidence is available. We may change internal design, not those external obligations. Give a fresh proposal and its impact; review only. Treat supplied facts as the only evidence.",
+      "expected_output": "A proportionate response that satisfies the stated scope and expectations.",
+      "files": [],
+      "expectations": [
+        "Preserves schema v1 and historical access obligations while reconsidering implementation choices.",
+        "Does not invent load/latency evidence or assert the worker can safely be removed.",
+        "Distinguishes proposed design, worthwhile action now, and ADR/document consequences."
+      ]
+    },
+    {
+      "id": 7,
+      "prompt": "Would you build our startup configuration loader differently today? One function reads env and YAML with fixed precedence, validates them into immutable Config, and returns it. No runtime updates or public extension API exist. Tests cover precedence, missing values, malformed YAML, and type errors. Provide a short answer; no edits. These facts are complete for this design question.",
+      "expected_output": "A proportionate response that satisfies the stated scope and expectations.",
+      "files": [],
+      "expectations": [
+        "Recommends Keep and preserves the simple startup design.",
+        "Does not invent features or a migration project; stays concise."
+      ]
+    }
+  ]
+}
+````
+
+## plugins/engineering-kit/skills/clean-sheet-review/evals/files/reporting_plan.md
+
+````
+# Reporting service plan
+
+## Required outcomes
+
+- Generate one weekly CSV from the existing orders database.
+- Email the CSV to the finance group.
+- Retry transient delivery failures without sending duplicate reports.
+- Preserve an audit record containing the report period, checksum, and delivery result.
+
+## Proposed design
+
+- Deploy a new HTTP microservice with its own database.
+- Add a queue between report generation and delivery.
+- Define a runtime plugin registry for CSV, PDF, and future report formats.
+- Add a client package to the monolith so it can call the service every Monday.
+
+## Evidence learned during the partial implementation
+
+- The existing monolith already owns the scheduler, orders transaction boundary, email client, and
+  audit database.
+- Only CSV is approved; no second format is planned.
+- Reporting has no independent scaling, availability, or deployment requirement.
+- The same team owns and deploys both proposed services.
+- No external consumer or public API exists.
+````
+
+## plugins/engineering-kit/skills/clean-sheet-review/evals/files/reporting_service.dart
+
+````
+abstract interface class ReportFormatPlugin {
+  String get id;
+
+  List<int> render(List<Map<String, Object?>> rows);
+}
+
+final class ReportPluginRegistry {
+  final Map<String, ReportFormatPlugin> _plugins = {};
+
+  void register(ReportFormatPlugin plugin) {
+    _plugins[plugin.id] = plugin;
+  }
+
+  ReportFormatPlugin require(String id) => _plugins[id]!;
+}
+
+final class ReportingService {
+  ReportingService(this.registry, this.queue);
+
+  final ReportPluginRegistry registry;
+  final DeliveryQueue queue;
+
+  Future<void> requestWeeklyReport(
+    String format,
+    List<Map<String, Object?>> rows,
+  ) async {
+    final bytes = registry.require(format).render(rows);
+    await queue.enqueue(bytes);
+  }
+}
+
+abstract interface class DeliveryQueue {
+  Future<void> enqueue(List<int> reportBytes);
+}
+````
+
+## plugins/engineering-kit/skills/clean-sheet-review/evals/trigger_queries.json
+
+````
+[
+  {
+    "query": "We finished v1 of the export service and it actually works now. If you were starting over with everything we learned, what would you cut or design differently?",
+    "should_trigger": true
+  },
+  {
+    "query": "Reconsider this CLI's whole command surface with fresh eyes - we added flags reactively and the scope feels bloated. Honestly, should this even be a CLI?",
+    "should_trigger": true
+  },
+  {
+    "query": "Here's the auth module we built plus the original plan. Knowing what we now know, write the spec you'd write today and tell me what to keep versus replace.",
+    "should_trigger": true
+  },
+  {
+    "query": "Don't just review the PR for bugs - step back and tell me whether this caching layer should exist at all given how rarely it's hit.",
+    "should_trigger": true
+  },
+  {
+    "query": "I want a clean-sheet take on our notifications architecture. Preserve the real constraints but treat the current design as provisional.",
+    "should_trigger": true
+  },
+  {
+    "query": "We can break the internal API if it helps. Re-examine the plugin loader design from scratch and recommend the simplest thing that covers our two real plugins.",
+    "should_trigger": true
+  },
+  {
+    "query": "If you had to rebuild this rate limiter from zero today, how would you design it? It's already in prod but I'm not attached to the current approach.",
+    "should_trigger": true
+  },
+  {
+    "query": "Look at this data model we shipped and the migration notes. Would you model it the same way now, or split it apart / collapse it into fewer tables?",
+    "should_trigger": true
+  },
+  {
+    "query": "Second-pass review please: the worker is implemented, but we learned the queue is almost always empty. What's the smallest correct version of this?",
+    "should_trigger": true
+  },
+  {
+    "query": "Take everything we now know about the Stripe integration and propose the design you'd actually build, not just a patch on what's there.",
+    "should_trigger": true
+  },
+  {
+    "query": "Review this PR in api/auth/login.ts for bugs, regressions, and missing tests before I merge it.",
+    "should_trigger": false
+  },
+  {
+    "query": "We haven't built anything yet - write a design doc / RFC for the new webhooks feature with goals, alternatives, and rollout.",
+    "should_trigger": false
+  },
+  {
+    "query": "Simplify this 80-line function and reduce the nesting, but keep the behavior exactly the same.",
+    "should_trigger": false
+  },
+  {
+    "query": "Find every call site of legacyClient across the repo so I know what depends on it.",
+    "should_trigger": false
+  },
+  {
+    "query": "This integration test started timing out in CI yesterday. Help me figure out why.",
+    "should_trigger": false
+  },
+  {
+    "query": "Refactor the orders module to extract a pricing service, but don't change any public behavior.",
+    "should_trigger": false
+  },
+  {
+    "query": "Execute the plan in docs/plans/oauth.md and check off each task as you implement it.",
+    "should_trigger": false
+  },
+  {
+    "query": "Summarize the current design of this service in a few bullets for a status update.",
+    "should_trigger": false
+  },
+  {
+    "query": "Do a security-only audit of this endpoint for injection and authorization issues.",
+    "should_trigger": false
+  },
+  {
+    "query": "Add a retry with exponential backoff to this HTTP client call.",
+    "should_trigger": false
+  },
+  {
+    "query": "Revisit our shipped system from its purpose, without treating old ADR design choices as requirements; propose a fresh design and document impact.",
+    "should_trigger": true
+  },
+  {
+    "query": "We have chosen cursor pagination. Settle its error contract and consumer examples without reopening the design direction.",
+    "should_trigger": false
+  },
+  {
+    "query": "Let's take a step back and redesign this from first principles instead of bolting on another flag—what are our options and what should we actually build?",
+    "should_trigger": true
+  }
+]
+````
+
+## plugins/engineering-kit/skills/code-review/SKILL.md
+
+````
+---
+name: code-review
+description: >
+  Use when reviewing or auditing a pull request, commit, diff, staged snapshot,
+  working tree, pasted patch, files, or repository for defects, regressions,
+  missing tests, suspicious or unnecessary code, hollow tests, AI-generated code
+  slop, structural maintainability and code-judo simplification, or adversarial
+  keep/reject change verdicts. Do not use to implement features, author a pull
+  request, redesign a system, or declare a canonical implementation.
+---
+
+# Code review
+
+One review. Every pass considers correctness, suspicious or unnecessary code,
+and hollow or tautological tests, then skeptically challenges both the change
+and each suspected finding. Depth scales with scope and risk. A user-narrowed
+scope still governs. Do not start this skill after every implementation;
+ordinary review language is enough.
+
+Neighboring owners stay separate: do not implement features, author
+a PR ([pr-authoring](../pr-authoring/SKILL.md)), redesign
+whether something should exist ([clean-sheet-review](../clean-sheet-review/SKILL.md)),
+or audit a canonical example ([reference-implementation](../reference-implementation/SKILL.md)).
+`code-simplifier` stays separately invoked.
+
+## Review
+
+1. Pin the target and constraints. Name the exact snapshot: commit, range, PR,
+   staged index, working tree, or pasted snippet. Do not mix dirty-tree files
+   into a commit or staged review.
+
+2. Inspect the relevant code, callers, tests, and stated contracts.
+
+3. Consider observable behavior, errors, ordering, security, and contracts;
+   changed or removed assertions; hollow or tautological tests; unnecessary
+   abstractions; ad-hoc spaghetti branching or file sprawl past 1,000 lines;
+   missed code-judo reframings that delete whole branches or layers; swallowed
+   failures; unjustified guards; and misleading or restating prose only where
+   demonstrably harmful. Do not infer AI authorship.
+   Do not flag style, one-caller helpers, documentation, or catches by
+   appearance alone. A test that moves with the implementation needs
+   independent contract support.
+
+4. Try to disprove each suspected finding against docs, types, callers, and
+   other counterevidence. Distinguish defects, risk, and missing evidence.
+   For concurrency or race risks that a single test run may not trigger,
+   disprove by showing the interleaving is impossible or already synchronized.
+   Clean code can produce no findings. Skeptical does not mean reflexively
+   rejecting.
+
+5. Run only focused, safe checks against the named baseline. Inspect unfamiliar code and build scripts before executing them. Isolate execution.
+   Do not invent runs. A pre-existing failing test is not evidence that this
+   change is wrong unless you show the change caused it.
+
+## Report
+
+When the user asks to keep a review, save it at `~/.agents/projects/<project>/reviews/<yyyy-mm-dd>-<slug>.md` using the shared project identity and provenance fields from `writing-plans` with `kind: review`, and link supporting files under the matching `~/.agents/projects/<project>/evidence/<yyyy-mm-dd>-<slug>/`, unless the user or repository instructions specify another location.
+
+One concise report. Material findings first, each with severity, location, observable impact, evidence, and the smallest fix. Then brief checks and
+coverage limits. When the user asked for readiness or keep-or-reject, or a
+concrete blocker warrants it, end with that conclusion. No required debate,
+JSON, multi-agent passes, checklist report, or long empty sections.
+
+Review-only by default. Fixes and publication follow actual authorization.
+Authorization to review or fix is not authorization to stage, commit, push,
+open, merge, or release. Re-run the affected checks after the last authorized edit.
+
+## Optional deeper tools
+
+For a large or high-risk audit, load only the extra structure the evidence
+needs. These are not modes and not prerequisites of the checks above. Small checks must not run all of this machinery.
+
+- [ai-slop.md](references/ai-slop.md) — cited-pattern quality audit
+- [change-verdict.md](references/change-verdict.md) — structured keep/reject
+  evidence and changed-test classification
+- [structural-quality.md](references/structural-quality.md) — structural
+  maintainability, code-judo simplification, and 1,000-line file decomposition
+- [rubric.md](references/rubric.md), [orchestration.md](references/orchestration.md),
+  [prompts.md](references/prompts.md)
+- `scripts/sweep.py`, `scripts/slice.py`, `scripts/check_findings.py`,
+  `scripts/_scope.py` / `scripts._scope`
+````
+
+## plugins/engineering-kit/skills/code-review/evals/evals.json
+
+````
+{
+  "skill_name": "code-review",
   "evals": [
     {
       "id": 1,
@@ -3840,12 +4385,159 @@ job, not this skill's.
         "Preserves unrelated edits rather than requiring a clean tree.",
         "Does not require a minimum rejection rate."
       ]
+    },
+    {
+      "id": 5,
+      "prompt": "Judge whether commit `4a91d2e` is worth bringing into the release branch. In `src/config/parseLimit.ts:41`, `parseLimit()` used to throw `RangeError` for negative values; the commit now clamps them to zero. `docs/config.md:73` still says negative limits are invalid. In `test/config/parseLimit.test.ts:88`, the author replaced `expect(() => parseLimit(-1)).toThrow(RangeError)` with `expect(parseLimit(-1)).toBe(0)`. There is no linked issue or migration note. Give me the safety-biased KEEP/REJECT judgment and do not edit anything.",
+      "expected_output": "A REJECT verdict that identifies the negative-input contract change, treats the moved expected value as an unjustified weakening rather than independent proof, presents the strongest plausible defense without accepting it as evidence, and names the spec decision or compatibility check needed to reconsider.",
+      "files": [],
+      "expectations": [
+        "The behavior summary distinguishes the new clamp-to-zero behavior from preserved behavior and cites the supplied source or documentation locations",
+        "The changed test at `test/config/parseLimit.test.ts:88` is classified as (c), or (c) unresolved, because it moves with the implementation without independent contract support",
+        "The prosecution and defense are presented as separate strongest-case arguments",
+        "The verdict is REJECT with confidence justified by the documentation and missing migration or decision evidence",
+        "The response names exact evidence that could change the verdict and does not rewrite the code"
+      ]
+    },
+    {
+      "id": 6,
+      "prompt": "Do an adversarial behavior review of this cache fix and tell me if we should keep it. `lib/cache/readThrough.ts:24` changed from `const value = cache.get(key); if (value) return value;` to `if (cache.has(key)) return cache.get(key);`. The loader call is otherwise unchanged. `lib/cache/readThrough.test.ts:61-84` adds cases proving cached `false`, `0`, and an empty string are returned without calling the loader again. The cache API allows all three values. I want prosecution vs defense, changed-test classification, and a clear verdict—review only.",
+      "expected_output": "A high-confidence KEEP verdict that recognizes the old truthiness bug, explains the observable reduction in unnecessary loader calls, classifies the added tests as legitimate tracking or strengthened coverage, and still articulates a real but weak prosecution case such as the extra lookup or a possible mutation race if applicable.",
+      "files": [],
+      "expectations": [
+        "The behavior summary identifies that cached falsey values now count as hits and the loader is no longer called for them",
+        "The review does not invent a regression merely to satisfy the adversarial posture",
+        "The changed or added tests are classified as (b) legitimate tracking change or stronger discriminating coverage, with a source link",
+        "The prosecution and defense are both substantive and remain separate",
+        "The verdict is KEEP with high or well-supported medium confidence and concrete locations"
+      ]
+    },
+    {
+      "id": 7,
+      "prompt": "We may cherry-pick a parser change from an upstream fork. `packages/importer/date.ts:52` changes invalid dates from throwing `InvalidDateError` to returning `null`; `packages/importer/date.test.ts:109` changes the corresponding expected exception to `null`. The upstream issue says this lets batch imports skip bad rows, and `packages/importer/batch.ts:144` already filters null dates. I cannot verify whether any other package imports `parseDate`, and there is no public API document in the material I have. Decide KEEP, REJECT, or KEEP-WITH-CAVEATS and tell me exactly what would settle it. No code changes.",
+      "expected_output": "A cautious verdict that recognizes the evidenced batch-import improvement but does not claim global compatibility. It should classify the test change provisionally, identify unknown callers as the central uncertainty, and specify a caller search plus error-contract or compatibility test as the evidence needed before safe adoption.",
+      "files": [],
+      "expectations": [
+        "The behavior summary states the throw-to-null contract change and separates the verified batch caller from unverified consumers",
+        "The changed test is classified as (b) only for the intended batch behavior or as (c) unresolved for the wider contract, with the uncertainty explained",
+        "The strongest prosecution centers on callers that may rely on `InvalidDateError`, while the defense cites the upstream issue and null-filtering batch path",
+        "The verdict is safety-biased and does not give an unconditional high-confidence KEEP",
+        "The response asks for an exact caller search and a compatibility/specification check or focused test to resolve doubt"
+      ]
+    },
+    {
+      "id": 8,
+      "prompt": "Review the working-tree files `checkout/cart.ts` and `checkout/cart.test.ts` before I commit. The docstring on `pageItems` says page 1 is the first `size` items. `discountedTotal` should return the amount after subtracting the percent discount, not the discount itself. I want ordinary review findings with evidence. Review only.",
+      "expected_output": "A single review that reports the paging off-by-one, the discount formula that returns the discount instead of the remaining total, and the tests that encode those wrong results instead of catching them.",
+      "files": [
+        "evals/files/checkout/cart.ts",
+        "evals/files/checkout/cart.test.ts"
+      ],
+      "expectations": [
+        "Reports that `pageItems` uses `page * size` and therefore skips the first page, contradicting the 1-based docstring",
+        "Reports that `discountedTotal` returns `cents * percent / 100` rather than the remaining total after the discount",
+        "Notes that `checkout/cart.test.ts` expects the defective results (`[\"c\", \"d\"]` and `100`) rather than catching them, and treats that as a moved or hollow expectation lacking independent contract support",
+        "Cites file and line evidence for each material defect",
+        "Applies both correctness and code-quality or hollow-test checking on this ordinary request, without requiring a slop sweep, finder JSON, or prosecution/defense debate",
+        "Does not edit the files"
+      ]
+    },
+    {
+      "id": 9,
+      "prompt": "This Copilot branch both looks sloppy and may have broken paging. Review `checkout/cart.ts` and `checkout/cart.test.ts`. Docs say page 1 is the first page and `discountedTotal` is the amount the customer pays. The tests were updated in the same patch to expect `pageItems(..., 1, 2) === [\"c\", \"d\"]` and `discountedTotal(1000, 10) === 100`. Tell me whether the behavior change is worth keeping. Review only.",
+      "expected_output": "One review that reports the contract breaks and unjustified test moves, then rejects the change without hiding the break as a caveat or inventing a mixed mode.",
+      "files": [
+        "evals/files/checkout/cart.ts",
+        "evals/files/checkout/cart.test.ts"
+      ],
+      "expectations": [
+        "In one review, identifies both the paging/discount contract breaks and the tests that moved with the implementation",
+        "Classifies the moved test expectations as unjustified weakening because they lack independent contract support",
+        "Gives a REJECT or not-ready conclusion rather than KEEP-WITH-CAVEATS for the merge-blocking contract break",
+        "Does not invent a mixed mode, a second agent, or a required debate format"
+      ]
+    },
+    {
+      "id": 10,
+      "prompt": "I asked for a normal bug review of PR #88. Which built-in checks apply on that ordinary request, and which optional tools stay unloaded unless scope or risk warrants them?",
+      "expected_output": "Ordinary review already includes correctness, suspicious or unnecessary code, hollow tests, and skeptical challenge. Sweep, finder JSON, and structured verdict machinery stay optional.",
+      "files": [],
+      "expectations": [
+        "States that an ordinary PR review considers correctness, suspicious or unnecessary code, and hollow or tautological tests",
+        "States that skeptical challenge of both the change and the findings is built in, not a separate mode",
+        "States that `scripts/sweep.py`, finder/validator JSON, and prosecution/defense ceremony are optional deeper tools, not required for this request",
+        "Does not hand the task to clean-sheet-review, pr-authoring, or code-simplifier"
+      ]
+    },
+    {
+      "id": 11,
+      "prompt": "Review this patch. `evals/files/patch/parse_discount.ts` used to throw `RangeError` for negative percents; it now clamps them to zero. `docs/discount.md` still says negative percents are invalid. `evals/files/patch/parse_discount.test.ts` replaced the throw expectation with `toBe(0)` and added `expect(result).toBe(result)`. Review only.",
+      "expected_output": "One ordinary-review report that flags the unauthorized clamp, the moved expectation, and the tautological test, then treats the contract break as a blocker.",
+      "files": [
+        "evals/files/patch/parse_discount.ts",
+        "evals/files/patch/parse_discount.test.ts"
+      ],
+      "expectations": [
+        "Reports the unauthorized behavior change from throw-on-negative to clamp-to-zero against the stated docs",
+        "Reports the moved `toBe(0)` expectation as lacking independent contract support",
+        "Reports `expect(result).toBe(result)` as a hollow or tautological test",
+        "Does not require a slop trigger, mixed mode, or prosecution/defense theater",
+        "Does not edit the files"
+      ]
+    },
+    {
+      "id": 12,
+      "prompt": "Review this file. `evals/files/orders/rate_limiter.ts` has a class doc, a refill-before-check comment, and a `flushMetrics` catch at a documented network edge that reports the failure. I want an ordinary review, not a hunt for AI authorship.",
+      "expected_output": "No fabricated findings. The justified boundary catch and why-comments stay; an empty findings list is valid.",
+      "files": [
+        "evals/files/orders/rate_limiter.ts"
+      ],
+      "expectations": [
+        "Does not invent findings for the justified `flushMetrics` boundary catch or the why-comments",
+        "Does not infer AI authorship or flag documentation or catches by appearance alone",
+        "Treats an empty findings list as a valid result for this clean code",
+        "Does not edit the file"
+      ]
     }
   ]
 }
 ````
 
-## plugins/engineering-kit/skills/ai-slop-review/evals/files/orders/order_service.test.ts
+## plugins/engineering-kit/skills/code-review/evals/files/checkout/cart.test.ts
+
+````
+import { discountedTotal, pageItems } from "./cart";
+
+test("page 1 returns the first page", () => {
+  expect(pageItems(["a", "b", "c", "d"], 1, 2)).toEqual(["c", "d"]);
+});
+
+test("discountedTotal of 1000 at 10 percent", () => {
+  expect(discountedTotal(1000, 10)).toBe(100);
+});
+````
+
+## plugins/engineering-kit/skills/code-review/evals/files/checkout/cart.ts
+
+````
+/** 1-based page of cart SKUs. Page 1 is the first `size` items. */
+export function pageItems(items: string[], page: number, size: number): string[] {
+  if (page < 1 || size < 1) {
+    throw new RangeError("page and size must be >= 1");
+  }
+  const start = page * size;
+  return items.slice(start, start + size);
+}
+
+export function discountedTotal(cents: number, percent: number): number {
+  if (percent < 0 || percent > 100) {
+    throw new RangeError("percent out of range");
+  }
+  return Math.floor((cents * percent) / 100);
+}
+````
+
+## plugins/engineering-kit/skills/code-review/evals/files/orders/order_service.test.ts
 
 ````
 import { describe, it, expect, vi } from "vitest";
@@ -3902,7 +4594,7 @@ describe("OrderService", () => {
 });
 ````
 
-## plugins/engineering-kit/skills/ai-slop-review/evals/files/orders/order_service.ts
+## plugins/engineering-kit/skills/code-review/evals/files/orders/order_service.ts
 
 ````
 import { PaymentGateway, PaymentFailed } from "./payment";
@@ -4011,7 +4703,7 @@ export class OrderService {
 }
 ````
 
-## plugins/engineering-kit/skills/ai-slop-review/evals/files/orders/rate_limiter.ts
+## plugins/engineering-kit/skills/code-review/evals/files/orders/rate_limiter.ts
 
 ````
 import { Clock } from "./clock";
@@ -4079,16 +4771,55 @@ export class RateLimiter {
 }
 ````
 
-## plugins/engineering-kit/skills/ai-slop-review/evals/trigger_queries.json
+## plugins/engineering-kit/skills/code-review/evals/files/patch/parse_discount.test.ts
+
+````
+import { parseDiscount } from "./parse_discount";
+
+test("negative percents clamp to zero", () => {
+  expect(parseDiscount(-1)).toBe(0);
+});
+
+test("accepts a discount", () => {
+  const result = parseDiscount(10);
+  expect(result).toBe(result);
+});
+````
+
+## plugins/engineering-kit/skills/code-review/evals/files/patch/parse_discount.ts
+
+````
+/** Negative percents are invalid and must throw RangeError. */
+export function parseDiscount(percent: number): number {
+  if (percent < 0) {
+    return 0;
+  }
+  return percent;
+}
+````
+
+## plugins/engineering-kit/skills/code-review/evals/trigger_queries.json
 
 ````
 [
   {
-    "query": "this PR from copilot has comments on every other line and try/catch wrapped around everything, can you audit it for ai slop before I review it properly? branch is feature/inventory-sync",
+    "query": "Review this patch.",
     "should_trigger": true
   },
   {
-    "query": "We're open-sourcing lib/ and test/ next month. Go through them for LLM-generated cruft: restating comments, Manager/Helper classes with one caller, tests that can't fail. Findings only, no edits.",
+    "query": "Review PR #88 for correctness bugs, regressions, and missing tests before merge. Findings first; I don't need a prosecution/defense exercise.",
+    "should_trigger": true
+  },
+  {
+    "query": "Look at my staged checkout changes versus the unstaged cart.ts edits and the untracked debug fixture. Review the staged snapshot for defects only.",
+    "should_trigger": true
+  },
+  {
+    "query": "Here's a pasted before/after of parseLimit. Review the actual snippet for regressions and say what the tests miss. Don't open a PR.",
+    "should_trigger": true
+  },
+  {
+    "query": "this PR from copilot has comments on every other line and try/catch wrapped around everything, can you audit it for ai slop before I review it properly? branch is feature/inventory-sync",
     "should_trigger": true
   },
   {
@@ -4096,39 +4827,35 @@ export class RateLimiter {
     "should_trigger": true
   },
   {
-    "query": "the intern used chatgpt for src/reports/. how much of it is over-engineered or hollow? i want a list with file:line and what to delete, i'll do the edits myself",
+    "query": "This upstream commit changes our parser's invalid-input behavior and updates the expected exception in the same patch. Should we cherry-pick it or is the test just following a regression? Give me a KEEP/REJECT call.",
     "should_trigger": true
   },
   {
-    "query": "Review the diff main...feature/checkout for AI tells: 'Note:' comments, defensive null checks on non-nullable types, impossible catches. Only flag lines the PR touched.",
+    "query": "Run an AI slop review on services/api. I want the finder-then-validator slop report, findings only.",
     "should_trigger": true
   },
   {
-    "query": "docs/ is full of 'In this section we will explore the powerful, seamless API' filler after the last doc generation pass. audit the markdown for slop and tell me what to cut",
+    "query": "Run an adversarial change review on PR #418: what can users observe now, which changed tests encode a real spec update, and should we accept the patch?",
     "should_trigger": true
   },
   {
-    "query": "run the ai slop review on the whole repo, findings report only. 60k lines of dart, analysis_options is strict, don't flag stuff the analyzer already catches",
+    "query": "This Copilot branch is full of restating comments and the author also moved the paging test expectation. Audit the slop and tell me whether we should keep or reject the behavior change.",
     "should_trigger": true
   },
   {
-    "query": "Our PR bot says these 8 comments in rate_limiter.ts are AI filler and must go. Second opinion? Some of them explain ordering constraints and I don't want them deleted by pattern matching.",
+    "query": "Review git diff main...feature/checkout for defensive null checks on non-nullable types and also decide if the clamp-instead-of-throw change is worth merging.",
     "should_trigger": true
   },
   {
-    "query": "is src/payments over-abstracted? there's a PriceStrategyFactory that returns the only strategy, a DataHelper, and every method has a 3-line jsdoc that repeats the signature. flag what a careful engineer would rip out",
+    "query": "Working tree has unrelated edits. Review commit 9fd13a7 for the off-by-one in pageItems and the missing empty-list test.",
     "should_trigger": true
   },
   {
-    "query": "three months of heavy claude code usage on services/api and reviewers say it reads like slop now. give me an evidence-backed cleanup list ranked by severity, and be honest about what's fine",
+    "query": "Our PR bot says these comments in rate_limiter.ts are AI filler. Second opinion with an AI slop review? I don't want why-comments deleted by pattern matching.",
     "should_trigger": true
   },
   {
-    "query": "Judge whether commit 4a91d2e is worth keeping. It changes parseLimit from throwing on negatives to clamping, and the test expectation moved with it. KEEP or REJECT?",
-    "should_trigger": false
-  },
-  {
-    "query": "Review this PR for bugs, security issues, and missing edge cases before merge. I don't care about comment style.",
+    "query": "Now that the notification service is built, reconsider whether it should exist at all and propose the simpler architecture you would design today.",
     "should_trigger": false
   },
   {
@@ -4136,11 +4863,31 @@ export class RateLimiter {
     "should_trigger": false
   },
   {
-    "query": "Rewrite the README so it sounds less like ChatGPT wrote it. Keep the same sections, just make the prose human.",
+    "query": "The branch is already pushed. Open a draft PR against main and write a concise description from the full diff and the tests we ran.",
     "should_trigger": false
   },
   {
-    "query": "Delete every comment in src/legacy/ and remove the unused helper classes, then run the tests and commit.",
+    "query": "Audit whether this implementation is good enough to be our canonical example for every new service team to copy.",
+    "should_trigger": false
+  },
+  {
+    "query": "Turn the locked API decisions into an executable implementation plan before anyone writes code.",
+    "should_trigger": false
+  },
+  {
+    "query": "Execute the plan in docs/plans/oauth.md and check off each task as you implement it.",
+    "should_trigger": false
+  },
+  {
+    "query": "We haven't built anything yet - write a design doc / RFC for the new webhooks feature with goals, alternatives, and rollout.",
+    "should_trigger": false
+  },
+  {
+    "query": "The importer test fails on CI but passes locally. Reproduce it and find the root cause before suggesting any fix.",
+    "should_trigger": false
+  },
+  {
+    "query": "Fix the regression in this commit, add tests, and prepare the patch for me.",
     "should_trigger": false
   },
   {
@@ -4148,33 +4895,365 @@ export class RateLimiter {
     "should_trigger": false
   },
   {
-    "query": "Set up ESLint rules to ban console.log, empty catch blocks, and unused vars across the monorepo.",
+    "query": "Rewrite the README so it sounds less like ChatGPT wrote it. Keep the same sections, just make the prose human.",
     "should_trigger": false
   },
   {
-    "query": "Now that the notification service is built, reconsider whether it should exist at all and propose the simpler design you'd build today.",
-    "should_trigger": false
-  },
-  {
-    "query": "How much did Claude Code spend on the checkout feature last month? Break it down by branch.",
-    "should_trigger": false
-  },
-  {
-    "query": "The importer test passes locally but fails on CI with a timeout. Find the root cause.",
+    "query": "Benchmark the old and new cache implementations and tell me which is faster under a 90/10 read-write workload.",
     "should_trigger": false
   }
 ]
 ````
 
-## plugins/engineering-kit/skills/ai-slop-review/references/orchestration.md
+## plugins/engineering-kit/skills/code-review/references/ai-slop.md
+
+````
+# Structured slop audit (optional)
+
+Optional deeper tool for a large or high-risk quality audit. The parent `code-review` skill
+already considers unnecessary code, hollow tests, and counterevidence. Load this reference
+when a cited-pattern audit, sweep, or delegation contract would help—not because the user
+said "slop," and not instead of the ordinary review. Ordinary reviews must not skip
+skeptical or quality checks just because this file stays unloaded.
+
+Find the places where generated code is worse than a careful engineer would ship, prove each
+one with a cited snippet, try to disprove it, and report only what survives. The default
+output is a findings report; implement fixes only when the user has requested them. The bar
+for every finding is the code, never its origin: "an LLM wrote this" is not a finding, and
+neither is voice alone.
+
+Resolve `<skill>` to the loaded `code-review` directory (this skill's root, including a
+packaged copy). Resolve [rubric.md](rubric.md), [orchestration.md](orchestration.md), and
+[prompts.md](prompts.md) from `references/` beside this file.
+
+## Size the review to the scope
+
+Start from the actual target: a diff range, pull request, directory, package, or repository.
+Estimate the scope and choose a proportionate execution mode. Work inline or in sequential
+slices by default. Use subagents only when permitted and useful, respecting the user's model,
+cost, and concurrency preferences. A large line count alone does not authorize delegation.
+For a large scope, [orchestration.md](orchestration.md) provides slicing and evidence
+contracts that also work sequentially. Preserve coverage and report unread files honestly.
+
+Record the starting worktree state and leave unrelated edits in place. A read-only review does
+not require stashing, resetting, committing, or cleaning the working tree.
+
+For a diff, only touched hunks are in scope. Read the whole file for context, because slop is
+judged against the file's conventions, but a finding on an untouched line carries
+`"preexisting": true` and lands in a separate optional bucket. A pull request is not
+responsible for the cruft around it.
+
+## Establish repo facts before reading
+
+Inspect the relevant repository conventions before classifying findings. Record the facts
+needed for the review, sharing them with any permitted delegated reviewers:
+
+- **Linter and formatter configuration** and what it enforces. Anything the analyzer already
+  flags is out of scope; name the rule and move on.
+- **Doc-comment requirements.** When the repository requires a doc on every public member, its
+  existence is never slop; only its content can be.
+- **Layer and boundary rules** from `CLAUDE.md`, `AGENTS.md`, `CONTRIBUTING`, or architecture
+  docs. S13 architecture findings come only from boundaries the repository states.
+- **Test harnesses** the repository documents. A harness or fake the repository does not
+  document is a finding; the documented ones are not.
+- **Out-of-scope paths:** generated, vendored, golden, third-party, and anything the user excludes.
+- **Compatibility promises.** A prerelease removes obsolete shapes; a stable library shims them.
+  Legacy aliases are S12 only where no promise exists.
+
+For a broad or uncertain review, use representative report and keep examples as described in
+[rubric.md](rubric.md). Scale calibration to the task; do not manufacture examples to
+meet a quota. Over-reporting on restating comments and chat voice is a known failure mode.
+
+## Run the mechanical sweep first
+
+With `<skill>` set to the loaded `code-review` directory, use the matching evidence directory
+from [the skill's Report section](../SKILL.md#report) as `<workspace>` for a review the user wants
+kept; otherwise use a temporary workspace, honoring any user or repository location override:
+
+```bash
+git diff --name-only <range> > <workspace>/changed.txt            # diff scope only
+python3 <skill>/scripts/sweep.py --root . --out <workspace> [--files <workspace>/changed.txt]
+```
+
+The sweep writes hit lists per rubric pattern (catch-alls, suppressions, step narration, chat
+voice, history narration, tag-style docs, helper and manager names, emoji, commented-out code,
+legacy shims), stale Dart lint suppressions when `analysis_options.yaml` is present, and
+per-test-file hints (marketing names, Arrange/Act/Assert narration, does-not-throw-only,
+tautologies, not-null-only, expected values computed from the input instead of a literal, files
+with more tests than assertions). Hits are leads. Every hit
+is triaged as reported or not_slop with a one-line reason; a hit you cannot justify is not_slop.
+The sweep only reports patterns it encodes. A listed hit still needs judgment, and a pattern
+the sweep does not encode can still be slop if the finder can cite it.
+
+## Find
+
+Load the lens block you are applying from [rubric.md](rubric.md) and work one lens
+at a time: comments and docs (C), code shape (K), tests (T). Mixing lenses in one pass produces
+shallower reads and a validator that cannot specialize.
+
+- Read every in-scope file to its last line and keep a `{path, lines_read}` ledger. File-read
+  tools truncate long files; the ledger makes a partial read visible instead of silent.
+- For each candidate, name the pattern and apply its decision test before deciding. If the test
+  does not clearly fail, do not report. The tests are questions ("delete the comment; did the
+  reader lose anything?", "if the code were broken the obvious way, would this test fail?"),
+  and the answer goes in `why`.
+- For S5 and S6, read the types and narrowing in scope. For S7, count the implementations or
+  call sites and state the number. For S12 suppressions, check the linter configuration.
+- For tests, read each body, then invert the view: list the unit's public entry points and which
+  tests exercise them. An entry point with an obvious failure path and no test is S10 too, and
+  reading test bodies alone never surfaces it.
+- Every finding carries path, start and end line, a verbatim snippet of at most four lines, the
+  guideline it violates, a one- or two-sentence `why`, and a one-sentence fix. Severity defaults
+  from the rule; move it one step only with a reason.
+- An empty findings list is a correct result for clean code. Do not manufacture findings to
+  justify the pass.
+
+Write findings as JSON in the finder contract from [orchestration.md](orchestration.md)
+even for an inline review, one file per lens under `<workspace>/findings/` with agent ids such
+as `C-inline`; the gate and the validator both read that shape.
+
+## Gate every citation
+
+```bash
+python3 <skill>/scripts/check_findings.py --root . --no-slices [--diff-range <range>] <workspace>/findings/*.json
+python3 <skill>/scripts/check_findings.py --root . --workspace <workspace> <workspace>/findings/*.json   # delegated
+```
+
+The gate verifies that each snippet exists within one line of its cited range, the pattern is in
+the agent's lens, severity and confidence are valid, every slice file was read to its last line,
+and, with a diff range, every finding sits inside a changed hunk or is marked preexisting. Fix or
+drop what fails before validation; a validator's time is the most expensive in the run.
+
+## Validate by trying to disprove
+
+The second pass sees only the structured fields: id, path, lines, pattern, severity, confidence,
+snippet, guideline, fix. Never the finder's `why`. Its job is to defeat each charge, in order:
+is it a why-comment; does a doc requirement or caveat justify it; is the catch at a boundary that
+reports; is the guarded state actually impossible given the types; how many implementations are
+there; would the test fail on the obvious break; does the linter already enforce it; is it the
+file's consistent convention. Verdicts are confirm, downgrade, reject, or reclassify, each with a
+one-sentence reason grounded in the cited code.
+
+Inline, do this yourself after finishing the find pass, from the stripped view, and be harsh on
+S1, S2, S3, and S9. Delegated, one validator per roughly three finders of the same lens, using the
+validator prompt in [prompts.md](prompts.md).
+
+Judge validation by its evidence and counterarguments, not a required rejection rate. All findings
+may legitimately survive, or none may. Revisit a pass when concrete unsupported conclusions or
+missed counterevidence justify it. A P1 survives only at high confidence.
+
+## Report
+
+Lead with confirmed P1s, then P2s grouped by file, each with pattern id, path, lines, snippet,
+and fix, then P3s clustered by file with counts. The pattern id is what lets a team batch fixes
+and check a charge against the rubric, so keep it in the report and not only in the JSON. Include a few sample rejections with their reasons so the reader
+can judge the validation, the files with zero findings, and anything not fully read. For a
+delegated run, include the per-lens and per-pattern counts from [orchestration.md](orchestration.md)
+in the same final report, using the saved path from [the skill's Report section](../SKILL.md#report)
+when the user wants it kept.
+
+Keep review-only requests read-only. If the user already requested fixes, apply supported changes
+within that scope without asking again. Comment deletions can be grouped; behavior changes need
+focused verification of the affected and preserved behavior. When
+the user then wants a keep-or-reject judgment on such a fix, continue in the same review
+and load [change-verdict.md](change-verdict.md) only if the structured verdict machinery helps.
+
+## Supporting files
+
+| Read | When |
+|---|---|
+| [rubric.md](rubric.md) | Before any find or validate pass: the fourteen patterns, decision tests, never-report list, severity, guideline sources by language, calibration method |
+| [orchestration.md](orchestration.md) | Large reviews: optional slicing, sequential or permitted delegated work, output contracts, validation, and coverage |
+| [prompts.md](prompts.md) | Composing self-contained finder, sweep, and validator prompts for subagents |
+| `scripts/slice.py` | Delegated runs: cut the scope into slices one agent can read in full, with a coverage check |
+| `scripts/sweep.py` | Optional deeper audit: mechanical hit lists and test hints |
+| `scripts/check_findings.py` | Optional deeper audit: the citation, lens, coverage, and diff-range gate for finder and validator JSON |
+| `scripts/_scope.py` | Not run directly: the file-gathering and language classification the three scripts share |
+````
+
+## plugins/engineering-kit/skills/code-review/references/change-verdict.md
+
+````
+# Structured change verdict (optional)
+
+Optional deeper tool when a keep/reject decision needs the full evidence account,
+changed-test classification, and residual-uncertainty list. The built-in `code-review`
+already challenges the change, moved tests, and each finding. Load this reference when that
+structure would help—not because the user said "verdict" or "adversarial," and not instead of
+the ordinary review. Ordinary reviews must not skip skeptical checks just because this file
+stays unloaded.
+
+Judge whether a specific code change deserves to survive. Put the burden of proof on
+behavior-changing code, while keeping every claim tied to evidence. A lack of proof is
+uncertainty—not proof that a regression exists—but unresolved uncertainty should count
+against risky, irreversible, or broad changes.
+
+The default is review-only: inspect and test when useful. Do not edit unless the user already
+authorized fixes. Publication and merge still need their own authorization.
+
+## Required outcome
+
+Produce a verdict backed by four things:
+
+- an explicit account of observable behavior before and after the change
+- independent strongest-case arguments for rejection and acceptance
+- a classification for every added, modified, deleted, or materially weakened test
+- concrete evidence that would resolve each remaining uncertainty
+
+Do not reward a change merely for being clever, simpler, or faster. Those qualities justify keeping it only when its behavior is correct for the intended contract and its tradeoffs are acceptable.
+
+## Gather the evidence needed for the decision
+
+Start from the actual review target: a git range, commit, pull request, patch, or pasted before/after code. If no target is available, ask for it; the verdict cannot be inferred from a description of the change alone.
+
+Read the diff, then inspect only the surrounding evidence needed to verify its claims:
+
+- the complete changed function or component and the invariants it relies on
+- callers, consumers, and public interfaces that make the changed behavior observable
+- tests, specifications, issue or decision context, documentation, schemas, and compatibility promises
+- error and rollback paths, state transitions, concurrency boundaries, and persisted data where relevant
+- history when it clarifies whether behavior is established or accidental
+
+Run focused read-only checks or tests when they materially reduce uncertainty. Do not substitute a passing suite for behavioral reasoning: tests can preserve the wrong expectation, omit the affected path, or be weakened in the same change.
+
+State what could not be inspected or verified. Never invent a line number; for deleted code, cite the deleted location or diff hunk as precisely as the available tooling permits.
+
+## Reconstruct the behavior delta
+
+Describe effects in terms a caller, user, operator, or persisted system could observe. Check the dimensions relevant to the change:
+
+- returned values, emitted output, state changes, and side effects
+- accepted and rejected inputs, null/empty/boundary handling, and equality or identity semantics
+- error type, message, timing, retryability, and fallback behavior
+- ordering, determinism, concurrency, cancellation, and lifecycle behavior
+- public API, wire format, storage format, configuration, and compatibility
+- performance characteristics when latency, memory, work amplification, or resource use crosses a meaningful contract or operational limit
+
+Classify each material edit as:
+
+- **Behavior-preserving:** available evidence supports the same observable contract.
+- **Behavior-changing:** an observable result or operational characteristic differs.
+- **Unverified:** preservation or intent depends on evidence that is unavailable or inconclusive.
+
+Rank the delta by blast radius: external or persisted contracts first, shared internal contracts next, and local implementation details last. Keep cosmetic and mechanical changes out of the behavioral case unless they alter generated artifacts, tooling behavior, or another observable surface.
+
+## Make two independent cases
+
+Keep the prosecution and defense as separate local reasoning passes so one does not prematurely compromise the other. These are two passes by the same reviewer, not fake independent agents or a second approval.
+
+### Prosecution
+
+Assume the change is unsafe until its behavioral claims are demonstrated. Build the strongest evidence-backed case that it should be rejected. Look especially for:
+
+- dropped guards, widened conditions, off-by-one boundaries, and null/empty changes
+- error-path, retry, timeout, transaction, or cleanup changes
+- equality, identity, coercion, ordering, and default-value shifts
+- compatibility breaks hidden inside a refactor or optimization
+- tests that changed in the same direction as the implementation without independent support for the new contract
+
+Do not soften this pass, but do not manufacture defects. Distinguish a demonstrated regression from a plausible risk and from missing evidence.
+
+### Defense
+
+Assume the change is a correct, intentional improvement and build the strongest evidence-backed case for keeping it. Look for:
+
+- a documented contract or decision that the old behavior violated
+- a concrete bug reproduced before and prevented after
+- stronger invariants, narrower failure modes, or improved compatibility
+- tests that add discriminating coverage instead of merely ratifying the implementation
+- a measured operational benefit whose behavioral tradeoff is understood
+
+The defense should answer the prosecution's strongest point when evidence allows. If it cannot, say so rather than inventing intent.
+
+When the user explicitly asks for delegated or parallel reviewers, isolate these passes through the available orchestration workflow and synthesize them here. Otherwise perform two clearly separated local passes.
+
+## Triage findings by observability and severity
+
+Report only concrete findings or material uncertainties. For each item, give the location, the before/after behavior, who or what can observe it, and why it affects the verdict.
+
+Separate:
+
+- **Observable contract changes:** public behavior, persisted data, cross-module contracts, security or authorization boundaries, operational limits, and user-visible failures.
+- **Internal-only changes:** implementation details with no demonstrated consumer impact.
+- **Does not matter:** cosmetic or mechanical deltas with no meaningful behavioral consequence.
+
+Order findings by expected harm and blast radius. Uncertainty is not a severity by itself; explain the concrete failure it leaves unresolved and how likely or costly that failure would be.
+
+## Scrutinize changed tests
+
+Inventory every added, modified, or deleted test, skipped case, changed expected value, removed assertion, loosened matcher, broader exception expectation, snapshot rewrite, widened tolerance, and reduced fixture coverage. Cross-reference each with the source or contract change that supposedly requires it.
+
+Classify each test change:
+
+- **(a) Intended contract update:** independent product, specification, compatibility, or decision evidence explicitly changes what the system should do; the test now encodes that revised contract.
+- **(b) Legitimate tracking change:** an evidenced and intentional source change requires the expectation to move, and the revised test still discriminates correct from incorrect behavior.
+- **(c) Unjustified weakening:** the change reduces regression detection, removes coverage, or moves an expectation with the implementation without enough independent support for the new behavior.
+
+Category (c) describes the effect of the test change, not the author's motive. If the evidence cannot distinguish (b) from (c), classify it provisionally as **(c), unresolved** and name the missing spec, reproduction, or invariant that would settle it.
+
+Call out deleted assertions and weakened expectations prominently. A source change with no corresponding test can also be a material gap, but do not pretend an unchanged test belongs in the changed-test inventory.
+
+## Reach the verdict
+
+Choose one recommendation:
+
+- **KEEP:** evidence supports the intended improvement, no material observable regression remains unresolved, and changed tests faithfully protect the contract.
+- **REJECT:** evidence demonstrates a regression or contract break, or the change's risk is too high for its unsupported behavioral claim.
+- **KEEP-WITH-CAVEATS:** the change is probably beneficial and no demonstrated regression requires rejection, but bounded follow-up evidence, compatibility work, or monitoring is still necessary.
+
+Do not use KEEP-WITH-CAVEATS to hide a merge blocker. If the caveat must be resolved before the change is safe, recommend REJECT until it is resolved.
+
+State confidence as high, medium, or low and tie it to evidence quality, coverage, and unresolved scope—not rhetorical certainty. Ties and unprovable preservation lean toward caution in proportion to blast radius and reversibility.
+
+## Report structure
+
+Use these sections for a substantive change-verdict review:
+
+```markdown
+## 1. Behavior-change summary
+- Behavior-changing:
+- Behavior-preserving:
+- Unverified:
+
+## 2. Triaged findings
+1. [Severity] `path/to/file:line` Finding
+   Observable impact: ...
+   Evidence: ...
+
+## 3. Changed-test analysis
+| Test/location | Change | Class | Source/contract link | Judgment |
+|---|---|---|---|---|
+
+## 4. Prosecution vs Defense
+### Prosecution
+...
+### Defense
+...
+
+## 5. Verdict
+- Recommendation: KEEP / REJECT / KEEP-WITH-CAVEATS
+- Confidence: High / Medium / Low — reason
+- Risky spots: `path/to/file:line`, ...
+- Evidence that would resolve doubt: exact test, specification, value, or invariant to confirm
+```
+
+Keep empty categories brief. If no tests changed, say so in section 3. Cite concrete `file:line` locations throughout, and label inferences and unavailable evidence explicitly.
+
+When the same request also asked for structured slop findings, keep this verdict structure
+and add the surviving quality findings as a separate section rather than folding them into
+caveats. Do not invent a mixed mode.
+````
+
+## plugins/engineering-kit/skills/code-review/references/orchestration.md
 
 ````
 # Delegated orchestration
 
-Use this reference for a large review that benefits from slicing, whether executed sequentially
-or with permitted subagents. The skill's execution policy governs delegation; line counts are
-planning estimates, not a requirement to spawn agents. For small reviews, the inline procedure
-and the output contract below are sufficient.
+Optional deeper machinery for a large or high-risk audit that benefits from slicing, whether
+executed sequentially or with permitted subagents. Ordinary reviews do not skip built-in
+quality or skeptical checks if this file stays unloaded, and they must not run sweep or JSON
+just because this file exists. The skill's execution policy governs delegation; line counts
+are planning estimates, not a requirement to spawn agents.
 
 ## Contents
 
@@ -4189,9 +5268,10 @@ and the output contract below are sufficient.
 
 ## 1. Workspace layout
 
-Keep every artifact outside the repository so a read-only run leaves `git status` clean. A
-temporary directory or a user-named directory is fine; a gitignored `.context/` inside the repo
-also works when the user prefers it.
+For a review the user wants kept, use the matching evidence directory from
+[the skill's Report section](../SKILL.md#report) as `<workspace>` and save the final review at
+its separate report path. For an unsaved review, use a temporary workspace and return the
+report in the conversation. Honor user or repository location overrides.
 
 ```
 <workspace>/
@@ -4200,7 +5280,6 @@ also works when the user prefers it.
   findings/<AGENT>.json    finder output
   validations/input/       finder output with `why`, `notes`, `hints_triaged` stripped
   validations/<AGENT>.json validator output
-  REPORT.md                orchestrator synthesis
 ```
 
 Preflight, from the repository root, with `<skill>` set to this skill's directory:
@@ -4212,8 +5291,8 @@ mkdir -p <workspace>/findings <workspace>/validations/input
 git status --short                                                      # record and preserve pre-existing changes
 ```
 
-Pass `--files changed.txt` to both scripts when the scope is a diff (`git diff --name-only
-<range> > changed.txt`). Pass `--include` and `--exclude` globs to narrow a repository scope.
+Pass `--files <workspace>/changed.txt` to both scripts when the scope is a diff (`git diff --name-only
+<range> > <workspace>/changed.txt`). Pass `--include` and `--exclude` globs to narrow a repository scope.
 
 ## 2. Slicing and lenses
 
@@ -4348,7 +5427,7 @@ Before writing a large report, spot-check material confirmed findings, emphasizi
 and uncertain cases. Investigate disagreements against the actual evidence; a percentage alone
 does not establish reviewer bias. Scale the sample to the report size.
 
-`REPORT.md` contains:
+The final review contains:
 
 - proposed, confirmed, downgraded, rejected, reclassified: per lens, per finder, per pattern
 - every confirmed P1 and P2 with path, lines, snippet, and fix
@@ -4372,13 +5451,15 @@ in this phase.
   unvalidated rather than as confirmed.
 ````
 
-## plugins/engineering-kit/skills/ai-slop-review/references/prompts.md
+## plugins/engineering-kit/skills/code-review/references/prompts.md
 
 ````
 # Finder, sweep, and validator prompts
 
-Templates for delegated agents. Fill every `{PLACEHOLDER}`; paste the lens rules from
-`rubric.md` where marked so each prompt is self-contained.
+Optional templates for a deeper delegated audit. Ordinary reviews do not require these
+prompts and must not skip built-in quality or skeptical checks if this file stays unloaded.
+Fill every `{PLACEHOLDER}`; paste the lens rules from `rubric.md` where marked so each
+prompt is self-contained.
 
 ## Contents
 
@@ -4697,14 +5778,19 @@ Every input finding id gets exactly one review. Write the file, then reply with 
 ```
 ````
 
-## plugins/engineering-kit/skills/ai-slop-review/references/rubric.md
+## plugins/engineering-kit/skills/code-review/references/rubric.md
 
 ````
 # AI slop rubric
 
-The fourteen patterns a finder may report, the decision test for each, which lens owns it, and
+Optional pattern tests for a deeper quality audit. Ordinary reviews already consider
+unnecessary code and hollow tests and must not skip those checks if this file stays unloaded.
+
+The fifteen patterns a finder may report, the decision test for each, which lens owns it, and
 what is never a finding. Load the lens block you are about to apply; paste it verbatim into a
-delegated finder or validator prompt so the agent never has to open this file.
+delegated finder or validator prompt so the agent never has to open this file. For deeper
+structural maintainability and code-judo simplification audits, also read
+[structural-quality.md](structural-quality.md).
 
 The bar for every pattern: report only when the code is worse than a careful engineer in this
 language would ship. "An LLM wrote this" is not a finding. Voice alone is not a finding.
@@ -4724,13 +5810,14 @@ reason in `why`. Lens letters: **C** comments and docs, **K** code shape, **T** 
 | S5 | K, T, W | Blanket or premature catch | Could the guarded code throw here, and does the handler report or rethrow? Report `try` around code that cannot throw; a catch-all that logs-and-continues or returns a default silently; catching the language's base error type. Exempt: error boundaries and IO, process, FFI, or network edges that surface the failure. | P2, P1 if it hides a bug |
 | S6 | K | Impossible defensive code | Can the guarded state occur given the declared types and the narrowing in scope? Null checks on non-nullable values, optional chaining after a definite value, `?? x` on a non-nullable, asserts that restate the type system, empty `else {}`. | P2 |
 | S7 | K | Over-abstraction | How many implementations or call sites? A factory, strategy, or wrapper with one implementation; a class around a three-line function; a type alias used once; `Manager` / `Helper` / `Util` with no domain meaning; a one-member interface where a function would do. Count and state the number in `why`. | P2 |
-| S8 | K | Scope creep in a unit | List the concerns one function handles. Report when it fetches, transforms, validates, and notifies in one body, or exceeds roughly 80 lines of mixed concerns, or nests so the happy path is hidden. Name the concerns. | P2 |
+| S8 | K | Scope creep in a unit | List the concerns one function handles. Report when it fetches, transforms, validates, and notifies in one body, or exceeds roughly 80 lines of mixed concerns, or nests so the happy path is hidden. Name the concerns. Prefer a data/type reframing or early guard clause over extracting a single-caller wrapper that would violate S7; extract a separate unit only when it owns distinct state, a combinatorial test seam, or a layer boundary. | P2 |
 | S9 | K, T, W | Generic naming | Does the type already say what the name says, and do neighboring files use a domain word? `data`, `result`, `temp`, `value`, `item`, `info`, `handler`, `processX`, `handleX`, `doX`; a `get` prefix on a property-like method; test names such as "should work" that state no behavior. Framework-domain names (`FocusManager`, `EventHandler` in an event system) are not generic. | P3 |
 | S10 | T | Fake or hollow test | If the code under test were broken in the obvious way, would this test fail? Asserts on the fake or mock rather than behavior; `expect(x, x)`; "does not throw" or "is not null" as the only assertion; an expected value computed by re-running production logic; a body with no assertion; happy path only where a failure mode is obvious. Also a coverage gap: a public entry point of the unit under test with an obvious failure path (a catch that releases and rethrows, a rejection branch) and no test at all, especially when the file wires up mocks for it and never asserts on them. | P2, P1 if it masks a real failure |
 | S11 | K | Superseded idioms the linter does not catch | Constructs the language has moved past that no enabled lint flags: redundant `new`, explicit `= null`, `== true`, `.length == 0`, callback loops where a `for` reads better, redundant `this.` or `const`, Hungarian or `kFoo` names, `late` or lazy init where a direct initializer works. Check the linter configuration first. | P2 |
 | S12 | K, T, W | Dead ceremony | Unused private helpers; a lint suppression for a rule that is not enabled or no longer fires; TODOs with no owner or issue; a utility duplicated from elsewhere in-tree; configuration knobs with one value; commented-out code; compatibility shims or "legacy" aliases in code that has no compatibility promise. | P2 |
 | S13 | K, T | Architecture mismatch | Does the code cross a boundary the repository states? A UI layer calling native or IO directly; a reinvented framework primitive (focus, routing, hit testing, text editing) where one exists; a new test harness or fake that re-implements framework behavior instead of using the documented harnesses; a package importing another package's private modules. Derive the boundaries from the repository's own instructions; do not invent them. | P1 |
 | S14 | C, W | Markdown slop | Filler ("In this section we will…"), the heading restated in the first sentence, marketing adjectives (powerful, seamless, comprehensive, robust), emoji headers, bold on every other phrase, references to APIs that no longer exist, placeholder text. | P3 |
+| S15 | K | File sprawl past 1,000 lines | Does the change push a file from under 1,000 lines to over 1,000 lines (or materially enlarge an already >1,000-line file) when cohesive responsibilities could be decomposed into focused modules first? | P2, P1 if it tangles unrelated responsibilities |
 
 Lens **T** also carries S1 and S3 for comments inside tests, S5 for catch-alls that swallow a test
 failure, S9 for empty test names, S12 for dead ceremony in tests, and S13 for a new harness.
@@ -4800,11 +5887,62 @@ domain name that looks generic). Put them in the finder prompt. Over-reporting o
 known failure mode; the keep examples pull the line back. Empty calibration produces noisy finders.
 ````
 
-## plugins/engineering-kit/skills/ai-slop-review/scripts/_scope.py
+## plugins/engineering-kit/skills/code-review/references/structural-quality.md
+
+````
+# Structural Maintainability & Code-Judo Reference
+
+Use this reference when auditing a diff, pull request, or branch for deep structural quality, maintainability regressions, spaghetti growth, file sprawl, or missed "code judo" simplifications. Ordinary reviews already check for over-abstraction and unit scope creep and must not skip those checks when this file stays unloaded.
+
+## Core Standards
+
+0. **Be ambitious about structural simplification ("Code Judo").**
+   - Look for opportunities to reframe data shapes, types, or state ownership so whole branches, helpers, modes, conditionals, or layers disappear altogether.
+   - Prefer solutions that delete complexity rather than rearranging or renaming it.
+   - When a change adds incidental complexity where a cleaner reframing exists in the current architecture, flag the missed simplification directly.
+
+1. **1,000-line file decomposition threshold (`S15`).**
+   - Do not let a change push a file from under 1,000 lines to over 1,000 lines (or materially enlarge an already >1,000-line file) without decomposing cohesive responsibilities first.
+   - Treat crossing 1,000 lines as a presumptive structural blocker unless there is a compelling reason and the resulting file remains clearly organized.
+
+2. **No random spaghetti branching in existing flows (`S8`).**
+   - Flag new ad-hoc conditionals, one-off boolean flags, nullable modes, or special-case branches bolted onto unrelated control flows.
+   - Subordinate extraction to Rule 0 and `S7`: first look for a data/type reframing or early guard clause that deletes the branch; extract a dedicated state machine, dispatcher, or module only when it owns distinct state, a combinatorial test seam, or a layer boundary (never a one-caller pass-through wrapper).
+
+3. **Prefer direct, boring, maintainable code over magic or thin indirection (`S7`).**
+   - Flag thin wrappers, identity abstractions, and pass-through helpers that add indirection without clarifying the contract or isolating a real boundary.
+   - Be skeptical of generic "magic" mechanisms that hide simple data-shape assumptions.
+
+4. **Enforce explicit type and boundary contracts (`S5`, `S6`).**
+   - Flag unnecessary casts (`any`, `unknown`), loosely-shaped ad-hoc objects, or silent fallback values that paper over unclear invariants on internal trusted paths.
+   - Push for explicit typed models or boundary validation at the system edge so internal control flow stays direct.
+
+5. **Keep logic in the canonical layer and reuse existing utilities (`S12`, `S13`).**
+   - Call out feature-specific logic leaking into shared paths or implementation details leaking across package/layer boundaries.
+   - Flag bespoke helpers when the repository already provides a canonical utility.
+
+6. **Flag avoidable serial orchestration and non-atomic state updates.**
+   - When independent async work is serialized for no reason and parallel execution is clearly simpler and safe, call it out.
+   - When related state updates can leave state half-applied on failure, push for an atomic update structure.
+
+## Priority Order for Structural Audits
+
+When reporting structural maintainability findings, prioritize in this order:
+1. Structural regressions and boundary leaks (`S13`)
+2. Missed opportunities for code-judo simplification that delete whole branches or layers
+3. Spaghetti / ad-hoc branching increases in shared or busy flows (`S8`)
+4. Type-contract escapes, silent fallbacks, or thin wrapper indirection (`S5`, `S6`, `S7`)
+5. File-size explosions crossing the 1,000-line decomposition threshold (`S15`)
+6. Unnecessary serial orchestration or partial-state update hazards
+
+Prefer a small number of high-conviction structural findings over a long list of cosmetic nits.
+````
+
+## plugins/engineering-kit/skills/code-review/scripts/_scope.py
 
 ````
 #!/usr/bin/env python3
-"""Shared scope helpers for the ai-slop-review scripts.
+"""Shared scope helpers for the code-review slop-mode scripts.
 
 Gathers the in-scope files for a review, classifies each one by language
 family and role (source, test, doc), and exposes the comment syntax the sweep
@@ -4952,7 +6090,7 @@ def comment_prefix(lang: str) -> str | None:
     return None
 ````
 
-## plugins/engineering-kit/skills/ai-slop-review/scripts/check_findings.py
+## plugins/engineering-kit/skills/code-review/scripts/check_findings.py
 
 ````
 #!/usr/bin/env python3
@@ -5160,7 +6298,7 @@ if __name__ == "__main__":
     sys.exit(main())
 ````
 
-## plugins/engineering-kit/skills/ai-slop-review/scripts/slice.py
+## plugins/engineering-kit/skills/code-review/scripts/slice.py
 
 ````
 #!/usr/bin/env python3
@@ -5285,7 +6423,7 @@ if __name__ == "__main__":
     sys.exit(main())
 ````
 
-## plugins/engineering-kit/skills/ai-slop-review/scripts/sweep.py
+## plugins/engineering-kit/skills/code-review/scripts/sweep.py
 
 ````
 #!/usr/bin/env python3
@@ -5298,9 +6436,9 @@ Writes <workspace>/sweep/<rubric-id>-<pattern>.txt (one hit per line as
 `path:line: text`), per-slice test hints (hints-<T-slice>.txt when
 <workspace>/slices exists, otherwise one hints-ALL.txt), and SUMMARY.txt with
 counts. Hits are leads for an agent to judge against the rubric, never
-findings by themselves. Mechanical first, judgment second: an agent that
-receives the hit list cannot miss a pattern and does not have to construct
-greps.
+findings by themselves. Mechanical first, judgment second: the sweep only
+lists patterns it encodes, so a finder still has to judge each hit and can
+still cite slop the sweep did not list.
 """
 from __future__ import annotations
 
@@ -5579,574 +6717,20 @@ if __name__ == "__main__":
     sys.exit(main())
 ````
 
-## plugins/engineering-kit/skills/architecture/SKILL.md
-
-````
----
-name: architecture
-description: >-
-  Use when choosing, evaluating, or recording a consequential technical design decision from
-  concrete requirements and constraints—for example a technology selection, component boundary,
-  data ownership choice, or architecture decision record. Produce a recommendation sized to the
-  decision and make its trade-offs and reconsideration conditions explicit. Prefer
-  clean-sheet-review when the user wants an existing solution's entire framing or scope reopened;
-  do not use for routine code review or an already-approved implementation task.
----
-
-<!-- Derived from anthropics/knowledge-work-plugins and modified by Leo Farias for engineering-kit. See ../../SOURCES.md. -->
-
-# Architecture Decisions
-
-Turn a material technical choice into a decision that another person can understand, challenge, and revisit. Preserve the user's real constraints; do not manufacture architecture ceremony for a small or reversible choice.
-
-## Size the decision
-
-Choose the lightest output that makes the decision usable:
-
-- **Compact recommendation:** a bounded, reversible choice with a small number of consequences.
-- **Architecture decision record (ADR):** a consequential or long-lived choice that needs a durable record or approval.
-- **Proposal evaluation:** an architecture already exists and the user wants its decision quality assessed without reopening the whole solution.
-
-When the user requests a specific format, use it. Do not turn an evaluation into a blank ADR template or a focused decision into a full system redesign.
-
-## Establish the decision frame
-
-Inspect relevant repository artifacts, design notes, constraints, and observed behavior when they are available. Summarize:
-
-- the outcome being decided;
-- hard constraints and external commitments;
-- the decision drivers that distinguish viable options;
-- assumptions and unknowns that could change the result.
-
-Ask at most one clarifying question when the missing answer could invert the recommendation. Otherwise proceed with an explicit assumption and say how a different answer would affect the decision.
-
-Keep requirements separate from the current implementation. Treat latency, scale, reliability, cost, team expertise, delivery time, compatibility, security, and operational ownership as decision drivers only when the available evidence makes them relevant.
-
-## Protect evidence and identity
-
-Vendor capabilities and prices change. Verify exact service prices, quotas, throughput limits, retention periods, provisioning times, and migration durations from a current authoritative source inspected during the current task before quoting them. A remembered value or an uninspected documentation URL is not verification. When verification is unavailable, compare qualitatively and list the fact that must be checked; do not substitute remembered numbers. Saying an unsupported number should be verified does not make it usable—omit the number entirely unless the response can cite the source it actually inspected.
-
-Do not include an Author, Deciders, Approvers, or contact field unless the user or a relevant artifact explicitly supplied that identity for this decision. Never use account, profile, machine, or environment identity as decision-record content.
-
-## Compare viable options
-
-Consider the status quo when it is genuinely viable. Compare serious options against the same decision drivers rather than listing generic pros and cons.
-
-- Tie assessments to the stated environment and workload.
-- Distinguish verified facts, reasonable estimates, and unresolved assumptions.
-- Avoid invented precision. Unless the user supplied a figure or it was verified from a current authoritative source inspected during the current task, do not quote exact service prices, quotas, throughput limits, retention periods, provisioning times, or migration durations. Do not present a vendor capability as current merely because a documentation URL is known. Compare qualitatively and name the lookup or measurement needed instead.
-- Do not force multiple alternatives when a hard constraint leaves only one viable choice.
-
-Make one recommendation. Explain the primary reason, the material trade-off being accepted, and why the rejected option is not preferred under the present constraints.
-
-## Present the result
-
-Lead with the recommendation and a short reason. For a compact decision or evaluation, include only the sections needed to show the frame, trade-offs, consequences, missing evidence, and reconsideration conditions.
-
-For a durable ADR, use this structure unless the repository already has a convention:
-
-```markdown
-# ADR-[number]: [Decision]
-
-**Status:** Proposed | Accepted | Deprecated | Superseded
-**Date:** [date]
-
-## Context
-[Decision, constraints, drivers, and material unknowns]
-
-## Decision
-[Chosen option and rationale]
-
-## Options considered
-[Comparable evidence and trade-offs for each viable option]
-
-## Consequences
-[What becomes easier, harder, riskier, or newly required]
-
-## Reconsider when
-[Observable thresholds or changed assumptions that should reopen the decision]
-```
-
-Add owners, approvers, implementation follow-ups, or links only when the user or repository needs them. Do not infer names, identities, email addresses, or decision authority from account or machine context; omit those fields unless the user or a relevant artifact supplied them. Do not create project-tracker tasks, modify implementation files, or imply approval unless the user requested those actions.
-
-## Final check
-
-Before returning the decision, verify that the recommendation follows from the stated drivers, material uncertainty is visible, consequences include the downside being accepted, and the reconsideration conditions are concrete enough to recognize later. Remove any unverified vendor number and any identity field not explicitly grounded in the request or inspected artifacts.
-````
-
-## plugins/engineering-kit/skills/architecture/evals/evals.json
-
-````
-{
-  "skill_name": "architecture",
-  "evals": [
-    {
-      "id": 1,
-      "prompt": "Create an architecture decision for our event bus. We are already on AWS, peak at about 5,000 events per second, require ordering only within one customer, have three engineers, no Kafka operations experience, and need to ship in eight weeks. Compare Kafka and SQS and recommend one.",
-      "expected_output": "A decision-ready ADR that recommends an option from the stated constraints, makes the material trade-offs and consequences explicit, and identifies assumptions that could change the decision.",
-      "files": [],
-      "expectations": [
-        "The output makes one clear recommendation and ties it to the eight-week schedule, team experience, AWS environment, throughput, and per-customer ordering requirement.",
-        "The output compares Kafka and SQS on operational burden, ordering semantics, throughput, and future flexibility without presenting unverified prices, quotas, throughput ceilings, retention periods, or vendor capabilities as current facts; an uninspected documentation URL does not count as verification.",
-        "The output states material consequences, risks, and at least one assumption or threshold that would justify revisiting the decision.",
-        "The output does not mention unavailable connector placeholders or require a connected knowledge base or project tracker.",
-        "The output does not invent an author, decider, email address, or approval authority that the prompt did not provide."
-      ]
-    },
-    {
-      "id": 2,
-      "prompt": "Evaluate this proposed design without turning it into a full rewrite: our small billing product has an API service, a separate worker, Postgres, and Redis-backed jobs. The proposal adds a second database solely for reporting. We need daily reports, can tolerate data being one hour old, and have one backend team. Tell me whether the added database is justified and what evidence is missing.",
-      "expected_output": "A focused evaluation of the proposed reporting database that separates observed constraints from assumptions, gives a verdict, and names evidence needed before committing to the added component.",
-      "files": [],
-      "expectations": [
-        "The output evaluates the proposed second database rather than automatically producing a blank ADR template or redesigning the entire billing system.",
-        "The output distinguishes stated facts from missing evidence such as reporting workload, query impact, data volume, or operational ownership.",
-        "The output gives a clear provisional verdict and explains what new evidence would reverse it.",
-        "The response is proportional to the focused decision and avoids unrelated implementation tasks."
-      ]
-    },
-    {
-      "id": 3,
-      "prompt": "For a single-process internal admin tool used by ten people, should we use SQLite or provision Postgres? Writes are low-volume, nightly file backup is acceptable, and we expect the tool to remain internal for at least a year. Give me the smallest useful architecture decision.",
-      "expected_output": "A concise, decision-ready recommendation sized to a low-risk internal tool, including the few conditions that would trigger reconsideration.",
-      "files": [],
-      "expectations": [
-        "The output recommends one option using the stated concurrency, operational, backup, and time-horizon constraints.",
-        "The output remains concise and does not pad the answer with a full enterprise ADR ceremony.",
-        "The output names concrete change conditions that would justify moving to the other option.",
-        "The output does not invent additional services, migration projects, or requirements."
-      ]
-    }
-  ]
-}
-````
-
-## plugins/engineering-kit/skills/architecture/evals/trigger_queries.json
-
-````
-[
-  {
-    "query": "Choose between SQS and Kafka for our event pipeline. Record the decision and the conditions that would change it.",
-    "should_trigger": true
-  },
-  {
-    "query": "Write an ADR for whether customer data should belong to the billing service or the account service.",
-    "should_trigger": true
-  },
-  {
-    "query": "Evaluate our proposal to add a second database for analytics. Give one recommendation with the accepted trade-off.",
-    "should_trigger": true
-  },
-  {
-    "query": "We must choose REST or gRPC between two internal services. Latency and team experience are the main constraints.",
-    "should_trigger": true
-  },
-  {
-    "query": "Should this capability remain in the monolith or become a service? Document the boundary decision.",
-    "should_trigger": true
-  },
-  {
-    "query": "Compare DynamoDB and Postgres for this workload. State the evidence we still need before the final decision.",
-    "should_trigger": true
-  },
-  {
-    "query": "Record why we selected an event-driven boundary for order fulfillment and when we should reconsider it.",
-    "should_trigger": true
-  },
-  {
-    "query": "Review this proposed cache architecture. I need a focused accept, reject, or revise decision.",
-    "should_trigger": true
-  },
-  {
-    "query": "Choose where encryption keys should be managed across these two components. The decision will affect every client.",
-    "should_trigger": true
-  },
-  {
-    "query": "Create the smallest useful technical decision for SQLite versus Postgres in our internal tool.",
-    "should_trigger": true
-  },
-  {
-    "query": "Review this pull request for correctness, security defects, and missing regression tests.",
-    "should_trigger": false
-  },
-  {
-    "query": "We already built this plugin registry. Reconsider whether the registry should exist at all.",
-    "should_trigger": false
-  },
-  {
-    "query": "Design the complete notification platform, including APIs, storage, queues, scaling, and operational ownership.",
-    "should_trigger": false
-  },
-  {
-    "query": "Implement the approved database choice and run the existing migration tests.",
-    "should_trigger": false
-  },
-  {
-    "query": "Write a product requirements document for a new customer notification feature.",
-    "should_trigger": false
-  },
-  {
-    "query": "The service started returning 500 errors after deployment. Find the root cause.",
-    "should_trigger": false
-  },
-  {
-    "query": "Create a test strategy for the payment migration. Include unit, integration, and rollback coverage.",
-    "should_trigger": false
-  },
-  {
-    "query": "Change this one configuration value and run the focused test.",
-    "should_trigger": false
-  },
-  {
-    "query": "Summarize this existing architecture for a stakeholder update. Do not evaluate or change it.",
-    "should_trigger": false
-  },
-  {
-    "query": "Create an implementation plan for the approved API migration. The architecture decision is complete.",
-    "should_trigger": false
-  }
-]
-````
-
-## plugins/engineering-kit/skills/clean-sheet-review/SKILL.md
-
-````
----
-name: clean-sheet-review
-description: >-
-  Use when a plan, spec, API, architecture, or implementation already exists and the user wants it
-  re-examined from a clean sheet — a fresh-eyes redo that may reconsider scope, public API,
-  dependencies, or whether the artifact should exist at all. Trigger on "if you built this again,
-  how would you do it" or "what would you simplify or replace now that it's built". Returns one
-  sized verdict: keep, refine, simplify, redesign, split, or stop. Prefer native diff review for routine
-  PR bug-finding and architecture or native system modeling for first-time design. Not for approved edits
-  whose scope and design are fixed.
----
-
-# Clean-Sheet Solution Review
-
-Re-evaluate an existing plan, spec, API, architecture, or implementation from a clean sheet. Keep the facts and real constraints learned so far, but treat the current scope and design as provisional, and return the smallest correct solution plus a justified verdict.
-
-This is a deliberate second pass, not a routine line-by-line code review. Its job is to counter attachment to the first design — the sunk-cost pull of "we already built it" — while still respecting the evidence that building it produced.
-
-## Scope after activation
-
-Use this skill only when a meaningful solution already exists **and** the user has given permission to reconsider at least one of scope, public API, architecture, data model, or problem framing. When that permission is ambiguous, clarify it rather than assuming a rewrite is wanted.
-
-Do not turn a normal review into a redesign. Hand off instead when:
-
-- Scope, behavior, and API are fixed and the user wants bug, regression, or risk findings -> native diff review.
-- No prior solution exists yet and the user wants a first design -> `architecture` for a decision/ADR or native system modeling for a broader system.
-- Scope and design are fixed and the user already wants the edit implemented -> use ordinary
-  engineering execution; use `code-simplifier` only when the user explicitly invokes it as a
-  separate cleanup pass.
-- The user wants a single-axis audit (security-only, performance-only, accessibility-only) and has not asked to reopen the design.
-
-## What you're working with
-
-Pick the mode from what you actually have; the mode changes the evidence available, not the standard:
-
-- **Plan mode:** a plan or spec exists, no code yet. Test it for internal consistency, missing behavior, undefined terms, and unverifiable acceptance criteria.
-- **Implementation mode:** working or partial code and tests exist. Trace requirements to real code paths and run what you safely can.
-- **Combined mode:** plan plus implementation plus the lessons from building it — the richest evidence.
-
-Use any evidence available: the decisions so far, the current plan or design notes, source/tests/schemas/config/docs, a branch or diff, observed failures or user feedback, and hard constraints (compatibility, migration, schedule, security, cost, platform). When you can read the repo, inspect the artifacts before concluding — verified evidence is the whole point of a second pass, so do not infer what you can check directly. Treat details omitted from a short prompt as unknown, not as defects in the existing design.
-
-## The core moves
-
-Every clean-sheet review, whatever its size, does four things:
-
-1. **Separate requirements from design choices.** Do not let "we built it as a library / service / registry / schema" masquerade as a requirement — naming the artifact is often where the first design quietly over-committed. An unspecified dimension is reconsiderable unless changing it breaks a clear external commitment.
-2. **Judge the current design on evidence, not attachment.** Inspect what is actually there; keep correctness defects separate from maintainability preferences; and evaluate each decision against the information that existed when it was made rather than criticizing prior authors. Missing evidence can justify a verification question, but it does not prove a defect.
-3. **Return one clear verdict with a brief reason** — typically **keep**, **refine**, **simplify**, **redesign**, **split**, or **stop**. Say the primary reason, the most important tradeoff, and what of the current approach survives. Use **keep** when the stated mechanism fits the demonstrated requirements and only normal implementation checks remain. Use **refine** only when evidence shows a material gap that changes the design or contract. Optional hardening, another valid implementation, or a new requirement introduced by the review does not change **keep** to **refine**.
-4. **Price the change.** A redesign must clear its combined implementation-and-migration cost — "cleaner" alone does not justify a rewrite. Keep is a valid and common answer; never recommend a rewrite just because a review was requested. Backward compatibility is not automatically a wall — verify whether it is a hard constraint or a migration cost before treating it as one.
-
-## Optional techniques — reach for what the problem needs
-
-Scale the second pass to the artifact. A sound design heading for **Keep** needs almost none of these; a "rewrite the reporting service" needs most. Use a technique when it changes the call, not by default.
-
-- **Neutral problem brief** — rewrite the problem without the current solution, classifying each item as required outcome / hard constraint / external commitment / observed evidence / current design choice / assumption / unknown. Use it when requirements and design choices are tangled; it is the sharpest tool for move 1.
-- **Independent clean-sheet design** — when heading toward simplify or redesign, design from the
-  brief rather than by editing the current architecture. Write the independent design before
-  comparing it with the current one. Use an isolated subagent only when the user explicitly asks
-  for delegated or parallel review. Aim for the narrowest useful scope and interface that covers
-  demonstrated needs. Describe responsibilities and data flow before choosing artifact names, so
-  the new design does not merely replace one set of layers with another.
-- **Subtraction pass** — trace the shortest path from each requirement to its outcome through both
-  designs. For every concept, representation, conversion, delegation hop, extension point, and
-  public surface, ask what requirement, invariant, or proven use would fail if it disappeared.
-  Collapse anything whose removal changes only navigation or syntax; keep a boundary when it owns
-  distinct semantics, lifecycle, authority, failure behavior, or an external commitment.
-- **Premortem** — assume it shipped and later failed; name the material plausible causes, the
-  earliest signal each produces, and a prevention/detection/containment measure. Use it only when
-  it could change the verdict, and do not invent unlikely risks to justify extra architecture.
-- **Correctness & failure-mode sweep** — cover functional correctness always; other dimensions (invariants, boundary/partial/duplicate inputs, error recovery and idempotency, data ownership and migration, concurrency, security boundaries, performance limits, compatibility, testability) only where evidence makes them relevant to the verdict. Turn vague quality claims into concrete scenarios — replace "must scale" with a workload, an environment, and a measurable limit. Do not expand a compact design summary into a full hardening review unless the user asks for one.
-- **Current-to-proposed comparison** — assign each material element an action: keep / change / remove / add / defer.
-- **Revised specification** — only when the user asks: problem, goals, non-goals, consumers, core concepts and invariants, inputs/outputs, public interface, required behavior including errors and edge cases, data/file format, compatibility and migration rules, acceptance tests, and deferred capabilities — each public operation tracing to a use case or invariant. Then state which prior decision is superseded and why.
-
-## Output
-
-Return Markdown. Lead with the verdict and a short reason, then include only the sections the verdict needs. For **keep**, use exactly this compact shape and stop at 120 words:
-
-```markdown
-**Verdict: Keep.** <Why the demonstrated invariants are sufficient.>
-
-- **Verify:** <The one condition that could overturn the verdict, or "No material condition remains.">
-```
-
-Do not add a hardening list, alternative design, revised specification, or implementation advice unless the user asks for it.
-
-Include, proportionally, the verdict; a neutral reframe; what should survive; correctness defects and
-design preferences kept distinct; and any assumption that could change the decision. Add a proposal,
-comparison, or migration path only when the verdict needs it, and a revised specification only when
-the user asks for one.
-
-## Clarifying question policy
-
-Ask only for missing facts that could invert the recommendation or change safety, compatibility, or
-output structure — for example, whether a published API may break or stored data must stay readable.
-Batch the material questions into one concise request when practical. Otherwise proceed on stated
-assumptions and say how the recommendation would change if they are wrong.
-
-## Review-only by default
-
-Default to review only — do not modify files, APIs, data, or external systems. When the user explicitly asks you to implement: complete the review and lock the verdict first, convert the chosen direction into the smallest change sequence, apply only those changes, add or update tests that show both corrected and preserved behavior, run the relevant validation, and report what changed and the compatibility impact honestly. Never silently ship a breaking redesign when the user asked only for analysis.
-````
-
-## plugins/engineering-kit/skills/clean-sheet-review/evals/evals.json
-
-````
-{
-  "skill_name": "clean-sheet-review",
-  "evals": [
-    {
-      "id": 1,
-      "prompt": "We shipped a ConfigProvider with a plugin registry so any module can register a config source at runtime. In practice only two sources exist (env vars and one YAML file) and they never change after startup. Now that it's built, what would you simplify or replace?",
-      "expected_output": "A clean-sheet review that lands on a Simplify verdict, reframes the problem neutrally, names what to preserve, and proposes removing the unused extension point.",
-      "files": [],
-      "expectations": [
-        "Leads with one verdict (here, Simplify or Refine) plus a short reason, not a generic review.",
-        "Reframes the problem and marks runtime registration as a current design choice, not a requirement.",
-        "Names what the current approach gets right and preserves it.",
-        "Separates a correctness concern (precedence/ordering) from a simplicity preference (unused extension point).",
-        "Recommends removing the registry only when no real second use case exists, and flags any compatibility caveat before deleting a public interface."
-      ]
-    },
-    {
-      "id": 2,
-      "prompt": "Before I expand this, review our configuration loader with fresh eyes. At startup, one function reads environment variables and one YAML file in a fixed documented precedence order, validates the merged values into one immutable typed Config object, and returns it. The application has no runtime updates, plugin registry, public extension API, or third source. Tests cover precedence, missing required values, malformed YAML, and type errors. Would you design it differently today?",
-      "expected_output": "A Keep verdict that resists rewriting a complete minimal design, stays short, and confines itself to a verification follow-up rather than inventing new architecture.",
-      "files": [],
-      "expectations": [
-        "Reaches a Keep verdict and explicitly declines to redesign.",
-        "Stays concise and omits the proposal/migration sections that a Keep verdict does not need.",
-        "Names what is already correct (one startup path, fixed precedence, typed immutable output, and focused error coverage).",
-        "Surfaces at most a small verification follow-up rather than speculative redesign.",
-        "Does not reward novelty or add abstractions the evidence does not justify.",
-        "Does not add a registry, provider interface, runtime reload system, dependency container, or other extension mechanism without a demonstrated need."
-      ]
-    },
-    {
-      "id": 3,
-      "prompt": "Review the attached plan and partial implementation for a new 'reporting microservice'. We're allowed to change scope and the internal API. Given what we learned building it, write the spec you'd write today and tell us what to keep, change, or drop, plus how to get there.",
-      "expected_output": "A combined-mode clean-sheet review with an independent minimal design, an explicit current-to-proposed comparison, a revised spec, and a reversible migration path.",
-      "files": [
-        "evals/files/reporting_plan.md",
-        "evals/files/reporting_service.dart"
-      ],
-      "expectations": [
-        "Builds a neutral problem brief before proposing a design, classifying items (required outcome, constraint, commitment, assumption).",
-        "Produces an independent minimal design rather than editing the current architecture, including explicit non-goals.",
-        "Questions whether a separate microservice is warranted instead of assuming the artifact is a requirement.",
-        "Gives a per-element comparison (keep / change / remove / add / defer) and a single verdict.",
-        "Provides a revised specification and a smallest-reversible-steps migration path, noting which prior decision is superseded."
-      ]
-    },
-    {
-      "id": 4,
-      "prompt": "Clean-sheet this completed typed-renderer refactor. The assured map is wrapped by a typed view, copied field-for-field into a private presentation object, passed through a one-use build function, and finally used by a widget. Behavior and validation are correct, and we may change private implementation shape. What should survive?",
-      "expected_output": "A process-first review that traces the requirement-to-render path, preserves the assurance boundary, and removes only representations or forwarding hops that have no distinct responsibility.",
-      "files": [],
-      "expectations": [
-        "Leads with one sized verdict and distinguishes behavioral correctness from implementation directness.",
-        "Traces responsibilities and data flow before recommending classes, functions, constructors, or other artifacts.",
-        "Preserves the assured typed boundary when it prevents raw-map access from leaking into widgets.",
-        "Challenges the field-for-field presentation copy and one-use forwarding hop by asking what invariant or semantics each owns.",
-        "Does not prescribe factories, top-level functions, or any other declaration form as a universal solution."
-      ]
-    }
-  ]
-}
-````
-
-## plugins/engineering-kit/skills/clean-sheet-review/evals/files/reporting_plan.md
-
-````
-# Reporting service plan
-
-## Required outcomes
-
-- Generate one weekly CSV from the existing orders database.
-- Email the CSV to the finance group.
-- Retry transient delivery failures without sending duplicate reports.
-- Preserve an audit record containing the report period, checksum, and delivery result.
-
-## Proposed design
-
-- Deploy a new HTTP microservice with its own database.
-- Add a queue between report generation and delivery.
-- Define a runtime plugin registry for CSV, PDF, and future report formats.
-- Add a client package to the monolith so it can call the service every Monday.
-
-## Evidence learned during the partial implementation
-
-- The existing monolith already owns the scheduler, orders transaction boundary, email client, and
-  audit database.
-- Only CSV is approved; no second format is planned.
-- Reporting has no independent scaling, availability, or deployment requirement.
-- The same team owns and deploys both proposed services.
-- No external consumer or public API exists.
-````
-
-## plugins/engineering-kit/skills/clean-sheet-review/evals/files/reporting_service.dart
-
-````
-abstract interface class ReportFormatPlugin {
-  String get id;
-
-  List<int> render(List<Map<String, Object?>> rows);
-}
-
-final class ReportPluginRegistry {
-  final Map<String, ReportFormatPlugin> _plugins = {};
-
-  void register(ReportFormatPlugin plugin) {
-    _plugins[plugin.id] = plugin;
-  }
-
-  ReportFormatPlugin require(String id) => _plugins[id]!;
-}
-
-final class ReportingService {
-  ReportingService(this.registry, this.queue);
-
-  final ReportPluginRegistry registry;
-  final DeliveryQueue queue;
-
-  Future<void> requestWeeklyReport(
-    String format,
-    List<Map<String, Object?>> rows,
-  ) async {
-    final bytes = registry.require(format).render(rows);
-    await queue.enqueue(bytes);
-  }
-}
-
-abstract interface class DeliveryQueue {
-  Future<void> enqueue(List<int> reportBytes);
-}
-````
-
-## plugins/engineering-kit/skills/clean-sheet-review/evals/trigger_queries.json
-
-````
-[
-  {
-    "query": "We finished v1 of the export service and it actually works now. If you were starting over with everything we learned, what would you cut or design differently?",
-    "should_trigger": true
-  },
-  {
-    "query": "Reconsider this CLI's whole command surface with fresh eyes - we added flags reactively and the scope feels bloated. Honestly, should this even be a CLI?",
-    "should_trigger": true
-  },
-  {
-    "query": "Here's the auth module we built plus the original plan. Knowing what we now know, write the spec you'd write today and tell me what to keep versus replace.",
-    "should_trigger": true
-  },
-  {
-    "query": "Don't just review the PR for bugs - step back and tell me whether this caching layer should exist at all given how rarely it's hit.",
-    "should_trigger": true
-  },
-  {
-    "query": "I want a clean-sheet take on our notifications architecture. Preserve the real constraints but treat the current design as provisional.",
-    "should_trigger": true
-  },
-  {
-    "query": "We can break the internal API if it helps. Re-examine the plugin loader design from scratch and recommend the simplest thing that covers our two real plugins.",
-    "should_trigger": true
-  },
-  {
-    "query": "If you had to rebuild this rate limiter from zero today, how would you design it? It's already in prod but I'm not attached to the current approach.",
-    "should_trigger": true
-  },
-  {
-    "query": "Look at this data model we shipped and the migration notes. Would you model it the same way now, or split it apart / collapse it into fewer tables?",
-    "should_trigger": true
-  },
-  {
-    "query": "Second-pass review please: the worker is implemented, but we learned the queue is almost always empty. What's the smallest correct version of this?",
-    "should_trigger": true
-  },
-  {
-    "query": "Take everything we now know about the Stripe integration and propose the design you'd actually build, not just a patch on what's there.",
-    "should_trigger": true
-  },
-  {
-    "query": "Review this PR in api/auth/login.ts for bugs, regressions, and missing tests before I merge it.",
-    "should_trigger": false
-  },
-  {
-    "query": "We haven't built anything yet - write a design doc / RFC for the new webhooks feature with goals, alternatives, and rollout.",
-    "should_trigger": false
-  },
-  {
-    "query": "Simplify this 80-line function and reduce the nesting, but keep the behavior exactly the same.",
-    "should_trigger": false
-  },
-  {
-    "query": "Find every call site of legacyClient across the repo so I know what depends on it.",
-    "should_trigger": false
-  },
-  {
-    "query": "This integration test started timing out in CI yesterday. Help me figure out why.",
-    "should_trigger": false
-  },
-  {
-    "query": "Refactor the orders module to extract a pricing service, but don't change any public behavior.",
-    "should_trigger": false
-  },
-  {
-    "query": "Execute the plan in docs/plans/oauth.md and check off each task as you implement it.",
-    "should_trigger": false
-  },
-  {
-    "query": "Summarize the current design of this service in a few bullets for a status update.",
-    "should_trigger": false
-  },
-  {
-    "query": "Do a security-only audit of this endpoint for injection and authorization issues.",
-    "should_trigger": false
-  },
-  {
-    "query": "Add a retry with exponential backoff to this HTTP client call.",
-    "should_trigger": false
-  }
-]
-````
-
 ## plugins/engineering-kit/skills/code-simplifier/SKILL.md
 
 ````
 ---
 name: code-simplifier
+disable-model-invocation: true
 description: >
-  Use when the user explicitly invokes `$code-simplifier` or names the code-simplifier skill and
-  asks to use it. Do not infer it from a generic cleanup request or a non-trivial edit. Run a
-  separate, behavior-preserving refinement pass over a user-selected code scope, defaulting to
-  recently written or modified code. Do not use for
-  larger structural work such as cross-module consolidation, responsibility splits, or replacing an
-  architecture; handle those as scoped engineering changes with proportionate behavior-preservation
-  tests.
+  Use when the user explicitly invokes `$code-simplifier`, names the code-simplifier skill and asks
+  to use it, or explicitly asks to deslop recently written or modified code. Do not infer it from a
+  generic cleanup request or a non-trivial edit. Run a separate, behavior-preserving refinement and
+  slop-removal pass over a user-selected code scope, defaulting to recently written or modified
+  code. Do not use for larger structural work such as cross-module consolidation, responsibility
+  splits, or replacing an architecture; handle those as scoped engineering changes with
+  proportionate behavior-preservation tests.
 ---
 
 # Code Simplifier
@@ -6155,10 +6739,11 @@ description: >
 See ../../SOURCES.md. -->
 
 Refine recently changed code so the behavior stays the same while the path from intent to effect
-becomes easier to follow. Prefer direct, explicit code over both clever compression and layers that
-only rename or forward values.
+becomes easier to follow and free of generated code slop. Prefer direct, explicit code over clever
+compression, speculative defensive guards, and layers that only rename or forward values.
 
-Run this workflow only as an explicitly invoked pass. Cleanup that is naturally part of an
+Run this workflow only as an explicitly invoked pass (`$code-simplifier`, naming `code-simplifier`,
+or an explicit request to deslop recent changes). Cleanup that is naturally part of an
 implementation remains ordinary engineering work and does not require this skill.
 
 ## Establish the boundary
@@ -6172,13 +6757,40 @@ implementation remains ordinary engineering work and does not require this skill
 ## Refinement process
 
 1. Trace each changed entry point through its important calls to the resulting output or effect.
-2. For each material new layer on those paths, identify the distinct responsibility it owns; scale
-   the inspection to the change rather than cataloging every local declaration.
-3. Remove navigation-only hops: inline forwarding calls, collapse same-shape conversions, use a
-   direct tear-off when signatures match, and keep repeated syntax when extracting it would only
-   hide simple code.
-4. Re-read the simplified path for naming, control flow, nesting, comments, and project consistency.
-5. Run the narrowest formatting, analysis, and behavior tests that can prove the cleanup preserved
+2. Look for structural simplifications ("code judo") within the selected scope:
+   - Reframe the local state model, data shape, or lookup table when doing so lets whole branches,
+     one-off boolean flags, nullable modes, or helper layers disappear entirely.
+   - Flatten deeply nested control flow with early returns, and eliminate scattered special-case
+     `if` statements bolted onto busy flows or feature-specific logic leaking into shared paths.
+   - Reuse existing canonical helpers in the codebase instead of keeping bespoke near-duplicates,
+     and split out a focused helper or module when a diff pushes a file past a healthy size boundary
+     (roughly 1,000 lines) by mixing distinct responsibilities.
+3. Remove navigation-only hops: inline forwarding calls, collapse same-shape conversions, inline
+   throwaway one-use variables returned on the next line, use a direct tear-off when signatures
+   match, and keep repeated syntax when extracting it would only hide simple code.
+4. Strip diff-level code slop while keeping real boundaries intact:
+   - **Defensive bloat & silent fallbacks:** Remove impossible defensive checks, redundant null
+     guards, blanket `try/catch` blocks, or silent fallback defaults (`?? ''`, `?? []`,
+     `catch { return null }`) on trusted internal paths where declared types and narrowing already
+     guarantee the state; keep error handling at IO, process, network, FFI, and user-input
+     boundaries.
+   - **Type escapes & suppressions:** Replace `any` casts, `unknown` casts, or unnecessary
+     optionality used only to bypass type checking with the actual narrow type or explicit boundary
+     validation. Fix the underlying local issue instead of leaving `@ts-ignore`, `@ts-expect-error`,
+     `eslint-disable`, or `// ignore:` suppressions.
+   - **Dead ceremony & generic naming:** Delete unused private helpers or single-value configuration
+     knobs introduced in the diff, and replace generic placeholder names (`data`, `result`, `temp`,
+     `item`, `processX`, `handleX`) with the domain terms used in neighboring files.
+5. Enforce strict comment hygiene:
+   - Delete comments that restate the code, tutorial/chat voice (`Note that...`, `Simply...`),
+     task/PR history narration, section banners, and commented-out code.
+   - **Reshape workaround sermons:** When a comment apologizes for or explains a confusing name,
+     surprise, or awkward flow in in-scope code we own, rename or restructure the code so it is
+     obvious without prose, then delete the comment.
+   - Keep only comments that earn their place: legal/license headers, required public API contract
+     docs, issue/RFC links, and `why` comments recording invariants, ordering constraints,
+     ABI/protocol rules, or rejected alternatives forced by external systems we cannot reshape.
+6. Run the narrowest formatting, analysis, and behavior tests that can prove the cleanup preserved
    the contract.
 
 ## What earns a separate layer
@@ -6210,8 +6822,9 @@ preferred artifact type or the fewest lines.
   choice, verify it against the applicable language guidance rather than relying on generic style
   folklore.
 
-When the user requested an edit, apply the simplification and report only material changes and
-verification. When the request was review-only, report the concrete opportunities without editing.
+When the user requested an edit, apply the simplification and keep the final summary concise (1–3
+sentences naming only material changes and verification). When the request was review-only, report
+the concrete opportunities without editing.
 ````
 
 ## plugins/engineering-kit/skills/code-simplifier/agents/openai.yaml
@@ -6270,6 +6883,19 @@ policy:
         "Declines to extract a helper solely to reduce line count.",
         "Checks whether a real shared invariant or future change point exists before introducing a layer.",
         "Keeps the response proportional to the localized cleanup."
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "$code-simplifier Deslop this recently modified handler without changing behavior: it has step-by-step narrating comments, an apology comment explaining a confusing `flag2` boolean mode we just added, an internal try/catch that swallows errors on an already-validated typed input, a `@ts-ignore` with an `as any` cast, and one why-comment documenting an ordering constraint with the payment gateway.",
+      "expected_output": "A behavior-preserving cleanup that removes the narrating comments, reshapes the confusing boolean mode so the apology comment can be deleted, removes the impossible internal catch and unsafe cast/suppression, and preserves the external why-comment and real boundary behavior.",
+      "files": [],
+      "expectations": [
+        "Removes narrating comments that restate the code while preserving the why-comment about the payment gateway ordering constraint.",
+        "Reshapes or renames the in-scope `flag2` boolean mode so the apology comment is no longer needed and deletes the comment.",
+        "Removes the redundant internal try/catch or impossible guard on already-validated typed state without removing real boundary error handling.",
+        "Replaces the `@ts-ignore` and `as any` cast with the narrow declared type.",
+        "Preserves observable behavior, verifies with the narrowest applicable check, and keeps the summary concise (1-3 sentences)."
       ]
     }
   ]
@@ -6475,6 +7101,10 @@ void main() {
     "should_trigger": true
   },
   {
+    "query": "Deslop the changes in this branch with code-simplifier and keep behavior identical.",
+    "should_trigger": true
+  },
+  {
     "query": "Clean up this function while you fix the bug.",
     "should_trigger": false
   },
@@ -6533,7 +7163,7 @@ Carry an existing implementation plan through verified completion within the use
 
 ## Establish the starting point
 
-1. Read the supplied plan and the current request. Identify the intended outcome, acceptance criteria, task dependencies, and authorized endpoint. A step written in a plan is not independent permission to publish, deploy, delete data, or contact someone.
+1. Read the supplied plan and the current request. When resuming without a plan path, look in the shared project folder described by `writing-plans` for a record matching the goal and provenance; do not choose solely by modification time. Identify the intended outcome, acceptance criteria, task dependencies, and authorized endpoint. A step written in a plan is not independent permission to publish, deploy, delete data, or contact someone.
 2. Inspect relevant repository instructions, source, tests, and working-tree state. Check which tasks are already complete before resuming. Preserve unrelated edits and verify completion claims against current evidence.
 3. Resolve routine implementation questions through inspection. Ask only when a missing decision materially changes scope, behavior, compatibility, or authorization. Continue independent authorized work while a blocking question is pending.
 4. Use the existing workspace unless isolation is needed or requested. Respect project branch rules and the user's chosen workspace. This skill does not require a worktree, a new session, or a particular task tool.
@@ -6549,7 +7179,9 @@ Carry an existing implementation plan through verified completion within the use
 
 ## Preserve continuity
 
-Use native task tracking and context compaction when available. Keep completed work, remaining dependencies, verification results, and material decisions recoverable in the existing plan when useful. Do not force a copy-and-paste handoff or start another agent merely because the plan is long. Use delegation only when permitted and useful, respecting the user's cost preferences.
+Use native task tracking and context compaction when available. Keep completed work, remaining dependencies, verification results, and material decisions recoverable in the existing plan at material milestones and before a handoff. Do not force a copy-and-paste handoff or start another agent merely because the plan is long. Use delegation only when permitted and useful, respecting the user's cost preferences.
+
+Unless the user or repository instructions specify another location, keep the saved plan in `~/.agents/projects/<project>/plans/<yyyy-mm-dd>-<slug>.md` and its linked evidence in `~/.agents/projects/<project>/evidence/<yyyy-mm-dd>-<slug>/`, using the shared project identity and provenance rules in `writing-plans`. Continue that same plan when work moves to another branch, worktree, or session; record the new worktree path, branch, commit, and session in dated progress or handoff notes rather than creating a new copy or tracker. Re-read the record before editing so concurrent work is preserved.
 
 ## Finish at the authorized endpoint
 
@@ -6557,7 +7189,7 @@ Review the result against the plan's acceptance criteria and run proportionate i
 
 If the request already authorizes commits, a push, or a PR, complete those steps using the repository's normal workflow. Otherwise report the prepared result without extending authorization. Do not require a branch-finishing skill or reopen decisions the user has already made.
 
-Report what was completed, meaningful deviations, verification evidence, remaining blockers, and the actual delivery state. Never describe a plan as finished while required tasks remain unresolved.
+Report what was completed, meaningful deviations, verification evidence, remaining blockers, the actual delivery state, and the saved plan path. Never describe a plan as finished while required tasks remain unresolved.
 ````
 
 ## plugins/engineering-kit/skills/executing-plans/evals/evals.json
@@ -6677,11 +7309,11 @@ Report what was completed, meaningful deviations, verification evidence, remaini
 ]
 ````
 
-## plugins/engineering-kit/skills/pull-request-authoring/SKILL.md
+## plugins/engineering-kit/skills/pr-authoring/SKILL.md
 
-`````
+````
 ---
-name: pull-request-authoring
+name: pr-authoring
 description: "Use when the user asks to create, open, or update a GitHub pull request from an already-pushed branch, or to draft, rewrite, or improve a PR title and description. Inspect the base-to-head diff, commits, repository template, supplied issue context, actual validation, and relevant visual evidence; then produce a concise, provider-neutral Markdown description and create or update the PR when authorized. Do not use for staging, committing, or pushing changes; reviewing code for defects; fixing CI; addressing review comments; or searching for a possibly related issue."
 ---
 
@@ -6689,7 +7321,7 @@ description: "Use when the user asks to create, open, or update a GitHub pull re
 
 Create or update a pull request whose title and description explain the change accurately and economically. Treat the PR body as reviewer context, not a development diary: describe the problem, resulting behavior, and evidence without mentioning the agent, model, provider, or tool that authored the work.
 
-This skill starts after the head branch is pushed. It may inspect the repository and create or update the PR, but it does not modify code, stage files, commit, or push.
+This skill starts after the head branch is pushed. It may inspect the repository and create or update the PR, but it does not modify code, stage files, commit, or push unless the user also explicitly asks to tidy commit history before publishing (if rewriting commit history is explicitly authorized, record `ORIGINAL_TREE=$(git rev-parse HEAD^{tree})` beforehand and verify `git rev-parse HEAD^{tree}` matches identically afterward before pushing).
 
 ## Required outcome
 
@@ -6775,7 +7407,7 @@ Decide from the actual change, not from file extensions alone.
 
 ### Static visual change
 
-For layout, styling, responsive, rendering, or other visible changes, verify the relevant route or surface in a real browser when it can be run safely. Use `webapp-verification` for browser-backed proof.
+For layout, styling, responsive, rendering, or other visible changes, verify the relevant route or surface in a real browser when it can be run safely, using the available host browser or Playwright tooling for browser-backed proof.
 
 - Prefer before-and-after screenshots when the comparison explains the change; otherwise one focused after screenshot is enough.
 - Capture the viewport, theme, and state that demonstrate the changed behavior.
@@ -6817,13 +7449,13 @@ Default to a draft PR when required validation or media is incomplete, or when r
 After a GitHub write, report the PR URL, title, draft/ready state, base and head branches, issue link status, validation represented in the body, and media status. Include the final body in one fenced `markdown` block so the user can verify what was published.
 
 If creation or update is blocked, return the complete title and fenced body plus the smallest exact action needed to unblock it. Do not substitute a vague checklist for the prepared PR.
-`````
+````
 
-## plugins/engineering-kit/skills/pull-request-authoring/evals/evals.json
+## plugins/engineering-kit/skills/pr-authoring/evals/evals.json
 
 ````
 {
-  "skill_name": "pull-request-authoring",
+  "skill_name": "pr-authoring",
   "evals": [
     {
       "id": 1,
@@ -6868,7 +7500,7 @@ If creation or update is blocked, return the complete title and fenced body plus
 }
 ````
 
-## plugins/engineering-kit/skills/pull-request-authoring/evals/trigger_queries.json
+## plugins/engineering-kit/skills/pr-authoring/evals/trigger_queries.json
 
 ````
 [
@@ -6955,6 +7587,962 @@ If creation or update is blocked, return the complete title and fenced body plus
 ]
 ````
 
+## plugins/engineering-kit/skills/pr-canvas/SKILL.md
+
+````
+---
+name: pr-canvas
+disable-model-invocation: true
+description: >
+  Use when the user explicitly invokes `$pr-canvas` or asks to generate an interactive HTML
+  pull request review walkthrough page in the browser with core vs mechanical file grouping,
+  plain-English pseudocode annotations, and moved-code diff detection. Do not use for standard
+  text-based code review (`code-review`) or pull request authoring (`pr-authoring`).
+---
+
+# PR Canvas
+
+Generate an interactive HTML review of a GitHub PR that reads like a peer walking you through what matters.
+
+## Workflow
+
+### 1. Fetch PR data
+
+Run these `gh api` calls in parallel:
+
+```bash
+gh api repos/{owner}/{repo}/pulls/{number} --jq '{title, body, user: .user.login, state, additions, deletions, changed_files, base: .base.ref, head: .head.ref}'
+gh api repos/{owner}/{repo}/pulls/{number}/files --paginate --jq '.[] | {filename, status, additions, deletions, patch}'
+gh api repos/{owner}/{repo}/pulls/{number}/comments --jq '.[] | {user: .user.login, body, path, line}'
+```
+
+### 2. Analyze the PR and write the body HTML
+
+Read the diffs, understand the PR, and write the `<body>` content directly as HTML. You have full creative freedom -- the goal is to explain the PR clearly to a reviewer. Use whatever structure best fits the PR.
+
+**Typical structure** (adapt as needed):
+- Header with title, PR number, author, stats
+- Summary box explaining what the PR does in plain English
+- Core file sections with annotations and diffs
+- Mechanical/boilerplate files collapsed by default
+- Review checklist at the bottom
+
+**But you can also add:**
+- **Pseudocode summaries** for verbose code -- show the algorithm in plain English or short pseudocode, with the real diff collapsed below (use a `.bp-section` card labeled "Show full implementation"). Great when 150 lines of retry/backoff/error-handling code is really just "fetch with exponential backoff and circuit breaker."
+- Diagrams (inline SVG, mermaid via CDN, ASCII art in `<pre>`)
+- Flowcharts showing before/after control flow
+- Tables comparing old vs new behavior
+- Callout boxes for warnings, questions, or gotchas
+- Interactive widgets if they help
+- Anything else that makes the review clearer
+
+**Pseudocode pattern example:**
+```html
+<div class="file-card">
+  <div class="file-hdr" onclick="toggle(this)">
+    <span class="fname">retryClient.ts</span>
+    <div class="fstats"><span class="pill add">+173</span><span class="pill del">&minus;11</span><span class="chev open">&#9654;</span></div>
+  </div>
+  <div class="file-body open">
+    <div class="file-note">
+      <strong>What this does in plain English:</strong>
+      <pre style="margin-top:8px;color:var(--text);font-size:12px;line-height:1.6;">
+fetch(url):
+  if circuit breaker is open → fail fast
+  retry up to N times:
+    try fetch with timeout
+    on success → close circuit breaker, return
+    on retryable error → wait (exponential backoff + jitter)
+    on non-retryable error → throw
+  circuit breaker records failure</pre>
+    </div>
+    <div class="bp-section" style="margin:0;border:0;border-radius:0;">
+      <div class="bp-hdr" onclick="toggleBP(this)">
+        <span>Show full implementation (+173 lines)</span><span class="chev">&#9654;</span>
+      </div>
+      <div class="bp-body"><div data-diff="retryClient"></div></div>
+    </div>
+  </div>
+</div>
+```
+
+### 3. Available CSS classes and JS utilities
+
+Read [assets/styles.css](assets/styles.css) and [assets/renderer.js](assets/renderer.js) from this skill directory. These give you a prebuilt dark-themed toolkit. Inject them into [assets/template.html](assets/template.html) verbatim.
+
+**CSS classes you can use:**
+
+| Class | Purpose |
+|-------|---------|
+| `.header`, `.header h1`, `.header-meta` | Page header |
+| `.pill.add`, `.pill.del`, `.pill.files` | Stat badges (+N, -N, N files) |
+| `.content` | Centered content wrapper (max 900px) |
+| `.summary` | Summary/TL;DR box |
+| `.section-title` | Section heading with bottom border |
+| `.ic` | Inline code reference (mono, blue, dark bg) |
+| `.file-card`, `.file-hdr`, `.file-body` | Collapsible file card (use `onclick="toggle(this)"` on `.file-hdr`) |
+| `.file-note` | Sticky reviewer annotation inside a file card |
+| `.bp-section`, `.bp-hdr`, `.bp-body` | Collapsed boilerplate card (use `onclick="toggleBP(this)"`) |
+| `.bp-note` | Note inside a boilerplate card |
+| `.verdict` | Review checklist box |
+
+**JS functions available:**
+
+| Function | Usage |
+|----------|-------|
+| `toggle(hdrElement)` | Toggle a `.file-body` open/closed |
+| `toggleBP(hdrElement)` | Toggle a `.bp-body` open/closed |
+| `renderDiff(target, diffInput)` | Render a unified diff. `target` can be a DOM element, string ID, or CSS selector. `diffInput` can be a raw patch string OR an array of lines -- both work. Automatically filters imports, collapses whitespace-only changes, detects moved code (blue/purple tint). |
+| `esc(string)` | HTML-escape a string |
+
+**Rendering diffs -- use `data-diff` attributes with auto-discovery.**
+Put `<div data-diff="KEY"></div>` placeholders in your body HTML wherever you want a diff rendered. The renderer finds them automatically after DOM load and fills them from the `<script id="pr-diffs-json" type="application/json">` element in `assets/template.html`.
+
+**CRITICAL: Patch strings can contain `</script>` in addition to newlines, backslashes, and quotes.** Even `json.dumps(...)` is not enough if you paste raw output into executable `<script>` because HTML parsing can terminate the tag early. Never manually embed patch strings in JS/JSON. Instead, use this safe approach:
+
+1. During the fetch step, save patches to a JSON file using `jq` (which handles escaping correctly):
+```bash
+gh api repos/{owner}/{repo}/pulls/{number}/files --paginate \
+  --jq '[.[] | {key: (.filename | gsub("[^a-zA-Z0-9]"; "_")), value: (.patch // "")}] | from_entries' \
+  > /tmp/pr-patches-{number}.json
+```
+
+2. During assembly, use Python to safely inject the JSON into `assets/template.html`:
+```bash
+python3 <<'PY'
+import json
+from pathlib import Path
+
+patches = json.loads(Path('/tmp/pr-patches-{number}.json').read_text())
+html = Path('/tmp/pr-review-{number}-body.html').read_text()
+css = Path('assets/styles.css').read_text()
+js = Path('assets/renderer.js').read_text()
+tmpl = Path('assets/template.html').read_text()
+
+# Prevent literal </script> from terminating HTML script tags early.
+safe_json = json.dumps(patches).replace('<', '\\u003c').replace('>', '\\u003e').replace('&', '\\u0026')
+
+out = (
+  tmpl.replace('/* INJECT_CSS */', css)
+      .replace('/* INJECT_JS */', js)
+      .replace('<!-- INJECT_BODY -->', html)
+      .replace('{"__PR_DIFFS_PLACEHOLDER__":true}', safe_json)
+)
+
+Path('/tmp/pr-review-{number}.html').write_text(out)
+PY
+```
+
+This guarantees valid JSON and script-safe HTML embedding. The agent writes body HTML to a temp file, then Python assembles everything safely.
+
+The diff data keys should match the `data-diff` attribute values in the HTML:
+```html
+<div data-diff="path_to_file_ts"></div>
+```
+
+Since `assets/renderer.js` loads in `<head>`, you can also call `renderDiff(target, lines)` directly from inline `<script>` tags if needed for custom use cases. The function accepts a DOM element, ID string, or CSS selector as `target`, and a string or array as `lines`.
+
+**You're not limited to these.** Add your own inline `<style>` blocks, `<script>` blocks, SVGs, diagrams, or anything else. The prebuilt pieces save time but don't constrain you.
+
+### 4. Assemble and serve
+
+1. Write your body HTML (everything that goes inside `<body>`) to `/tmp/pr-review-{number}-body.html`
+2. Save patches to `/tmp/pr-patches-{number}.json` using the `jq` command from step 3 above
+3. Run the Python assembly script from step 3 above (reads `assets/styles.css`, `assets/renderer.js`, `assets/template.html` from this skill directory, injects body + patches safely, writes final HTML)
+4. Start a local server on a fixed port:
+   ```bash
+   cd /tmp && python3 -m http.server 8432 --bind 127.0.0.1
+   ```
+   Run this backgrounded, then navigate the browser to `http://127.0.0.1:8432/pr-review-{number}.html`.
+
+   **Why a fixed port and `cd /tmp`:** Background shells have no TTY, so Python buffers its startup message ("Serving HTTP on...") indefinitely — using port 0 means you can never read which port was chosen. And `--directory /tmp` works but `cd /tmp` is more robust across Python versions. If port 8432 is taken, try 8433, 8434, etc.
+
+### Diff features (handled automatically by `assets/renderer.js`)
+
+- Filters out import-only lines
+- Collapses whitespace-only changes into context lines
+- Detects moved code blocks (3+ consecutive lines deleted in one place and added identically elsewhere) -- renders in blue/purple instead of red/green
+- Near-matches (moved + small edit) get a different purple tint
+
+### Style notes
+
+- Dark theme: `#1a1a1a` background, Inter body font, IBM Plex Mono for code
+- Use `var(--warning)` for orange, `var(--success)` for green, `var(--danger)` for red, `var(--accent)` for blue
+- Sticky file headers (`position: sticky; top: 0`) and notes (`top: 35px`) pin while scrolling
+- Core files expanded by default (`.file-body.open`), mechanical files collapsed
+````
+
+## plugins/engineering-kit/skills/pr-canvas/agents/openai.yaml
+
+````
+interface:
+  display_name: "PR Canvas"
+  short_description: "Interactive HTML PR review walkthrough"
+  default_prompt: "Use $pr-canvas to generate an interactive HTML walkthrough of this pull request."
+policy:
+  allow_implicit_invocation: false
+````
+
+## plugins/engineering-kit/skills/pr-canvas/assets/renderer.js
+
+````
+function toggle(hdr) {
+  var b = hdr.nextElementSibling, c = hdr.querySelector('.chev');
+  b.classList.toggle('open'); c.classList.toggle('open');
+}
+function toggleBP(hdr) {
+  var b = hdr.nextElementSibling, c = hdr.querySelector('.chev');
+  b.classList.toggle('open'); c.classList.toggle('open');
+}
+
+function isImport(line) {
+  var s = line.replace(/^[+ -]/, '').trim();
+  return s.startsWith('import ') || s.startsWith('import{') || s.startsWith('} from ');
+}
+
+function isWhitespaceOnly(del, add) {
+  return del.replace(/^-/, '').replace(/\s/g, '') === add.replace(/^\+/, '').replace(/\s/g, '');
+}
+
+function esc(s) {
+  return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+}
+
+function normWs(s) {
+  return s.replace(/\s+/g, ' ').trim();
+}
+
+function toLines(input) {
+  if (!input) return [];
+  if (Array.isArray(input)) return input;
+  if (typeof input === 'string') return input.split('\n');
+  return [];
+}
+
+function loadPrDiffs() {
+  var el = document.getElementById('pr-diffs-json');
+  if (!el) return null;
+  try {
+    return JSON.parse(el.textContent || '');
+  } catch (err) {
+    console.error('Failed to parse PR diff JSON payload', err);
+    return null;
+  }
+}
+
+function detectMoves(dels, adds) {
+  var TH = 3;
+  var md = {}, ma = {};
+  for (var di = 0; di < dels.length; di++) {
+    if (md[di]) continue;
+    var db = [di];
+    for (var d2 = di+1; d2 < dels.length && d2-di < 40; d2++) {
+      if (dels[d2].consecutive && !md[d2]) db.push(d2); else break;
+    }
+    if (db.length < TH) continue;
+    var dn = db.map(function(i){ return normWs(dels[i].code); });
+    for (var ai = 0; ai < adds.length; ai++) {
+      if (ma[ai]) continue;
+      var ab = [ai];
+      for (var a2 = ai+1; a2 < adds.length && a2-ai < 40; a2++) {
+        if (adds[a2].consecutive && !ma[a2]) ab.push(a2); else break;
+      }
+      if (ab.length < TH) continue;
+      var an = ab.map(function(i){ return normWs(adds[i].code); });
+      var ml = Math.min(dn.length, an.length), mc = 0;
+      for (var m = 0; m < ml; m++) { if (dn[m] === an[m]) mc++; }
+      if (mc >= TH && mc >= ml * 0.7) {
+        for (var k = 0; k < ml; k++) {
+          md[db[k]] = { exact: dn[k] === an[k] };
+          ma[ab[k]] = { exact: dn[k] === an[k] };
+        }
+        break;
+      }
+    }
+  }
+  return { movedDels: md, movedAdds: ma };
+}
+
+/**
+ * renderDiff(target, diffInput)
+ *   target: DOM element, string ID, or CSS selector
+ *   diffInput: array of diff lines, OR a single string (will be split on \n)
+ */
+function renderDiff(target, diffInput) {
+  var el;
+  if (typeof target === 'string') {
+    el = document.getElementById(target) || document.querySelector(target);
+  } else {
+    el = target;
+  }
+  if (!el) return;
+
+  var lines = toLines(diffInput);
+  if (!lines.length) { el.innerHTML = '<div style="padding:12px;color:#777;font-size:12px;">No diff data</div>'; return; }
+
+  var filtered = lines.filter(function(l) {
+    if (l.startsWith('--- ') || l.startsWith('+++ ') || l.startsWith('@@') || l.startsWith('diff ')) return true;
+    return !isImport(l);
+  });
+
+  var wsOut = [];
+  for (var wi = 0; wi < filtered.length; wi++) {
+    if (filtered[wi].startsWith('-')) {
+      var dr = [filtered[wi]], wj = wi+1;
+      while (wj < filtered.length && filtered[wj].startsWith('-')) { dr.push(filtered[wj]); wj++; }
+      var ar = [], wk = wj;
+      while (wk < filtered.length && filtered[wk].startsWith('+')) { ar.push(filtered[wk]); wk++; }
+      if (dr.length === ar.length && dr.length > 0) {
+        var allWs = true;
+        for (var wc = 0; wc < dr.length; wc++) { if (!isWhitespaceOnly(dr[wc], ar[wc])) { allWs = false; break; } }
+        if (allWs) { for (var wx = 0; wx < ar.length; wx++) wsOut.push(' ' + ar[wx].slice(1)); wi = wk-1; continue; }
+      }
+    }
+    wsOut.push(filtered[wi]);
+  }
+
+  var dels = [], adds = [], parsed = [];
+  var oL = 0, nL = 0, pD = false, pA = false;
+  for (var pi = 0; pi < wsOut.length; pi++) {
+    var line = wsOut[pi];
+    if (line.startsWith('--- ') || line.startsWith('+++ ') || line.startsWith('diff ')) continue;
+    if (line.startsWith('@@')) {
+      var hm = line.match(/@@ -(\d+)(?:,\d+)? \+(\d+)/);
+      if (hm) { oL = parseInt(hm[1]); nL = parseInt(hm[2]); }
+      parsed.push({ type: 'hunk', text: line }); pD = false; pA = false; continue;
+    }
+    if (line.startsWith('+')) {
+      var ae = { type:'add', code:line.slice(1), newLine:nL, consecutive:pA, idx:parsed.length };
+      adds.push(ae); parsed.push(ae); nL++; pA = true; pD = false;
+    } else if (line.startsWith('-')) {
+      var de = { type:'del', code:line.slice(1), oldLine:oL, consecutive:pD, idx:parsed.length };
+      dels.push(de); parsed.push(de); oL++; pD = true; pA = false;
+    } else {
+      var c = line.startsWith(' ') ? line.slice(1) : line;
+      parsed.push({ type:'ctx', code:c, oldLine:oL, newLine:nL }); oL++; nL++; pD = false; pA = false;
+    }
+  }
+
+  var mv = detectMoves(dels, adds);
+  var rows = [];
+  for (var ri = 0; ri < parsed.length; ri++) {
+    var p = parsed[ri];
+    if (p.type === 'hunk') {
+      rows.push('<tr class="diff-hunk"><td class="diff-ln"></td><td class="diff-ln"></td><td class="diff-code">' + esc(p.text) + '</td></tr>');
+    } else if (p.type === 'add') {
+      var ai2 = -1; for (var fa=0;fa<adds.length;fa++) if(adds[fa].idx===p.idx){ai2=fa;break;}
+      var cls = (mv.movedAdds[ai2]) ? (mv.movedAdds[ai2].exact ? 'diff-moved-add' : 'diff-moved-add-edited') : 'diff-add';
+      rows.push('<tr class="'+cls+'"><td class="diff-ln"></td><td class="diff-ln">'+p.newLine+'</td><td class="diff-code">'+esc(p.code)+'</td></tr>');
+    } else if (p.type === 'del') {
+      var di2 = -1; for(var fd=0;fd<dels.length;fd++) if(dels[fd].idx===p.idx){di2=fd;break;}
+      var cls2 = (mv.movedDels[di2]) ? (mv.movedDels[di2].exact ? 'diff-moved-del' : 'diff-moved-del-edited') : 'diff-del';
+      rows.push('<tr class="'+cls2+'"><td class="diff-ln">'+p.oldLine+'</td><td class="diff-ln"></td><td class="diff-code">'+esc(p.code)+'</td></tr>');
+    } else {
+      rows.push('<tr class="diff-ctx"><td class="diff-ln">'+p.oldLine+'</td><td class="diff-ln">'+p.newLine+'</td><td class="diff-code">'+esc(p.code)+'</td></tr>');
+    }
+  }
+  el.innerHTML = '<table class="diff-table"><tbody>' + rows.join('') + '</tbody></table>';
+}
+
+/* Auto-discovery: after DOM loads, find all [data-diff] elements and render diffs from pr-diffs-json. */
+document.addEventListener('DOMContentLoaded', function() {
+  var prDiffs = loadPrDiffs();
+  if (!prDiffs) return;
+  var els = document.querySelectorAll('[data-diff]');
+  for (var i = 0; i < els.length; i++) {
+    var key = els[i].getAttribute('data-diff');
+    if (key && Object.prototype.hasOwnProperty.call(prDiffs, key)) {
+      renderDiff(els[i], prDiffs[key]);
+    }
+  }
+});
+````
+
+## plugins/engineering-kit/skills/pr-canvas/assets/styles.css
+
+````
+:root {
+  --bg: #1a1a1a;
+  --surface: #222;
+  --surface-raised: #2a2a2a;
+  --border: #333;
+  --text: #bbb;
+  --text-muted: #777;
+  --text-bright: #e5e5e5;
+  --accent: #7aa2f7;
+  --warning: #e0a458;
+  --success: #73b87e;
+  --danger: #e06060;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Inter', -apple-system, sans-serif;
+  font-size: 13px;
+  line-height: 1.5;
+}
+.header {
+  border-bottom: 1px solid var(--border);
+  padding: 24px 32px 20px;
+}
+.header h1 { font-size: 20px; font-weight: 600; color: var(--text-bright); margin-bottom: 4px; }
+.header-meta { font-size: 12px; color: var(--text-muted); display: flex; gap: 16px; align-items: center; margin-top: 8px; }
+.pill { display: inline-flex; padding: 1px 8px; border-radius: 10px; font-family: 'IBM Plex Mono', monospace; font-size: 11px; font-weight: 500; }
+.pill.add { background: #73b87e22; color: var(--success); }
+.pill.del { background: #e0606022; color: var(--danger); }
+.pill.files { background: #7aa2f722; color: var(--accent); }
+.content { max-width: 900px; margin: 0 auto; padding: 24px 20px 60px; }
+.summary { background: var(--surface); border: 1px solid var(--border); border-radius: 6px; padding: 16px 20px; margin-bottom: 28px; font-size: 13px; line-height: 1.6; }
+.summary strong { color: var(--text-bright); }
+.summary ul { margin-top: 8px; padding-left: 18px; }
+.summary li { margin-bottom: 4px; }
+.section-title { font-size: 14px; font-weight: 600; color: var(--text-bright); margin: 28px 0 12px; padding-bottom: 6px; border-bottom: 1px solid var(--border); }
+.ic { font-family: 'IBM Plex Mono', monospace; font-size: 11px; background: var(--surface-raised); padding: 1px 5px; border-radius: 3px; color: var(--accent); }
+
+.file-card { background: var(--surface); border: 1px solid var(--border); border-radius: 6px; margin-bottom: 12px; }
+.file-hdr {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 8px 14px; background: var(--surface-raised); border-bottom: 1px solid var(--border);
+  cursor: pointer; user-select: none; position: sticky; top: 0; z-index: 12; border-radius: 6px 6px 0 0;
+}
+.file-hdr:hover { background: #303030; }
+.file-hdr .fname { font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: var(--accent); }
+.file-hdr .fstats { display: flex; gap: 6px; align-items: center; }
+.file-hdr .chev { color: var(--text-muted); transition: transform 0.15s; font-size: 11px; margin-left: 10px; }
+.file-hdr .chev.open { transform: rotate(90deg); }
+.file-body { display: none; }
+.file-body.open { display: block; }
+.file-note {
+  padding: 10px 14px; font-size: 13px; color: var(--text); line-height: 1.55;
+  border-bottom: 1px solid var(--border); background: var(--surface);
+  position: sticky; top: 35px; z-index: 11;
+}
+.file-note strong { color: var(--text-bright); }
+.file-note ul { margin-top: 6px; padding-left: 18px; }
+.file-note li { margin-bottom: 3px; }
+
+.bp-section { background: var(--surface); border: 1px solid var(--border); border-radius: 6px; margin-bottom: 8px; }
+.bp-hdr { display: flex; align-items: center; justify-content: space-between; padding: 8px 14px; cursor: pointer; user-select: none; font-size: 12px; color: var(--text-muted); }
+.bp-hdr:hover { background: var(--surface-raised); }
+.bp-hdr .chev { color: var(--text-muted); transition: transform 0.15s; font-size: 11px; }
+.bp-hdr .chev.open { transform: rotate(90deg); }
+.bp-body { display: none; border-top: 1px solid var(--border); }
+.bp-body.open { display: block; }
+.bp-note { padding: 8px 14px; font-size: 12px; color: var(--text-muted); line-height: 1.5; border-bottom: 1px solid var(--border); background: var(--bg); }
+
+.diff-table { width: 100%; border-collapse: collapse; font-family: 'IBM Plex Mono', monospace; font-size: 12px; line-height: 20px; table-layout: fixed; tab-size: 4; }
+.diff-table td { vertical-align: top; white-space: pre; }
+.diff-ln { width: 40px; min-width: 40px; max-width: 40px; text-align: right; padding: 0 6px 0 0; color: #555; background: var(--surface); user-select: none; }
+.diff-code { padding: 0 12px; color: var(--text); background: var(--bg); overflow-x: auto; }
+tr.diff-add .diff-ln { color: #5a8a5a; background: #1a2a1a; }
+tr.diff-add .diff-code { background: #1a2a1a; color: #c8e6c8; }
+tr.diff-del .diff-ln { color: #8a5a5a; background: #2a1a1a; }
+tr.diff-del .diff-code { background: #2a1a1a; color: #e6c8c8; }
+tr.diff-ctx .diff-ln { background: var(--surface); }
+tr.diff-ctx .diff-code { background: var(--bg); color: var(--text-muted); }
+tr.diff-hunk td { background: var(--surface-raised); color: var(--text-muted); font-size: 11px; padding: 3px 12px; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+tr.diff-hunk .diff-ln { background: var(--surface-raised); }
+tr.diff-moved-del .diff-ln { color: #6a6a8a; background: #1a1a2a; }
+tr.diff-moved-del .diff-code { background: #1a1a2a; color: #a8a8d0; }
+tr.diff-moved-add .diff-ln { color: #6a6a8a; background: #1a1a2a; }
+tr.diff-moved-add .diff-code { background: #1a1a2a; color: #a8a8d0; }
+tr.diff-moved-del-edited .diff-ln { color: #7a6a8a; background: #221a2a; }
+tr.diff-moved-del-edited .diff-code { background: #221a2a; color: #c0a8d0; }
+tr.diff-moved-add-edited .diff-ln { color: #7a6a8a; background: #221a2a; }
+tr.diff-moved-add-edited .diff-code { background: #221a2a; color: #c0a8d0; }
+
+.verdict { background: var(--surface); border: 1px solid var(--border); border-radius: 6px; padding: 16px 20px; margin-top: 28px; }
+.verdict h3 { font-size: 14px; font-weight: 600; color: var(--text-bright); margin-bottom: 8px; }
+.verdict ul { padding-left: 18px; }
+.verdict li { font-size: 13px; margin-bottom: 6px; line-height: 1.5; }
+.verdict li strong { color: var(--text-bright); }
+````
+
+## plugins/engineering-kit/skills/pr-canvas/assets/template.html
+
+````
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* INJECT_CSS */
+</style>
+<script>
+/* INJECT_JS */
+</script>
+</head>
+<body>
+<!-- INJECT_BODY -->
+<script id="pr-diffs-json" type="application/json" data-pr-diffs>{"__PR_DIFFS_PLACEHOLDER__":true}</script>
+</body>
+</html>
+````
+
+## plugins/engineering-kit/skills/pr-canvas/evals/evals.json
+
+````
+{
+  "skill_name": "pr-canvas",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "$pr-canvas Generate an interactive HTML PR review walkthrough for PR #42 using the skill's template, CSS, and diff renderer.",
+      "expected_output": "Fetches PR metadata, files, and comments via `gh api`, writes structured body HTML with core vs collapsed boilerplate sections and `data-diff` placeholders, safely escapes JSON patches (`\\u003c` for `</script>`), injects `assets/styles.css` and `assets/renderer.js` into `assets/template.html`, and serves it locally.",
+      "files": [],
+      "expectations": [
+        "Fetches PR metadata, file patches, and comments using `gh api`.",
+        "Categorizes changed files into expanded core cards and collapsed mechanical/boilerplate sections.",
+        "Uses `assets/styles.css`, `assets/renderer.js`, and `assets/template.html` from the skill directory.",
+        "Escapes `<`, `>`, and `&` when injecting patch JSON so literal `</script>` in diffs cannot break HTML parsing."
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "$pr-canvas Build a visual HTML walkthrough for PR #108 and include a plain-English pseudocode summary above the 180-line retry client diff.",
+      "expected_output": "Includes a `.file-note` plain-English pseudocode summary for the complex file with the full diff inside a collapsible `.bp-section` using `data-diff`.",
+      "files": [],
+      "expectations": [
+        "Adds a plain-English or pseudocode summary in `.file-note` for the verbose algorithm.",
+        "Places the raw diff inside a collapsible `.bp-section` card with a `data-diff` placeholder.",
+        "Uses a fixed local port (`127.0.0.1:8432`) when serving `/tmp/pr-review-108.html`."
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "$pr-canvas Assemble the HTML review page for a PR whose test patch contains a literal `</script>` string.",
+      "expected_output": "Saves patches via `jq` and uses Python to replace `<`, `>`, and `&` with Unicode escapes before injecting into `assets/template.html` so the page renders safely.",
+      "files": [],
+      "expectations": [
+        "Never pastes raw patch strings directly into an inline `<script>` tag.",
+        "Escapes `<` to `\\u003c`, `>` to `\\u003e`, and `&` to `\\u0026` during assembly.",
+        "Writes the assembled standalone HTML file to `/tmp/pr-review-{number}.html`."
+      ]
+    }
+  ]
+}
+````
+
+## plugins/engineering-kit/skills/pr-canvas/evals/trigger_queries.json
+
+````
+[
+  {
+    "query": "$pr-canvas generate an interactive HTML review walkthrough for PR #42",
+    "should_trigger": true
+  },
+  {
+    "query": "use pr-canvas to build a visual browser walkthrough of this GitHub PR",
+    "should_trigger": true
+  },
+  {
+    "query": "run `/engineering-kit:pr-canvas` on https://github.com/org/repo/pull/99",
+    "should_trigger": true
+  },
+  {
+    "query": "create a pr-canvas HTML page with moved-code detection for PR #15",
+    "should_trigger": true
+  },
+  {
+    "query": "$pr-canvas walk me through PR #210 in an interactive HTML page",
+    "should_trigger": true
+  },
+  {
+    "query": "use the pr-canvas skill to render this pull request in the browser",
+    "should_trigger": true
+  },
+  {
+    "query": "generate a dark-mode HTML PR review canvas for pull request #73",
+    "should_trigger": true
+  },
+  {
+    "query": "$pr-canvas build an annotated HTML diff walkthrough for this PR",
+    "should_trigger": true
+  },
+  {
+    "query": "review this diff in chat and list any bugs or regressions",
+    "should_trigger": false
+  },
+  {
+    "query": "draft a pull request title and description for my branch",
+    "should_trigger": false
+  },
+  {
+    "query": "watch CI checks on this PR until they pass",
+    "should_trigger": false
+  },
+  {
+    "query": "resolve the merge conflicts in our lockfile",
+    "should_trigger": false
+  },
+  {
+    "query": "summarize the commits I authored over the last week",
+    "should_trigger": false
+  },
+  {
+    "query": "check compiler errors across the TypeScript build",
+    "should_trigger": false
+  },
+  {
+    "query": "write an executable implementation plan from this spec",
+    "should_trigger": false
+  },
+  {
+    "query": "formalize these business rules in SBVR",
+    "should_trigger": false
+  }
+]
+````
+
+## plugins/engineering-kit/skills/pr-comments/SKILL.md
+
+````
+---
+name: pr-comments
+description: >
+  Use when fetching, grouping, and skeptically triaging review comments, inline threads, and
+  discussion feedback from an active pull request into a prioritized action list. Do not use when
+  performing a new code review from scratch (`code-review`) or drafting a pull request description
+  (`pr-authoring`).
+---
+
+# Get PR comments
+
+## Trigger
+
+Need a concise, verified, actionable summary of reviewer and bot feedback on the active pull request.
+
+## Workflow
+
+1. Resolve the active PR for the current branch (or user-supplied PR number/URL):
+   ```bash
+   gh pr view --json number,url,headRefName,baseRefName
+   ```
+2. Fetch both inline review threads and top-level review/discussion comments (`gh pr view --comments` alone omits inline code review threads):
+   ```bash
+   gh api repos/{owner}/{repo}/pulls/{number}/comments --paginate \
+     --jq '.[] | {id, user: .user.login, path, line: (.line // .original_line), body, created_at, in_reply_to_id}'
+   gh api repos/{owner}/{repo}/pulls/{number}/reviews --paginate \
+     --jq '.[] | select(.body != "") | {user: .user.login, state, body}'
+   ```
+3. Verify each comment against the current codebase and tests before accepting its premise:
+   - Do not blindly obey reviewer or bot comments (such as CodeRabbit, Bugbot, or Copilot).
+   - Check the cited file, surrounding callers, types, and `HEAD` state to determine whether the comment identifies a real defect, is already fixed/outdated on `HEAD`, or is based on a misreading of the code.
+4. Group feedback by severity and actionability:
+   - **Valid & actionable** (ordered by severity: blocking bugs/regressions first, then maintainability/tests)
+   - **Already fixed or outdated on `HEAD`**
+   - **Disputed / incorrect** (with the concrete code or test evidence explaining why the current implementation is right)
+   - **Open questions** requiring user product/design input
+5. Return the concise action list. Apply code fixes only when the user has requested them, and re-run affected tests after editing.
+
+## Output
+
+- Grouped feedback summary (`Valid & actionable`, `Outdated/Fixed`, `Disputed with evidence`)
+- Action list ordered by priority
+- Open questions that still need clarification
+````
+
+## plugins/engineering-kit/skills/pr-comments/evals/evals.json
+
+````
+{
+  "skill_name": "pr-comments",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Fetch the review comments on the active pull request, group them by severity and actionability, and give me a prioritized action list without editing code yet.",
+      "expected_output": "Resolves the active PR, fetches inline review comments and discussion threads via `gh`, verifies them against current code, and outputs a prioritized action list.",
+      "files": [],
+      "expectations": [
+        "Resolves the active pull request for the branch using `gh`.",
+        "Fetches both inline review comments and PR review/discussion comments.",
+        "Groups feedback by severity and actionability.",
+        "Remains read-only and lists open questions when edits were not requested."
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Use pr-comments on PR #104 to see what reviewers and bots flagged, filter out threads that are already fixed on HEAD, and summarize what still needs action.",
+      "expected_output": "Fetches PR #104 comments, checks each against HEAD, separates resolved/outdated items from actionable items, and orders the remaining work by priority.",
+      "files": [],
+      "expectations": [
+        "Fetches review comments and discussion threads for PR #104.",
+        "Checks cited files/lines against the current code to distinguish outdated threads from live issues.",
+        "Returns a prioritized action list and open questions."
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "Get the PR comments on my current branch and apply fixes for the high-priority actionable items.",
+      "expected_output": "Fetches and groups the PR comments, applies focused fixes for the confirmed actionable items, and reports the changes.",
+      "files": [],
+      "expectations": [
+        "Summarizes and prioritizes the fetched PR feedback first.",
+        "Applies fixes only because the user explicitly requested them.",
+        "Reports the addressed items and any remaining open questions."
+      ]
+    }
+  ]
+}
+````
+
+## plugins/engineering-kit/skills/pr-comments/evals/trigger_queries.json
+
+````
+[
+  {
+    "query": "get the PR comments on the active pull request and summarize what I need to fix",
+    "should_trigger": true
+  },
+  {
+    "query": "fetch and triage reviewer feedback on PR #88 by priority",
+    "should_trigger": true
+  },
+  {
+    "query": "use pr-comments to list all unresolved review threads on this branch's PR",
+    "should_trigger": true
+  },
+  {
+    "query": "what comments did reviewers leave on my pull request?",
+    "should_trigger": true
+  },
+  {
+    "query": "pull the GitHub PR review comments and group them into an action list",
+    "should_trigger": true
+  },
+  {
+    "query": "check the inline review comments and discussion on the current PR",
+    "should_trigger": true
+  },
+  {
+    "query": "summarize the review feedback on this PR and highlight open questions",
+    "should_trigger": true
+  },
+  {
+    "query": "fetch the latest PR comments from GitHub and order them by severity",
+    "should_trigger": true
+  },
+  {
+    "query": "review my local uncommitted diff for bugs and hollow tests",
+    "should_trigger": false
+  },
+  {
+    "query": "write a pull request title and description for this branch",
+    "should_trigger": false
+  },
+  {
+    "query": "resolve the git merge conflicts in src/index.ts",
+    "should_trigger": false
+  },
+  {
+    "query": "summarize my authored git commits from the past 7 days",
+    "should_trigger": false
+  },
+  {
+    "query": "drive this interactive CLI inside a tmux harness",
+    "should_trigger": false
+  },
+  {
+    "query": "write a multi-step implementation plan from this specification",
+    "should_trigger": false
+  },
+  {
+    "query": "choose between gRPC and REST in an architecture decision record",
+    "should_trigger": false
+  },
+  {
+    "query": "formalize these business rules using SBVR notation",
+    "should_trigger": false
+  }
+]
+````
+
+## plugins/engineering-kit/skills/pr-prep/SKILL.md
+
+````
+---
+name: pr-prep
+description: >
+  Use when preparing a pull request or branch for easier review by cleaning or reorganizing noisy
+  commit history into logical dependency-ordered commits (while proving git tree identity) and
+  adding reviewer entry-point guidance without changing code behavior. Do not use for general code
+  review (`code-review`) or feature implementation.
+---
+
+# Make PR Easy to Review
+
+Prepare a PR so a reviewer can quickly understand the intent, important files, and risk. The default goal is reviewability without behavior changes.
+
+## Workflow
+
+1. Resolve the target PR from the user-provided URL or current branch.
+2. Inspect commits, diff size, changed paths, generated files, and PR description.
+3. Identify reviewability issues: noisy commits, stale description, unrelated changes, mixed mechanical and logic changes, missing tests, or unclear reviewer entry points.
+4. Propose a plan before rewriting history or force-pushing.
+5. Apply safe improvements, then verify the tree or diff still matches the intended code.
+
+## History Cleanup
+
+Only rewrite history when the user asks for it or agrees to the plan. Before rewriting:
+
+```bash
+gh pr view <PR> --json title,headRefName,baseRefName,state,commits
+git fetch origin <headRefName> <baseRefName>
+ORIGINAL_TREE=$(git rev-parse origin/<headRefName>^{tree})
+```
+
+Good commit groupings usually follow dependency order:
+
+1. Schema/storage or generated API definitions.
+2. Core logic.
+3. Wiring and integration.
+4. UI or surface behavior.
+5. Tests.
+
+After rewriting, verify content identity:
+
+```bash
+echo "Original tree: $ORIGINAL_TREE"
+echo "Current tree:  $(git rev-parse HEAD^{tree})"
+git diff origin/<headRefName> --stat
+```
+
+Do not push if the tree changed unintentionally.
+
+## Reviewer Guidance
+
+When code behavior should stay untouched, prefer PR description and review notes:
+
+- Add a TL;DR that matches the actual diff.
+- Separate core files from generated or mechanical files.
+- Call out risky behavior changes, migration order, rollout plan, and test coverage.
+- Link issue trackers, dashboards, or design docs when they explain intent.
+
+## Guardrails
+
+- Never hide meaningful behavior changes inside "cleanup".
+- Do not bypass hooks unless the user explicitly asks.
+- If the PR is too large to make reviewable with notes, recommend splitting instead of polishing around the problem.
+````
+
+## plugins/engineering-kit/skills/pr-prep/evals/evals.json
+
+````
+{
+  "skill_name": "pr-prep",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Make this PR easy to review: I have 9 noisy WIP commits (`wip`, `fix typo`, `oops`). Propose a dependency-ordered commit reorganization plan and show how you will prove the git tree did not change.",
+      "expected_output": "Inspects commits and diff, proposes grouping into dependency order (schema/API -> core logic -> wiring -> UI -> tests), records `ORIGINAL_TREE=$(git rev-parse ...)`, and verifies `git rev-parse HEAD^{tree}` matches after rewriting.",
+      "files": [],
+      "expectations": [
+        "Proposes a commit reorganization plan before rewriting history or force-pushing.",
+        "Orders proposed commits by dependency (schema/definitions -> core logic -> wiring -> UI -> tests).",
+        "Records `ORIGINAL_TREE` before history rewrite and verifies `git rev-parse HEAD^{tree}` equality afterward.",
+        "Refuses to push if the tree hash changed unintentionally."
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Make PR #77 easier to review without rewriting git history\u2014just improve the PR description and reviewer guidance.",
+      "expected_output": "Leaves commit history untouched and updates reviewer guidance with an accurate TL;DR, core vs mechanical file separation, risk/migration callouts, and verification notes.",
+      "files": [],
+      "expectations": [
+        "Does not rewrite commit history when the user asks to keep history untouched.",
+        "Separates core logic files from generated or mechanical files in the reviewer guide.",
+        "Adds a truthful TL;DR, risky change callouts, and test coverage notes."
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "This 4,500-line PR touches three unrelated subsystems. Use pr-prep to advise how to handle it.",
+      "expected_output": "Identifies that the PR mixes unrelated changes and is too large for notes alone, and recommends splitting into focused PRs rather than polishing around the problem.",
+      "files": [],
+      "expectations": [
+        "Flags mixed unrelated changes and excessive diff size.",
+        "Recommends splitting the PR rather than masking the scope with prose notes alone.",
+        "Never hides behavior changes inside history cleanup."
+      ]
+    }
+  ]
+}
+````
+
+## plugins/engineering-kit/skills/pr-prep/evals/trigger_queries.json
+
+````
+[
+  {
+    "query": "make this PR easy to review by cleaning up my noisy WIP commit history",
+    "should_trigger": true
+  },
+  {
+    "query": "reorganize the commits on this branch into logical dependency order and verify tree identity",
+    "should_trigger": true
+  },
+  {
+    "query": "use pr-prep to tidy this pull request and annotate reviewer entry points",
+    "should_trigger": true
+  },
+  {
+    "query": "split my 12 messy commits into clean reviewable commits without changing the final tree",
+    "should_trigger": true
+  },
+  {
+    "query": "prepare this PR for reviewers by separating mechanical files from core logic changes",
+    "should_trigger": true
+  },
+  {
+    "query": "clean up the commit history on this branch and prove `git rev-parse HEAD^{tree}` is unchanged",
+    "should_trigger": true
+  },
+  {
+    "query": "make PR #39 easier to review with a clear reading order and tidy commits",
+    "should_trigger": true
+  },
+  {
+    "query": "tidy this PR so reviewers know where to start and don't have to read WIP commits",
+    "should_trigger": true
+  },
+  {
+    "query": "review this diff for bugs, security issues, and hollow tests",
+    "should_trigger": false
+  },
+  {
+    "query": "watch gh pr checks until CI is green",
+    "should_trigger": false
+  },
+  {
+    "query": "resolve the git merge conflicts in src/server.ts",
+    "should_trigger": false
+  },
+  {
+    "query": "summarize my authored commits from the last 7 days",
+    "should_trigger": false
+  },
+  {
+    "query": "run the repository's compiler and type-check commands",
+    "should_trigger": false
+  },
+  {
+    "query": "drive our interactive CLI inside a tmux session",
+    "should_trigger": false
+  },
+  {
+    "query": "write an architecture decision record for database sharding",
+    "should_trigger": false
+  },
+  {
+    "query": "build a canonical reference implementation for our SDK",
+    "should_trigger": false
+  }
+]
+````
+
 ## plugins/engineering-kit/skills/reference-implementation/SKILL.md
 
 ````
@@ -6962,84 +8550,80 @@ If creation or update is blocked, return the complete title and fenced body plus
 name: reference-implementation
 description: >-
   Use when creating, reviewing, refactoring, or auditing a reference-quality implementation —
-  canonical code where correctness, traceability, and appropriate abstraction matter more than raw
-  performance. Trigger on "reference implementation", "canonical version", "golden-path example",
-  "the blessed implementation", or auditing whether code deserves to be the reference. Not for
-  ordinary bug fixes, cleanup, or optimization unless the result is meant to be authoritative or
-  copied.
+  canonical code that others should copy, where correctness, traceability, and earned
+  abstraction matter. Trigger on "reference implementation", "canonical version",
+  "golden-path example", "the blessed implementation", or auditing whether code deserves
+  to be the reference. Not for ordinary bug fixes, cleanup, or optimization unless the
+  result is meant to be authoritative or copied.
 ---
 
 # Reference Implementation
 
-Produce or audit **reference-quality code**: code that preserves the problem's semantics, is easy to verify, uses only abstractions that earn their place, and is no more complex than the task requires. What separates this from ordinary review or refactoring is one discipline — the code must not invent semantics. Every meaningful behavior should trace to one authoritative rule and be tested at the behavior level.
+Produce or audit canonical code: faithful to the agreed problem, easy to verify, and only
+as abstract as the work requires. This is not ordinary review or cleanup. Use it when the
+code is the authoritative example others should copy.
 
-## The core discipline
+Whether you build, refactor, or only audit follows the user's authorization, not a mode.
+Audit is read-only unless edits were requested. Do not infer permission to stage, commit,
+push, merge, or publish. Preserve unrelated work. Recheck after the last authorized edit.
 
-Whatever the size of the work, five things make code reference quality:
+## Workflow
 
-1. **Explicit semantics.** State inputs, outputs, definitions, boundary conventions, tie-breaking, edge behavior, non-goals, and any required complexity. If the code handles a case the semantics don't describe, either the code is wrong or the semantics are incomplete.
-2. **One authoritative owner per meaningful rule.** Each behavior that could be misunderstood,
-   duplicated, or changed has one authoritative definition. Repeated enforcement can be correct at
-   independent trust, compatibility, or persistence boundaries; keep those sites traceable to the
-   same rule and test that they agree. Repeated syntax is fine; independently redefined *meaning*
-   drifts. Naming rules (R-001, ...) helps mainly across multiple files or owners, where they become
-   searchable cross-references — it is optional in single-file work.
-3. **Abstractions that pay rent.** Trace each named layer from its callers to the behavior it
-   ultimately performs, and state the distinct responsibility it owns. Keep it when it names a
-   problem concept, protects an invariant, owns a real phase or boundary, removes duplicated
-   meaning, or makes verification easier. A forwarding call or same-shape representation change
-   does not become meaningful merely because it has a type or function name. Abstract meaning,
-   not shape.
-4. **Real boundaries only.** Separate work when assumptions, guarantees, failure behavior, ownership,
-   or side effects materially change. A conceptual step in an explanation does not require its own
-   function, type, or phase in code.
-5. **Behavior-level tests.** Tests should fail when behavior is wrong, not when internals are reorganized. Prefer golden examples, edge and boundary/tie cases, and rule- and invariant-level tests; add brute-force oracle, property, or metamorphic tests where the input space makes them feasible.
+### 1. Establish intended behavior and authority
 
-## Size the artifact to the work
+The source of truth is the authoritative spec, requirements, or accepted decisions — not
+whatever the code currently does. Name only the material contract: inputs and outputs,
+input preconditions and non-goals, boundary and error cases, order or ties, invariants,
+and compatibility or operational/complexity limits that actually apply. Do not invent
+missing policy. Respect stated exclusions; an out-of-contract case is not a missing
+rule. Ask only when the answer would change the decision; label other assumptions
+provisional rather than canonizing a guess.
 
-The point is to make semantics explicit enough to prevent drift — not to produce a document. Scale accordingly:
+Each meaningful rule has one authoritative definition. That does not mean one execution
+site. Repeated enforcement can be correct at trust, persistence, or compatibility
+boundaries; keep those sites traceable to the same rule and check that they agree.
+Preserve checks needed at each boundary rather than centralizing execution merely to
+remove repetition. Rule IDs or matrices are optional and useful only when they reduce
+ambiguity.
 
-- **Tiny:** hold it in your head or a short reply. Name the semantic rule, implement it once, test the edge case, resist abstractions that don't protect meaning.
-- **Most work:** capture the at-risk semantics, the important rules and their one owner each, and the test plan in plain notes. Skip data-model and algorithm bookkeeping unless a type carries a non-obvious invariant or a real algorithm is in play.
-- **Large or collaborative:** use `templates/implementation_canvas.md` as optional shared notes,
-  keeping only the sections that clarify semantics, ownership, boundaries, or verification.
+### 2. Build or inspect the simplest faithful implementation
 
-The canvas is an optional tool for the last case, not a required deliverable. Reach for it when the rule set, data model, or handoffs are complex enough that a shared artifact is what keeps the semantics from drifting.
+Trace representative callers to their effects. A layer earns its place through a distinct
+responsibility, guarantee, safety property, ownership, lifecycle, or clearer verification.
+Shape-only wrappers and same-shape conversions are often wasteful; a single caller is not
+proof a layer is useless. Preserve useful boundaries even when they have one caller.
+Simpler means less needless complexity, not the fewest lines.
 
-## Auditing for reference quality
+Scale the writing: hold tiny work in a short reply; capture at-risk rules and tests in
+plain notes for most work; reach for `templates/implementation_canvas.md` only when shared
+notes materially help a large or collaborative case. The canvas is optional. Do not force
+a redesign or a canvas onto already-clear canonical code.
 
-When judging whether existing code (or a refactor) deserves to be canonical, work from semantics outward:
+### 3. Verify and challenge behavior and evidence
 
-1. **Reconstruct the intended semantics.** Inputs, outputs, boundary conventions, tie-breaking, edge behavior, non-goals. If you cannot find them, that itself is a drift risk — flag it.
-2. **Check rule ownership.** Each important rule should have one authoritative owner and
-   behavior-level tests. Distinguish independently redefined meaning from deliberate enforcement at
-   multiple boundaries. Flag undocumented behavior, divergent rule copies, and broad integration
-   tests standing in for missing rule-level coverage.
-3. **Check real boundaries.** Where the implementation has a genuine parse, validation, core,
-   persistence, or formatting boundary, verify that its assumptions and guarantees do not leak.
-   Do not demand separate phases when a direct flow is clearer.
-4. **Trace the implementation path.** Follow representative entry points to their effects or
-   outputs. For every function, type, and representation change on that path, identify its owned
-   responsibility. Flag navigation-only forwarding and parallel representations that do not
-   change semantics, invariants, ownership, lifecycle, or authority. A single caller is a reason
-   to inspect a layer, not by itself a reason to delete it.
-5. **Check tests.** They should exercise behavior, not implementation structure.
-6. **For a diff, classify each change** as mechanical (formatting/rename), structural (moved logic, same semantics), or semantic (changed output, edge behavior, validation, ordering, tie-breaking, or assumptions). No semantic change may hide inside a refactor.
+Tests come from the contract, not from copies of production logic or weakened
+expectations. Cover examples, relevant boundaries, failures, and order or ties. Add a
+small independent oracle, property, or metamorphic check only when it actually helps.
 
-Lead with a **Pass**, **Pass with issues**, or **Fail** verdict backed by `file:line` evidence.
-Organize the rest around the issues that actually exist—correctness, drift, abstraction, missing
-behavior, or tests—and omit empty categories rather than filling a fixed report template.
+In a diff, distinguish mechanical or structural intent from evidenced preservation and
+from explicit semantic changes. Do not treat formatting, moves, or renames as
+behavior-preserving by definition; hidden semantic drift is not a refactor. A semantic
+change updates the agreed contract, the implementation, and the tests together, with
+authorization. Performance requirements in the contract remain in force; preferring
+correctness does not waive them.
 
-## When semantics change
+Challenge suspected findings against context and counterevidence. There is no finding
+quota. Never claim tests that were not run. Name the exact snapshot that was tested, and
+separate baseline failures from new regressions.
 
-A semantic change — different output, edge behavior, validation, tie-breaking, ordering, boundary convention, or algorithmic assumption — must update the semantics, the code, and the tests together. Mechanical and structural changes preserve behavior by definition; only semantic changes touch the rules, so keep them visible rather than buried in a refactor.
+### 4. Report proportionately
 
-## Supporting files
-
-Load only what the current task needs:
-
-- `templates/implementation_canvas.md` — optional working notes for large or collaborative
-  implementations; remove irrelevant sections rather than filling them mechanically.
+Lead with a short outcome and evidence-backed `file:line` findings that exist. For an
+audit, distinguish a demonstrated defect from inability to establish reference quality
+because evidence is missing. Do not give an unconditional pass from source inspection
+alone. A Pass/Fail label is optional; clearer plain wording is enough. For
+implementation, say what behavior changed, which checks actually ran, and what remains
+limited. Skip empty categories and rigid templates.
 ````
 
 ## plugins/engineering-kit/skills/reference-implementation/evals/evals.json
@@ -7059,7 +8643,7 @@ Load only what the current task needs:
         "The implementation avoids abstractions that only add shape.",
         "Does not require a canvas or phase breakdown when the implementation is already easy to reason about directly.",
         "Tests cover golden examples, edge cases, and ordering/tie behavior.",
-        "The final audit checks semantic traceability and change safety."
+        "Reports the contract, any changed behavior, and checks actually run; does not require a separate review pass after implementation."
       ]
     },
     {
@@ -7089,7 +8673,7 @@ Load only what the current task needs:
       "expectations": [
         "Compares new behavior against named reference rules.",
         "Flags drift even if tests still pass superficially.",
-        "Distinguishes acceptable implementation changes from semantic changes.",
+        "Distinguishes evidenced preservation from semantic changes; a move, rename, or formatting change is not behavior-preserving by definition.",
         "Recommends targeted tests for drift cases."
       ]
     },
@@ -7104,6 +8688,35 @@ Load only what the current task needs:
         "Flags a same-shape conversion or forwarding helper when it owns no semantics, invariant, ownership, lifecycle, or authority.",
         "Treats a single caller as inspection evidence rather than an automatic deletion rule.",
         "Separates implementation-shape drift from wire or behavioral drift."
+      ]
+    },
+    {
+      "id": 5,
+      "prompt": "This attached parser is already the intended canonical version. One port rule is defined in _parseAndValidatePort and enforced independently at the decodeConfig runtime boundary and the StoredConfig.fromJson persistence boundary. Decide whether it deserves to remain the reference implementation, needs redesign, or needs a canvas. Cite file and line evidence.",
+      "expected_output": "Keeps the shared port rule and its two independent enforcement sites; does not demand a canvas or a single-layer redesign.",
+      "files": [
+        "evals/files/reference_parser.dart",
+        "evals/files/reference_parser_test.dart"
+      ],
+      "expectations": [
+        "Does not require a canvas or ceremonial notes for this already-clear canonical parser.",
+        "Treats _parseAndValidatePort as the single authoritative port definition used by both decodeConfig and StoredConfig.fromJson.",
+        "Treats those two call sites as legitimate independent enforcement at runtime and persistence boundaries, not competing definitions.",
+        "Does not collapse the runtime and persistence call sites into a single validation layer."
+      ]
+    },
+    {
+      "id": 6,
+      "prompt": "Audit whether the attached tag parser deserves to be the reference implementation. The spec never says whether duplicate tags are an error, last-wins, or first-wins. The current code silently keeps the first occurrence. Do not invent a policy. Cite what you can and cannot verify.",
+      "expected_output": "Surfaces the missing duplicate-tag policy, marks first-wins as unverified rather than canonical, and does not invent or rubber-stamp the contract.",
+      "files": [
+        "evals/files/parser_before.dart"
+      ],
+      "expectations": [
+        "Surfaces the missing duplicate-tag policy instead of inventing error, last-wins, or first-wins as canon.",
+        "Does not mark the silent first-occurrence behavior as a verified contract.",
+        "Labels any assumed duplicate rule as provisional or asks only if that decision would change the outcome.",
+        "Distinguishes any demonstrated defect from inability to establish reference quality because material policy is missing."
       ]
     }
   ]
@@ -12401,307 +14014,200 @@ if __name__ == "__main__":
     raise SystemExit(main(sys.argv[1:]))
 ````
 
-## plugins/engineering-kit/skills/webapp-verification/SKILL.md
+## plugins/engineering-kit/skills/verify/SKILL.md
 
 ````
 ---
-name: webapp-verification
-description: "Use when a web app or site must be verified in a real browser: reproduce UI behavior, inspect console or network evidence, check responsive or accessibility states, capture screenshots, or add and run Playwright end-to-end tests. Do not use for general web browsing, code-only review, API-only testing, browser or MCP setup, or workstation storage cleanup."
+name: verify
+description: >
+  Use when verifying a specific technical claim, bug fix, or performance/memory change with fresh
+  falsifiable baseline-versus-treatment local evidence and returning a `VERIFIED`, `NOT VERIFIED`,
+  or `INCONCLUSIVE` verdict. Do not use for vague stylistic claims or static code review without
+  runtime measurement.
 ---
 
-# Web App Verification
+# Verify This
 
-Prove the requested user-visible behavior in a real browser and leave reproducible evidence. This
-skill owns the verification result; it does not own general web browsing, browser installation, MCP
-configuration, or workstation maintenance.
+Verification is not a recap. It proves or disproves a specific claim with repeatable evidence.
 
-## Choose the verification surface
+## When To Use
 
-Honor the user's explicit browser or tool choice. Otherwise choose by the evidence the task needs:
+- The user asks "verify this", "prove it works", "did this fix it", or "show me the evidence".
+- A bug fix needs a before/after repro.
+- A UI, CLI, API, performance, or memory claim needs measurement.
+- A test passes but the user-visible behavior still needs confirmation.
 
-| Need | Preferred surface |
-|---|---|
-| Interactive exploration, visual review, screenshots, or state already open in a browser | An available host `Browser` or `Chrome` skill. Load and follow that skill before using standalone browser automation. |
-| Repeatable regression coverage or CI | The repository's existing Playwright setup and bundled browser. Preserve its config, version, test location, and conventions. |
-| DevTools-specific network, performance, or protocol evidence unavailable through the host browser | An already-configured Chrome DevTools MCP backend. Do not add or reconfigure one unless the user asked for setup. |
-| No suitable browser capability | Report the result as blocked or unverified and provide the smallest concrete verification steps. |
+Do not use this for vague claims like "the code is cleaner". Ask for a measurable claim first.
 
-A host browser's Playwright interface controls that browser session; it is not the repository's
-Playwright test runner. Interactive exploration and durable tests may therefore use different
-surfaces in the same task.
+## Workflow
 
-When authentication, persistent state, concurrent agents, shared sessions, or shutdown ownership
-affect the run, read [Browser sessions](references/browser-runtime.md) before launching anything.
-For requested storage diagnosis, use `dev-machine-cleanup` if available or inspect the
-storage directly within the requested scope; no personal plugin is required.
-Handle requested browser installation or MCP configuration with the selected tool’s setup
-guidance. Routine shutdown of this task’s browser or dev server stays within verification.
+1. Restate the claim in falsifiable form: condition, metric, and threshold.
+2. Pick the smallest local surface that can disprove it.
+3. Capture a baseline from the old state: merge base, parent commit, failing branch, or current broken repro.
+4. Capture treatment from the changed state with the same command, data, warmup, and environment.
+5. Compare raw artifacts: numbers, screenshots, terminal transcripts, HTTP responses, profiles, heap snapshots, or test output.
+6. Return exactly one verdict: `VERIFIED`, `NOT VERIFIED`, or `INCONCLUSIVE`.
 
-## Verify the behavior
+## Local Surfaces
 
-1. Inspect the repository's documented start command, existing browser tests, and target route. Use
-   an existing dev server when appropriate instead of starting a duplicate.
-2. Define the user flow, expected result, relevant viewport, and evidence needed to distinguish pass
-   from failure.
-3. Exercise the flow through the selected browser surface. Capture console, network, accessibility,
-   screenshot, or DOM evidence only when it supports the result.
-4. If the user requested a fix, make the smallest change supported by the observed failure and rerun
-   the same flow.
-5. Add or update a repository Playwright test when the user requested durable coverage or when the
-   regression is valuable enough to preserve. Do not turn every exploratory check into a test.
+- Code behavior: focused unit/integration tests or a minimal repro script.
+- CLI/TUI behavior: terminal transcript, isolated PTY/`tmux` harness, or demo recording.
+- UI behavior: native host browser or Playwright tooling, screenshots, accessibility snapshots, or browser traces.
+- API behavior: local HTTP/RPC request and response diff.
+- Performance: same-machine baseline/treatment timings or CPU profiles.
+- Memory: heap snapshots before and after the suspected operation.
 
-For repository Playwright tests:
+## Artifact Layout
 
-- Prefer the configured bundled browser; do not switch to installed Google Chrome unless the task
-  specifically requires its behavior.
-- Explore the real flow before encoding it, then use stable roles, labels, visible text, or existing
-  test IDs.
-- Assert user-visible outcomes rather than incidental DOM structure, generated classes, or timing.
-- Run the targeted test and report the exact command and result.
+When safe to write artifacts:
 
-## Report the evidence
+```text
+/tmp/verify/<claim-slug>/
+├── claim.md
+├── timeline.md
+├── baseline/
+├── treatment/
+├── diff/
+└── verdict.md
+```
 
-State what flow, route, viewport, and browser surface were actually checked. Include relevant
-screenshots, console or network findings, selectors, and test commands. Distinguish interactive
-evidence from repeatable test coverage, and do not claim verification if neither ran.
+If artifacts may contain sensitive code, prompts, screenshots, HTTP bodies, or heap data, keep only the minimal inline evidence unless the user agrees to disk storage.
 
-Close only browser processes, tabs, profiles, and dev servers owned by this task. Report anything
-left running when it matters to the user's next step.
+## Verdict Rules
+
+- `VERIFIED`: baseline and treatment differ in the predicted direction, by the claimed threshold, with no obvious confound.
+- `NOT VERIFIED`: the behavior is unchanged, moves the wrong way, or misses the threshold.
+- `INCONCLUSIVE`: no valid baseline, noisy signal, failed measurement, or an environment difference invalidates the comparison.
+
+## Output
+
+Use this shape:
+
+```text
+VERIFIED | NOT VERIFIED | INCONCLUSIVE
+Claim: <falsifiable claim>
+
+Evidence:
+<metric/artifact>: baseline=<...>, treatment=<...>, delta=<...>, threshold=<...>
+
+Reasoning:
+<one tight paragraph naming the evidence and any confounds>
+```
+
+Do not soften a negative result. A clear `NOT VERIFIED` is useful.
 ````
 
-## plugins/engineering-kit/skills/webapp-verification/evals/evals.json
+## plugins/engineering-kit/skills/verify/evals/evals.json
 
 ````
 {
-  "skill_name": "webapp-verification",
+  "skill_name": "verify",
   "evals": [
     {
       "id": 1,
-      "prompt": "I have a local web app running on http://localhost:5173. Explore the sign-in and settings flows, capture any console errors, and summarize the main user-visible flows we should cover with browser tests.",
-      "expected_output": "Uses browser exploration before recommending tests, reports routes and flows checked, notes console errors or lack of errors, and identifies concrete browser-test scenarios.",
+      "prompt": "Verify this claim: 'Our parser patch reduces cold-parse latency by at least 30% on `fixtures/large.json`.'",
+      "expected_output": "Restates the claim falsifiably with metric and threshold, measures baseline on the parent commit/merge-base and treatment on the patched state under identical conditions, compares raw numbers, and returns `VERIFIED`, `NOT VERIFIED`, or `INCONCLUSIVE` in the required output shape.",
       "files": [],
       "expectations": [
-        "Explores the running app before proposing test code",
-        "Summarizes user-visible flows and routes that were checked",
-        "Reports console errors or explicitly says none were observed",
-        "Recommends concrete browser test scenarios based on observed behavior",
-        "If the target app or browser tooling is unavailable, the output marks the result blocked/unverified instead of fabricating evidence."
+        "Restates the claim in falsifiable form with condition, metric, and threshold.",
+        "Captures both baseline and treatment measurements under the same environment and input.",
+        "Outputs the exact `VERIFIED | NOT VERIFIED | INCONCLUSIVE` block with `Claim:`, `Evidence:`, and `Reasoning:`."
       ]
     },
     {
       "id": 2,
-      "prompt": "Generate a Playwright test for this scenario: a user opens the pricing page, switches to annual billing, sees discounted prices, and can start checkout from the Pro plan. Explore the page first and save the test in the existing tests directory.",
-      "expected_output": "Explores the scenario first, writes a Playwright test using stable locators, saves it in the repo's existing test location, runs it, and reports the result or blocker.",
+      "prompt": "Verify this: 'The code is much cleaner now.'",
+      "expected_output": "Refuses to issue a fake verification for a vague non-measurable claim and asks for a concrete falsifiable behavioral or performance claim first.",
       "files": [],
       "expectations": [
-        "Does not write the test before exploring the target page",
-        "Uses stable user-facing locators where available",
-        "Saves the test in the existing Playwright test structure",
-        "Runs the test or reports the exact blocker preventing execution",
-        "If the target app or browser tooling is unavailable, the output marks the result blocked/unverified instead of fabricating evidence."
+        "Declines to run `verify` on a vague stylistic claim like 'the code is cleaner'.",
+        "Asks the user for a measurable, falsifiable claim or observable behavior to test."
       ]
     },
     {
       "id": 3,
-      "prompt": "Review the dashboard page for layout problems on desktop and mobile. I care about overlapping text, clipped buttons, console errors, and accessibility basics. Give me evidence and targeted fixes, not a broad redesign.",
-      "expected_output": "Checks at least desktop and mobile viewports, captures evidence for visual or accessibility issues, prioritizes concrete findings, and avoids broad redesign recommendations.",
+      "prompt": "Did this fix the CLI crash when passing `--empty`? Prove it works with verify.",
+      "expected_output": "Reproduces the crash on the baseline commit, runs the exact same `--empty` command on the treatment state, compares exit codes and stderr transcripts, and returns a structured `VERIFIED` or `NOT VERIFIED` verdict.",
       "files": [],
       "expectations": [
-        "Checks multiple viewport sizes when reviewing layout",
-        "Reports visual issues with browser evidence such as screenshots or observed selectors",
-        "Includes console or accessibility observations when relevant",
-        "Keeps recommendations targeted to the observed issues",
-        "If the target app or browser tooling is unavailable, the output marks the result blocked/unverified instead of fabricating evidence."
-      ]
-    },
-    {
-      "id": 4,
-      "prompt": "Verify a backend helper handles null inputs correctly; no browser or UI is involved.",
-      "expected_output": "A boundary response that routes away from webapp verification for non-browser API/function testing.",
-      "files": [],
-      "expectations": [
-        "Identifies there is no browser UI to verify.",
-        "Does not claim browser verification was performed.",
-        "Suggests unit/API tests or code review instead."
-      ]
-    },
-    {
-      "id": 5,
-      "prompt": "I have three coding agents checking different flows in the same local web app on my Mac. Two need separate test accounts and one checks a public page. Set up the browser verification so they can run in parallel without exposing my everyday Chrome profile or filling the disk with duplicate Chrome copies.",
-      "expected_output": "Chooses an available browser surface and deliberate state strategy for the three checks, explains the shared-browser tradeoff, and assigns shutdown ownership without exposing the personal profile or silently turning verification into a machine-setup task.",
-      "files": [],
-      "expectations": [
-        "Keeps the user's everyday Chrome profile out of automation.",
-        "Uses separate browser state for agents with independent test accounts.",
-        "Explains that a shared dedicated browser reduces launches but shares tabs and state.",
-        "Identifies which task owns browser and dev-server shutdown.",
-        "Uses an available host Browser or Chrome skill before adding standalone browser automation.",
-        "Uses the selected tool’s setup guidance for requested browser or MCP configuration; does not invoke the cleanup skill for configuration or silently change machine-wide setup."
-      ]
-    },
-    {
-      "id": 6,
-      "prompt": "Verify the checkout fix in the browser, but I also noticed com.google.Chrome.code_sign_clone is huge after earlier agent runs. Clean up anything no longer needed when you finish.",
-      "expected_output": "Completes or reports the checkout verification separately, then invokes or hands off to dev-machine-cleanup for storage diagnosis and cleanup rather than embedding machine-maintenance instructions in the verification workflow.",
-      "files": [],
-      "expectations": [
-        "Keeps browser verification and workstation cleanup as distinct responsibilities.",
-        "Uses the appropriate browser surface to verify checkout or marks the result unverified.",
-        "Routes Chrome clone diagnosis and cleanup to dev-machine-cleanup.",
-        "Does not delete browser state while Chrome or automation may own it.",
-        "Reports any task-owned browser or dev-server resources left running."
-      ]
-    },
-    {
-      "id": 7,
-      "prompt": "The built-in Browser skill is available. Reproduce the cart-total bug interactively, then add a regression test to this repository's existing Playwright suite and run the smallest relevant test command.",
-      "expected_output": "Uses the host Browser skill for interactive reproduction and the repository Playwright runner for durable coverage, keeping the two Playwright surfaces distinct and avoiding an unnecessary Chrome DevTools MCP setup.",
-      "files": [],
-      "expectations": [
-        "Loads and follows the available Browser skill for interactive reproduction.",
-        "Uses the repository's existing Playwright configuration and test location for the regression test.",
-        "Does not confuse the host browser's Playwright interface with the repository Playwright test runner.",
-        "Runs the targeted repository test or reports the exact blocker.",
-        "Does not add Chrome DevTools MCP when the requested evidence is already available."
+        "Captures the failing repro on the baseline state and the passing output on the treatment state.",
+        "Reports concrete baseline vs treatment evidence (exit code, output transcript).",
+        "Does not soften a negative or inconclusive result."
       ]
     }
   ]
 }
 ````
 
-## plugins/engineering-kit/skills/webapp-verification/evals/trigger_queries.json
+## plugins/engineering-kit/skills/verify/evals/trigger_queries.json
 
 ````
 [
   {
-    "query": "Open http://localhost:5173 and verify the settings flow actually works.",
+    "query": "verify this claim with baseline and treatment evidence: memory usage drops below 50MB",
     "should_trigger": true
   },
   {
-    "query": "Check this local app in Playwright, capture screenshots, and report console errors.",
+    "query": "prove it works: run a before/after repro showing this patch fixes the 500 error",
     "should_trigger": true
   },
   {
-    "query": "Verify the checkout flow actually works after my frontend changes.",
+    "query": "use verify to test whether p95 latency improved by at least 20%",
     "should_trigger": true
   },
   {
-    "query": "Inspect the responsive layout at mobile and desktop widths and provide browser evidence.",
+    "query": "did this fix the race condition? show me falsifiable baseline vs treatment evidence",
     "should_trigger": true
   },
   {
-    "query": "Generate a regression test in the existing Playwright suite after exploring the real UI.",
+    "query": "verify this bug fix by capturing the broken repro on main and the fixed output on HEAD",
     "should_trigger": true
   },
   {
-    "query": "Debug why clicking Save does nothing in the browser and capture the failing request.",
+    "query": "run verify and return a VERIFIED, NOT VERIFIED, or INCONCLUSIVE verdict",
     "should_trigger": true
   },
   {
-    "query": "Open the staging URL and check network failures during login.",
+    "query": "measure baseline and treatment heap snapshots to verify the memory leak is gone",
     "should_trigger": true
   },
   {
-    "query": "Check visible accessibility issues and keyboard flow for this page.",
+    "query": "prove with local before-and-after artifacts that the API response time regression is resolved",
     "should_trigger": true
   },
   {
-    "query": "Three agents need to verify different signed-in flows in this local app at the same time; choose safe browser state and prove each flow works.",
-    "should_trigger": true
-  },
-  {
-    "query": "Use the state already open in my Chrome tab to reproduce this staging UI bug, then add a repository Playwright test for the fix.",
-    "should_trigger": true
-  },
-  {
-    "query": "Review this React component for bugs without running the app.",
+    "query": "write an architecture decision record for our caching strategy",
     "should_trigger": false
   },
   {
-    "query": "Verify this backend API function handles nulls correctly.",
+    "query": "draft a pull request title and description from my branch commits",
     "should_trigger": false
   },
   {
-    "query": "Run unit tests only; no browser or UI is involved.",
+    "query": "summarize the git commits I authored over the last 7 days",
     "should_trigger": false
   },
   {
-    "query": "Explain how Playwright locators work and show a short example.",
+    "query": "fetch and group reviewer comments from the active PR",
     "should_trigger": false
   },
   {
-    "query": "Create Flutter integration tests for this mobile screen.",
+    "query": "clean up noisy WIP commits on this branch into logical commits",
     "should_trigger": false
   },
   {
-    "query": "Configure Chrome DevTools MCP globally for Cursor and Claude, but do not test an application yet.",
+    "query": "resolve git merge conflicts in src/config.ts",
     "should_trigger": false
   },
   {
-    "query": "My Mac is low on space; inspect and clean stale Chrome code-sign clones, and no web app needs verification.",
+    "query": "formalize these domain rules in SBVR",
     "should_trigger": false
   },
   {
-    "query": "Open several competitor websites and summarize their pricing plans for my research notes.",
-    "should_trigger": false
-  },
-  {
-    "query": "Install Playwright and download every supported browser for a future project; there is no app to test yet.",
-    "should_trigger": false
-  },
-  {
-    "query": "Use my logged-in Chrome tab to submit this reimbursement form for me.",
+    "query": "generate an interactive HTML PR review canvas",
     "should_trigger": false
   }
 ]
-````
-
-## plugins/engineering-kit/skills/webapp-verification/references/browser-runtime.md
-
-````
-# Browser sessions
-
-Read this reference only when authentication, persistent state, concurrent agents, shared browser
-sessions, or shutdown ownership affects a web-app verification run. It guides session selection; it
-does not configure browser tooling or clean workstation storage.
-
-## Choose state deliberately
-
-- For disposable public flows, use the isolated state supplied by the selected browser surface.
-- For exact state already open in Chrome, use the host's Chrome or browser-extension capability.
-  Treat the attached tabs and profile as visible to that controller; do not copy or relaunch the
-  user's personal profile.
-- For repeated authenticated automation, use a dedicated persistent automation profile rather than
-  the everyday browser profile. Let only one browser process own that profile at a time.
-- Follow the selected host Browser or Chrome skill's own selection and lifecycle rules. Do not layer
-  standalone Playwright or Chrome DevTools MCP over the same interaction merely because both are
-  available.
-
-## Coordinate concurrent runs
-
-Give agents separate browser state when they use different accounts or may change the same tabs. A
-shared dedicated browser can reduce process count, but every attached agent can observe or modify its
-tabs, cookies, and navigation, so share it only when that interference is acceptable.
-
-Do not launch two browser processes against the same persistent profile. Before launching, record:
-
-- the task or agent that owns the session;
-- the browser surface and state mode: isolated, persistent automation, or attached user state;
-- whether control is independent or intentionally shared; and
-- who will close the task-owned tabs, browser process, and dev server.
-
-## Keep setup and maintenance separate
-
-Use an already-configured Chrome DevTools MCP backend only when the verification needs DevTools
-evidence the host browser cannot provide. MCP options and compatibility change by version, so verify
-the installed server's documentation during an explicit setup task instead of encoding those details
-here.
-
-For requested storage diagnosis or cleanup of profiles or Chrome code-sign clones, use
-`dev-machine-cleanup` if available, or inspect storage directly within the requested
-scope. No personal plugin is required. For browser installation or MCP configuration, follow the selected tool’s
-setup guidance. Closing this task’s browser or dev server does not require the cleanup skill.
-Do not delete browser state while any browser or automation process may still own it.
 ````
 
 ## plugins/engineering-kit/skills/writing-plans/SKILL.md
@@ -12751,7 +14257,25 @@ If repository access or required artifacts are unavailable, say so plainly. Buil
 
 ## Choose the output location
 
-Honor a user-specified path first, then an established repository convention. If neither exists, return the plan in the conversation unless the user explicitly asked for a saved artifact. Do not create a new planning directory or impose source-specific path names merely because this skill was used.
+Honor a user-specified path first, then explicit repository instructions. Otherwise, save a plan that will be kept, executed later, or handed off under `~/.agents/projects/<project>/`. This is the user's home directory, outside every checkout and worktree; a plan returned only for discussion can stay in the conversation.
+
+Use this shared layout, creating only the directories needed:
+
+```text
+~/.agents/projects/<project>/
+  plans/<yyyy-mm-dd>-<slug>.md     # plan, progress, decisions, and handoff notes
+  notes/<yyyy-mm-dd>-<slug>.md     # standalone notes for work without a plan
+  reviews/<yyyy-mm-dd>-<slug>.md   # reviews the user wants kept
+  evidence/<yyyy-mm-dd>-<slug>/   # supporting probes, captures, and logs
+```
+
+Resolve `<project>` from the `origin` remote's owner and repository name, joined with a hyphen and without `.git`, such as `btwld-jam`. HTTPS and SSH URLs for the same repository use the same folder. Without `origin`, use the main worktree's directory name from `git worktree list --porcelain`, not the current linked worktree's name; outside Git, use the working directory's name. Reuse an established project folder. If unrelated repositories would share a name, qualify it with the host or namespace before saving.
+
+Before creating a record, look for one matching the work's goal and provenance. A plan belongs to a work item, which may span several worktrees; keep worktree paths in its provenance rather than adding a worktree folder to the storage layout. Continue the same record across branches, worktrees, sessions, and dates; do not select a plan solely because it is newest. Use distinct slugs for independent work, including work started on the same day. Use the same date-and-slug stem for related plans, reviews, and evidence, and link them from the plan. Keep notes for planned work in that plan; `notes/` is for work with no plan, not a second progress tracker.
+
+Start saved Markdown records with YAML front matter containing `kind` (`plan`, `note`, or `review`), `date` (creation date in `yyyy-mm-dd` form), `repository` (owner/repository, or the main directory's absolute path without `origin`), `branch`, `commit` (full HEAD hash), `worktree` (absolute path to the checkout where the record was created), `skill`, `session` (session or transcript id), and `status` (`draft`, `approved`, or `superseded`). Record creation provenance; use YAML `null` for unavailable values rather than inventing them. Keep later worktree, branch, commit, and session changes in dated progress notes, along with completed work, remaining work, and evidence links. Read the latest contents before updating a shared record and preserve other contributors' notes.
+
+When a client requires its own plan-mode file, follow that restriction and save a durable copy here as soon as the client permits it; identify the saved path as the record for continued work. Preserve an existing source copy when repository instructions, PRs, or other records cite it. Do not silently move or delete those sources. Include the saved path in the response or handoff so the next session can find it. Avoid `docs/` and ignored folders inside a checkout for agent records unless the user or repository instructions specify that location.
 
 ## Build an executable sequence
 
@@ -12783,7 +14307,8 @@ Include these only when the change needs them:
 - security and permission boundaries;
 - observability or operational verification;
 - documentation and consumer communication;
-- staged rollout and post-deployment checks.
+- staged rollout and post-deployment checks;
+- for a replacement or rewrite: the chosen replacement and compatibility strategy, which legacy behavior and characterization tests must survive, and when the old code can safely be removed. Side-by-side implementation and compatibility layers are options to evaluate against actual commitments.
 
 For ordinary changes, focused automated tests and the repository's standard validation commands are usually enough.
 
@@ -12813,7 +14338,7 @@ End with the plan's readiness, material assumptions, and any decision the implem
       "expectations": [
         "The plan preserves the atomicity and 24-hour replay requirements and maps them to persistence, service, controller, and test work.",
         "The plan orders schema or data-model work before code that depends on it and identifies focused Jest and Prisma validation.",
-        "The output does not claim to have modified files or impose an unrequested plan directory.",
+        "The output does not claim to have modified files and does not create or require a hard-coded docs/superpowers plan path.",
         "The plan is specific enough to execute but does not require a commit after every tiny action or force a subagent handoff."
       ]
     },
@@ -12831,19 +14356,49 @@ End with the plan's readiness, material assumptions, and any decision the implem
     },
     {
       "id": 3,
-      "prompt": "Write an implementation plan only for adding asynchronous CSV exports to a reporting service. Approved requirements: a user can request an export and retrieve only their own result; existing synchronous JSON reports remain unchanged; failed jobs expose a retriable failure state. Supplied repository facts: jobs use the existing queue abstraction in src/jobs; reporting routes live in src/reports; repository tests use pytest. Storage provider, retention period, and production rollout mechanism are not supplied, and live inspection is unavailable. Return a dependency-ordered plan with acceptance coverage and bounded discovery tasks; do not implement, create tickets, or deploy.",
-      "expected_output": "A scoped implementation plan preserving the supplied requirements and repository facts while identifying missing storage and rollout decisions without inventing contracts.",
-      "files": [],
+      "prompt": "Create a plan for adding an owned engineering plugin that works in both Claude Code and Codex. It will initially import two externally maintained skills with exact repository and commit provenance, include one existing native skill, and remain inactive until structural and behavioral validation pass. After preserving the exact baselines, adapt the imported skills only where doing so demonstrably improves their purpose. The current plugins must remain recoverable and no remote push is authorized. Use the attached sanitized pre-pilot repository context; live repository inspection is unavailable, so do not claim to run tools or inspect anything beyond that fixture. Keep the plan under 1,500 words and do not implement anything.",
+      "expected_output": "A reversible pilot plan that separates scaffolding, exact imports, local adaptations, validation, and cutover; handles both platform manifests and upstream licenses; and respects the no-push/no-cutover boundary.",
+      "files": [
+        "evals/files/repo-context.md"
+      ],
       "expectations": [
-        "Traces export ownership, job failure handling, and unchanged JSON reporting to implementation tasks and focused tests.",
-        "Orders shared job/result contracts before the workers and reporting routes that consume them.",
-        "Keeps storage, retention, and rollout choices unresolved or proposed rather than inventing providers or deadlines.",
-        "Uses supplied component paths and pytest without claiming repository inspection or fabricated exact file names.",
-        "Does not implement, publish, create tickets, or require a particular planning directory or orchestration system."
+        "The plan separates plugin scaffolding, byte-identical upstream imports, local adaptation, validation, and eventual cutover into reviewable checkpoints.",
+        "The plan records repository URL, source path, exact commit, update policy, and required license or attribution handling for imported skills.",
+        "The plan covers both Claude Code and Codex manifests and preserves globally unique skill ownership.",
+        "The plan does not push, install over, disable, or remove the existing live plugins before validation.",
+        "The plan does not invent repository files, skill names, commit history, configuration, or tool output that the prompt did not provide and the evaluator could not inspect.",
+        "The plan does not require Superpowers-specific output paths, subskills, worktrees, or per-action commits that the request did not select."
       ]
     }
   ]
 }
+````
+
+## plugins/engineering-kit/skills/writing-plans/evals/files/repo-context.md
+
+````
+# Sanitized pre-pilot repository context
+
+This fixture contains only the structural facts needed for the planning evaluation.
+
+- The repository is a Git marketplace named `leo-kit`.
+- Claude Code marketplace: `.claude-plugin/marketplace.json`.
+- Codex marketplace: `.agents/plugins/marketplace.json`.
+- Existing plugins live under `plugins/<plugin>/` and each has both `.claude-plugin/plugin.json` and `.codex-plugin/plugin.json`.
+- Existing plugins are `dev-tools`, `dart-flutter-kit`, and `personal-kit`.
+- Skills are canonical under `plugins/<plugin>/skills/<skill-name>/`.
+- Skill names must be globally unique across all plugins.
+- `clean-sheet-review` currently exists at `plugins/engineering-kit/skills/clean-sheet-review/` and must have only one canonical location.
+- `scripts/build-plugin-bundle.py` regenerates plugin README and skills manifest files.
+- `scripts/validate-plugin-bundle.sh` validates every marketplace plugin; its plugin list must be updated when a plugin is added.
+- Both marketplace files must remain synchronized.
+- Listing a plugin in either marketplace does not install or activate it. The existing schemas do not use an `enabled` field; keeping the pilot inactive means not installing or upgrading it into the active environment.
+- No `engineering-kit` plugin exists in this pre-pilot state.
+- External baseline 1: `architecture` from `https://github.com/anthropics/knowledge-work-plugins.git`, path `engineering/skills/architecture`, commit `d463f6f0dce59a99c4869598324aac25b28ad4f9`, Apache-2.0.
+- External baseline 2: `writing-plans` from `https://github.com/obra/superpowers.git`, path `skills/writing-plans`, commit `b36e0829c6d0140e93cfef2ca599b1b07d4a7797`, MIT.
+- The pilot must preserve exact external imports before adaptations, retain required license texts, and keep source URL, source path, based-on commit, reviewed-through commit, and update policy in one plugin-level `plugins/engineering-kit/SOURCES.md`.
+- Exact baseline imports and later local adaptations must be separate Git commits so either can be inspected or reverted independently.
+- The pilot must not push, install, disable providers, or cut over current plugins.
 ````
 
 ## plugins/engineering-kit/skills/writing-plans/evals/trigger_queries.json
@@ -12933,11 +14488,11 @@ End with the plan's readiness, material assumptions, and any decision the implem
 ]
 ````
 
-## plugins/engineering-kit/tests/test_ai_slop_review_scripts.py
+## plugins/engineering-kit/tests/test_code_review_scripts.py
 
 ````
 #!/usr/bin/env python3
-"""Regression tests for the ai-slop-review bundled scripts."""
+"""Regression tests for the code-review optional slop-audit helper scripts."""
 
 from __future__ import annotations
 
@@ -12951,7 +14506,7 @@ import tempfile
 import unittest
 from pathlib import Path
 
-SCRIPTS = Path(__file__).resolve().parents[1] / "skills" / "ai-slop-review" / "scripts"
+SCRIPTS = Path(__file__).resolve().parents[1] / "skills" / "code-review" / "scripts"
 
 
 def load(name: str):
@@ -19892,10 +21447,10 @@ SKILLS = {
     'design-kit': {'design-system', 'image-to-code', 'accessibility-review', 'design-verification', 'frontend-design', 'ux-copy', 'visual-exploration', 'design-critique', 'user-research', 'url-to-code'},
     'product-kit': {'product-brainstorming', 'research-synthesis',
                     'competitive-brief', 'ux-friction-research', 'write-prd', 'write-wbs'},
-    'engineering-kit': {'adversarial-change-review', 'ai-slop-review', 'architecture',
-                        'clean-sheet-review', 'code-simplifier', 'executing-plans',
-                        'pull-request-authoring', 'reference-implementation', 'sbvr',
-                        'webapp-verification', 'writing-plans'},
+    'engineering-kit': {'architecture', 'ci-loop', 'clean-sheet-review', 'code-review',
+                        'code-simplifier', 'executing-plans', 'pr-authoring', 'pr-canvas',
+                        'pr-comments', 'pr-prep', 'reference-implementation', 'sbvr',
+                        'verify', 'writing-plans'},
 }
 
 

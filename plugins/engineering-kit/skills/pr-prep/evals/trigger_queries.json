@@ -1,0 +1,66 @@
+[
+  {
+    "query": "make this PR easy to review by cleaning up my noisy WIP commit history",
+    "should_trigger": true
+  },
+  {
+    "query": "reorganize the commits on this branch into logical dependency order and verify tree identity",
+    "should_trigger": true
+  },
+  {
+    "query": "use pr-prep to tidy this pull request and annotate reviewer entry points",
+    "should_trigger": true
+  },
+  {
+    "query": "split my 12 messy commits into clean reviewable commits without changing the final tree",
+    "should_trigger": true
+  },
+  {
+    "query": "prepare this PR for reviewers by separating mechanical files from core logic changes",
+    "should_trigger": true
+  },
+  {
+    "query": "clean up the commit history on this branch and prove `git rev-parse HEAD^{tree}` is unchanged",
+    "should_trigger": true
+  },
+  {
+    "query": "make PR #39 easier to review with a clear reading order and tidy commits",
+    "should_trigger": true
+  },
+  {
+    "query": "tidy this PR so reviewers know where to start and don't have to read WIP commits",
+    "should_trigger": true
+  },
+  {
+    "query": "review this diff for bugs, security issues, and hollow tests",
+    "should_trigger": false
+  },
+  {
+    "query": "watch gh pr checks until CI is green",
+    "should_trigger": false
+  },
+  {
+    "query": "resolve the git merge conflicts in src/server.ts",
+    "should_trigger": false
+  },
+  {
+    "query": "summarize my authored commits from the last 7 days",
+    "should_trigger": false
+  },
+  {
+    "query": "run the repository's compiler and type-check commands",
+    "should_trigger": false
+  },
+  {
+    "query": "drive our interactive CLI inside a tmux session",
+    "should_trigger": false
+  },
+  {
+    "query": "write an architecture decision record for database sharding",
+    "should_trigger": false
+  },
+  {
+    "query": "build a canonical reference implementation for our SDK",
+    "should_trigger": false
+  }
+]

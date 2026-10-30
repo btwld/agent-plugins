@@ -78,5 +78,17 @@
   {
     "query": "Add a retry with exponential backoff to this HTTP client call.",
     "should_trigger": false
+  },
+  {
+    "query": "Revisit our shipped system from its purpose, without treating old ADR design choices as requirements; propose a fresh design and document impact.",
+    "should_trigger": true
+  },
+  {
+    "query": "We have chosen cursor pagination. Settle its error contract and consumer examples without reopening the design direction.",
+    "should_trigger": false
+  },
+  {
+    "query": "Let's take a step back and redesign this from first principles instead of bolting on another flag—what are our options and what should we actually build?",
+    "should_trigger": true
   }
 ]

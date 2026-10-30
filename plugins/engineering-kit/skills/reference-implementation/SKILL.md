@@ -2,81 +2,77 @@
 name: reference-implementation
 description: >-
   Use when creating, reviewing, refactoring, or auditing a reference-quality implementation —
-  canonical code where correctness, traceability, and appropriate abstraction matter more than raw
-  performance. Trigger on "reference implementation", "canonical version", "golden-path example",
-  "the blessed implementation", or auditing whether code deserves to be the reference. Not for
-  ordinary bug fixes, cleanup, or optimization unless the result is meant to be authoritative or
-  copied.
+  canonical code that others should copy, where correctness, traceability, and earned
+  abstraction matter. Trigger on "reference implementation", "canonical version",
+  "golden-path example", "the blessed implementation", or auditing whether code deserves
+  to be the reference. Not for ordinary bug fixes, cleanup, or optimization unless the
+  result is meant to be authoritative or copied.
 ---
 
 # Reference Implementation
 
-Produce or audit **reference-quality code**: code that preserves the problem's semantics, is easy to verify, uses only abstractions that earn their place, and is no more complex than the task requires. What separates this from ordinary review or refactoring is one discipline — the code must not invent semantics. Every meaningful behavior should trace to one authoritative rule and be tested at the behavior level.
+Produce or audit canonical code: faithful to the agreed problem, easy to verify, and only
+as abstract as the work requires. This is not ordinary review or cleanup. Use it when the
+code is the authoritative example others should copy.
 
-## The core discipline
+Whether you build, refactor, or only audit follows the user's authorization, not a mode.
+Audit is read-only unless edits were requested. Do not infer permission to stage, commit,
+push, merge, or publish. Preserve unrelated work. Recheck after the last authorized edit.
 
-Whatever the size of the work, five things make code reference quality:
+## Workflow
 
-1. **Explicit semantics.** State inputs, outputs, definitions, boundary conventions, tie-breaking, edge behavior, non-goals, and any required complexity. If the code handles a case the semantics don't describe, either the code is wrong or the semantics are incomplete.
-2. **One authoritative owner per meaningful rule.** Each behavior that could be misunderstood,
-   duplicated, or changed has one authoritative definition. Repeated enforcement can be correct at
-   independent trust, compatibility, or persistence boundaries; keep those sites traceable to the
-   same rule and test that they agree. Repeated syntax is fine; independently redefined *meaning*
-   drifts. Naming rules (R-001, ...) helps mainly across multiple files or owners, where they become
-   searchable cross-references — it is optional in single-file work.
-3. **Abstractions that pay rent.** Trace each named layer from its callers to the behavior it
-   ultimately performs, and state the distinct responsibility it owns. Keep it when it names a
-   problem concept, protects an invariant, owns a real phase or boundary, removes duplicated
-   meaning, or makes verification easier. A forwarding call or same-shape representation change
-   does not become meaningful merely because it has a type or function name. Abstract meaning,
-   not shape.
-4. **Real boundaries only.** Separate work when assumptions, guarantees, failure behavior, ownership,
-   or side effects materially change. A conceptual step in an explanation does not require its own
-   function, type, or phase in code.
-5. **Behavior-level tests.** Tests should fail when behavior is wrong, not when internals are reorganized. Prefer golden examples, edge and boundary/tie cases, and rule- and invariant-level tests; add brute-force oracle, property, or metamorphic tests where the input space makes them feasible.
+### 1. Establish intended behavior and authority
 
-## Size the artifact to the work
+The source of truth is the authoritative spec, requirements, or accepted decisions — not
+whatever the code currently does. Name only the material contract: inputs and outputs,
+input preconditions and non-goals, boundary and error cases, order or ties, invariants,
+and compatibility or operational/complexity limits that actually apply. Do not invent
+missing policy. Respect stated exclusions; an out-of-contract case is not a missing
+rule. Ask only when the answer would change the decision; label other assumptions
+provisional rather than canonizing a guess.
 
-The point is to make semantics explicit enough to prevent drift — not to produce a document. Scale accordingly:
+Each meaningful rule has one authoritative definition. That does not mean one execution
+site. Repeated enforcement can be correct at trust, persistence, or compatibility
+boundaries; keep those sites traceable to the same rule and check that they agree.
+Preserve checks needed at each boundary rather than centralizing execution merely to
+remove repetition. Rule IDs or matrices are optional and useful only when they reduce
+ambiguity.
 
-- **Tiny:** hold it in your head or a short reply. Name the semantic rule, implement it once, test the edge case, resist abstractions that don't protect meaning.
-- **Most work:** capture the at-risk semantics, the important rules and their one owner each, and the test plan in plain notes. Skip data-model and algorithm bookkeeping unless a type carries a non-obvious invariant or a real algorithm is in play.
-- **Large or collaborative:** use `templates/implementation_canvas.md` as optional shared notes,
-  keeping only the sections that clarify semantics, ownership, boundaries, or verification.
+### 2. Build or inspect the simplest faithful implementation
 
-The canvas is an optional tool for the last case, not a required deliverable. Reach for it when the rule set, data model, or handoffs are complex enough that a shared artifact is what keeps the semantics from drifting.
+Trace representative callers to their effects. A layer earns its place through a distinct
+responsibility, guarantee, safety property, ownership, lifecycle, or clearer verification.
+Shape-only wrappers and same-shape conversions are often wasteful; a single caller is not
+proof a layer is useless. Preserve useful boundaries even when they have one caller.
+Simpler means less needless complexity, not the fewest lines.
 
-## Auditing for reference quality
+Scale the writing: hold tiny work in a short reply; capture at-risk rules and tests in
+plain notes for most work; reach for `templates/implementation_canvas.md` only when shared
+notes materially help a large or collaborative case. The canvas is optional. Do not force
+a redesign or a canvas onto already-clear canonical code.
 
-When judging whether existing code (or a refactor) deserves to be canonical, work from semantics outward:
+### 3. Verify and challenge behavior and evidence
 
-1. **Reconstruct the intended semantics.** Inputs, outputs, boundary conventions, tie-breaking, edge behavior, non-goals. If you cannot find them, that itself is a drift risk — flag it.
-2. **Check rule ownership.** Each important rule should have one authoritative owner and
-   behavior-level tests. Distinguish independently redefined meaning from deliberate enforcement at
-   multiple boundaries. Flag undocumented behavior, divergent rule copies, and broad integration
-   tests standing in for missing rule-level coverage.
-3. **Check real boundaries.** Where the implementation has a genuine parse, validation, core,
-   persistence, or formatting boundary, verify that its assumptions and guarantees do not leak.
-   Do not demand separate phases when a direct flow is clearer.
-4. **Trace the implementation path.** Follow representative entry points to their effects or
-   outputs. For every function, type, and representation change on that path, identify its owned
-   responsibility. Flag navigation-only forwarding and parallel representations that do not
-   change semantics, invariants, ownership, lifecycle, or authority. A single caller is a reason
-   to inspect a layer, not by itself a reason to delete it.
-5. **Check tests.** They should exercise behavior, not implementation structure.
-6. **For a diff, classify each change** as mechanical (formatting/rename), structural (moved logic, same semantics), or semantic (changed output, edge behavior, validation, ordering, tie-breaking, or assumptions). No semantic change may hide inside a refactor.
+Tests come from the contract, not from copies of production logic or weakened
+expectations. Cover examples, relevant boundaries, failures, and order or ties. Add a
+small independent oracle, property, or metamorphic check only when it actually helps.
 
-Lead with a **Pass**, **Pass with issues**, or **Fail** verdict backed by `file:line` evidence.
-Organize the rest around the issues that actually exist—correctness, drift, abstraction, missing
-behavior, or tests—and omit empty categories rather than filling a fixed report template.
+In a diff, distinguish mechanical or structural intent from evidenced preservation and
+from explicit semantic changes. Do not treat formatting, moves, or renames as
+behavior-preserving by definition; hidden semantic drift is not a refactor. A semantic
+change updates the agreed contract, the implementation, and the tests together, with
+authorization. Performance requirements in the contract remain in force; preferring
+correctness does not waive them.
 
-## When semantics change
+Challenge suspected findings against context and counterevidence. There is no finding
+quota. Never claim tests that were not run. Name the exact snapshot that was tested, and
+separate baseline failures from new regressions.
 
-A semantic change — different output, edge behavior, validation, tie-breaking, ordering, boundary convention, or algorithmic assumption — must update the semantics, the code, and the tests together. Mechanical and structural changes preserve behavior by definition; only semantic changes touch the rules, so keep them visible rather than buried in a refactor.
+### 4. Report proportionately
 
-## Supporting files
-
-Load only what the current task needs:
-
-- `templates/implementation_canvas.md` — optional working notes for large or collaborative
-  implementations; remove irrelevant sections rather than filling them mechanically.
+Lead with a short outcome and evidence-backed `file:line` findings that exist. For an
+audit, distinguish a demonstrated defect from inability to establish reference quality
+because evidence is missing. Do not give an unconditional pass from source inspection
+alone. A Pass/Fail label is optional; clearer plain wording is enough. For
+implementation, say what behavior changed, which checks actually ran, and what remains
+limited. Skip empty categories and rigid templates.

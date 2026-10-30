@@ -1,7 +1,7 @@
 {
   "name": "engineering-kit",
-  "version": "0.1.1",
-  "description": "Engineering architecture, implementation planning, focused reviews, business rules, and web-app verification.",
+  "version": "0.2.0",
+  "description": "Engineering architecture, implementation planning, unified code and structural review, PR and CI workflows, business rules, and falsifiable verification.",
   "author": {
     "name": "Concepta"
   },

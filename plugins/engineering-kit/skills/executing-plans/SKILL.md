@@ -11,7 +11,7 @@ Carry an existing implementation plan through verified completion within the use
 
 ## Establish the starting point
 
-1. Read the supplied plan and the current request. Identify the intended outcome, acceptance criteria, task dependencies, and authorized endpoint. A step written in a plan is not independent permission to publish, deploy, delete data, or contact someone.
+1. Read the supplied plan and the current request. When resuming without a plan path, look in the shared project folder described by `writing-plans` for a record matching the goal and provenance; do not choose solely by modification time. Identify the intended outcome, acceptance criteria, task dependencies, and authorized endpoint. A step written in a plan is not independent permission to publish, deploy, delete data, or contact someone.
 2. Inspect relevant repository instructions, source, tests, and working-tree state. Check which tasks are already complete before resuming. Preserve unrelated edits and verify completion claims against current evidence.
 3. Resolve routine implementation questions through inspection. Ask only when a missing decision materially changes scope, behavior, compatibility, or authorization. Continue independent authorized work while a blocking question is pending.
 4. Use the existing workspace unless isolation is needed or requested. Respect project branch rules and the user's chosen workspace. This skill does not require a worktree, a new session, or a particular task tool.
@@ -27,7 +27,9 @@ Carry an existing implementation plan through verified completion within the use
 
 ## Preserve continuity
 
-Use native task tracking and context compaction when available. Keep completed work, remaining dependencies, verification results, and material decisions recoverable in the existing plan when useful. Do not force a copy-and-paste handoff or start another agent merely because the plan is long. Use delegation only when permitted and useful, respecting the user's cost preferences.
+Use native task tracking and context compaction when available. Keep completed work, remaining dependencies, verification results, and material decisions recoverable in the existing plan at material milestones and before a handoff. Do not force a copy-and-paste handoff or start another agent merely because the plan is long. Use delegation only when permitted and useful, respecting the user's cost preferences.
+
+Unless the user or repository instructions specify another location, keep the saved plan in `~/.agents/projects/<project>/plans/<yyyy-mm-dd>-<slug>.md` and its linked evidence in `~/.agents/projects/<project>/evidence/<yyyy-mm-dd>-<slug>/`, using the shared project identity and provenance rules in `writing-plans`. Continue that same plan when work moves to another branch, worktree, or session; record the new worktree path, branch, commit, and session in dated progress or handoff notes rather than creating a new copy or tracker. Re-read the record before editing so concurrent work is preserved.
 
 ## Finish at the authorized endpoint
 
@@ -35,4 +37,4 @@ Review the result against the plan's acceptance criteria and run proportionate i
 
 If the request already authorizes commits, a push, or a PR, complete those steps using the repository's normal workflow. Otherwise report the prepared result without extending authorization. Do not require a branch-finishing skill or reopen decisions the user has already made.
 
-Report what was completed, meaningful deviations, verification evidence, remaining blockers, and the actual delivery state. Never describe a plan as finished while required tasks remain unresolved.
+Report what was completed, meaningful deviations, verification evidence, remaining blockers, the actual delivery state, and the saved plan path. Never describe a plan as finished while required tasks remain unresolved.

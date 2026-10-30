@@ -12,7 +12,7 @@
         "The implementation avoids abstractions that only add shape.",
         "Does not require a canvas or phase breakdown when the implementation is already easy to reason about directly.",
         "Tests cover golden examples, edge cases, and ordering/tie behavior.",
-        "The final audit checks semantic traceability and change safety."
+        "Reports the contract, any changed behavior, and checks actually run; does not require a separate review pass after implementation."
       ]
     },
     {
@@ -42,7 +42,7 @@
       "expectations": [
         "Compares new behavior against named reference rules.",
         "Flags drift even if tests still pass superficially.",
-        "Distinguishes acceptable implementation changes from semantic changes.",
+        "Distinguishes evidenced preservation from semantic changes; a move, rename, or formatting change is not behavior-preserving by definition.",
         "Recommends targeted tests for drift cases."
       ]
     },
@@ -57,6 +57,35 @@
         "Flags a same-shape conversion or forwarding helper when it owns no semantics, invariant, ownership, lifecycle, or authority.",
         "Treats a single caller as inspection evidence rather than an automatic deletion rule.",
         "Separates implementation-shape drift from wire or behavioral drift."
+      ]
+    },
+    {
+      "id": 5,
+      "prompt": "This attached parser is already the intended canonical version. One port rule is defined in _parseAndValidatePort and enforced independently at the decodeConfig runtime boundary and the StoredConfig.fromJson persistence boundary. Decide whether it deserves to remain the reference implementation, needs redesign, or needs a canvas. Cite file and line evidence.",
+      "expected_output": "Keeps the shared port rule and its two independent enforcement sites; does not demand a canvas or a single-layer redesign.",
+      "files": [
+        "evals/files/reference_parser.dart",
+        "evals/files/reference_parser_test.dart"
+      ],
+      "expectations": [
+        "Does not require a canvas or ceremonial notes for this already-clear canonical parser.",
+        "Treats _parseAndValidatePort as the single authoritative port definition used by both decodeConfig and StoredConfig.fromJson.",
+        "Treats those two call sites as legitimate independent enforcement at runtime and persistence boundaries, not competing definitions.",
+        "Does not collapse the runtime and persistence call sites into a single validation layer."
+      ]
+    },
+    {
+      "id": 6,
+      "prompt": "Audit whether the attached tag parser deserves to be the reference implementation. The spec never says whether duplicate tags are an error, last-wins, or first-wins. The current code silently keeps the first occurrence. Do not invent a policy. Cite what you can and cannot verify.",
+      "expected_output": "Surfaces the missing duplicate-tag policy, marks first-wins as unverified rather than canonical, and does not invent or rubber-stamp the contract.",
+      "files": [
+        "evals/files/parser_before.dart"
+      ],
+      "expectations": [
+        "Surfaces the missing duplicate-tag policy instead of inventing error, last-wins, or first-wins as canon.",
+        "Does not mark the silent first-occurrence behavior as a verified contract.",
+        "Labels any assumed duplicate rule as provisional or asks only if that decision would change the outcome.",
+        "Distinguishes any demonstrated defect from inability to establish reference quality because material policy is missing."
       ]
     }
   ]

@@ -1,0 +1,39 @@
+{
+  "skill_name": "pr-canvas",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "$pr-canvas Generate an interactive HTML PR review walkthrough for PR #42 using the skill's template, CSS, and diff renderer.",
+      "expected_output": "Fetches PR metadata, files, and comments via `gh api`, writes structured body HTML with core vs collapsed boilerplate sections and `data-diff` placeholders, safely escapes JSON patches (`\\u003c` for `</script>`), injects `assets/styles.css` and `assets/renderer.js` into `assets/template.html`, and serves it locally.",
+      "files": [],
+      "expectations": [
+        "Fetches PR metadata, file patches, and comments using `gh api`.",
+        "Categorizes changed files into expanded core cards and collapsed mechanical/boilerplate sections.",
+        "Uses `assets/styles.css`, `assets/renderer.js`, and `assets/template.html` from the skill directory.",
+        "Escapes `<`, `>`, and `&` when injecting patch JSON so literal `</script>` in diffs cannot break HTML parsing."
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "$pr-canvas Build a visual HTML walkthrough for PR #108 and include a plain-English pseudocode summary above the 180-line retry client diff.",
+      "expected_output": "Includes a `.file-note` plain-English pseudocode summary for the complex file with the full diff inside a collapsible `.bp-section` using `data-diff`.",
+      "files": [],
+      "expectations": [
+        "Adds a plain-English or pseudocode summary in `.file-note` for the verbose algorithm.",
+        "Places the raw diff inside a collapsible `.bp-section` card with a `data-diff` placeholder.",
+        "Uses a fixed local port (`127.0.0.1:8432`) when serving `/tmp/pr-review-108.html`."
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "$pr-canvas Assemble the HTML review page for a PR whose test patch contains a literal `</script>` string.",
+      "expected_output": "Saves patches via `jq` and uses Python to replace `<`, `>`, and `&` with Unicode escapes before injecting into `assets/template.html` so the page renders safely.",
+      "files": [],
+      "expectations": [
+        "Never pastes raw patch strings directly into an inline `<script>` tag.",
+        "Escapes `<` to `\\u003c`, `>` to `\\u003e`, and `&` to `\\u0026` during assembly.",
+        "Writes the assembled standalone HTML file to `/tmp/pr-review-{number}.html`."
+      ]
+    }
+  ]
+}
