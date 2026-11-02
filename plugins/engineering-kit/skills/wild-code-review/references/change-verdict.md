@@ -1,7 +1,7 @@
 # Structured change verdict (optional)
 
 Optional deeper tool when a keep/reject decision needs the full evidence account,
-changed-test classification, and residual-uncertainty list. The built-in `code-review`
+changed-test classification, and residual-uncertainty list. The built-in `wild-code-review`
 already challenges the change, moved tests, and each finding. Load this reference when that
 structure would help—not because the user said "verdict" or "adversarial," and not instead of
 the ordinary review. Ordinary reviews must not skip skeptical checks just because this file

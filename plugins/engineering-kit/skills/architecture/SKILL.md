@@ -8,7 +8,7 @@ description: >-
   Produce a recommendation sized to the
   decision and make its trade-offs and reconsideration conditions explicit. Prefer
   clean-sheet-review when the user wants an existing solution's entire framing or scope reopened;
-  do not use for routine code review (use code-review) or an already-approved implementation task.
+  do not use for routine code review (use wild-code-review) or an already-approved implementation task.
 ---
 
 <!-- Derived from anthropics/knowledge-work-plugins and modified by Leo Farias for engineering-kit. See ../../SOURCES.md. -->

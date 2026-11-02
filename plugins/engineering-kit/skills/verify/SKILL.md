@@ -4,7 +4,7 @@ description: >
   Use when proving or disproving a specific technical claim, bug fix, UI/API behavior change, or
   performance/memory improvement with fresh falsifiable baseline-versus-treatment runtime evidence
   and returning a `VERIFIED`, `NOT VERIFIED`, or `INCONCLUSIVE` verdict. Do not use for vague
-  stylistic claims or static code review without runtime measurement (use `code-review`).
+  stylistic claims or static code review without runtime measurement (use `wild-code-review`).
 ---
 
 # Verify
@@ -18,7 +18,7 @@ Prove or disprove a concrete technical claim at runtime by capturing a reproduci
 - A UI, CLI, API, performance, or memory claim needs real runtime measurement.
 - Unit tests pass, but the real end-to-end or user-visible behavior still needs confirmation.
 
-Do not use this for vague claims like "the code is cleaner". Ask for a measurable claim first, or use `code-review` for static review.
+Do not use this for vague claims like "the code is cleaner". Ask for a measurable claim first, or use `wild-code-review` for static review.
 
 ## Workflow
 

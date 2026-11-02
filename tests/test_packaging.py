@@ -8,11 +8,11 @@ SKILLS = {
     'design-kit': {'design-system', 'image-to-code', 'accessibility-review', 'design-verification', 'frontend-design', 'ux-copy', 'visual-exploration', 'design-critique', 'user-research', 'url-to-code'},
     'product-kit': {'product-brainstorming', 'research-synthesis',
                     'competitive-brief', 'ux-friction-research', 'write-prd', 'write-wbs'},
-    'engineering-kit': {'architecture', 'ci-loop', 'clean-sheet-review', 'code-review',
+    'engineering-kit': {'architecture', 'ci-loop', 'clean-sheet-review',
                         'code-simplifier', 'executing-plans', 'pr-authoring', 'pr-canvas',
                         'pr-comments', 'pr-prep', 'reference-implementation', 'sbvr',
-                        'verify', 'writing-for-agents', 'writing-for-humans',
-                        'writing-plans'},
+                        'verify', 'wild-code-review', 'writing-for-agents',
+                        'writing-for-humans', 'writing-plans'},
 }
 
 

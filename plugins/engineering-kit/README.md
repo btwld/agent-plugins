@@ -10,7 +10,7 @@ Engineering workflows for Codex and Claude Code, installed as
 | [architecture](skills/architecture/SKILL.md) | A grounded technical choice, API contract design, or architecture decision record |
 | [writing-plans](skills/writing-plans/SKILL.md) | An executable implementation plan from settled requirements |
 | [executing-plans](skills/executing-plans/SKILL.md) | Carry out an existing authorized implementation plan |
-| [code-review](skills/code-review/SKILL.md) | Unified review and codebase audit for defects, regressions, AI slop, structural quality, and change verdicts |
+| [wild-code-review](skills/wild-code-review/SKILL.md) | Unified review and codebase audit for defects, regressions, AI slop, structural quality, and change verdicts |
 | [clean-sheet-review](skills/clean-sheet-review/SKILL.md) | Reconsider an existing solution's scope and design from first principles |
 | [code-simplifier](skills/code-simplifier/SKILL.md) | Explicitly requested behavior-preserving refinement and slop removal |
 | [pr-authoring](skills/pr-authoring/SKILL.md) | A grounded PR title/body and authorized PR creation or update |

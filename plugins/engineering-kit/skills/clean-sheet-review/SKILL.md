@@ -6,7 +6,7 @@ description: >-
   this today", "what should survive", or "rethink this without being bound by previous design
   decisions". Derive a fresh proposal from
   real requirements, compare it with the existing solution, and explain code, migration, and
-  document impact. Return keep, refine, simplify, redesign, split, or stop. Prefer code-review
+  document impact. Return keep, refine, simplify, redesign, split, or stop. Prefer wild-code-review
   for defects within a fixed design, architecture for focused decisions or developing a chosen
   API contract, and ordinary execution for an already-approved refactor. Not for first-time
   product discovery or an unrequested rewrite.
@@ -25,7 +25,7 @@ scope, API, architecture, data model, or framing. Keep any fixed dimensions fixe
 uncertainty could change the recommendation or compatibility impact; otherwise state assumptions.
 A request to refactor while preserving behavior does not by itself authorize reopening the contract.
 
-- Use `code-review` for defects, regressions, or missing tests within a fixed design.
+- Use `wild-code-review` for defects, regressions, or missing tests within a fixed design.
 - Use `architecture` for a focused technical decision, initial design decision, or details of a
   chosen API contract. A clean-sheet review can itself propose a design of any relevant size;
   multiple public surfaces do not require another skill.

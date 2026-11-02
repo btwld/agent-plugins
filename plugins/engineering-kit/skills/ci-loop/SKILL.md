@@ -4,7 +4,7 @@ description: >
   Use when watching pull request CI checks, diagnosing failing PR jobs, and iterating on minimal
   targeted fixes until all required PR checks are green using `gh pr checks` as the source of
   truth. Do not use for authoring a new pull request description (`pr-authoring`) or performing a
-  static code review without CI checks (`code-review`).
+  static code review without CI checks (`wild-code-review`).
 ---
 
 # CI Loop

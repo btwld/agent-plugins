@@ -1,6 +1,6 @@
 # Structured slop audit (optional)
 
-Optional deeper tool for a large or high-risk quality audit. The parent `code-review` skill
+Optional deeper tool for a large or high-risk quality audit. The parent `wild-code-review` skill
 already considers unnecessary code, hollow tests, and counterevidence. Load this reference
 when a cited-pattern audit, sweep, or delegation contract would help—not because the user
 said "slop," and not instead of the ordinary review. Ordinary reviews must not skip
@@ -12,7 +12,7 @@ output is a findings report; implement fixes only when the user has requested th
 for every finding is the code, never its origin: "an LLM wrote this" is not a finding, and
 neither is voice alone.
 
-Resolve `<skill>` to the loaded `code-review` directory (this skill's root, including a
+Resolve `<skill>` to the loaded `wild-code-review` directory (this skill's root, including a
 packaged copy). Resolve [rubric.md](rubric.md), [orchestration.md](orchestration.md), and
 [prompts.md](prompts.md) from `references/` beside this file.
 
@@ -56,7 +56,7 @@ meet a quota. Over-reporting on restating comments and chat voice is a known fai
 
 ## Run the mechanical sweep first
 
-With `<skill>` set to the loaded `code-review` directory, use the matching evidence directory
+With `<skill>` set to the loaded `wild-code-review` directory, use the matching evidence directory
 from [the skill's Report section](../SKILL.md#report) as `<workspace>` for a review the user wants
 kept; otherwise use a temporary workspace, honoring any user or repository location override:
 

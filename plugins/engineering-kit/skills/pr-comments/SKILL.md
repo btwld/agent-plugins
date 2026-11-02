@@ -3,7 +3,7 @@ name: pr-comments
 description: >
   Use when fetching, verifying against current `HEAD`, and skeptically triaging inline review
   threads and discussion comments from an active pull request into a prioritized action list. Do
-  not use when performing a new code review from scratch (`code-review`) or drafting a pull request
+  not use when performing a new code review from scratch (`wild-code-review`) or drafting a pull request
   description (`pr-authoring`).
 ---
 

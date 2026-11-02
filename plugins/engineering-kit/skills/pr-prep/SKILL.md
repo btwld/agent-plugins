@@ -4,7 +4,7 @@ description: >
   Use when preparing a pull request or branch before review by removing stray local artifacts,
   reorganizing noisy WIP commit history into logical dependency-ordered commits (while proving Git
   tree identity), and adding reviewer entry-point guidance without changing code behavior. Do not
-  use for defect/slop review (`code-review`) or feature implementation.
+  use for defect/slop review (`wild-code-review`) or feature implementation.
 ---
 
 # PR Prep

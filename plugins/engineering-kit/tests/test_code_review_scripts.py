@@ -13,7 +13,7 @@ import tempfile
 import unittest
 from pathlib import Path
 
-SCRIPTS = Path(__file__).resolve().parents[1] / "skills" / "code-review" / "scripts"
+SCRIPTS = Path(__file__).resolve().parents[1] / "skills" / "wild-code-review" / "scripts"
 
 
 def load(name: str):

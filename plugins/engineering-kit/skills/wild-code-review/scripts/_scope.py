@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Shared scope helpers for the code-review slop-mode scripts.
+"""Shared scope helpers for the wild-code-review slop-mode scripts.
 
 Gathers the in-scope files for a review, classifies each one by language
 family and role (source, test, doc), and exposes the comment syntax the sweep

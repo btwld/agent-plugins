@@ -1,5 +1,5 @@
 ---
-name: code-review
+name: wild-code-review
 description: >
   Use when reviewing or auditing a pull request, commit, diff, staged snapshot,
   working tree, pasted patch, files, or repository for defects, regressions,
@@ -10,7 +10,7 @@ description: >
   canonical implementation.
 ---
 
-# Code review
+# Wild Code Review
 
 One review. Every pass considers correctness, suspicious or unnecessary code,
 and hollow or tautological tests, then skeptically challenges both the change

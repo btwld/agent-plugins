@@ -5,7 +5,7 @@ description: >
   Use when the user explicitly invokes `$pr-canvas` or asks to generate an interactive HTML
   pull request review walkthrough page in the browser with core vs mechanical file grouping,
   plain-English pseudocode annotations, and moved-code diff detection. Do not use for standard
-  text-based code review (`code-review`) or pull request authoring (`pr-authoring`).
+  text-based code review (`wild-code-review`) or pull request authoring (`pr-authoring`).
 ---
 
 # PR Canvas
