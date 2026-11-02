@@ -1,17 +1,15 @@
 ---
 name: pr-comments
 description: >
-  Use when fetching, grouping, and skeptically triaging review comments, inline threads, and
-  discussion feedback from an active pull request into a prioritized action list. Do not use when
-  performing a new code review from scratch (`code-review`) or drafting a pull request description
-  (`pr-authoring`).
+  Use when fetching, verifying against current `HEAD`, and skeptically triaging inline review
+  threads and discussion comments from an active pull request into a prioritized action list. Do
+  not use when performing a new code review from scratch (`code-review`) or drafting a pull request
+  description (`pr-authoring`).
 ---
 
-# Get PR comments
+# PR Comments
 
-## Trigger
-
-Need a concise, verified, actionable summary of reviewer and bot feedback on the active pull request.
+Fetch all inline code review threads and top-level review feedback on an active pull request, verify each human or bot claim against the current `HEAD` code and tests, and group them into a prioritized action list.
 
 ## Workflow
 

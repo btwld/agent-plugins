@@ -12,6 +12,7 @@ Skills, helpers, and fixtures derive from [Leo Farias's skills](https://github.c
 | `writing-plans`, `executing-plans` | [Superpowers](https://github.com/obra/superpowers), respective `skills/` directories, `b36e0829c6d0140e93cfef2ca599b1b07d4a7797` | [MIT](licenses/superpowers-MIT.txt) |
 | `code-simplifier` | [Anthropic Code Simplifier](https://github.com/anthropics/claude-plugins-official), `plugins/code-simplifier/agents/code-simplifier.md`, `ceb9b72b4c4c20ad39efce780edd0aabe80ebce3` | [Apache-2.0](licenses/anthropic-code-simplifier-Apache-2.0.txt) |
 | `ci-loop`, `pr-canvas`, `pr-comments`, `pr-prep`, `verify` | [Cursor Plugins](https://github.com/cursor/plugins), `cursor-team-kit/skills/`, `ddf824aff1e55ba14bd666b30bce3fc69962abe6` | [MIT](licenses/cursor-team-kit-MIT.txt) |
+| `writing-for-agents` | [Matt Pocock Skills](https://github.com/mattpocock/skills), `writing-for-agents`, `4ae2317ddb22b046e26455e4f9c9b3aaaf62212d` | [MIT](licenses/mattpocock-skills-MIT.txt) |
 | Remaining skills and local adaptations | Leo Farias | [BSD-3-Clause](LICENSE) |
 
 Concepta's publisher metadata does not replace the original copyright notices.

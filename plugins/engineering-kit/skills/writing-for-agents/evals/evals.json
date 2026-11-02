@@ -1,0 +1,28 @@
+{
+  "skill_name": "writing-for-agents",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Our `AGENTS.md` has grown to 450 lines. It copies the full `package.json` scripts table, lists the directory tree, has three different places explaining how database migrations work, and includes a 90-line deployment checklist that only matters during release cuts. Refactor it using `writing-for-agents` principles.",
+      "expected_output": "A refactored `AGENTS.md` plan and text that removes cached environment lookups (`package.json` scripts and directory tree), consolidates migration guidance into one co-located section (single source of truth), moves the branch-specific 90-line release checklist behind a sharp context pointer, and removes no-op filler.",
+      "files": [],
+      "expectations": [
+        "Removes the copied `package.json` scripts and directory tree because the environment already serves as the source of truth",
+        "Co-locates the scattered database migration rules in one authoritative place instead of repeating them",
+        "Pushes the release-only deployment checklist out of `AGENTS.md` behind a context pointer with front-loaded trigger branches",
+        "Replaces negative prohibitions where possible with positive target instructions and cuts no-op sentences"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "We are authoring a new `SKILL.md` for database schema migrations. Should it be model-invoked or user-invoked, how should we write its `description` pointer, and how do we prevent the agent from rushing past the safety-check step to generate the SQL file?",
+      "expected_output": "Guidance grounded in `writing-for-agents` and `references/skill-mechanics.md` covering the model-invoked vs. user-invoked trade-off (context load vs. cognitive load), a front-loaded description with one trigger per distinct branch, and a checkable, exhaustive completion criterion on the safety-check step.",
+      "files": [],
+      "expectations": [
+        "Explains the trade-off between model-invoked (permanent context load via description) and user-invoked (`disable-model-invocation: true`, cognitive load)",
+        "Writes a context pointer description that front-loads trigger words and avoids synonym repetition for the same branch",
+        "Defines a sharp, checkable, exhaustive completion criterion on the safety-check step before considering splitting the sequence across a context boundary"
+      ]
+    }
+  ]
+}

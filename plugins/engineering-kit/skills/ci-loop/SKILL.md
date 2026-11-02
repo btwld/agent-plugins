@@ -1,19 +1,17 @@
 ---
 name: ci-loop
 description: >
-  Use when watching pull request CI checks, diagnosing failing PR checks (`fix-ci`), and iterating
-  on focused fixes until all required PR checks are green using `gh pr checks` as the source of
-  truth. Do not use for authoring a new pull request description or performing a static code review
-  without CI checks.
+  Use when watching pull request CI checks, diagnosing failing PR jobs, and iterating on minimal
+  targeted fixes until all required PR checks are green using `gh pr checks` as the source of
+  truth. Do not use for authoring a new pull request description (`pr-authoring`) or performing a
+  static code review without CI checks (`code-review`).
 ---
 
-# Loop on CI
+# CI Loop
 
-## Trigger
+Watch the active pull request's CI checks, pull logs for failing jobs, apply the smallest safe fix for each root failure, and repeat until all required PR checks pass.
 
-Need to watch a branch or pull request, diagnose failing CI checks, and iterate on fixes until all required checks are green.
-
-Use `gh pr checks` as the source of truth. It includes all PR-attached checks, while `gh run list` only covers GitHub Actions.
+Use `gh pr checks` as the source of truth because it covers every check attached to the PR, whereas `gh run list` only covers GitHub Actions workflows.
 
 ## Workflow
 

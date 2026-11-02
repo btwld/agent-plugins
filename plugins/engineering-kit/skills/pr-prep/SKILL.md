@@ -1,15 +1,15 @@
 ---
 name: pr-prep
 description: >
-  Use when preparing a pull request or branch for easier review by cleaning or reorganizing noisy
-  commit history into logical dependency-ordered commits (while proving git tree identity) and
-  adding reviewer entry-point guidance without changing code behavior. Do not use for general code
-  review (`code-review`) or feature implementation.
+  Use when preparing a pull request or branch before review by removing stray local artifacts,
+  reorganizing noisy WIP commit history into logical dependency-ordered commits (while proving Git
+  tree identity), and adding reviewer entry-point guidance without changing code behavior. Do not
+  use for defect/slop review (`code-review`) or feature implementation.
 ---
 
-# Make PR Easy to Review
+# PR Prep
 
-Prepare a PR so a reviewer can quickly understand the intent, important files, and risk. The default goal is reviewability without behavior changes.
+Prepare a branch or pull request so a reviewer can understand its intent, key files, and commit progression quickly without changing runtime behavior.
 
 ## Workflow
 

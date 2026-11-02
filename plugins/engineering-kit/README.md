@@ -1,7 +1,7 @@
 # Engineering Kit
 
 Engineering workflows for Codex and Claude Code, installed as
-`engineering-kit@conceptadev`. The kit contains 14 focused skills and their helpers.
+`engineering-kit@conceptadev`. The kit contains 16 focused skills and their helpers.
 
 ## Skills
 
@@ -10,17 +10,19 @@ Engineering workflows for Codex and Claude Code, installed as
 | [architecture](skills/architecture/SKILL.md) | A grounded technical choice, API contract design, or architecture decision record |
 | [writing-plans](skills/writing-plans/SKILL.md) | An executable implementation plan from settled requirements |
 | [executing-plans](skills/executing-plans/SKILL.md) | Carry out an existing authorized implementation plan |
-| [code-review](skills/code-review/SKILL.md) | Unified review for defects, regressions, AI slop, structural quality, and change verdicts |
+| [code-review](skills/code-review/SKILL.md) | Unified review and codebase audit for defects, regressions, AI slop, structural quality, and change verdicts |
 | [clean-sheet-review](skills/clean-sheet-review/SKILL.md) | Reconsider an existing solution's scope and design from first principles |
 | [code-simplifier](skills/code-simplifier/SKILL.md) | Explicitly requested behavior-preserving refinement and slop removal |
 | [pr-authoring](skills/pr-authoring/SKILL.md) | A grounded PR title/body and authorized PR creation or update |
-| [pr-prep](skills/pr-prep/SKILL.md) | Logical dependency-ordered commit reorganization with tree-identity proof |
+| [pr-prep](skills/pr-prep/SKILL.md) | Clean stray artifacts and reorganize commit history in dependency order with tree-identity proof |
 | [pr-canvas](skills/pr-canvas/SKILL.md) | Interactive HTML pull request walkthrough in the browser |
 | [pr-comments](skills/pr-comments/SKILL.md) | Verified triage and action ordering for active PR review comments |
 | [ci-loop](skills/ci-loop/SKILL.md) | Watch PR checks, diagnose failing CI runs, and iterate until green |
-| [verify](skills/verify/SKILL.md) | Falsifiable baseline-versus-treatment verification (`VERIFIED`, `NOT VERIFIED`, `INCONCLUSIVE`) |
+| [verify](skills/verify/SKILL.md) | Prove or disprove a falsifiable claim with baseline-versus-treatment runtime evidence (`VERIFIED`, `NOT VERIFIED`, `INCONCLUSIVE`) |
 | [reference-implementation](skills/reference-implementation/SKILL.md) | A canonical implementation suitable for reuse |
 | [sbvr](skills/sbvr/SKILL.md) | Structured business vocabulary and rules |
+| [writing-for-agents](skills/writing-for-agents/SKILL.md) | Author and refactor agent-consumed docs (`SKILL.md`, `AGENTS.md`, `CLAUDE.md`, and reference docs) |
+| [writing-for-humans](skills/writing-for-humans/SKILL.md) | Clear human-facing technical prose, capability/user-story specs, and single-source Linear/issue-tracker linking (ASD-STE100) |
 
 Choose a skill for the requested outcome. Routine coding and reviews need no
 wrapper workflow. `code-simplifier` and `pr-canvas` retain explicit-only invocation,

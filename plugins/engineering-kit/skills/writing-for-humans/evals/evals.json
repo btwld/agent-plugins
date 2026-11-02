@@ -1,0 +1,28 @@
+{
+  "skill_name": "writing-for-humans",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Rewrite this runbook excerpt using `writing-for-humans`: 'Note: Operators must rotate the API signing key before revoking the old key, and the service cache should be cleared after the key is rotated if the environment is production, otherwise requests might be rejected by the gateway.' Keep all technical obligations intact.",
+      "expected_output": "Clear, active-voice procedural commands with conditions placed before actions, required actions moved out of the informational note, sentences under 20 words, and all obligations and conditions preserved.",
+      "files": [],
+      "expectations": [
+        "Moves the required operator actions out of the informational Note into direct procedural steps",
+        "Places the production environment condition before the cache-clearing action it governs",
+        "Uses active voice and one command per sentence within the 20-word procedural target",
+        "Preserves the ordering obligation (rotate before revoking) without inventing or dropping requirements"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "We have a canonical capability spec at `docs/capabilities/invoice-export.md#story-2-csv-retry`. Draft the Linear parent capability issue and the Story 2 sub-issue so the team can track delivery without creating duplicate spec text that goes stale.",
+      "expected_output": "Lean Linear parent and sub-issue descriptions that hold a 1-line outcome summary, a direct link to the canonical spec/story section, and execution-only context, rather than copying the full requirements or acceptance-check tables.",
+      "files": [],
+      "expectations": [
+        "Follows the 'link, don't copy' rule by linking directly to `docs/capabilities/invoice-export.md` and `#story-2-csv-retry`",
+        "Includes a concise 1-line outcome summary for both the parent issue and the story sub-issue",
+        "Keeps full acceptance criteria and requirement tables in the canonical spec rather than pasting them into the Linear issue bodies"
+      ]
+    }
+  ]
+}

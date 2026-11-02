@@ -1,0 +1,66 @@
+[
+  {
+    "query": "Refactor our root CLAUDE.md and AGENTS.md so they don't bloat the context window on every turn.",
+    "should_trigger": true
+  },
+  {
+    "query": "Write a new SKILL.md for our release workflow with progressive disclosure into references/.",
+    "should_trigger": true
+  },
+  {
+    "query": "Tighten the description frontmatter on these three skills so the agent triggers them reliably without synonym bloat.",
+    "should_trigger": true
+  },
+  {
+    "query": "Our skill has a 300-line reference section inlined above the ordered steps and the agent keeps skipping step 2. How should we restructure the skill?",
+    "should_trigger": true
+  },
+  {
+    "query": "Audit this AGENTS.md for cached environment lookups, no-op instructions, and scattered rules.",
+    "should_trigger": true
+  },
+  {
+    "query": "Should this niche cleanup skill be model-invoked or set disable-model-invocation: true?",
+    "should_trigger": true
+  },
+  {
+    "query": "Rewrite these negative 'DO NOT' rules in CLAUDE.md into positive instructions and sharper completion criteria.",
+    "should_trigger": true
+  },
+  {
+    "query": "Help me split this giant agent instruction file into an in-file workflow and disclosed reference docs.",
+    "should_trigger": true
+  },
+  {
+    "query": "Rewrite our customer-facing API guide and README in Simplified Technical English.",
+    "should_trigger": false
+  },
+  {
+    "query": "Draft a Linear parent issue and story sub-issues that link to our canonical capability spec instead of copying the acceptance criteria.",
+    "should_trigger": false
+  },
+  {
+    "query": "Review PR #42 for correctness bugs, race conditions, and hollow tests.",
+    "should_trigger": false
+  },
+  {
+    "query": "Formalize the billing domain's business vocabulary and operative rules in SBVR.",
+    "should_trigger": false
+  },
+  {
+    "query": "Turn these settled requirements into a step-by-step implementation plan for the auth refactor.",
+    "should_trigger": false
+  },
+  {
+    "query": "Write an ADR comparing Postgres LISTEN/NOTIFY with Redis Streams for our event bus.",
+    "should_trigger": false
+  },
+  {
+    "query": "Write a user story with Given/When/Then acceptance checks for password reset.",
+    "should_trigger": false
+  },
+  {
+    "query": "Clean up the commits on this branch into logical, reviewable units before I open the PR.",
+    "should_trigger": false
+  }
+]

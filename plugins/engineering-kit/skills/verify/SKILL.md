@@ -1,24 +1,24 @@
 ---
 name: verify
 description: >
-  Use when verifying a specific technical claim, bug fix, or performance/memory change with fresh
-  falsifiable baseline-versus-treatment local evidence and returning a `VERIFIED`, `NOT VERIFIED`,
-  or `INCONCLUSIVE` verdict. Do not use for vague stylistic claims or static code review without
-  runtime measurement.
+  Use when proving or disproving a specific technical claim, bug fix, UI/API behavior change, or
+  performance/memory improvement with fresh falsifiable baseline-versus-treatment runtime evidence
+  and returning a `VERIFIED`, `NOT VERIFIED`, or `INCONCLUSIVE` verdict. Do not use for vague
+  stylistic claims or static code review without runtime measurement (use `code-review`).
 ---
 
-# Verify This
+# Verify
 
-Verification is not a recap. It proves or disproves a specific claim with repeatable evidence.
+Prove or disprove a concrete technical claim at runtime by capturing a reproducible **baseline (before)** measurement and comparing it against a **treatment (after)** measurement under identical conditions. Verification is not a summary of edits or a static code review—it tests whether the claimed fix or improvement actually holds when executed.
 
 ## When To Use
 
 - The user asks "verify this", "prove it works", "did this fix it", or "show me the evidence".
-- A bug fix needs a before/after repro.
-- A UI, CLI, API, performance, or memory claim needs measurement.
-- A test passes but the user-visible behavior still needs confirmation.
+- A bug fix needs a before/after reproduction showing the failure before the change and the pass after.
+- A UI, CLI, API, performance, or memory claim needs real runtime measurement.
+- Unit tests pass, but the real end-to-end or user-visible behavior still needs confirmation.
 
-Do not use this for vague claims like "the code is cleaner". Ask for a measurable claim first.
+Do not use this for vague claims like "the code is cleaner". Ask for a measurable claim first, or use `code-review` for static review.
 
 ## Workflow
 

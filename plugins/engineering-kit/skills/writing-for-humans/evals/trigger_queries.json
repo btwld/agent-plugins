@@ -1,0 +1,66 @@
+[
+  {
+    "query": "Rewrite this operator runbook in Simplified Technical English so the steps are short, active-voice commands.",
+    "should_trigger": true
+  },
+  {
+    "query": "Edit our README and architecture overview for human readers so sentences stay under 25 words and conditions come before actions.",
+    "should_trigger": true
+  },
+  {
+    "query": "Draft a capability spec and user stories with Given/When/Then acceptance checks, including refusal cases.",
+    "should_trigger": true
+  },
+  {
+    "query": "Create the Linear parent issue and story sub-issues for `docs/specs/webhook-retries.md` using link-don't-copy.",
+    "should_trigger": true
+  },
+  {
+    "query": "Clean up this dense requirements section without changing any obligations, requirement IDs, or negations.",
+    "should_trigger": true
+  },
+  {
+    "query": "Turn these five repetitive paragraphs describing order status transitions into a scannable table and short lead paragraph.",
+    "should_trigger": true
+  },
+  {
+    "query": "Review this technical guide for passive voice, buried required actions inside Notes, and inconsistent terminology.",
+    "should_trigger": true
+  },
+  {
+    "query": "Simplify the prose in our onboarding guide so engineers can scan the purpose, boundary, and numbered flow quickly.",
+    "should_trigger": true
+  },
+  {
+    "query": "Refactor our root AGENTS.md and CLAUDE.md to reduce context window load and sharpen context pointers.",
+    "should_trigger": false
+  },
+  {
+    "query": "Write a new SKILL.md frontmatter description and progressive disclosure layout for an agent skill.",
+    "should_trigger": false
+  },
+  {
+    "query": "Formalize these domain terms and operative business rules into strict SBVR notation.",
+    "should_trigger": false
+  },
+  {
+    "query": "Review PR #104 for race conditions, null-handling bugs, and tautological unit tests.",
+    "should_trigger": false
+  },
+  {
+    "query": "Write an executable multi-step implementation plan for migrating our queue worker to BullMQ.",
+    "should_trigger": false
+  },
+  {
+    "query": "Rebase and split the commits on this branch into logical, dependency-ordered commits for review.",
+    "should_trigger": false
+  },
+  {
+    "query": "Verify whether this caching patch actually fixes the N+1 query by running baseline vs treatment reproduction.",
+    "should_trigger": false
+  },
+  {
+    "query": "Watch the failing GitHub Actions checks on this PR and fix the lint error.",
+    "should_trigger": false
+  }
+]
