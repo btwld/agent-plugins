@@ -15,13 +15,9 @@ Prepare a PR so a reviewer can quickly understand the intent, important files, a
 
 1. Resolve the target PR from the user-provided URL or current branch.
 2. Inspect commits, diff size, changed paths, generated files, and PR description.
-3. Run the **Pre-PR Hygiene & Anti-Slop Gate** before reorganizing commits:
-   - **Evict non-production artifacts (`S16`):** Check `git diff <base>...HEAD --name-status` and `git status` for stray agent plans, walkthroughs, notes (`PLAN.md`, `IMPLEMENTATION_PLAN.md`, `walkthrough.md`, `docs/plans/`, or Markdown files with `kind: plan|note|review` frontmatter), `.context/` or `.ws/` directories, one-off debug scripts (`debug_*`, `scratch_*`, `tmp_*`), and backup files (`*.bak`, `*.orig`). Move durable agent records to `~/.agents/projects/<project>/` and remove stray files from the branch before locking the tree hash.
-   - **Reject fake or focused tests (`S10`):** Check touched test files for `.only` / unexplained `.skip`, tautological assertions (`expect(x).toBe(x)`, `toBeDefined()`-only), mock-only assertions that never verify behavior, or weakened assertions.
-   - **Strip AI and structural slop (`S1–S15`):** Remove restating comments, workaround sermons, impossible defensive checks, stale lint suppressions, and unjustified >1,000-line file sprawl.
-4. Identify reviewability issues: noisy commits, stale description, unrelated changes, mixed mechanical and logic changes, missing tests, or unclear reviewer entry points.
-5. Propose a plan before rewriting history or force-pushing.
-6. Apply safe improvements, then verify the cleaned tree matches across commit reorganization.
+3. Identify reviewability issues: noisy commits, stale description, unrelated changes, stray local artifacts (such as agent plans, walkthroughs, `.context/`, or debug files that belong in `~/.agents/projects/<project>/` or `.gitignore`), mixed mechanical and logic changes, missing tests, or unclear reviewer entry points.
+4. Propose a plan before rewriting history or force-pushing.
+5. Apply safe improvements, then verify the tree or diff still matches the intended code.
 
 ## History Cleanup
 

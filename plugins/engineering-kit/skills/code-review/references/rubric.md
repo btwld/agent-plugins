@@ -5,9 +5,7 @@ unnecessary code and hollow tests and must not skip those checks if this file st
 
 The sixteen patterns a finder may report, the decision test for each, which lens owns it, and
 what is never a finding. Load the lens block you are about to apply; paste it verbatim into a
-delegated finder or validator prompt so the agent never has to open this file. For deeper
-structural maintainability and code-judo simplification audits, also read
-[structural-quality.md](structural-quality.md).
+delegated finder or validator prompt so the agent never has to open this file.
 
 The bar for every pattern: report only when the code is worse than a careful engineer in this
 language would ship. "An LLM wrote this" is not a finding. Voice alone is not a finding.

@@ -48,14 +48,7 @@ Gather:
 - migrations, rollout constraints, compatibility concerns, or follow-up work when material
 - visual or interactive evidence when the change can be understood better by seeing it
 
-Do not infer success from changed tests alone, list every touched file, narrate implementation chronology, or claim a check passed without fresh evidence.
-
-Before creating a PR or marking a draft ready, check `git diff <base>...<head> --name-status` and the diff for **pre-publication hygiene blockers**:
-- **Non-production files in the branch (`S16`):** Stray agent plans, walkthroughs, scratch notes (`PLAN.md`, `walkthrough.md`, `docs/plans/`, Markdown files with `kind: plan|note|review` frontmatter), `.context/` or `.ws/` artifacts, debug scripts (`debug_*`, `scratch_*`), or backup files (`*.bak`, `*.orig`) that belong in `~/.agents/projects/<project>/` or `.gitignore`.
-- **Fake or focused tests (`S10`):** Leftover `.only` / unexplained `.skip`, tautological or `toBeDefined()`-only assertions, mock-only assertions, or weakened test expectations.
-- **Unremoved AI slop (`S1–S15`):** Restating comments, workaround sermons, impossible defensive fallbacks, or suppressed type/lint errors.
-
-When any hygiene blocker is present on the branch, call it out explicitly in the response and keep the PR in draft (or pause creation) until the branch is cleaned.
+Do not infer success from changed tests alone, list every touched file, narrate implementation chronology, or claim a check passed without fresh evidence. If the diff includes stray non-production artifacts (such as agent plans, walkthroughs, `.context/` files, or debug scripts) or unfinished test markers (`.only`), call them out and keep the PR as a draft until cleaned.
 
 ## Write concise, neutral copy
 

@@ -3,10 +3,11 @@ name: code-review
 description: >
   Use when reviewing or auditing a pull request, commit, diff, staged snapshot,
   working tree, pasted patch, files, or repository for defects, regressions,
-  missing tests, suspicious or unnecessary code, hollow tests, AI-generated code
-  slop, structural maintainability and code-judo simplification, or adversarial
-  keep/reject change verdicts. Do not use to implement features, author a pull
-  request, redesign a system, or declare a canonical implementation.
+  missing tests, suspicious or unnecessary code, hollow tests, stray
+  non-production or planning artifacts, AI-generated code slop, structural
+  maintainability, or adversarial keep/reject change verdicts. Do not use to
+  implement features, author a pull request, redesign a system, or declare a
+  canonical implementation.
 ---
 
 # Code review
@@ -29,19 +30,29 @@ or audit a canonical example ([reference-implementation](../reference-implementa
    staged index, working tree, or pasted snippet. Do not mix dirty-tree files
    into a commit or staged review.
 
-2. Inspect the relevant code, callers, tests, and stated contracts.
+2. Inspect the relevant code, callers, tests, and stated contracts. Work inline
+   in a single fast pass by default; use at most 2–3 focused parallel lenses
+   (correctness, tests/hygiene, structure/slop) only on large diffs when
+   delegation is permitted and useful, avoiding multi-wave ceremony.
 
-3. Consider observable behavior, errors, ordering, security, and contracts;
-   stray non-production files, agent plans, walkthroughs, or debug artifacts
-   committed into the repository tree (`S16`); changed or removed assertions;
-   hollow or tautological tests, mock-only assertions, or `.only`/`.skip` leaks
-   (`S10`); unnecessary abstractions (`S7`); ad-hoc spaghetti branching (`S8`)
-   or file sprawl past 1,000 lines (`S15`); missed code-judo reframings that
-   delete whole branches or layers; swallowed failures (`S5`); unjustified
-   guards (`S6`); and misleading or restating prose only where demonstrably
-   harmful (`S1–S4`). Do not infer AI authorship. Do not flag style,
-   one-caller helpers, documentation, or catches by appearance alone. A test
-   that moves with the implementation needs independent contract support.
+3. Check in priority order:
+   - **Bugs, regressions, and contracts (highest priority):** observable
+     behavior, error handling, ordering/concurrency, security boundaries, and
+     swallowed failures.
+   - **Test authenticity and repo hygiene:** changed or removed assertions;
+     hollow or tautological tests, mock-only assertions, or `.only`/`.skip`
+     leaks; and stray non-production files, agent plans, walkthroughs, or debug
+     artifacts committed into the repository tree instead of
+     `~/.agents/projects/<project>/`. A test that moves with the implementation
+     needs independent contract support.
+   - **AI slop and structural quality:** unjustified guards or impossible
+     defensive checks on trusted internal paths; unnecessary abstractions or
+     single-caller pass-through wrappers; ad-hoc spaghetti branching; files
+     pushed past 1,000 lines without decomposition; missed code-judo data/state
+     reframings that delete whole branches or layers; and misleading or
+     restating prose only where demonstrably harmful. Do not infer AI authorship.
+     Do not flag style, one-caller helpers, documentation, or catches by
+     appearance alone.
 
 4. Try to disprove each suspected finding against docs, types, callers, and
    other counterevidence. Distinguish defects, risk, and missing evidence.
@@ -58,9 +69,9 @@ or audit a canonical example ([reference-implementation](../reference-implementa
 
 When the user asks to keep a review, save it at `~/.agents/projects/<project>/reviews/<yyyy-mm-dd>-<slug>.md` using the shared project identity and provenance fields from `writing-plans` with `kind: review`, and link supporting files under the matching `~/.agents/projects/<project>/evidence/<yyyy-mm-dd>-<slug>/`, unless the user or repository instructions specify another location.
 
-One concise report. Material findings first, each with severity, location, observable impact, evidence, and the smallest fix. Then brief checks and
+One concise report. Material findings first (bugs and merge blockers before slop), each with severity, location, observable impact, evidence, and the smallest fix. Then brief checks and
 coverage limits. When the user asked for readiness or keep-or-reject, or a
-concrete blocker warrants it, end with that conclusion. No required debate,
+concrete blocker warrants it, end with that conclusion (safe to merge vs. blocked). No required debate,
 JSON, multi-agent passes, checklist report, or long empty sections.
 
 Review-only by default. Fixes and publication follow actual authorization.
@@ -75,8 +86,6 @@ needs. These are not modes and not prerequisites of the checks above. Small chec
 - [ai-slop.md](references/ai-slop.md) — cited-pattern quality audit
 - [change-verdict.md](references/change-verdict.md) — structured keep/reject
   evidence and changed-test classification
-- [structural-quality.md](references/structural-quality.md) — structural
-  maintainability, code-judo simplification, and 1,000-line file decomposition
 - [rubric.md](references/rubric.md), [orchestration.md](references/orchestration.md),
   [prompts.md](references/prompts.md)
 - `scripts/sweep.py`, `scripts/slice.py`, `scripts/check_findings.py`,
