@@ -33,6 +33,10 @@ Use this reference when auditing a diff, pull request, or branch for deep struct
    - When independent async work is serialized for no reason and parallel execution is clearly simpler and safe, call it out.
    - When related state updates can leave state half-applied on failure, push for an atomic update structure.
 
+7. **Enforce production tree hygiene (`S16`) and test authenticity (`S10`).**
+   - Treat stray agent plans, walkthroughs, scratch notes, debug scripts, backup files, and `.context`/`.ws` artifacts committed into the repository tree as `P1` blockers (durable agent records belong in `~/.agents/projects/<project>/`).
+   - Treat fake/hollow tests (asserting only on mocks, `toBeDefined()`, tautologies, weakened assertions, or leftover `.only`/`.skip`) as `P1`/`P2` blockers rather than valid test coverage.
+
 ## Priority Order for Structural Audits
 
 When reporting structural maintainability findings, prioritize in this order:

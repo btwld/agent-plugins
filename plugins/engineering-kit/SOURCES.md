@@ -4,7 +4,7 @@ This file records origins and licenses only. The kit is maintained directly in
 this repository.
 
 Skills, helpers, and fixtures derive from [Leo Farias's skills](https://github.com/leoafarias/skills),
-`plugins/engineering-kit`, commit `6030de126ba8d3cb069648d6bdd38f72530b771d`.
+`plugins/engineering-kit`, commit `fce84a2eb288ee43e8a7160f30f2fd3fb7931187`.
 
 | Content | Earlier source and baseline | License |
 | --- | --- | --- |

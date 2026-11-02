@@ -32,14 +32,16 @@ or audit a canonical example ([reference-implementation](../reference-implementa
 2. Inspect the relevant code, callers, tests, and stated contracts.
 
 3. Consider observable behavior, errors, ordering, security, and contracts;
-   changed or removed assertions; hollow or tautological tests; unnecessary
-   abstractions; ad-hoc spaghetti branching or file sprawl past 1,000 lines;
-   missed code-judo reframings that delete whole branches or layers; swallowed
-   failures; unjustified guards; and misleading or restating prose only where
-   demonstrably harmful. Do not infer AI authorship.
-   Do not flag style, one-caller helpers, documentation, or catches by
-   appearance alone. A test that moves with the implementation needs
-   independent contract support.
+   stray non-production files, agent plans, walkthroughs, or debug artifacts
+   committed into the repository tree (`S16`); changed or removed assertions;
+   hollow or tautological tests, mock-only assertions, or `.only`/`.skip` leaks
+   (`S10`); unnecessary abstractions (`S7`); ad-hoc spaghetti branching (`S8`)
+   or file sprawl past 1,000 lines (`S15`); missed code-judo reframings that
+   delete whole branches or layers; swallowed failures (`S5`); unjustified
+   guards (`S6`); and misleading or restating prose only where demonstrably
+   harmful (`S1–S4`). Do not infer AI authorship. Do not flag style,
+   one-caller helpers, documentation, or catches by appearance alone. A test
+   that moves with the implementation needs independent contract support.
 
 4. Try to disprove each suspected finding against docs, types, callers, and
    other counterevidence. Distinguish defects, risk, and missing evidence.

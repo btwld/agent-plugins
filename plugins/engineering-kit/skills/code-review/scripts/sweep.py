@@ -96,6 +96,13 @@ LANG_PATTERNS: dict[str, dict[str, str]] = {
 
 EMOJI = re.compile("[\U0001F300-\U0001FAFF✅❌⚠✨⭐✔]")
 BLOCK_DOC = re.compile(r"^\s*/\*(?!\*/)")
+NON_PROD_PATH_RE = re.compile(
+    r"(^|/)(PLAN|IMPLEMENTATION_PLAN|WALKTHROUGH|walkthrough|NOTES|notes|SCRATCH|scratch|REVIEW_NOTES)\.md$"
+    r"|(^|/)docs/(plans|superpowers)/"
+    r"|(^|/)(\.context|\.ws)/"
+    r"|(^|/)(debug_|scratch_|tmp_)[^/]+$"
+)
+AGENT_RECORD_FRONTMATTER_RE = re.compile(r"^kind:\s*(plan|note|review)\s*$")
 
 TEST_PATTERNS = {
     "S9-S10-marketing-test-name": r"(\b(test|it|testWidgets|describe)\(\s*['\"`][^'\"`]*|def test_\w*|func Test\w*)(should work|correctly|properly|as expected|works|_works|_correctly|_properly)\b",
@@ -105,6 +112,7 @@ TEST_PATTERNS = {
     "S10-only-not-null": r"expect\([^,]+,\s*isNotNull\s*\)|\.toBeDefined\(\)|\.toBeTruthy\(\)|assertIsNotNone\(|assert \w+ is not None\s*$",
     # Expected side computed from the input (a reduce/map/sum over the same data) instead of a literal.
     "S10-computed-expected": r"\.(toBe|toEqual|toStrictEqual)\([^;]*\.(reduce|map|filter|fold|sum)\(|expect\([^,]+,\s*[^;]*\.(reduce|map|fold)\(|assert(Equal|Eq)\([^,]+,\s*[^;]*\.(reduce|map|sum)\(|\bsum\([^)]*\)\s*\)\s*$",
+    "S10-focused-or-skipped": r"\b(it|test|describe|context)\.(only|skip)\s*\(|\b(fit|fdescribe|xit|xdescribe)\s*\(|@unittest\.skip\b|@pytest\.mark\.skip\b",
     "S12-test-suppression": r"//\s*ignore_for_file:|eslint-disable|#\s*noqa|@ts-ignore",
 }
 TEST_DECL = re.compile(r"\b(test|it|testWidgets)\(|^\s*def test_\w+|^\s*func Test\w+|#\[test\]|@Test\b|^\s*it\s+['\"]", re.M)
@@ -145,8 +153,18 @@ def hit(path: str, lineno: int, text: str, tag: str | None = None) -> str:
 def sweep_code(files: list[ScopeFile], root: Path) -> dict[str, list[str]]:
     hits: dict[str, list[str]] = defaultdict(list)
     for f in files:
+        if NON_PROD_PATH_RE.search(f.path):
+            hits["S16-non-prod-artifact"].append(hit(f.path, 1, f"non-production or agent artifact path: {f.path}"))
+        if f.role == "source" and f.lines > 1000:
+            hits["S15-file-sprawl"].append(hit(f.path, 1, f"{f.lines} lines (exceeds 1,000-line decomposition threshold)"))
         lines = read_lines(root / f.path)
         if f.role == "doc":
+            if lines and lines[0].strip() == "---":
+                for i, line in enumerate(lines[1:25], 2):
+                    if line.strip() == "---":
+                        break
+                    if AGENT_RECORD_FRONTMATTER_RE.match(line.strip()):
+                        hits["S16-non-prod-artifact"].append(hit(f.path, i, f"agent record frontmatter in repo tree: {line.strip()}"))
             for i, line in enumerate(lines, 1):
                 if EMOJI.search(line):
                     hits["S3-S14-emoji"].append(hit(f.path, i, line))

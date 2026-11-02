@@ -2869,7 +2869,7 @@ This file records origins and licenses only. The kit is maintained directly in
 this repository.
 
 Skills, helpers, and fixtures derive from [Leo Farias's skills](https://github.com/leoafarias/skills),
-`plugins/engineering-kit`, commit `6030de126ba8d3cb069648d6bdd38f72530b771d`.
+`plugins/engineering-kit`, commit `fce84a2eb288ee43e8a7160f30f2fd3fb7931187`.
 
 | Content | Earlier source and baseline | License |
 | --- | --- | --- |
@@ -4267,14 +4267,16 @@ or audit a canonical example ([reference-implementation](../reference-implementa
 2. Inspect the relevant code, callers, tests, and stated contracts.
 
 3. Consider observable behavior, errors, ordering, security, and contracts;
-   changed or removed assertions; hollow or tautological tests; unnecessary
-   abstractions; ad-hoc spaghetti branching or file sprawl past 1,000 lines;
-   missed code-judo reframings that delete whole branches or layers; swallowed
-   failures; unjustified guards; and misleading or restating prose only where
-   demonstrably harmful. Do not infer AI authorship.
-   Do not flag style, one-caller helpers, documentation, or catches by
-   appearance alone. A test that moves with the implementation needs
-   independent contract support.
+   stray non-production files, agent plans, walkthroughs, or debug artifacts
+   committed into the repository tree (`S16`); changed or removed assertions;
+   hollow or tautological tests, mock-only assertions, or `.only`/`.skip` leaks
+   (`S10`); unnecessary abstractions (`S7`); ad-hoc spaghetti branching (`S8`)
+   or file sprawl past 1,000 lines (`S15`); missed code-judo reframings that
+   delete whole branches or layers; swallowed failures (`S5`); unjustified
+   guards (`S6`); and misleading or restating prose only where demonstrably
+   harmful (`S1–S4`). Do not infer AI authorship. Do not flag style,
+   one-caller helpers, documentation, or catches by appearance alone. A test
+   that moves with the implementation needs independent contract support.
 
 4. Try to disprove each suspected finding against docs, types, callers, and
    other counterevidence. Distinguish defects, risk, and missing evidence.
@@ -5786,7 +5788,7 @@ Every input finding id gets exactly one review. Write the file, then reply with 
 Optional pattern tests for a deeper quality audit. Ordinary reviews already consider
 unnecessary code and hollow tests and must not skip those checks if this file stays unloaded.
 
-The fifteen patterns a finder may report, the decision test for each, which lens owns it, and
+The sixteen patterns a finder may report, the decision test for each, which lens owns it, and
 what is never a finding. Load the lens block you are about to apply; paste it verbatim into a
 delegated finder or validator prompt so the agent never has to open this file. For deeper
 structural maintainability and code-judo simplification audits, also read
@@ -5812,12 +5814,13 @@ reason in `why`. Lens letters: **C** comments and docs, **K** code shape, **T** 
 | S7 | K | Over-abstraction | How many implementations or call sites? A factory, strategy, or wrapper with one implementation; a class around a three-line function; a type alias used once; `Manager` / `Helper` / `Util` with no domain meaning; a one-member interface where a function would do. Count and state the number in `why`. | P2 |
 | S8 | K | Scope creep in a unit | List the concerns one function handles. Report when it fetches, transforms, validates, and notifies in one body, or exceeds roughly 80 lines of mixed concerns, or nests so the happy path is hidden. Name the concerns. Prefer a data/type reframing or early guard clause over extracting a single-caller wrapper that would violate S7; extract a separate unit only when it owns distinct state, a combinatorial test seam, or a layer boundary. | P2 |
 | S9 | K, T, W | Generic naming | Does the type already say what the name says, and do neighboring files use a domain word? `data`, `result`, `temp`, `value`, `item`, `info`, `handler`, `processX`, `handleX`, `doX`; a `get` prefix on a property-like method; test names such as "should work" that state no behavior. Framework-domain names (`FocusManager`, `EventHandler` in an event system) are not generic. | P3 |
-| S10 | T | Fake or hollow test | If the code under test were broken in the obvious way, would this test fail? Asserts on the fake or mock rather than behavior; `expect(x, x)`; "does not throw" or "is not null" as the only assertion; an expected value computed by re-running production logic; a body with no assertion; happy path only where a failure mode is obvious. Also a coverage gap: a public entry point of the unit under test with an obvious failure path (a catch that releases and rethrows, a rejection branch) and no test at all, especially when the file wires up mocks for it and never asserts on them. | P2, P1 if it masks a real failure |
+| S10 | T | Fake or hollow test | If the code under test were broken in the obvious way, would this test fail? Asserts on the fake or mock rather than behavior; `expect(x, x)`; "does not throw" or "is not null" as the only assertion; an expected value computed by re-running production logic; a body with no assertion; happy path only where a failure mode is obvious; `.only` or unexplained `.skip` left in the suite. Also a coverage gap: a public entry point of the unit under test with an obvious failure path (a catch that releases and rethrows, a rejection branch) and no test at all, especially when the file wires up mocks for it and never asserts on them. | P2, P1 if it masks a real failure or leaves `.only` |
 | S11 | K | Superseded idioms the linter does not catch | Constructs the language has moved past that no enabled lint flags: redundant `new`, explicit `= null`, `== true`, `.length == 0`, callback loops where a `for` reads better, redundant `this.` or `const`, Hungarian or `kFoo` names, `late` or lazy init where a direct initializer works. Check the linter configuration first. | P2 |
 | S12 | K, T, W | Dead ceremony | Unused private helpers; a lint suppression for a rule that is not enabled or no longer fires; TODOs with no owner or issue; a utility duplicated from elsewhere in-tree; configuration knobs with one value; commented-out code; compatibility shims or "legacy" aliases in code that has no compatibility promise. | P2 |
 | S13 | K, T | Architecture mismatch | Does the code cross a boundary the repository states? A UI layer calling native or IO directly; a reinvented framework primitive (focus, routing, hit testing, text editing) where one exists; a new test harness or fake that re-implements framework behavior instead of using the documented harnesses; a package importing another package's private modules. Derive the boundaries from the repository's own instructions; do not invent them. | P1 |
 | S14 | C, W | Markdown slop | Filler ("In this section we will…"), the heading restated in the first sentence, marketing adjectives (powerful, seamless, comprehensive, robust), emoji headers, bold on every other phrase, references to APIs that no longer exist, placeholder text. | P3 |
 | S15 | K | File sprawl past 1,000 lines | Does the change push a file from under 1,000 lines to over 1,000 lines (or materially enlarge an already >1,000-line file) when cohesive responsibilities could be decomposed into focused modules first? | P2, P1 if it tangles unrelated responsibilities |
+| S16 | C, K, W | Non-production artifact or stray agent file | Does this file belong in the shipped repository, or is it an agent plan, walkthrough, scratch note, review dump, debug script, backup file, or local workspace artifact (`PLAN.md`, `IMPLEMENTATION_PLAN.md`, `walkthrough.md`, `notes.md`, `docs/plans/*`, `docs/superpowers/*`, agent frontmatter `kind: plan\|note\|review`, `.context/*`, `.ws/*`, `*.bak`, `*.orig`, `*.tmp`, `debug_*`, `scratch_*`) that belongs in `~/.agents/projects/<project>/` or `.gitignore`? Exempt: established repository documentation (`README.md`, `CHANGELOG.md`, `CONTRIBUTING.md`, ADR directories) explicitly requested or maintained by the project. | P1 |
 
 Lens **T** also carries S1 and S3 for comments inside tests, S5 for catch-alls that swallow a test
 failure, S9 for empty test names, S12 for dead ceremony in tests, and S13 for a new harness.
@@ -5924,6 +5927,10 @@ Use this reference when auditing a diff, pull request, or branch for deep struct
 6. **Flag avoidable serial orchestration and non-atomic state updates.**
    - When independent async work is serialized for no reason and parallel execution is clearly simpler and safe, call it out.
    - When related state updates can leave state half-applied on failure, push for an atomic update structure.
+
+7. **Enforce production tree hygiene (`S16`) and test authenticity (`S10`).**
+   - Treat stray agent plans, walkthroughs, scratch notes, debug scripts, backup files, and `.context`/`.ws` artifacts committed into the repository tree as `P1` blockers (durable agent records belong in `~/.agents/projects/<project>/`).
+   - Treat fake/hollow tests (asserting only on mocks, `toBeDefined()`, tautologies, weakened assertions, or leftover `.only`/`.skip`) as `P1`/`P2` blockers rather than valid test coverage.
 
 ## Priority Order for Structural Audits
 
@@ -6119,10 +6126,10 @@ import sys
 from pathlib import Path
 
 LENS = {
-    "C": {"S1", "S2", "S3", "S4", "S14"},
-    "K": {"S5", "S6", "S7", "S8", "S9", "S11", "S12", "S13"},
+    "C": {"S1", "S2", "S3", "S4", "S14", "S16"},
+    "K": {"S5", "S6", "S7", "S8", "S9", "S11", "S12", "S13", "S15", "S16"},
     "T": {"S10", "S12", "S9", "S1", "S3", "S5", "S13"},
-    "W": {"S1", "S2", "S3", "S4", "S5", "S9", "S12", "S14"},
+    "W": {"S1", "S2", "S3", "S4", "S5", "S9", "S12", "S14", "S15", "S16"},
 }
 SEVERITIES = {"P1", "P2", "P3"}
 CONFIDENCES = {"high", "medium", "low"}
@@ -6524,6 +6531,13 @@ LANG_PATTERNS: dict[str, dict[str, str]] = {
 
 EMOJI = re.compile("[\U0001F300-\U0001FAFF✅❌⚠✨⭐✔]")
 BLOCK_DOC = re.compile(r"^\s*/\*(?!\*/)")
+NON_PROD_PATH_RE = re.compile(
+    r"(^|/)(PLAN|IMPLEMENTATION_PLAN|WALKTHROUGH|walkthrough|NOTES|notes|SCRATCH|scratch|REVIEW_NOTES)\.md$"
+    r"|(^|/)docs/(plans|superpowers)/"
+    r"|(^|/)(\.context|\.ws)/"
+    r"|(^|/)(debug_|scratch_|tmp_)[^/]+$"
+)
+AGENT_RECORD_FRONTMATTER_RE = re.compile(r"^kind:\s*(plan|note|review)\s*$")
 
 TEST_PATTERNS = {
     "S9-S10-marketing-test-name": r"(\b(test|it|testWidgets|describe)\(\s*['\"`][^'\"`]*|def test_\w*|func Test\w*)(should work|correctly|properly|as expected|works|_works|_correctly|_properly)\b",
@@ -6533,6 +6547,7 @@ TEST_PATTERNS = {
     "S10-only-not-null": r"expect\([^,]+,\s*isNotNull\s*\)|\.toBeDefined\(\)|\.toBeTruthy\(\)|assertIsNotNone\(|assert \w+ is not None\s*$",
     # Expected side computed from the input (a reduce/map/sum over the same data) instead of a literal.
     "S10-computed-expected": r"\.(toBe|toEqual|toStrictEqual)\([^;]*\.(reduce|map|filter|fold|sum)\(|expect\([^,]+,\s*[^;]*\.(reduce|map|fold)\(|assert(Equal|Eq)\([^,]+,\s*[^;]*\.(reduce|map|sum)\(|\bsum\([^)]*\)\s*\)\s*$",
+    "S10-focused-or-skipped": r"\b(it|test|describe|context)\.(only|skip)\s*\(|\b(fit|fdescribe|xit|xdescribe)\s*\(|@unittest\.skip\b|@pytest\.mark\.skip\b",
     "S12-test-suppression": r"//\s*ignore_for_file:|eslint-disable|#\s*noqa|@ts-ignore",
 }
 TEST_DECL = re.compile(r"\b(test|it|testWidgets)\(|^\s*def test_\w+|^\s*func Test\w+|#\[test\]|@Test\b|^\s*it\s+['\"]", re.M)
@@ -6573,8 +6588,18 @@ def hit(path: str, lineno: int, text: str, tag: str | None = None) -> str:
 def sweep_code(files: list[ScopeFile], root: Path) -> dict[str, list[str]]:
     hits: dict[str, list[str]] = defaultdict(list)
     for f in files:
+        if NON_PROD_PATH_RE.search(f.path):
+            hits["S16-non-prod-artifact"].append(hit(f.path, 1, f"non-production or agent artifact path: {f.path}"))
+        if f.role == "source" and f.lines > 1000:
+            hits["S15-file-sprawl"].append(hit(f.path, 1, f"{f.lines} lines (exceeds 1,000-line decomposition threshold)"))
         lines = read_lines(root / f.path)
         if f.role == "doc":
+            if lines and lines[0].strip() == "---":
+                for i, line in enumerate(lines[1:25], 2):
+                    if line.strip() == "---":
+                        break
+                    if AGENT_RECORD_FRONTMATTER_RE.match(line.strip()):
+                        hits["S16-non-prod-artifact"].append(hit(f.path, i, f"agent record frontmatter in repo tree: {line.strip()}"))
             for i, line in enumerate(lines, 1):
                 if EMOJI.search(line):
                     hits["S3-S14-emoji"].append(hit(f.path, i, line))
@@ -7187,6 +7212,11 @@ Unless the user or repository instructions specify another location, keep the sa
 
 Review the result against the plan's acceptance criteria and run proportionate integration checks. Fix relevant failures and identify any remaining verification gaps. Avoid repeating an unchanged full suite without a reason.
 
+Before staging, committing, pushing, or opening a PR, run a **pre-commit hygiene and anti-slop check** on `git status --short` and `git diff`:
+- **No non-production artifacts in the repo tree:** Verify that plans, notes, reviews, and evidence stay under `~/.agents/projects/<project>/` (never committed as `PLAN.md`, `walkthrough.md`, `docs/plans/`, `.context/`, `.ws/`, debug scripts, or `.bak`/`.orig` files inside the checkout).
+- **No fake or focused tests:** Confirm new and updated tests assert on real behavior and failure modes, contain no `.only` or unexplained `.skip`, and do not pass when the production change is broken.
+- **No AI slop:** Strip restating comments, workaround sermons, impossible defensive checks on trusted internal paths, and unverified lint/type suppressions.
+
 If the request already authorizes commits, a push, or a PR, complete those steps using the repository's normal workflow. Otherwise report the prepared result without extending authorization. Do not require a branch-finishing skill or reopen decisions the user has already made.
 
 Report what was completed, meaningful deviations, verification evidence, remaining blockers, the actual delivery state, and the saved plan path. Never describe a plan as finished while required tasks remain unresolved.
@@ -7363,6 +7393,13 @@ Gather:
 - visual or interactive evidence when the change can be understood better by seeing it
 
 Do not infer success from changed tests alone, list every touched file, narrate implementation chronology, or claim a check passed without fresh evidence.
+
+Before creating a PR or marking a draft ready, check `git diff <base>...<head> --name-status` and the diff for **pre-publication hygiene blockers**:
+- **Non-production files in the branch (`S16`):** Stray agent plans, walkthroughs, scratch notes (`PLAN.md`, `walkthrough.md`, `docs/plans/`, Markdown files with `kind: plan|note|review` frontmatter), `.context/` or `.ws/` artifacts, debug scripts (`debug_*`, `scratch_*`), or backup files (`*.bak`, `*.orig`) that belong in `~/.agents/projects/<project>/` or `.gitignore`.
+- **Fake or focused tests (`S10`):** Leftover `.only` / unexplained `.skip`, tautological or `toBeDefined()`-only assertions, mock-only assertions, or weakened test expectations.
+- **Unremoved AI slop (`S1–S15`):** Restating comments, workaround sermons, impossible defensive fallbacks, or suppressed type/lint errors.
+
+When any hygiene blocker is present on the branch, call it out explicitly in the response and keep the PR in draft (or pause creation) until the branch is cleaned.
 
 ## Write concise, neutral copy
 
@@ -8380,9 +8417,13 @@ Prepare a PR so a reviewer can quickly understand the intent, important files, a
 
 1. Resolve the target PR from the user-provided URL or current branch.
 2. Inspect commits, diff size, changed paths, generated files, and PR description.
-3. Identify reviewability issues: noisy commits, stale description, unrelated changes, mixed mechanical and logic changes, missing tests, or unclear reviewer entry points.
-4. Propose a plan before rewriting history or force-pushing.
-5. Apply safe improvements, then verify the tree or diff still matches the intended code.
+3. Run the **Pre-PR Hygiene & Anti-Slop Gate** before reorganizing commits:
+   - **Evict non-production artifacts (`S16`):** Check `git diff <base>...HEAD --name-status` and `git status` for stray agent plans, walkthroughs, notes (`PLAN.md`, `IMPLEMENTATION_PLAN.md`, `walkthrough.md`, `docs/plans/`, or Markdown files with `kind: plan|note|review` frontmatter), `.context/` or `.ws/` directories, one-off debug scripts (`debug_*`, `scratch_*`, `tmp_*`), and backup files (`*.bak`, `*.orig`). Move durable agent records to `~/.agents/projects/<project>/` and remove stray files from the branch before locking the tree hash.
+   - **Reject fake or focused tests (`S10`):** Check touched test files for `.only` / unexplained `.skip`, tautological assertions (`expect(x).toBe(x)`, `toBeDefined()`-only), mock-only assertions that never verify behavior, or weakened assertions.
+   - **Strip AI and structural slop (`S1–S15`):** Remove restating comments, workaround sermons, impossible defensive checks, stale lint suppressions, and unjustified >1,000-line file sprawl.
+4. Identify reviewability issues: noisy commits, stale description, unrelated changes, mixed mechanical and logic changes, missing tests, or unclear reviewer entry points.
+5. Propose a plan before rewriting history or force-pushing.
+6. Apply safe improvements, then verify the cleaned tree matches across commit reorganization.
 
 ## History Cleanup
 
@@ -14726,6 +14767,30 @@ class SweepTests(unittest.TestCase):
                 sweep.main(["--root", str(root), "--out", str(out)])
             self.assertTrue((out / "sweep" / "hints-T1.txt").is_file())
             self.assertFalse((out / "sweep" / "hints-ALL.txt").exists())
+
+    def test_non_prod_artifacts_file_sprawl_and_focused_tests(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            make_repo(root)
+            (root / "PLAN.md").write_text("# Temporary Plan\n", encoding="utf-8")
+            (root / "docs" / "plans").mkdir(parents=True)
+            (root / "docs" / "plans" / "2026-11-01-draft.md").write_text(
+                "---\nkind: plan\nstatus: draft\n---\n# Draft\n", encoding="utf-8"
+            )
+            (root / "src" / "giant.ts").write_text(
+                "\n".join(f"export const v{i} = {i};" for i in range(1005)) + "\n",
+                encoding="utf-8",
+            )
+            (root / "test" / "focused.test.ts").write_text(
+                "it.only('runs only this test', () => { expect(1).toBe(1); });\n",
+                encoding="utf-8",
+            )
+            lists = self.run_sweep(root, root / ".ws")
+            self.assertIn("PLAN.md:1:", lists["S16-non-prod-artifact"])
+            self.assertIn("docs/plans/2026-11-01-draft.md:1:", lists["S16-non-prod-artifact"])
+            self.assertIn("agent record frontmatter in repo tree: kind: plan", lists["S16-non-prod-artifact"])
+            self.assertIn("src/giant.ts:1:", lists["S15-file-sprawl"])
+            self.assertIn("[S10-focused-or-skipped]", lists["hints-ALL"])
 
 
 class GateTests(unittest.TestCase):

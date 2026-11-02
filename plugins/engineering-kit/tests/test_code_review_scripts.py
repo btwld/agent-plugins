@@ -234,6 +234,30 @@ class SweepTests(unittest.TestCase):
             self.assertTrue((out / "sweep" / "hints-T1.txt").is_file())
             self.assertFalse((out / "sweep" / "hints-ALL.txt").exists())
 
+    def test_non_prod_artifacts_file_sprawl_and_focused_tests(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            make_repo(root)
+            (root / "PLAN.md").write_text("# Temporary Plan\n", encoding="utf-8")
+            (root / "docs" / "plans").mkdir(parents=True)
+            (root / "docs" / "plans" / "2026-11-01-draft.md").write_text(
+                "---\nkind: plan\nstatus: draft\n---\n# Draft\n", encoding="utf-8"
+            )
+            (root / "src" / "giant.ts").write_text(
+                "\n".join(f"export const v{i} = {i};" for i in range(1005)) + "\n",
+                encoding="utf-8",
+            )
+            (root / "test" / "focused.test.ts").write_text(
+                "it.only('runs only this test', () => { expect(1).toBe(1); });\n",
+                encoding="utf-8",
+            )
+            lists = self.run_sweep(root, root / ".ws")
+            self.assertIn("PLAN.md:1:", lists["S16-non-prod-artifact"])
+            self.assertIn("docs/plans/2026-11-01-draft.md:1:", lists["S16-non-prod-artifact"])
+            self.assertIn("agent record frontmatter in repo tree: kind: plan", lists["S16-non-prod-artifact"])
+            self.assertIn("src/giant.ts:1:", lists["S15-file-sprawl"])
+            self.assertIn("[S10-focused-or-skipped]", lists["hints-ALL"])
+
 
 class GateTests(unittest.TestCase):
     def finding(self, **overrides) -> dict:

@@ -35,6 +35,11 @@ Unless the user or repository instructions specify another location, keep the sa
 
 Review the result against the plan's acceptance criteria and run proportionate integration checks. Fix relevant failures and identify any remaining verification gaps. Avoid repeating an unchanged full suite without a reason.
 
+Before staging, committing, pushing, or opening a PR, run a **pre-commit hygiene and anti-slop check** on `git status --short` and `git diff`:
+- **No non-production artifacts in the repo tree:** Verify that plans, notes, reviews, and evidence stay under `~/.agents/projects/<project>/` (never committed as `PLAN.md`, `walkthrough.md`, `docs/plans/`, `.context/`, `.ws/`, debug scripts, or `.bak`/`.orig` files inside the checkout).
+- **No fake or focused tests:** Confirm new and updated tests assert on real behavior and failure modes, contain no `.only` or unexplained `.skip`, and do not pass when the production change is broken.
+- **No AI slop:** Strip restating comments, workaround sermons, impossible defensive checks on trusted internal paths, and unverified lint/type suppressions.
+
 If the request already authorizes commits, a push, or a PR, complete those steps using the repository's normal workflow. Otherwise report the prepared result without extending authorization. Do not require a branch-finishing skill or reopen decisions the user has already made.
 
 Report what was completed, meaningful deviations, verification evidence, remaining blockers, the actual delivery state, and the saved plan path. Never describe a plan as finished while required tasks remain unresolved.
