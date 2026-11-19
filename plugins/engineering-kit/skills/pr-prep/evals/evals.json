@@ -3,19 +3,19 @@
   "evals": [
     {
       "id": 1,
-      "prompt": "Make this PR easy to review: I have 9 noisy WIP commits (`wip`, `fix typo`, `oops`). Propose a dependency-ordered commit reorganization plan and show how you will prove the git tree did not change.",
-      "expected_output": "Inspects commits and diff, proposes grouping into dependency order (schema/API -> core logic -> wiring -> UI -> tests), records `ORIGINAL_TREE=$(git rev-parse ...)`, and verifies `git rev-parse HEAD^{tree}` matches after rewriting.",
+      "prompt": "Use $pr-prep. Make this PR easy to review: I have 9 noisy WIP commits (`wip`, `fix typo`, `oops`). Propose a dependency-ordered commit reorganization plan and show how you will prove the git tree did not change.",
+      "expected_output": "Groups actual dependent commits, records the original tree, and explains how to verify content equivalence.",
       "files": [],
       "expectations": [
         "Proposes a commit reorganization plan before rewriting history or force-pushing.",
-        "Orders proposed commits by dependency (schema/definitions -> core logic -> wiring -> UI -> tests).",
+        "Bases groups on the actual dependencies in the change.",
         "Records `ORIGINAL_TREE` before history rewrite and verifies `git rev-parse HEAD^{tree}` equality afterward.",
         "Refuses to push if the tree hash changed unintentionally."
       ]
     },
     {
       "id": 2,
-      "prompt": "Make PR #77 easier to review without rewriting git history\u2014just improve the PR description and reviewer guidance.",
+      "prompt": "Use $pr-prep. Make PR #77 easier to review without rewriting git history—just improve the PR description and reviewer guidance.",
       "expected_output": "Leaves commit history untouched and updates reviewer guidance with an accurate TL;DR, core vs mechanical file separation, risk/migration callouts, and verification notes.",
       "files": [],
       "expectations": [

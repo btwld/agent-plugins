@@ -1,0 +1,6 @@
+interface:
+  display_name: "PR Prep"
+  short_description: "Prepare a branch for review"
+  default_prompt: "Use $pr-prep to prepare this branch for review."
+policy:
+  allow_implicit_invocation: false

@@ -12,8 +12,8 @@ language would ship. "An LLM wrote this" is not a finding. Voice alone is not a 
 
 ## Pattern IDs
 
-Severity defaults come from the rule. A finder may move severity one step with a one-sentence
-reason in `why`. Lens letters: **C** comments and docs, **K** code shape, **T** tests,
+For patterns with a default severity, a finder may move one step and explain why.
+For S15 and S16, derive severity from the demonstrated impact. Lens letters: **C** comments and docs, **K** code shape, **T** tests,
 **W** repo-wide sweep.
 
 | ID | Lens | Pattern | Decision test | Default |
@@ -32,8 +32,8 @@ reason in `why`. Lens letters: **C** comments and docs, **K** code shape, **T** 
 | S12 | K, T, W | Dead ceremony | Unused private helpers; a lint suppression for a rule that is not enabled or no longer fires; TODOs with no owner or issue; a utility duplicated from elsewhere in-tree; configuration knobs with one value; commented-out code; compatibility shims or "legacy" aliases in code that has no compatibility promise. | P2 |
 | S13 | K, T | Architecture mismatch | Does the code cross a boundary the repository states? A UI layer calling native or IO directly; a reinvented framework primitive (focus, routing, hit testing, text editing) where one exists; a new test harness or fake that re-implements framework behavior instead of using the documented harnesses; a package importing another package's private modules. Derive the boundaries from the repository's own instructions; do not invent them. | P1 |
 | S14 | C, W | Markdown slop | Filler ("In this section we will…"), the heading restated in the first sentence, marketing adjectives (powerful, seamless, comprehensive, robust), emoji headers, bold on every other phrase, references to APIs that no longer exist, placeholder text. | P3 |
-| S15 | K | File sprawl past 1,000 lines | Does the change push a file from under 1,000 lines to over 1,000 lines (or materially enlarge an already >1,000-line file) when cohesive responsibilities could be decomposed into focused modules first? | P2, P1 if it tangles unrelated responsibilities |
-| S16 | C, K, W | Non-production artifact or stray agent file | Does this file belong in the shipped repository, or is it an agent plan, walkthrough, scratch note, review dump, debug script, backup file, or local workspace artifact (`PLAN.md`, `IMPLEMENTATION_PLAN.md`, `walkthrough.md`, `notes.md`, `docs/plans/*`, `docs/superpowers/*`, agent frontmatter `kind: plan\|note\|review`, `.context/*`, `.ws/*`, `*.bak`, `*.orig`, `*.tmp`, `debug_*`, `scratch_*`) that belongs in `~/.agents/projects/<project>/` or `.gitignore`? Exempt: established repository documentation (`README.md`, `CHANGELOG.md`, `CONTRIBUTING.md`, ADR directories) explicitly requested or maintained by the project. | P1 |
+| S15 | K | Tangled responsibilities | Can you identify independent reasons to change, concrete maintenance cost, and a simpler boundary? File length is a lead. | Based on demonstrated impact |
+| S16 | C, K, W | Suspected stray artifact | Check consumers, packaging, fixture discovery, and repository conventions. What evidence shows the file has no maintained purpose and what harm does its inclusion cause? | Based on demonstrated impact |
 
 Lens **T** also carries S1 and S3 for comments inside tests, S5 for catch-alls that swallow a test
 failure, S9 for empty test names, S12 for dead ceremony in tests, and S13 for a new harness.

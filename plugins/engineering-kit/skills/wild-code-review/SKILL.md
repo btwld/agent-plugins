@@ -28,9 +28,11 @@ or audit a canonical example ([reference-implementation](../reference-implementa
 
 1. Pin the target and constraints. Name the exact snapshot: commit, range, PR,
    staged index, working tree, or pasted snippet. Do not mix dirty-tree files
-   into a commit or staged review.
+   into a commit or staged review. For stacked PRs, compare with the immediate
+   parent at verified base and head commits. Identify inherited findings separately.
 
-2. Inspect the relevant code, callers, tests, and stated contracts. Work inline
+2. Trace the change to its callers, promised behavior, supported versions, and tests.
+   Question a project convention when it conflicts with an observable contract. Work inline
    in a single fast pass by default; use at most 2–3 focused parallel lenses
    (correctness, tests/hygiene, structure/slop) only on large diffs when
    delegation is permitted and useful, avoiding multi-wave ceremony.
@@ -42,17 +44,19 @@ or audit a canonical example ([reference-implementation](../reference-implementa
    - **Test authenticity and repo hygiene:** changed or removed assertions;
      hollow or tautological tests, mock-only assertions, or `.only`/`.skip`
      leaks; and stray non-production files, agent plans, walkthroughs, or debug
-     artifacts committed into the repository tree instead of
-     `~/.agents/projects/<project>/`. A test that moves with the implementation
+     artifacts with no maintained purpose. Check consumers, packaging, and fixture
+     discovery before calling a file unused. A test that moves with the implementation
      needs independent contract support.
    - **AI slop and structural quality:** unjustified guards or impossible
      defensive checks on trusted internal paths; unnecessary abstractions or
-     single-caller pass-through wrappers; ad-hoc spaghetti branching; files
-     pushed past 1,000 lines without decomposition; missed code-judo data/state
-     reframings that delete whole branches or layers; and misleading or
+     single-caller pass-through wrappers; ad-hoc spaghetti branching; tangled responsibilities; simpler
+     data or state representations that remove unnecessary branching; and misleading or
      restating prose only where demonstrably harmful. Do not infer AI authorship.
      Do not flag style, one-caller helpers, documentation, or catches by
      appearance alone.
+
+   - **API and documentation:** Check changed defaults, compatibility, and public
+     contracts against examples, documentation, and the actual callers.
 
 4. Try to disprove each suspected finding against docs, types, callers, and
    other counterevidence. Distinguish defects, risk, and missing evidence.

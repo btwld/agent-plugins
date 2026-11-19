@@ -39,6 +39,17 @@
         "The result keeps PR #88 as a draft and identifies authorized upload of the local video as the remaining action.",
         "The body is shown in exactly one fenced `markdown` block and contains no agent, model, or provider attribution."
       ]
+    },
+    {
+      "id": 4,
+      "prompt": "Draft a title and body for my unpushed branch. The complete diff retries the request once on HTTP 503 and adds a passing test for that case. Leave the commits alone. No issue.",
+      "expected_output": "A local PR text draft for the stated change.",
+      "files": [],
+      "expectations": [
+        "Returns a title and body without requiring a remote head.",
+        "Uses the supplied test evidence, with no invented command or issue.",
+        "Does not publish or rewrite commits."
+      ]
     }
   ]
 }

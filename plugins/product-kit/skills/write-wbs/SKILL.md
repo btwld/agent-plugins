@@ -1,88 +1,36 @@
 ---
 name: write-wbs
-description: Create or revise a work breakdown structure and delivery review from a requirement baseline and planning evidence, with package definitions, primary coverage, lifecycle stages, releases, dependencies, and optional timeline/PDF generation. Not a PRD-authoring or automatic estimation workflow.
+description: Create or review a delivery work breakdown from supplied requirements. Return work packages and dependencies in chat, update a connected product model, or generate a standalone scheduled review as requested.
 ---
 
 # Write WBS
 
-Use the product-kit plugin's shared resources. Resolve the plugin root two
-levels above this skill directory (../..); run commands from that root.
-Read [the WBS contract](../../references/wbs-process.md) before changing plans.
-For linked requirements and questions, follow the shared
-[record conventions](../../references/record-conventions.md); do not create
-WBS-specific copies of their identities or answers.
+## Break down the work
 
-## Select the source
+Read the requirements and planning evidence. Preserve requirement IDs and wording. Group work by deliverable. For each package identify its outcome, owner if known, dependencies, completion evidence, and disposition. Give each requirement exactly one primary package, including deferred or excluded scope. Additional contributing packages can share the work.
 
-- If a product JSON model exists, read [the product contract](../../references/product-model.md)
-  and maintain its delivery section. Requirements, questions, decisions, and
-  validations remain shared records; do not copy them into another editable plan.
-- For a standalone WBS baseline, use [the example plan](../../assets/examples/wbs/plan.json)
-  as a structural reference. Populate a separate project file from actual sources.
-- If the request is to define product behavior first, use
-  [write-prd](../write-prd/SKILL.md); do not invent requirements to fill packages.
+For a quick breakdown, return the packages, their primary IDs, and open inputs in chat. Leave unknown owners and dates open. A package assignment does not commit a team to a schedule. Use [write-prd](../write-prd/SKILL.md) when the requested decision is about product behavior. Use Engineering Kit's `writing-plans` for implementation steps once requirements are settled.
 
-Check scope and source evidence. Preserve requirement IDs and wording. Identify
-unknown owners, missing scheduling information, and unresolved questions explicitly.
-No package, timeline, or generated document constitutes scope approval.
+## Save or generate a review when requested
 
-## Build the breakdown
+Resolve the product-kit root two levels above this skill's directory. Read the [WBS process](../../references/wbs-process.md) for planning fields, stage and release semantics, generation, and validation.
 
-Group outcome-based work packages; grouping need not reproduce the feature tree.
-For each package identify its deliverable, owner, completion evidence, dependencies,
-and disposition. Assign each supplied requirement to exactly one primary package,
-including unscheduled optional/deferred/excluded buckets. In the connected model,
-record additional contributing packages without duplicating primary coverage.
+- **Connected product record.** Update its delivery section against the [product model](../../references/product-model.md) and [shared record conventions](../../references/record-conventions.md). Reuse requirement, question, decision, and validation IDs. Keep primary and contributing assignments distinct. Link blocking questions to the affected stages. Open or Assumed questions retain their holds. A resolved decision or completed task still needs its own validation evidence.
+- **Standalone scheduled plan.** Use the [example plan](../../assets/examples/wbs/plan.json) for structure. Populate a separate project file using the supplied schedule, dependencies, and gates. Keep stages, releases, and dates distinct.
+- **Unscheduled review.** Use the requested text or document format. With no actual schedule, leave a new product model's delivery section null. Preserve existing schedules. The timeline generator needs dates. If Word or PDF is requested, consult the [document guide](../../references/document-generation.md), [Word reference](../../assets/wbs/reference.docx), and [PDF reference](../../assets/wbs/reference.pdf).
 
-Keep work groups, lifecycle stages, releases, and dates distinct. Use only supplied
-or explicitly proposed planning values and label their status. Never invent dates
-to satisfy validation. With no actual schedule, retain delivery as null in the PRD
-and produce a manual unscheduled WBS using the retained reference; the scheduled
-generator requires complete dates. Do not discard an existing schedule to switch modes.
-
-For connected plans, link blocking questions to actual package stages. Open and
-Assumed questions retain explicit holds. Answered resolves the decision hold,
-not verification. Completed tasks do not imply passed validation or release gates.
-
-## Validate and generate
-
-From the plugin root, replace example paths with the actual source and a separate
-output directory:
+Run the relevant pair from the plugin root using the actual source and a separate output directory.
 
 ```sh
-# Connected PRD and WBS from one source:
+# Connected model
 uv run scripts/build_product.py /absolute/path/product.json --check
 uv run scripts/build_product.py /absolute/path/product.json --out /absolute/path/review
 
-# Standalone WBS:
+# Standalone scheduled plan
 python3 scripts/build_wbs.py /absolute/path/plan.json --check
-python3 scripts/build_wbs.py /absolute/path/plan.json --out /absolute/path/review --pdf
+python3 scripts/build_wbs.py /absolute/path/plan.json --out /absolute/path/review
 ```
 
-Python 3.10+ is required. The connected generator declares its JSON-schema
-dependency through uv. Standalone validation/HTML use the standard library;
---pdf needs Chrome/Chromium and uses an isolated browser profile.
+For standalone PDF output, add `--pdf` to the generation command and provide Chrome or Chromium. Python 3.10+ is required. The connected generator declares its schema dependency through uv.
 
-Resolve invalid references, coverage gaps, dependency cycles, and date errors
-before generation. Check supplied baseline completeness against evidence separately.
-Inspect hierarchy, package definitions, chronology, stages, releases/gates, and
-coverage. For a connected plan, also inspect contributors, task links, question
-holds, and validation states. Inspect every PDF page before sharing.
-
-## Word references and maintenance
-
-Use [document-generation guidance](../../references/document-generation.md),
-[WBS Word](../../assets/wbs/reference.docx), and
-[WBS PDF](../../assets/wbs/reference.pdf) for manual layout. Generated project
-documents stay outside the plugin. Update source records and regenerate views;
-do not edit generated HTML as an independent plan.
-
-Shared tests run from the plugin root:
-
-```sh
-uv run --with jsonschema==4.26.0 python -m unittest discover -s scripts/tests -v
-```
-
-Return the requested review, missing planning inputs, and checks performed.
-Do not create tracker tickets, publish, or start implementation merely because a
-WBS has been drafted.
+Resolve coverage gaps, broken references, cycles, and inconsistent dates in the source before generation. Inspect the resulting package coverage, dependencies, schedule, and any stage holds against the supplied baseline. Inspect each PDF page before sharing. Report the requested deliverable, remaining planning gaps, and checks performed. Drafting a WBS alone does not authorize creating tickets, publishing, or starting implementation.

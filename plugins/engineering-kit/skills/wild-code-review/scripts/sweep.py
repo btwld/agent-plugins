@@ -154,9 +154,9 @@ def sweep_code(files: list[ScopeFile], root: Path) -> dict[str, list[str]]:
     hits: dict[str, list[str]] = defaultdict(list)
     for f in files:
         if NON_PROD_PATH_RE.search(f.path):
-            hits["S16-non-prod-artifact"].append(hit(f.path, 1, f"non-production or agent artifact path: {f.path}"))
+            hits["S16-non-prod-artifact"].append(hit(f.path, 1, f"possible artifact path; check consumers: {f.path}"))
         if f.role == "source" and f.lines > 1000:
-            hits["S15-file-sprawl"].append(hit(f.path, 1, f"{f.lines} lines (exceeds 1,000-line decomposition threshold)"))
+            hits["S15-file-sprawl"].append(hit(f.path, 1, f"{f.lines} lines; inspect responsibility boundaries"))
         lines = read_lines(root / f.path)
         if f.role == "doc":
             if lines and lines[0].strip() == "---":

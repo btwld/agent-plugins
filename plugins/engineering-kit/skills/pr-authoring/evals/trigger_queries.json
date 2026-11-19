@@ -78,5 +78,41 @@
   {
     "query": "Explain what changed in PR #104 for a non-technical stakeholder, but don't edit the PR.",
     "should_trigger": false
+  },
+  {
+    "query": "make this PR easy to review by cleaning up my noisy WIP commit history",
+    "should_trigger": true
+  },
+  {
+    "query": "reorganize the commits on this branch into logical dependency order and verify tree identity",
+    "should_trigger": true
+  },
+  {
+    "query": "split my 12 messy commits into clean reviewable commits without changing the final tree",
+    "should_trigger": true
+  },
+  {
+    "query": "prepare this PR for reviewers by separating mechanical files from core logic changes",
+    "should_trigger": true
+  },
+  {
+    "query": "clean up the commit history on this branch and prove `git rev-parse HEAD^{tree}` is unchanged",
+    "should_trigger": true
+  },
+  {
+    "query": "make PR #39 easier to review with a clear reading order and tidy commits",
+    "should_trigger": true
+  },
+  {
+    "query": "tidy this PR so reviewers know where to start and don't have to read WIP commits",
+    "should_trigger": true
+  },
+  {
+    "query": "Draft a PR body for this local branch before I push it.",
+    "should_trigger": true
+  },
+  {
+    "query": "Run the pr-prep command for a local reviewer reading order.",
+    "should_trigger": false
   }
 ]

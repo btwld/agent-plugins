@@ -13,6 +13,11 @@ No external product or template plugin is required. Resolve the plugin
 root two levels above this skill directory (../..); run commands from that root, not the
 user's working directory.
 
+For a brief feature spec or a review in chat, answer in the requested format
+using the available requirements and acceptance criteria. Preserve any existing
+record IDs. Create or update the structured source when the user requests a
+saved model, a generated review, or a change to an existing product record.
+
 ## Define and review requirements
 
 Read existing project evidence before asking for missing context. Identify whether
@@ -37,7 +42,9 @@ defaults, encodings, and status codes open or explicitly proposed. Before delive
 trace acceptance criteria to evidence and check contradictions and adjacent scope
 accidentally introduced by the draft.
 
-## Create the structured record
+For an in-chat draft or review, return the requested prose and open questions here.
+
+## Create the structured record when requested
 
 Read [record conventions](../../references/record-conventions.md) for IDs, scope,
 question fields, resolution/reopening, and machine-readable queries. Read

@@ -25,7 +25,7 @@ straight to PRD review or WBS planning. Competitive research compares alternativ
 friction research assesses user difficulties; synthesis analyzes supplied evidence.
 Choose the requested workflow without imposing a fixed sequence.
 
-For requirements and delivery work:
+For a short feature spec or delivery breakdown, answer directly in the requested format. Use the structured workflow below when the task calls for a saved record or generated review.
 
 1. Read the actual evidence and identify the product, module, or feature boundary.
 2. Define the intended outcome, scope, and observable requirements; keep unknowns visible.

@@ -1,95 +1,69 @@
 ---
 name: architecture
 description: >-
-  Use when choosing, evaluating, or recording a consequential technical design decision from
-  concrete requirements and constraints—for example a technology selection, component boundary,
-  data ownership choice, architecture decision record, or developing a chosen API design into
-  consumer examples and testable requirements.
-  Produce a recommendation sized to the
-  decision and make its trade-offs and reconsideration conditions explicit. Prefer
-  clean-sheet-review when the user wants an existing solution's entire framing or scope reopened;
-  do not use for routine code review (use wild-code-review) or an already-approved implementation task.
+  Use when choosing, evaluating, or remembering a technical design decision: technology
+  selection, component boundaries, data ownership, or a chosen API contract. Give a concise
+  recommendation and its reason, main trade-off, and conditions for reconsideration. Use
+  clean-sheet-review to reopen an existing solution's whole framing, wild-code-review for
+  code defects, and ordinary execution for an approved implementation.
 ---
 
-<!-- Derived from anthropics/knowledge-work-plugins and modified by Leo Farias for engineering-kit. See ../../SOURCES.md. -->
+<!-- Derived from anthropics/knowledge-work-plugins and modified by Leo Farias. See ../../SOURCES.md. -->
 
-# Architecture Decisions
+# Architecture
 
-Turn a material technical choice into a decision that another person can understand, challenge, and revisit. Preserve the user's real constraints; do not manufacture architecture ceremony for a small or reversible choice.
+Make the technical choice clear and easy to remember. Keep the decision proportional to
+its consequences; a long-lived choice does not require a long document or a formal ADR.
 
-## Size the decision
+## Understand the decision
 
-Choose the lightest output that makes the decision usable:
+Inspect relevant requirements, repository evidence, existing decisions, and real consumers.
+Identify the outcome, fixed constraints, and unknowns that could change the recommendation.
+Preserve the user's chosen scope. Ask only when a missing fact would materially change the
+choice; otherwise state a reasonable assumption.
 
-- **Compact recommendation:** a bounded, reversible choice with a small number of consequences.
-- **Architecture decision record (ADR):** a consequential or long-lived choice that needs a durable record or approval.
-- **API contract design:** a chosen design direction needs consumer examples, precise behavior,
-  and testable requirements. Read [api-contract-design.md](references/api-contract-design.md)
-  for that work; it applies to initial contracts and approved redesigns.
-- **Proposal evaluation:** an architecture already exists and the user wants its decision quality assessed without reopening the whole solution.
+Distinguish choosing a direction from developing one already chosen. For consumer examples,
+errors, compatibility, and testable API requirements, read
+[api-contract-design.md](references/api-contract-design.md). Do not reopen settled choices
+or turn a focused evaluation into a system redesign.
 
-When the user requests a specific format, use it. Do not turn an evaluation into a blank ADR template or a focused decision into a full system redesign. When a design has its own decision record, cite it rather than creating a competing record. A proposal may recommend superseding an ADR; update its accepted status only when that decision is authorized, preserving history.
+## Recommend the smallest suitable solution
 
-## Establish the decision frame
+Compare viable options against the actual constraints, including the existing approach when
+it remains suitable. Do not invent alternatives, components, or requirements to fill a template.
+Explain the strongest reason for the recommendation and the material cost or limitation accepted.
+Separate observed facts, proposals, and unresolved questions; recommending a choice does not
+mean it has been approved.
 
-Inspect relevant repository artifacts, design notes, constraints, and observed behavior when they are available. Summarize:
+Verify changing vendor capabilities and exact prices, quotas, throughput ceilings, retention
+periods, or migration estimates against current authoritative evidence before citing them.
+An uninspected URL or remembered number is not verification. If evidence is unavailable,
+compare qualitatively and name the fact or measurement needed.
 
-- the outcome being decided;
-- hard constraints and external commitments;
-- the decision drivers that distinguish viable options;
-- assumptions and unknowns that could change the result.
+## Remember the choice concisely
 
-Ask at most one clarifying question when the missing answer could invert the recommendation. Otherwise proceed with an explicit assumption and say how a different answer would affect the decision.
+Lead with the decision or recommendation. Usually a short paragraph or these four lines is enough:
 
-Keep requirements separate from the current implementation. Treat latency, scale, reliability, cost, team expertise, delivery time, compatibility, security, and operational ownership as decision drivers only when the available evidence makes them relevant.
+- **Decision:** what we chose, or what is proposed if it is not settled.
+- **Why:** the requirement or constraint that drove it.
+- **Trade-off:** the main limitation we accept.
+- **Revisit:** what concrete change would warrant another look, if relevant.
 
-## Protect evidence and identity
+Use only the detail needed to understand and act on the choice. Add consumer examples or
+compatibility details when requested or necessary; concision must not hide an unresolved contract.
+Do not add invented owners, approvers, dates, scores, or exhaustive option matrices.
 
-Vendor capabilities and prices change. Verify exact service prices, quotas, throughput limits, retention periods, provisioning times, and migration durations from a current authoritative source inspected during the current task before quoting them. A remembered value or an uninspected documentation URL is not verification. When verification is unavailable, compare qualitatively and list the fact that must be checked; do not substitute remembered numbers. Saying an unsupported number should be verified does not make it usable—omit the number entirely unless the response can cite the source it actually inspected.
+When the decision needs to persist, update the relevant existing plan or project documentation
+using its established location. Keep one authoritative explanation and link to it rather than
+copying it into another tracker. A discussion-only recommendation can stay in the conversation.
+If no suitable record exists and the user asks to save the decision, create a short project note
+in the requested or established location. Distinguish a proposed change from an accepted decision,
+and preserve relevant history when a choice changes.
 
-Do not include an Author, Deciders, Approvers, or contact field unless the user or a relevant artifact explicitly supplied that identity for this decision. Never use account, profile, machine, or environment identity as decision-record content.
+Use the project's formal ADR format when the user asks for it or the repository requires it. Do not generate numbered ADR files, an ADR
+folder, or a separate approval workflow by default. Respect existing records and repository
+requirements; do not delete or silently replace them to simplify the format.
 
-## Compare viable options
-
-Consider the status quo when it is genuinely viable. Compare serious options against the same decision drivers rather than listing generic pros and cons.
-
-- Tie assessments to the stated environment and workload.
-- Distinguish verified facts, reasonable estimates, and unresolved assumptions.
-- Avoid invented precision. Unless the user supplied a figure or it was verified from a current authoritative source inspected during the current task, do not quote exact service prices, quotas, throughput limits, retention periods, provisioning times, or migration durations. Do not present a vendor capability as current merely because a documentation URL is known. Compare qualitatively and name the lookup or measurement needed instead.
-- Do not force multiple alternatives when a hard constraint leaves only one viable choice.
-
-Make one recommendation. Explain the primary reason, the material trade-off being accepted, and why the rejected option is not preferred under the present constraints.
-
-## Present the result
-
-Lead with the recommendation and a short reason. For a compact decision or evaluation, include only the sections needed to show the frame, trade-offs, consequences, missing evidence, and reconsideration conditions.
-
-Keep durable ADRs in the repository's decision-record folder (for example `docs/decisions/`) so they remain part of its versioned design history; do not store them in `~/.agents/`. For a durable ADR, use this structure unless the repository already has a convention:
-
-```markdown
-# ADR-[number]: [Decision]
-
-**Status:** Proposed | Accepted | Deprecated | Superseded
-**Date:** [date]
-
-## Context
-[Decision, constraints, drivers, and material unknowns]
-
-## Decision
-[Chosen option and rationale]
-
-## Options considered
-[Comparable evidence and trade-offs for each viable option]
-
-## Consequences
-[What becomes easier, harder, riskier, or newly required]
-
-## Reconsider when
-[Observable thresholds or changed assumptions that should reopen the decision]
-```
-
-Add owners, approvers, implementation follow-ups, or links only when the user or repository needs them. Do not infer names, identities, email addresses, or decision authority from account or machine context; omit those fields unless the user or a relevant artifact supplied them. Do not create project-tracker tasks, modify implementation files, or imply approval unless the user requested those actions.
-
-## Final check
-
-Before returning the decision, verify that the recommendation follows from the stated drivers, material uncertainty is visible, consequences include the downside being accepted, and the reconsideration conditions are concrete enough to recognize later. Remove any unverified vendor number and any identity field not explicitly grounded in the request or inspected artifacts.
+Before finishing, check that the recommendation follows from the evidence, the main trade-off
+is visible, and any saved note can be found. Report material uncertainty plainly. Do not create
+tickets, modify implementation, commit, or publish beyond the user's authorized scope.

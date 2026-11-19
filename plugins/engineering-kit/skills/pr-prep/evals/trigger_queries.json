@@ -1,11 +1,11 @@
 [
   {
     "query": "make this PR easy to review by cleaning up my noisy WIP commit history",
-    "should_trigger": true
+    "should_trigger": false
   },
   {
     "query": "reorganize the commits on this branch into logical dependency order and verify tree identity",
-    "should_trigger": true
+    "should_trigger": false
   },
   {
     "query": "use pr-prep to tidy this pull request and annotate reviewer entry points",
@@ -13,23 +13,23 @@
   },
   {
     "query": "split my 12 messy commits into clean reviewable commits without changing the final tree",
-    "should_trigger": true
+    "should_trigger": false
   },
   {
     "query": "prepare this PR for reviewers by separating mechanical files from core logic changes",
-    "should_trigger": true
+    "should_trigger": false
   },
   {
     "query": "clean up the commit history on this branch and prove `git rev-parse HEAD^{tree}` is unchanged",
-    "should_trigger": true
+    "should_trigger": false
   },
   {
     "query": "make PR #39 easier to review with a clear reading order and tidy commits",
-    "should_trigger": true
+    "should_trigger": false
   },
   {
     "query": "tidy this PR so reviewers know where to start and don't have to read WIP commits",
-    "should_trigger": true
+    "should_trigger": false
   },
   {
     "query": "review this diff for bugs, security issues, and hollow tests",
@@ -62,5 +62,9 @@
   {
     "query": "build a canonical reference implementation for our SDK",
     "should_trigger": false
+  },
+  {
+    "query": "Run $pr-prep on these commits and give me a reading order.",
+    "should_trigger": true
   }
 ]

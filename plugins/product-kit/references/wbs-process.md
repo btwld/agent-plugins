@@ -30,8 +30,9 @@ path, or approve the plan.
 3. Assign every supplied requirement exactly once to a primary package. Put
    optional, deferred, and excluded items in explicit unscheduled packages.
 4. Supply release windows, stage dates, finish-to-start dependencies, and gates.
-   Use `Unassigned` for unknown people. If dates are unknown, use the Word draft
-   until planning supplies them; do not invent dates just to render a timeline.
+   Use `Unassigned` for unknown people. If dates are unknown, give an unscheduled breakdown in the
+   requested format. Use the Word reference for a Word deliverable. Generate a
+   timeline once the plan has actual dates.
 5. Validate, generate, and inspect the HTML/PDF. Edit the JSON, not generated
    HTML or SVG. Regeneration replaces files in the chosen output directory.
 6. Record decisions in the actual project tracker or authority. Structural

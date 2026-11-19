@@ -1,7 +1,7 @@
 # Engineering Kit
 
 Engineering workflows for Codex and Claude Code, installed as
-`engineering-kit@conceptadev`. The kit contains 16 focused skills and their helpers.
+`engineering-kit@conceptadev`. The kit has 15 workflows and one compatibility command.
 
 ## Skills
 
@@ -13,8 +13,8 @@ Engineering workflows for Codex and Claude Code, installed as
 | [wild-code-review](skills/wild-code-review/SKILL.md) | Unified review and codebase audit for defects, regressions, AI slop, structural quality, and change verdicts |
 | [clean-sheet-review](skills/clean-sheet-review/SKILL.md) | Reconsider an existing solution's scope and design from first principles |
 | [code-simplifier](skills/code-simplifier/SKILL.md) | Explicitly requested behavior-preserving refinement and slop removal |
-| [pr-authoring](skills/pr-authoring/SKILL.md) | A grounded PR title/body and authorized PR creation or update |
-| [pr-prep](skills/pr-prep/SKILL.md) | Clean stray artifacts and reorganize commit history in dependency order with tree-identity proof |
+| [pr-authoring](skills/pr-authoring/SKILL.md) | Prepare a local branch, draft a PR, or publish an authorized PR update |
+| [pr-prep](skills/pr-prep/SKILL.md) | Explicit compatibility command for the preparation step in pr-authoring |
 | [pr-canvas](skills/pr-canvas/SKILL.md) | Interactive HTML pull request walkthrough in the browser |
 | [pr-comments](skills/pr-comments/SKILL.md) | Verified triage and action ordering for active PR review comments |
 | [ci-loop](skills/ci-loop/SKILL.md) | Watch PR checks, diagnose failing CI runs, and iterate until green |
@@ -25,7 +25,7 @@ Engineering workflows for Codex and Claude Code, installed as
 | [writing-for-humans](skills/writing-for-humans/SKILL.md) | Clear human-facing technical prose, capability/user-story specs, and single-source Linear/issue-tracker linking (ASD-STE100) |
 
 Choose a skill for the requested outcome. Routine coding and reviews need no
-wrapper workflow. `code-simplifier` and `pr-canvas` retain explicit-only invocation,
+wrapper workflow. `code-simplifier`, `pr-prep`, and `pr-canvas` use explicit-only invocation,
 including their Codex and Claude invocation policies. Other workflows keep their
 existing scope boundaries.
 
