@@ -1,6 +1,6 @@
 # Agent Plugins
 
-This repository owns Concepta's Product, Engineering, and Design kits for Codex
+This repository owns Concepta's Product, Engineering, Design, and Dart Package kits for Codex
 and Claude Code. Maintain these kits directly; do not introduce upstream skill
 tracking, import/merge workflows, or synchronization with another skills repository.
 
@@ -13,7 +13,9 @@ tracking, import/merge workflows, or synchronization with another skills reposit
   breakdowns distinct from implementation plans; no automatic handoff is required.
 - Design Kit owns interface design, critique, accessibility, UX copy, and study planning.
   Product Kit owns research synthesis; Engineering Kit owns functional verification.
-- Dart/Flutter is an external official plugin managed by the client. Keep its
+- Dart Package Kit owns workflows for ACK, Noir, Mix, and Remix. Use the consuming
+  project's resolved package as the API reference. Link to package-maintained guides and skills.
+- General Dart/Flutter is an external official plugin managed by the client. Keep its
   skills and MCP configuration out of these kits; see docs/external-plugins.md.
 
 ## Author and maintain

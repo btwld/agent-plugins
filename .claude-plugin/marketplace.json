@@ -18,7 +18,12 @@
     {
       "name": "design-kit",
       "source": "./plugins/design-kit"
+    },
+    {
+      "name": "dart-package-kit",
+      "source": "./plugins/dart-package-kit",
+      "description": "Package-specific guidance for ACK validation, Noir terminal apps, Mix styling, and Remix Flutter components."
     }
   ],
-  "description": "Private Concepta plugins for product and engineering workflows."
+  "description": "Product, engineering, design, and Dart package plugins from Concepta."
 }

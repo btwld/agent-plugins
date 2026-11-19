@@ -1,0 +1,11 @@
+{
+  "name": "dart-package-kit",
+  "version": "0.1.0",
+  "description": "Package-specific guidance for ACK validation, Noir terminal apps, Mix styling, and Remix Flutter components.",
+  "author": {
+    "name": "Concepta"
+  },
+  "skills": "./skills/",
+  "license": "BSD-3-Clause",
+  "repository": "https://github.com/btwld/agent-plugins"
+}
