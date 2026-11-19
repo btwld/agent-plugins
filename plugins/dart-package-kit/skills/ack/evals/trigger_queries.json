@@ -1,0 +1,10 @@
+[
+  {"query": "Validate incoming orders using the Ack dependency already in pubspec, and show which field caused a 400.", "should_trigger": true},
+  {"query": "How do I make package:ack preserve missing versus explicit-null keys in a PATCH model?", "should_trigger": true},
+  {"query": "Our Ack codec reads timestamps but emits the wrong representation on save. Can you fix the round trip?", "should_trigger": true},
+  {"query": "Migrate our Ack schemas from 1.7 to 2.0 and check the generated model changes.", "should_trigger": true},
+  {"query": "Add null-safe fromJson and toJson methods to this Dart class using only dart:convert.", "should_trigger": false},
+  {"query": "Write a build_runner generator for annotated classes in a Dart package.", "should_trigger": false},
+  {"query": "Why isn't our broker receiving the consumer's ACK between reconnects?", "should_trigger": false},
+  {"query": "Review this TypeScript Zod schema for my checkout endpoint.", "should_trigger": false}
+]

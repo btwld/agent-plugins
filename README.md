@@ -9,6 +9,7 @@ repository; there is no upstream import, tracking, or merge workflow.
 | --- | --- | --- | --- |
 | [Product Kit](plugins/product-kit/README.md) | Research, requirements, PRDs, and delivery breakdowns | 6 | 0.3.2 |
 | [Engineering Kit](plugins/engineering-kit/README.md) | Technical decisions, implementation, reviews, PR/CI workflows, writing, and verification | 16 | 0.2.0 |
+| [Dart Package Kit](plugins/dart-package-kit/README.md) | ACK schemas, Noir terminal apps, Mix styling, and Remix UI components | 4 | 0.1.0 |
 | [Design Kit](plugins/design-kit/README.md) | Interface design, critique, accessibility, UX copy, and research planning | 10 | 0.1.1 |
 
 Product Kit owns the shared requirements, questions, and decisions. Engineering
@@ -16,7 +17,7 @@ Kit turns settled scope into implementation work without creating a second
 requirement baseline. Use the skill that matches the task; no automatic sequence
 or handoff is required.
 
-A [flattened source snapshot](agent-plugins.flattened.md) is available for review.
+An [earlier snapshot of the Product, Engineering, and Design kits](agent-plugins.flattened.md) is available for historical review. The plugin directories above contain the current skills.
 Binary assets are listed by hash; install plugins from their folders, not the snapshot.
 
 ## Install
@@ -30,6 +31,7 @@ codex plugin marketplace add https://github.com/btwld/agent-plugins.git
 codex plugin add product-kit@conceptadev
 codex plugin add engineering-kit@conceptadev
 codex plugin add design-kit@conceptadev
+codex plugin add dart-package-kit@conceptadev
 ```
 
 ### Claude Code
@@ -39,6 +41,7 @@ claude plugin marketplace add https://github.com/btwld/agent-plugins.git
 claude plugin install product-kit@conceptadev
 claude plugin install engineering-kit@conceptadev
 claude plugin install design-kit@conceptadev
+claude plugin install dart-package-kit@conceptadev
 ```
 
 Start a new session afterward. In Codex, request the relevant skill. Claude
@@ -46,8 +49,8 @@ commands include `/product-kit:write-prd`, `/product-kit:write-wbs`, and
 `/engineering-kit:writing-plans`. Use one active provider for each plugin namespace;
 cloning or maintaining this repository does not replace installed plugins.
 
-Dart/Flutter uses a separate official provider. See [Dart/Flutter setup](docs/external-plugins.md).
-Neither kit duplicates its skills or MCP server.
+For general Dart and Flutter tasks, install the official provider. Dart Package
+Kit adds workflows for four specific packages alongside it. [Dart and Flutter setup](docs/external-plugins.md)
 
 ## Maintain
 
@@ -77,6 +80,7 @@ python3 -m unittest discover -s tests
 claude plugin validate plugins/product-kit --strict
 claude plugin validate plugins/engineering-kit --strict
 claude plugin validate plugins/design-kit --strict
+claude plugin validate plugins/dart-package-kit --strict
 claude plugin validate . --strict
 ```
 
