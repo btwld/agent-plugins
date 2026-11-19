@@ -18,8 +18,9 @@ constructor, and generated styler of the resolved source.
 
 ## Direct widget examples
 
-Use one of these button implementations inside the existing Flutter host. The
-0.2.0 package uses the earlier convenience methods.
+Use one of these button implementations inside the existing Flutter host.
+Start with `RemixButtonStyle` on 0.2.0. Older examples may use helpers such as
+`paddingX` or `borderRadiusAll`, which newer Mix 2.x releases deprecate.
 
 ```dart
 import 'package:flutter/widgets.dart';
@@ -29,10 +30,9 @@ Widget saveButton(VoidCallback save) => RemixButton(
   label: 'Save',
   onPressed: save,
   style: RemixButtonStyle()
-      .paddingX(16)
-      .paddingY(10)
+      .padding(.symmetric(horizontal: 16, vertical: 10))
       .color(const Color(0xFF244B8F))
-      .borderRadiusAll(const Radius.circular(8))
+      .borderRadius(.circular(8))
       .label(TextStyler().color(const Color(0xFFFFFFFF))),
 );
 ```
@@ -48,8 +48,7 @@ Widget saveButton(VoidCallback save) => RemixButton(
   label: 'Save',
   onPressed: save,
   style: ButtonStyler()
-      .padding(.horizontal(16))
-      .padding(.vertical(10))
+      .padding(.symmetric(horizontal: 16, vertical: 10))
       .color(const Color(0xFF244B8F))
       .borderRadius(.circular(8))
       .label(TextStyler().color(const Color(0xFFFFFFFF))),
