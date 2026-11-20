@@ -1,0 +1,25 @@
+{
+  "skill_name": "mix",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Our Flutter project resolves mix 2.4.0. A panel applies BoxStyler().padding(.all(12)) in a separate statement but its child still touches the edge. Explain what to check and show a widget test that distinguishes 12 logical pixels from zero.",
+      "expected_output": "Find whether the result of padding was discarded or never supplied to the actual Box, and test the resulting inset.",
+      "files": [],
+      "expectations": [
+        "Traces which Box receives the modified style and preserves the returned styler.",
+        "Measures the laid-out inset of the child against the parent in a focused widget test."
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Our Flutter app uses Mix from a local path override. A docs example uses a method our analyzer does not recognize. Change the widget's design token to show a different color in one subtree.",
+      "expected_output": "Resolve the package path, use its actual API, scope the token override to the requested subtree and check an unaffected sibling.",
+      "files": [],
+      "expectations": [
+        "Checks the resolved local package before choosing an API.",
+        "Localizes the change to the subtree and verifies both affected and unaffected widgets."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+[
+  {
+    "query": "Use the dart-codegen skill. I need to write a source_gen GeneratorForAnnotation that emits a .g.dart file.",
+    "should_trigger": true
+  },
+  {
+    "query": "My build.yaml builder needs to read another generator's output, but I keep getting a build phase cycle.",
+    "should_trigger": true
+  },
+  {
+    "query": "json_serializable generated a missing .g.dart file in my Flutter app. I only need to run the existing generator.",
+    "should_trigger": false
+  },
+  {
+    "query": "Refactor this Flutter widget and fix the analyzer warnings.",
+    "should_trigger": false
+  },
+  {
+    "query": "Convert analyzer DartType values into code_builder References with imports handled correctly.",
+    "should_trigger": true
+  },
+  {
+    "query": "Debug this SharedPartBuilder because generated files are stale after build_runner.",
+    "should_trigger": true
+  },
+  {
+    "query": "Create a Builder that writes .routes.dart files and declares buildExtensions correctly.",
+    "should_trigger": true
+  },
+  {
+    "query": "My GeneratorForAnnotation should only support classes; add InvalidGenerationSource behavior.",
+    "should_trigger": true
+  },
+  {
+    "query": "Update this source_gen package for analyzer API changes without breaking generated imports.",
+    "should_trigger": true
+  },
+  {
+    "query": "Test a Dart code generator with build_test and an error-path fixture.",
+    "should_trigger": true
+  },
+  {
+    "query": "Decide whether this annotation and generator need separate packages based on how consumers import them.",
+    "should_trigger": true
+  },
+  {
+    "query": "Debug a builder ordering problem caused by generated output dependencies.",
+    "should_trigger": true
+  },
+  {
+    "query": "Add an integration_test login flow on Android emulator.",
+    "should_trigger": false
+  },
+  {
+    "query": "Write ordinary Dart model classes by hand.",
+    "should_trigger": false
+  },
+  {
+    "query": "Explain what build_runner is at a high level.",
+    "should_trigger": false
+  },
+  {
+    "query": "Update pubspec dependencies for a Flutter app consuming freezed.",
+    "should_trigger": false
+  },
+  {
+    "query": "Fix a linter warning in generated output; don't change the generator.",
+    "should_trigger": false
+  },
+  {
+    "query": "Write a Dart doc comment for this public API.",
+    "should_trigger": false
+  },
+  {
+    "query": "Publish this Flutter package to pub.dev.",
+    "should_trigger": false
+  },
+  {
+    "query": "Convert a JSON response to a Dart class manually.",
+    "should_trigger": false
+  }
+]

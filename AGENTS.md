@@ -1,38 +1,29 @@
-# Agent Plugins
+# Bitwild Team Kit
 
-This repository owns Concepta's Product, Engineering, and Design kits for Codex
-and Claude Code. Maintain these kits directly; do not introduce upstream skill
-tracking, import/merge workflows, or synchronization with another skills repository.
+Maintain one team plugin for Codex and Claude Code. Its canonical files live under
+`plugins/bitwild-team-kit/`. Both marketplace entries point to that directory.
+Keep skill names unique and resolve runtime resources relative to the loaded skill.
+Keep prior releases in Git.
 
-## Ownership
+## Workflow ownership
 
-- Product Kit owns exploration, research, PRDs, requirements/questions, and WBS.
-  Reuse its record contract rather than duplicating requirements or resolutions.
-- Engineering Kit owns technical decisions, implementation plans and execution,
-  specialized reviews, business-rule modeling, and verification. Keep delivery
-  breakdowns distinct from implementation plans; no automatic handoff is required.
-- Design Kit owns interface design, critique, accessibility, UX copy, and study planning.
-  Product Kit owns research synthesis; Engineering Kit owns functional verification.
-- Dart/Flutter is an external official plugin managed by the client. Keep its
-  skills and MCP configuration out of these kits; see docs/external-plugins.md.
+Choose the workflow that matches the requested deliverable. Product requirements,
+questions, and decisions share one source. Delivery breakdowns assign work to
+packages. Engineering plans describe implementation. Design research planning
+and analysis of collected evidence are separate tasks. Use Writing for Humans
+for documents people act on, Writing for Agents for agent instructions, and
+Deep Code Review for final review. Preserve explicit invocation policies.
 
-## Author and maintain
+Keep package-specific guidance aligned with the project's resolved dependency.
+Link to upstream package guides for detail. General Dart and Flutter skills and
+Dart MCP come from Flutter's official provider.
 
-- Canonical content lives in `plugins/<kit>/`. Resolve helpers and resources from
-  the loaded skill's location. Do not edit installed caches or duplicate bundles.
-- Use Skill Creator for skill changes and provider guidance for packaging. Give
-  each skill a clear outcome; add components only when they serve a concrete use.
-- Preserve user scope, authoritative IDs, and the distinction between evidence,
-  proposals, decisions, and implementation proof. JSON schemas define structured
-  records; Word/PDF references define presentation.
-- Retain source attribution and license notices. `SOURCES.md` is informational,
-  not an instruction to fetch, compare, or merge external repositories.
-- Keep project evidence and generated deliverables outside plugin packages.
-  Preserve unrelated files and active plugin installations.
+## Author and validate
 
-## Validate and release
+Use Skill Creator for changes to a skill. Preserve source attribution, license
+notices, schema and reference contracts, and existing user work. Keep client
+records and generated output outside the plugin. Use fictional test fixtures.
 
-Keep both catalogs and both provider manifests aligned. Run the README checks and
-focused validation for changed behavior. Separate structural validation from
-behavioral evaluation; do not report fixtures as executed tests. Use semantic
-versions and plugin-scoped release tags. Preserve prior releases in Git.
+Run the checks in README.md, verify resource paths in an isolated installed
+copy, and test changed workflows. Keep the provider manifests and catalog
+aligned. Record what ran separately from model discovery or behavior claims.

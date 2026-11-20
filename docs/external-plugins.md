@@ -3,8 +3,9 @@
 Use `dart-flutter@dart-flutter` from the official
 [Flutter plugin repository](https://github.com/flutter/agent-plugins).
 Follow its [setup guide](https://docs.flutter.dev/ai/get-started) for SDK and client
-requirements. This provider is separate from the company-owned Product and
-Engineering kits; its skills and Dart MCP server are not copied into this repo.
+requirements. The official provider supplies the general skills and the Dart MCP
+server. Bitwild Team Kit supplies the specialist Dart, Flutter, and package workflows.
+[Team skill catalog](../plugins/bitwild-team-kit/README.md)
 
 ## Install
 

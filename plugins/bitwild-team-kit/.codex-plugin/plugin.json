@@ -1,0 +1,26 @@
+{
+  "name": "bitwild-team-kit",
+  "version": "1.0.0",
+  "description": "Plan product delivery, design interfaces, write documentation, review engineering changes, and build with Dart and Flutter.",
+  "author": {
+    "name": "Bitwild"
+  },
+  "repository": "https://github.com/btwld/agent-plugins",
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Bitwild Team Kit",
+    "shortDescription": "Product, design, engineering, and Dart workflows",
+    "longDescription": "Plan product delivery, design interfaces, write documentation, review engineering changes, and build with Dart and Flutter.",
+    "developerName": "Bitwild",
+    "category": "Coding",
+    "capabilities": [
+      "Read",
+      "Write"
+    ],
+    "defaultPrompt": [
+      "Review this change for merge readiness.",
+      "Turn these requirements into a delivery breakdown.",
+      "Help me use the Dart package version installed in this project."
+    ]
+  }
+}

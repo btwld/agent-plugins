@@ -1,0 +1,38 @@
+{
+  "skill_name": "dart-idioms",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Review only; recommend an idiomatic Dart API cleanup. We authorize a hard cutoff for makeTag. Tag has a const generative constructor storing its string unchanged; Tag makeTag(String value) => Tag(value) adds nothing. Future<Tag> loadTag(File file) async => Tag(await file.readAsString()) lives in an I/O adapter, and interleave<T> is a pure top-level list algorithm. What should move, stay, or disappear? Preserve observable behavior.",
+      "expected_output": "Remove the redundant wrapper, preserve direct construction semantics, retain async I/O adaptation and independent algorithm ownership.",
+      "files": [],
+      "expectations": [
+        "Replaces makeTag with direct use of the existing real constructor, not a static method or extension.",
+        "Keeps asynchronous file loading outside the pure value type and retains the pure algorithm as a top-level function.",
+        "Does not introduce trimming, const canonicalization, or other behavior changes in migrated calls."
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Review our Dart constructor choices, no edits. Config.fromJson is a factory that decodes nested objects, computes coupled intermediate values, translates failures to FormatException, then calls Config._. Session.cached returns an existing cached instance. Profile(String name) stores the name directly, while Profile.checked trims it and rejects blanks. All Profiles are intended to have nonblank names. Which declarations should change? No blanket breaking-change permission.",
+      "expected_output": "Retain justified factories; centralize the Profile invariant with explicit compatibility and normalization consequences.",
+      "files": [],
+      "expectations": [
+        "Retains parsing/assembly and caching factories for concrete reasons rather than attempting to remove all factories.",
+        "Identifies the unchecked public constructor as bypassing the Profile invariant and recommends runtime enforcement.",
+        "Distinguishes intended nonblank validation from optional trimming and flags changed accepted inputs/public compatibility."
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "Review only. A Flutter State receives a borrowed repository from its widget. build() calls repository.openSession() on every rebuild. A proposal moves session creation into the widget constructor, disposes the repository from State.dispose, and replaces every rendering helper with a widget, including a two-line Text helper. The repository can change in didUpdateWidget; session opening may complete asynchronously. Recommend idiomatic ownership without replacing our state-management framework.",
+      "expected_output": "Lifecycle-owned acquisition and disposal, including updates and async races; no disposal of borrowed repository or mechanical helper extraction.",
+      "files": [],
+      "expectations": [
+        "Keeps resource acquisition out of both build and widget constructors, and never disposes the borrowed repository.",
+        "Handles repository replacement and stale async completion/unmounts in the existing lifecycle owner.",
+        "Retains trivial rendering helpers unless a concrete component/rebuild/context benefit warrants extraction."
+      ]
+    }
+  ]
+}
