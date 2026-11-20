@@ -18,8 +18,6 @@ Choose the skill for the outcome you need. All skills below use the same install
 - [Verify](skills/verify/SKILL.md) measures a specific behavior claim. [Clean-Sheet Review](skills/clean-sheet-review/SKILL.md) reopens the design decision. [Reference Implementation](skills/reference-implementation/SKILL.md) reviews a canonical example others will copy.
 - [PR Canvas](skills/pr-canvas/SKILL.md) creates a requested interactive walkthrough. [SBVR](skills/sbvr/SKILL.md) formalizes shared business vocabulary and rules.
 
-Existing commands still work. [wild-code-review](skills/wild-code-review/SKILL.md) runs Deep Code Review, and [pr-prep](skills/pr-prep/SKILL.md) runs the preparation step of PR Authoring. Both compatibility names require explicit invocation.
-
 ## Product and delivery
 
 | Skill | Outcome |

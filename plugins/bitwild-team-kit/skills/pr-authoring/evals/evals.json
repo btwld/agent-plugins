@@ -50,6 +50,40 @@
         "Uses the supplied test evidence, with no invented command or issue.",
         "Does not publish or rewrite commits."
       ]
+    },
+    {
+      "id": 5,
+      "prompt": "Use $pr-authoring. Make this PR easy to review: I have 9 noisy WIP commits (`wip`, `fix typo`, `oops`). Propose a dependency-ordered commit reorganization plan and show how you will prove the git tree did not change.",
+      "expected_output": "Groups actual dependent commits, records the original tree, and explains how to verify content equivalence.",
+      "files": [],
+      "expectations": [
+        "Proposes a commit reorganization plan before rewriting history or force-pushing.",
+        "Bases groups on the actual dependencies in the change.",
+        "Records `ORIGINAL_TREE` before history rewrite and verifies `git rev-parse HEAD^{tree}` equality afterward.",
+        "Refuses to push if the tree hash changed unintentionally."
+      ]
+    },
+    {
+      "id": 6,
+      "prompt": "Use $pr-authoring. Make PR #77 easier to review without rewriting git history—just improve the PR description and reviewer guidance.",
+      "expected_output": "Leaves commit history untouched and updates reviewer guidance with an accurate TL;DR, core vs mechanical file separation, risk/migration callouts, and verification notes.",
+      "files": [],
+      "expectations": [
+        "Does not rewrite commit history when the user asks to keep history untouched.",
+        "Separates core logic files from generated or mechanical files in the reviewer guide.",
+        "Adds a truthful TL;DR, risky change callouts, and test coverage notes."
+      ]
+    },
+    {
+      "id": 7,
+      "prompt": "This 4,500-line PR touches three unrelated subsystems. Use pr-authoring to advise how to handle it.",
+      "expected_output": "Identifies that the PR mixes unrelated changes and is too large for notes alone, and recommends splitting into focused PRs rather than polishing around the problem.",
+      "files": [],
+      "expectations": [
+        "Flags mixed unrelated changes and excessive diff size.",
+        "Recommends splitting the PR rather than masking the scope with prose notes alone.",
+        "Never hides behavior changes inside history cleanup."
+      ]
     }
   ]
 }

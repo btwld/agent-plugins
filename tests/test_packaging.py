@@ -10,10 +10,10 @@ SKILLS = {
         'code-simplifier', 'competitive-brief', 'dart-codegen', 'dart-idioms',
         'dartpad-examples', 'deep-code-review', 'design-critique', 'design-system',
         'design-verification', 'executing-plans', 'flutter-setup', 'frontend-design', 'image-to-code', 'mix',
-        'noir', 'pr-authoring', 'pr-canvas', 'pr-comments', 'pr-prep', 'product-brainstorming',
+        'noir', 'pr-authoring', 'pr-canvas', 'pr-comments', 'product-brainstorming',
         'reference-implementation', 'remix-flutter', 'research-synthesis', 'sbvr', 'test-audit',
         'url-to-code', 'user-research', 'ux-copy', 'ux-friction-research', 'verify',
-        'visual-exploration', 'wild-code-review', 'write-prd', 'write-wbs',
+        'visual-exploration', 'write-prd', 'write-wbs',
         'writing-for-agents', 'writing-for-humans', 'writing-plans',
     },
 }

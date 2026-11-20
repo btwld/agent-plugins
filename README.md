@@ -29,7 +29,7 @@ Open a fresh session. Try `$deep-code-review` in Codex or `/bitwild-team-kit:dee
 1. If `conceptadev` is already registered, refresh it with `codex plugin marketplace upgrade conceptadev` or `claude plugin marketplace update conceptadev`.
 2. Install `bitwild-team-kit@conceptadev`. Check that the new plugin lists the skills you use.
 3. Remove the former company kits you installed: `engineering-kit`, `product-kit`, `design-kit`, and `dart-package-kit`. For example, run `codex plugin remove engineering-kit@conceptadev` or `claude plugin uninstall engineering-kit@conceptadev` in its original scope. Open a fresh session.
-4. Update saved Claude commands to the new prefix. For example, `/product-kit:write-wbs` becomes `/bitwild-team-kit:write-wbs`. The skill names stay the same. Scripts that used a checkout path should now resolve resources under `plugins/bitwild-team-kit/`.
+4. Update saved Claude commands to the new prefix. For example, `/product-kit:write-wbs` becomes `/bitwild-team-kit:write-wbs`. Replace `pr-prep` with `pr-authoring` for branch preparation and `wild-code-review` with `deep-code-review` for final reviews. Scripts that used a checkout path should now resolve resources under `plugins/bitwild-team-kit/`.
 
 ## Validate
 
