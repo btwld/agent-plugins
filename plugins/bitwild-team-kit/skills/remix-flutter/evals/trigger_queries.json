@@ -1,0 +1,34 @@
+[
+  {
+    "query": "ButtonStyler is missing even though our Flutter app has remix in pubspec.lock. Check the installed version and show how to style RemixButton.",
+    "should_trigger": true
+  },
+  {
+    "query": "Our Remix Fortal button recipe keeps its old color on hover. Change the app-owned recipe so its states use our tokens.",
+    "should_trigger": true
+  },
+  {
+    "query": "How can I update the button template at the @remix pin without losing the edits in my Flutter app's lib/ui?",
+    "should_trigger": true
+  },
+  {
+    "query": "The Remix toast from the settings route can't find its scope. Fix it in this Flutter app.",
+    "should_trigger": true
+  },
+  {
+    "query": "Why does this ColorToken resolve outside the nested MixScope on our plain Mix Box widget?",
+    "should_trigger": false
+  },
+  {
+    "query": "Fix focus wraparound on a NakedMenu using only the naked_ui package.",
+    "should_trigger": false
+  },
+  {
+    "query": "Move the Remix route's TypeScript loader and action to React Router.",
+    "should_trigger": false
+  },
+  {
+    "query": "Make the Flutter Material ElevatedButton use the active ColorScheme on hover.",
+    "should_trigger": false
+  }
+]

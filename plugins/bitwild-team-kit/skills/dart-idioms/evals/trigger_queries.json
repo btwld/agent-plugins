@@ -1,0 +1,66 @@
+[
+  {
+    "query": "Audit our Dart package constructors: which fromMap factories are really doing work and which should be named generative constructors?",
+    "should_trigger": true
+  },
+  {
+    "query": "This Flutter screen opens a session during build and owns a controller from its parent. Review the resource lifecycle before we simplify it.",
+    "should_trigger": true
+  },
+  {
+    "query": "We have createUser and makeUser wrappers around User constructors; remove the pointless indirection but keep parsing errors stable.",
+    "should_trigger": true
+  },
+  {
+    "query": "Are our static-only Dart utility classes hiding functions that should just be top-level? Review the APIs and call sites.",
+    "should_trigger": true
+  },
+  {
+    "query": "Help me design a Dart Config API with one validation boundary, without checked and unchecked public paths.",
+    "should_trigger": true
+  },
+  {
+    "query": "Should our async Dart database loader be a constructor, a static open method, or a separate service? Review the actual ownership.",
+    "should_trigger": true
+  },
+  {
+    "query": "Review these Dart extensions: a few construct domain objects, others coordinate network calls. Is that idiomatic placement?",
+    "should_trigger": true
+  },
+  {
+    "query": "Simplify this Flutter widget API, but preserve const construction, keys, and ownership of the supplied repository.",
+    "should_trigger": true
+  },
+  {
+    "query": "Run dart format over lib and stop; don't redesign our constructors.",
+    "should_trigger": false
+  },
+  {
+    "query": "Our Flutter Row overflows by 42 pixels on narrow screens. Fix the responsive layout.",
+    "should_trigger": false
+  },
+  {
+    "query": "Add a widget test for the existing login form error state; don't refactor it.",
+    "should_trigger": false
+  },
+  {
+    "query": "Generate freezed JSON serialization for the model exactly as specified.",
+    "should_trigger": false
+  },
+  {
+    "query": "Resolve the package version conflict between analyzer and build_runner.",
+    "should_trigger": false
+  },
+  {
+    "query": "Write API documentation for our current constructors without changing their design.",
+    "should_trigger": false
+  },
+  {
+    "query": "Compare Riverpod and Bloc for our new Flutter application's state management architecture.",
+    "should_trigger": false
+  },
+  {
+    "query": "Review this TypeScript module's static factory functions and simplify the class API.",
+    "should_trigger": false
+  }
+]

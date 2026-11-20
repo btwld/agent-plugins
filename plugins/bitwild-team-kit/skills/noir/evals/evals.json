@@ -1,0 +1,27 @@
+{
+  "skill_name": "noir",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Sketch a minimal Dart entry point for a package:noir status screen that displays Ready. I already depend on Noir. How do I check that it renders inside an 80-column terminal?",
+      "expected_output": "A runnable Noir-only screen and a way to inspect it at a known width.",
+      "files": [],
+      "expectations": [
+        "Uses package:noir/noir.dart, runTuiApp and a public text widget.",
+        "Checks visual output using a real terminal or a compatible driver at the requested geometry.",
+        "Distinguishes a headless lifecycle check from a rendered frame."
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "A Noir TUI search field no longer receives the letter q after I registered a global quit shortcut. How would you isolate and verify the fix without changing my project's dependencies?",
+      "expected_output": "An input-routing diagnosis and a narrow interactive regression check.",
+      "files": [],
+      "expectations": [
+        "Examines app-level key handling and focus before changing the text field.",
+        "Checks event handling against the resolved Noir package.",
+        "Exercises typing q into the focused field and quitting through the intended shortcut."
+      ]
+    }
+  ]
+}

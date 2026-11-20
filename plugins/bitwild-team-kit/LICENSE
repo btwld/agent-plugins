@@ -1,0 +1,7 @@
+Bitwild Team Kit includes components with different licensing terms.
+
+The included BSD-3-Clause, MIT, and Apache-2.0 notices apply to the corresponding
+components identified in SOURCES.md. Original license texts are provided in
+licenses/ and in the skill directories where applicable. The product schema,
+company generators, and document reference assets retain their existing terms.
+Bundling them with other components does not grant a new license to those files.

@@ -1,0 +1,106 @@
+[
+  {
+    "query": "$dartpad-examples Create a single-file DartPad demo of a Mix squishy switch, with named styles and a white background.",
+    "should_trigger": true
+  },
+  {
+    "query": "$dartpad-examples Clean up this Flutter teaching snippet for DartPad without changing its keyboard or screen reader behavior.",
+    "should_trigger": true
+  },
+  {
+    "query": "$dartpad-examples Our Mix example compiles locally but DartPad says semanticsRole is unknown. Check published package compatibility.",
+    "should_trigger": true
+  },
+  {
+    "query": "$dartpad-examples Document this runnable DartPad main.dart as a short tutorial using Effective Dart comments.",
+    "should_trigger": true
+  },
+  {
+    "query": "$dartpad-examples Make the DartPad switch shrink on press and squash during travel, keeping the code small.",
+    "should_trigger": true
+  },
+  {
+    "query": "$dartpad-examples Review whether this copy-paste Mix demo needs a theme, color tokens, or an enum for one keyframe ID.",
+    "should_trigger": true
+  },
+  {
+    "query": "$dartpad-examples Verify the exact snippet copied from our Flutter gallery really runs on stable DartPad.",
+    "should_trigger": true
+  },
+  {
+    "query": "$dartpad-examples Build a self-contained DartPad example teaching ValueNotifier without external assets.",
+    "should_trigger": true
+  },
+  {
+    "query": "Refactor our production Mix checkout screen into shared theme tokens across the app.",
+    "should_trigger": false
+  },
+  {
+    "query": "Design a state management architecture for our Flutter application and its REST client.",
+    "should_trigger": false
+  },
+  {
+    "query": "Fix code generation for BoxSpec in the Mix framework, not the examples.",
+    "should_trigger": false
+  },
+  {
+    "query": "Write API documentation for our Dart server package; no executable teaching snippet is needed.",
+    "should_trigger": false
+  },
+  {
+    "query": "Review screen reader support across the entire production Flutter navigation flow.",
+    "should_trigger": false
+  },
+  {
+    "query": "Create a Remotion animation of a bouncing switch for a marketing video.",
+    "should_trigger": false
+  },
+  {
+    "query": "Upgrade the Flutter SDK and resolve our pub workspace dependencies.",
+    "should_trigger": false
+  },
+  {
+    "query": "Add analytics and persistence to the production settings toggle.",
+    "should_trigger": false
+  },
+  {
+    "query": "Compare DartPad and VS Code for teaching beginners; don't write any code.",
+    "should_trigger": false
+  },
+  {
+    "query": "Fix the DartPad website's JavaScript editor layout rather than its Dart snippets.",
+    "should_trigger": false
+  },
+  {
+    "query": "Create a single-file DartPad demo of a Mix squishy switch, with named styles and a white background.",
+    "should_trigger": false
+  },
+  {
+    "query": "Clean up this Flutter teaching snippet for DartPad without changing its keyboard or screen reader behavior.",
+    "should_trigger": false
+  },
+  {
+    "query": "Our Mix example compiles locally but DartPad says semanticsRole is unknown. Check published package compatibility.",
+    "should_trigger": false
+  },
+  {
+    "query": "Document this runnable DartPad main.dart as a short tutorial using Effective Dart comments.",
+    "should_trigger": false
+  },
+  {
+    "query": "Make the DartPad switch shrink on press and squash during travel, keeping the code small.",
+    "should_trigger": false
+  },
+  {
+    "query": "Review whether this copy-paste Mix demo needs a theme, color tokens, or an enum for one keyframe ID.",
+    "should_trigger": false
+  },
+  {
+    "query": "Verify the exact snippet copied from our Flutter gallery really runs on stable DartPad.",
+    "should_trigger": false
+  },
+  {
+    "query": "Build a self-contained DartPad example teaching ValueNotifier without external assets.",
+    "should_trigger": false
+  }
+]

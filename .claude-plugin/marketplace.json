@@ -1,24 +1,15 @@
 {
   "name": "conceptadev",
   "owner": {
-    "name": "Concepta",
+    "name": "Bitwild",
     "url": "https://github.com/btwld"
   },
   "plugins": [
     {
-      "name": "product-kit",
-      "source": "./plugins/product-kit",
-      "description": "Product exploration, evidence synthesis, competitive and friction research, structured PRDs, and connected WBS planning."
-    },
-    {
-      "name": "engineering-kit",
-      "source": "./plugins/engineering-kit",
-      "description": "Engineering architecture, implementation planning, unified code and structural review, PR and CI workflows, business rules, and falsifiable verification."
-    },
-    {
-      "name": "design-kit",
-      "source": "./plugins/design-kit"
+      "name": "bitwild-team-kit",
+      "source": "./plugins/bitwild-team-kit",
+      "description": "Plan product delivery, design interfaces, write documentation, review engineering changes, and build with Dart and Flutter."
     }
   ],
-  "description": "Private Concepta plugins for product and engineering workflows."
+  "description": "Plan product delivery, design interfaces, write documentation, review engineering changes, and build with Dart and Flutter."
 }

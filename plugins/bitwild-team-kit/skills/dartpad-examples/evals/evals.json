@@ -1,0 +1,56 @@
+{
+  "skill_name": "dartpad-examples",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Create a single-file DartPad demo of a Mix squishy switch, with named styles and a white background.",
+      "expected_output": "A self-contained, small Mix showcase with separated styles and target-version verification.",
+      "expectations": [
+        "Keeps styling readable and avoids unnecessary theme or enum machinery.",
+        "Checks the target published Mix API, not only local repository APIs.",
+        "Reports compilation and runtime evidence separately."
+      ],
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "Our Mix example compiles locally but DartPad says semanticsRole is unknown. Check published package compatibility.",
+      "expected_output": "A version-aware correction preserving switch semantics without unsupported parameters.",
+      "expectations": [
+        "Checks the published Pressable signature.",
+        "Preserves toggle semantics with one semantic owner.",
+        "Does not claim a local build proves DartPad compatibility."
+      ],
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "Clean up this Flutter teaching snippet for DartPad without changing its keyboard or screen reader behavior. It already supports reduced motion; keep that behavior.",
+      "expected_output": "A simpler snippet retaining interaction and accessibility behavior.",
+      "expectations": [
+        "Preserves reduced-motion behavior and keyboard activation.",
+        "Avoids unnecessary abstractions.",
+        "Explains non-obvious decisions with concise comments."
+      ],
+      "files": []
+    },
+    {
+      "id": 4,
+      "prompt": "Simplify the supplied Spring Check into a clean self-contained Mix DartPad teaching example. Preserve its appearance, dimensions, timing and pointer/keyboard interaction; keep colors and styling easy to read and document the lesson briefly. Audit accessibility role ownership and repair a role/action defect if present. Check whether Material setup is needed and explain your choice. Use the loaded DartPad skill. Return the complete runnable main.dart and a short evidence/limitations note. Target stable DartPad Mix 2.1.0. Separately review the supplied Prompt Bar and explain what app-shell dependencies cannot safely be removed; do not rewrite Prompt Bar.",
+      "expected_output": "A standalone checkbox with styles outside build, preserved typography and motion, one semantic label/action/role, and a dependency-aware Prompt Bar review.",
+      "files": [
+        "evals/files/spring_check.dart",
+        "evals/files/prompt_bar.dart"
+      ],
+      "expectations": [
+        "All ordinary styler declarations are outside build(), with explicit inputs for state-dependent styles.",
+        "The widget tree uses callable stylers and retains a separate literal palette without MixScope.",
+        "Shorthand is valid for target Mix 2.1.0; instance-only wrap starts from a constructor.",
+        "Checkbox semantics have one label, checked state, tap action and no duplicate button role.",
+        "The standalone shell decision accounts for inherited typography; Prompt Bar keeps TextField Material requirements.",
+        "The final snippet passes actual DartPad analysis and yields nonempty compiled JavaScript.",
+        "Existing geometry, durations, press/hover feedback and keyboard handling remain present."
+      ]
+    }
+  ]
+}

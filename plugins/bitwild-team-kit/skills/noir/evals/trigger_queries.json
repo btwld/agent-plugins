@@ -1,0 +1,66 @@
+[
+  {
+    "query": "Sketch a minimal Dart entry point for a package:noir status screen that displays Ready. I already depend on Noir. How do I check that it renders inside an 80-column terminal?",
+    "should_trigger": true
+  },
+  {
+    "query": "A Noir TUI search field no longer receives the letter q after I registered a global quit shortcut. How would you isolate and verify the fix without changing my project's dependencies?",
+    "should_trigger": true
+  },
+  {
+    "query": "Check how my package:noir dashboard wraps at 40 terminal columns.",
+    "should_trigger": true
+  },
+  {
+    "query": "Add keyboard navigation to this Noir terminal form.",
+    "should_trigger": true
+  },
+  {
+    "query": "Test mount and disposal of a Dart Noir widget without opening a real terminal.",
+    "should_trigger": true
+  },
+  {
+    "query": "Inspect the focus order of my Noir TUI using noir_driver.",
+    "should_trigger": true
+  },
+  {
+    "query": "Compare SignalWidget with the stateful approach for this Noir terminal application.",
+    "should_trigger": true
+  },
+  {
+    "query": "Use $noir to add a status row to my TUI.",
+    "should_trigger": true
+  },
+  {
+    "query": "Write a zero-knowledge range proof in Noir.",
+    "should_trigger": false
+  },
+  {
+    "query": "Implement a Flutter screen with two TextFields and a submit button.",
+    "should_trigger": false
+  },
+  {
+    "query": "Build a standard Dart CLI command with package:args and JSON output.",
+    "should_trigger": false
+  },
+  {
+    "query": "Capture a film-noir look for the cover artwork.",
+    "should_trigger": false
+  },
+  {
+    "query": "Add keyboard navigation to a React OpenTUI application.",
+    "should_trigger": false
+  },
+  {
+    "query": "Validate a Dart JSON payload with package:ack.",
+    "should_trigger": false
+  },
+  {
+    "query": "Investigate a layout overflow in a Flutter widget test.",
+    "should_trigger": false
+  },
+  {
+    "query": "Make my zsh prompt print the current Git branch.",
+    "should_trigger": false
+  }
+]

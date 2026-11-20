@@ -1,0 +1,6 @@
+interface:
+  display_name: "Flutter Setup"
+  short_description: "Check Flutter skills, SDKs, and Dart MCP in the target client"
+  default_prompt: "Use $flutter-setup to check the official Flutter plugin and Dart MCP in this environment."
+policy:
+  allow_implicit_invocation: false

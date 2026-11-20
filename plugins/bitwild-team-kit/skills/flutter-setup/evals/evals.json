@@ -1,0 +1,17 @@
+{
+  "skill_name": "flutter-setup",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Use flutter-setup. I use Claude.ai chat and have Claude Code on my laptop. How do I add Flutter skills and Dart MCP to the chat account?",
+      "expected_output": "Use the account marketplace for skills and identify the hosted connector requirement for MCP. Leave the laptop configuration alone.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "Check this Codex runner only. The SDK and official plugin are present but this session shows no Dart tools.",
+      "expected_output": "Inspect the versions and official skill discovery, report the unverified in-session connection and the fresh-session check, and preserve the configuration.",
+      "files": []
+    }
+  ]
+}

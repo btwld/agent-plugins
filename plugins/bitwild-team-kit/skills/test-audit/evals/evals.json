@@ -1,0 +1,42 @@
+{
+  "skill_name": "test-audit",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "$test-audit Audit records.py for redundant cases. Give recommendations only.",
+      "expected_output": "Identify the exact duplicate and preserve the distinct parser, reader and layout contracts.",
+      "files": [
+        "evals/files/records.py"
+      ],
+      "expectations": [
+        "Names test_v1_id as the survivor for test_v1_example_again (or vice versa).",
+        "Keeps the decimal input 08 covered and explains a regression that passes the 07 examples.",
+        "Keeps V2 field selection and the panel width requirement.",
+        "Leaves the input file untouched."
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Use $test-audit to trim a disposable copy of records.py. Run its tests before and after.",
+      "expected_output": "Remove the proven duplicate and verify that distinct coverage survives.",
+      "files": [
+        "evals/files/records.py"
+      ],
+      "expectations": [
+        "Runs all five original test functions before changing the copy.",
+        "Removes only one of the two identical V1 tests from the copy.",
+        "Runs the four surviving cases and reports the observed results."
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "Use the test-audit skill. A library test checks timer cancellation and an adapter test asserts that closing the view calls cancel. Can we drop one? I have only their names.",
+      "expected_output": "Explain why the evidence is insufficient and request the assertions and call path.",
+      "files": [],
+      "expectations": [
+        "Distinguishes timer behavior from adapter wiring.",
+        "Identifies the missing evidence and withholds a removal recommendation."
+      ]
+    }
+  ]
+}

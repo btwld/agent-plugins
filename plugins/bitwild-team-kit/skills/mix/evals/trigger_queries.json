@@ -1,0 +1,34 @@
+[
+  {
+    "query": "This Flutter BoxStyler returns a new style, but I can't get the inset to show on my Mix Box.",
+    "should_trigger": true
+  },
+  {
+    "query": "The hover background on this Mix Pressable is right in isolation but wrong under a nested MixScope. Trace it.",
+    "should_trigger": true
+  },
+  {
+    "query": "Convert the repeated raw spacing in these package:mix widgets to our existing spacing token.",
+    "should_trigger": true
+  },
+  {
+    "query": "Set the responsive tracks for a grouped Flutter Mix GridBox.",
+    "should_trigger": true
+  },
+  {
+    "query": "Fix keyboard activation and selection in a Remix menu without changing its look.",
+    "should_trigger": false
+  },
+  {
+    "query": "Plan an accessibility study for a mobile checkout.",
+    "should_trigger": false
+  },
+  {
+    "query": "Fix a RenderFlex overflow inside a plain Flutter Row. We use only the Material SDK.",
+    "should_trigger": false
+  },
+  {
+    "query": "Wire up a Remix loader for this TypeScript web route.",
+    "should_trigger": false
+  }
+]

@@ -1,0 +1,35 @@
+{
+  "skill_name": "remix-flutter",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "My Flutter app resolves remix 0.2.0. I copied ButtonStyler().padding(.all(12)) from the Remix site and Flutter can't find ButtonStyler. Give me a styled Save button that works with our current lockfile.",
+      "expected_output": "Use RemixButton with the styling API verified against the stable 0.2.0 package and keep the current dependency line.",
+      "files": [],
+      "expectations": [
+        "Uses package:remix/remix.dart, RemixButton and RemixButtonStyle from the 0.2.0 public API.",
+        "Retains the dependency line and supplies a version-appropriate padding call and Save callback."
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "pubspec.lock resolves remix 1.0.0-rc.4. An old example uses FortalScope and FortalButtonStyle, but we're building a hand-styled Save button and don't use remix.yaml. What should go in the widget and how would you verify it?",
+      "expected_output": "Use the release candidate public widget and styler directly and verify the Save action in the existing host.",
+      "files": [],
+      "expectations": [
+        "Uses RemixButton and ButtonStyler and keeps the existing host and callback.",
+        "Explains that a preset is optional for direct widgets and provides an analysis or widget-test check for the requested behavior."
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "I'm on Flutter 3.44 and followed the Remix RC docs. remix init --preset vanilla fails with 'No registry-stable branch is published for btwld/remix'. I mainly need a styled button and can wait on Vanilla. Help me get it working.",
+      "expected_output": "Identify the unavailable upstream registry ref and provide a direct Remix component path when the user can defer the preset.",
+      "files": [],
+      "expectations": [
+        "Identifies the missing official registry ref and does not claim init supports a --ref option.",
+        "Provides a direct package:remix/remix.dart solution using the supported release candidate API and defers preset installation."
+      ]
+    }
+  ]
+}

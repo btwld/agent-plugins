@@ -1,0 +1,10 @@
+{
+  "name": "bitwild-team-kit",
+  "version": "1.0.0",
+  "description": "Plan product delivery, design interfaces, write documentation, review engineering changes, and build with Dart and Flutter.",
+  "author": {
+    "name": "Bitwild"
+  },
+  "repository": "https://github.com/btwld/agent-plugins",
+  "skills": "./skills/"
+}

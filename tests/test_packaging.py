@@ -5,14 +5,17 @@ import unittest
 
 ROOT = Path(__file__).resolve().parents[1]
 SKILLS = {
-    'design-kit': {'design-system', 'image-to-code', 'accessibility-review', 'design-verification', 'frontend-design', 'ux-copy', 'visual-exploration', 'design-critique', 'user-research', 'url-to-code'},
-    'product-kit': {'product-brainstorming', 'research-synthesis',
-                    'competitive-brief', 'ux-friction-research', 'write-prd', 'write-wbs'},
-    'engineering-kit': {'architecture', 'ci-loop', 'clean-sheet-review',
-                        'code-simplifier', 'executing-plans', 'pr-authoring', 'pr-canvas',
-                        'pr-comments', 'pr-prep', 'reference-implementation', 'sbvr',
-                        'verify', 'wild-code-review', 'writing-for-agents',
-                        'writing-for-humans', 'writing-plans'},
+    'bitwild-team-kit': {
+        'accessibility-review', 'ack', 'architecture', 'ci-loop', 'clean-sheet-review',
+        'code-simplifier', 'competitive-brief', 'dart-codegen', 'dart-idioms',
+        'dartpad-examples', 'deep-code-review', 'design-critique', 'design-system',
+        'design-verification', 'executing-plans', 'flutter-setup', 'frontend-design', 'image-to-code', 'mix',
+        'noir', 'pr-authoring', 'pr-canvas', 'pr-comments', 'product-brainstorming',
+        'reference-implementation', 'remix-flutter', 'research-synthesis', 'sbvr', 'test-audit',
+        'url-to-code', 'user-research', 'ux-copy', 'ux-friction-research', 'verify',
+        'visual-exploration', 'write-prd', 'write-wbs',
+        'writing-for-agents', 'writing-for-humans', 'writing-plans',
+    },
 }
 
 
@@ -61,7 +64,7 @@ class PackagingTests(unittest.TestCase):
                     self.assertTrue(resolved.is_relative_to(plugin.resolve()), (p, target))
 
     def test_product_example_resolves_its_bundled_schema(self):
-        plugin = ROOT / 'plugins/product-kit'
+        plugin = ROOT / 'plugins/bitwild-team-kit'
         example = plugin / 'assets/examples/product/product.json'
         resolved = (example.parent / json.loads(example.read_text())['$schema']).resolve()
         self.assertEqual(resolved, (plugin / 'references/product.schema.json').resolve())

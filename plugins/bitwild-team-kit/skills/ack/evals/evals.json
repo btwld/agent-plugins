@@ -1,0 +1,27 @@
+{
+  "skill_name": "ack",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Our checkout service already uses ack 1.7.1. Validate an incoming order with a positive integer quantity and a delivery note that may be missing, null, or a string. A bad order should produce a field-specific validation error without a 500.",
+      "expected_output": "A version-compatible Ack object schema, safe handling of a rejected payload, and checks of the supported field states.",
+      "files": [],
+      "expectations": [
+        "Uses the resolved 1.7.1 API and keeps the existing dependency.",
+        "Requires a positive integer quantity and handles each of the three note states.",
+        "Inspects the failure branch before reading the error and tests a rejected quantity."
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "We've pinned ack and ack_generator to 2.0.0-beta.3. A PATCH model currently treats both omitted nickname and explicit null as 'leave unchanged'. Fix it and make the outgoing JSON preserve the difference.",
+      "expected_output": "A version-matched model change and handler and encoding tests covering omitted, null, and present values.",
+      "files": [],
+      "expectations": [
+        "Uses the resolved beta generator's single .g.dart part and edits the annotated source model.",
+        "Uses JsonMaybe or an equivalent presence-preserving model and verifies missing, null, and populated keys through parsing, applying the patch, and encoding.",
+        "Regenerates affected files when needed and reports the checks actually run."
+      ]
+    }
+  ]
+}
