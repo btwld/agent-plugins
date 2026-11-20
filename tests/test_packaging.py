@@ -11,7 +11,7 @@ SKILLS = {
     'engineering-kit': {'architecture', 'ci-loop', 'clean-sheet-review',
                         'code-simplifier', 'executing-plans', 'pr-authoring', 'pr-canvas',
                         'pr-comments', 'pr-prep', 'reference-implementation', 'sbvr',
-                        'verify', 'wild-code-review', 'writing-for-agents',
+                        'verify', 'deep-code-review', 'wild-code-review', 'test-audit', 'writing-for-agents',
                         'writing-for-humans', 'writing-plans'},
 }
 

@@ -1,0 +1,66 @@
+[
+  {
+    "query": "$test-audit on the parser suite. Which cases catch the same regression?",
+    "should_trigger": true
+  },
+  {
+    "query": "Use test-audit to assess this PR’s deleted assertions.",
+    "should_trigger": true
+  },
+  {
+    "query": "Use the test-audit skill to trim redundant tests in the sync package.",
+    "should_trigger": true
+  },
+  {
+    "query": "$test-audit Can we collapse this input matrix while keeping boundary cases?",
+    "should_trigger": true
+  },
+  {
+    "query": "Run test-audit on this old compatibility test. Is its contract retired?",
+    "should_trigger": true
+  },
+  {
+    "query": "Use $test-audit to tell me whether this mock and end-to-end test protect the same wiring.",
+    "should_trigger": true
+  },
+  {
+    "query": "$test-audit Review the suite and leave files alone.",
+    "should_trigger": true
+  },
+  {
+    "query": "Use test-audit and apply only the proven duplicate removals.",
+    "should_trigger": true
+  },
+  {
+    "query": "Run the existing test suite.",
+    "should_trigger": false
+  },
+  {
+    "query": "Review this PR for correctness and missing tests.",
+    "should_trigger": false
+  },
+  {
+    "query": "Audit the suite for duplicated assertions.",
+    "should_trigger": false
+  },
+  {
+    "query": "Use code-simplifier on the test setup.",
+    "should_trigger": false
+  },
+  {
+    "query": "Write a Flutter widget test for the retry button.",
+    "should_trigger": false
+  },
+  {
+    "query": "Why did this integration test time out?",
+    "should_trigger": false
+  },
+  {
+    "query": "Use verify to check whether the fix handles cancellation.",
+    "should_trigger": false
+  },
+  {
+    "query": "Can you explain what the test-audit skill does?",
+    "should_trigger": false
+  }
+]

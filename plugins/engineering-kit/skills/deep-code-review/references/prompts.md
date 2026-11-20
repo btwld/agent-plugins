@@ -35,7 +35,7 @@ Design choices these templates encode, so edits keep them:
 | `{CALIBRATION}` | two or three real report examples and two or three real keep examples from this repository |
 | `{GUIDELINE_SOURCE}` | the language's style guide name, for the `guideline` field |
 | `{ID}`, `{SLICE_PATH}`, `{HINTS_PATH}`, `{OUTPUT_PATH}`, `{INPUTS_PATH}`, `{SWEEP_DIR}` | per-agent paths |
-| `{DIFF_NOTE}` | empty for a repository scope; for a diff scope: "Only lines inside the changed hunks of `<range>` are in scope. A finding outside them must carry `"preexisting": true` or be dropped." |
+| `{DIFF_NOTE}` | Empty for a repository scope; for a diff scope: "Attribute findings to `<range>`. Use a changed causal hunk as the primary citation, explaining effects in untouched callers/docs. Mark genuinely inherited defects `\"preexisting\": true`." |
 
 ## Finder, lens C (comments and docs)
 
@@ -60,9 +60,9 @@ OUTPUT: {OUTPUT_PATH}
 == Rules (report only these; cite the id) ==
 {RULES_C}
 
-Also apply the language's doc-comment form: a type doc starts with a noun phrase, not "This
-class…"; a boolean doc starts with "Whether"; the first sentence is a one-line summary in its
-own paragraph. Report a form violation as S1 or S3 with the guideline named.
+Apply the target language's actual documentation conventions and repository requirements.
+Do not transfer one language's doc-comment rules to another. Wording alone is not a finding;
+show misleading content, a violated requirement, or a concrete maintenance cost.
 
 == Never report ==
 {NEVER}
@@ -77,8 +77,8 @@ own paragraph. Report a form violation as S1 or S3 with the guideline named.
    lines_read must equal the real line count or the file will be sent back.
 3. For each candidate, write down the rule id and apply that rule's test before deciding. If
    the test does not clearly fail, do not report.
-4. Severity defaults to P3 for this lens. Raise to P2 only for a dense cluster (five or more in
-   one file) and say so in why.
+4. Assign severity from impact. Cosmetic cleanup is usually P3; materially misleading
+   documentation can be more serious regardless of how many instances exist.
 5. Confidence: high = named pattern, guideline, snippet; medium = could be house style;
    low = smell only (validators reject these).
 
@@ -144,7 +144,7 @@ OUTPUT: {OUTPUT_PATH}
 3. For each candidate, name the rule and apply its test. For S5 and S6 read the types and
    narrowing in scope before deciding. For S7 count the implementations or call sites with a
    search and state the number in why. For S12 suppressions, check the linter configuration.
-4. Severity defaults from the rule. Move one step only with a reason.
+4. Assign severity from demonstrated impact; explain departures from pattern defaults.
 5. Confidence: high = pattern, guideline, snippet, and you checked the context (types, call
    sites, config); medium = could be house style; low = smell only.
 
@@ -181,8 +181,8 @@ OUTPUT: {OUTPUT_PATH}
 
 == Repo facts ==
 {REPO_FACTS}
-(Include the documented test harnesses here. A new harness or a fake that re-implements
-framework behavior is S13.)
+(Include actual harnesses and boundary contracts. A new harness or fake is not a defect
+without a demonstrated contract violation or unjustified maintenance cost.)
 
 == Rules (report only these) ==
 {RULES_T}
@@ -199,7 +199,7 @@ framework behavior is S13.)
 4. Then invert the view: list the public entry points of each unit under test and which tests
    exercise them. An entry point with an obvious failure path and no test at all is S10 too,
    cited at the untested function, and it is easy to miss when you only read test bodies.
-5. Severity defaults from the rule; move one step only with a reason.
+5. Severity follows demonstrated impact; explain departures from pattern defaults.
 
 == Output ==
 Finder JSON shape with hints_triaged filled:
@@ -242,13 +242,14 @@ S2-history-narration.txt, S1-this-class-docs.txt  Open each hit; apply the comme
   delete it, did the reader lose anything? Report only clear failures. Numbered steps that
   encode ordering are not findings. Dividers used consistently in one large constants file are
   one file-level P3 at most.
-S12-legacy-compat.txt, S12-todo.txt, S12-commented-out-code.txt  Report shims, aliases,
-  orphan TODOs, and commented-out code. P2.
+S12-legacy-compat.txt, S12-todo.txt, S12-commented-out-code.txt  Check compatibility promises,
+  consumers, and maintained purpose. Report only proven dead or misleading residue;
+  absence of an issue link alone does not invalidate a TODO.
 S4-tag-style-docs.txt, S3-block-comment-docs.txt  Report every real hit in a language whose
   guide asks for prose docs; skip languages where tags are the convention.
 S9-helper-manager-names.txt  Report only names with no domain meaning.
-S3-S14-emoji.txt  Emoji inside string literals in tests is data. Report emoji in comments or
-  Markdown prose only.
+S3-S14-emoji.txt  Typography alone is not a finding. Report only a concrete requirement
+  violation, misleading content, or maintenance problem; keep useful prose and test data.
 
 Every hit must appear in hints_triaged as reported (with finding id) or not_slop (with a
 one-line reason). Aggregate identical repo-wide patterns into one finding whose snippet is the
@@ -264,8 +265,8 @@ counts triaged and findings by pattern.
 
 ```
 You are a validator in a two-pass review of {REPO_SUMMARY} at {ROOT}. Finders have proposed
-findings; your job is to DISPROVE them. A validator that confirms everything has failed.
-Expect to reject or downgrade a real share.
+findings; your job is to try to disprove them using evidence. All, some, or none may survive.
+There is no rejection-rate target; challenge the reasoning, not the count.
 
 READ-ONLY. Do not edit, create, or delete any file except your output file.
 
@@ -291,11 +292,13 @@ OUTPUT: {OUTPUT_PATH}
    b. Does a doc-comment requirement or a real caveat justify the doc? Reject.
    c. For S5: is the catch at an IO, process, FFI, or network edge, and does it report or
       rethrow? Reject.
-   d. For S6: read the declared types and narrowing; is the state actually impossible? If not,
-      reject.
-   e. For S7: count implementations or call sites yourself. If more than one, reject.
+   d. For S6: check callers, runtime boundaries, narrowing, and compatibility; is the guarded
+      state actually impossible on this path? Type annotations alone are insufficient.
+   e. For S7: check whether the layer owns semantics, lifecycle, or a boundary. Caller counts
+      provide context but cannot prove or disprove unnecessary indirection alone.
    f. For S10: name the obvious break; would the test fail? If yes, reject.
-   g. Does the configured linter already enforce it? Reject and name the rule.
+   g. Is this only duplicate mechanical style feedback from configured tooling? Reject and
+      name the rule. Keep independently demonstrated correctness defects reportable.
    h. Is the pattern the file's consistent convention? Downgrade to P3 at file level, or reject
       if already reported for that file.
 4. Verdict: confirm | downgrade (give new severity) | reject | reclassify (give new pattern).
@@ -318,5 +321,5 @@ finder schema plus "lens": "{LENS}".
 }
 
 Every input finding id gets exactly one review. Write the file, then reply with counts
-(confirm / downgrade / reject / reclassify / missed) and the two rejections you are most sure of.
+(confirm / downgrade / reject / reclassify / missed) and any material counterevidence.
 ```

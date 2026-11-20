@@ -8,13 +8,18 @@ repository; there is no upstream import, tracking, or merge workflow.
 | Plugin | Purpose | Skills | Version |
 | --- | --- | --- | --- |
 | [Product Kit](plugins/product-kit/README.md) | Research, requirements, PRDs, and delivery breakdowns | 6 | 0.3.3 |
-| [Engineering Kit](plugins/engineering-kit/README.md) | Technical decisions, implementation, reviews, PR/CI workflows, writing, and verification | 16 | 0.3.0 |
+| [Engineering Kit](plugins/engineering-kit/README.md) | Technical decisions, implementation plans, writing for people and agents, and final code reviews | 18 | 0.3.0 |
 | [Design Kit](plugins/design-kit/README.md) | Interface design, critique, accessibility, UX copy, and research planning | 10 | 0.1.1 |
 
 Product Kit owns the shared requirements, questions, and decisions. Engineering
 Kit turns settled scope into implementation work without creating a second
 requirement baseline. Use the skill that matches the task; no automatic sequence
 or handoff is required.
+
+For common engineering requests, start with the skill for a
+[document people can use](plugins/engineering-kit/skills/writing-for-humans/SKILL.md),
+[instructions an agent can follow](plugins/engineering-kit/skills/writing-for-agents/SKILL.md),
+or a [final review and merge verdict](plugins/engineering-kit/skills/deep-code-review/SKILL.md).
 
 An [earlier source snapshot](agent-plugins.flattened.md) is available for historical review. The plugin directories contain the current workflows.
 Binary assets are listed by hash; install plugins from their folders, not the snapshot.

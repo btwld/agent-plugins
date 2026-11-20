@@ -1,6 +1,6 @@
 # Structured slop audit (optional)
 
-Optional deeper tool for a large or high-risk quality audit. The parent `wild-code-review` skill
+Optional deeper tool for a large or high-risk quality audit. The parent `deep-code-review` skill
 already considers unnecessary code, hollow tests, and counterevidence. Load this reference
 when a cited-pattern audit, sweep, or delegation contract would help—not because the user
 said "slop," and not instead of the ordinary review. Ordinary reviews must not skip
@@ -12,7 +12,7 @@ output is a findings report; implement fixes only when the user has requested th
 for every finding is the code, never its origin: "an LLM wrote this" is not a finding, and
 neither is voice alone.
 
-Resolve `<skill>` to the loaded `wild-code-review` directory (this skill's root, including a
+Resolve `<skill>` to the loaded `deep-code-review` directory (this skill's root, including a
 packaged copy). Resolve [rubric.md](rubric.md), [orchestration.md](orchestration.md), and
 [prompts.md](prompts.md) from `references/` beside this file.
 
@@ -28,25 +28,28 @@ contracts that also work sequentially. Preserve coverage and report unread files
 Record the starting worktree state and leave unrelated edits in place. A read-only review does
 not require stashing, resetting, committing, or cleaning the working tree.
 
-For a diff, only touched hunks are in scope. Read the whole file for context, because slop is
-judged against the file's conventions, but a finding on an untouched line carries
-`"preexisting": true` and lands in a separate optional bucket. A pull request is not
-responsible for the cruft around it.
+For a diff, attribute findings to the reviewed change. Read surrounding code and consumers
+for context. New breakage can surface in untouched callers or docs; cite the changed cause
+and the affected location. Mark genuinely inherited defects `"preexisting": true` and keep
+them separate. The optional citation gate expects the primary location in a changed hunk;
+include untouched consequences in the explanation rather than mislabeling them pre-existing.
 
 ## Establish repo facts before reading
 
 Inspect the relevant repository conventions before classifying findings. Record the facts
 needed for the review, sharing them with any permitted delegated reviewers:
 
-- **Linter and formatter configuration** and what it enforces. Anything the analyzer already
-  flags is out of scope; name the rule and move on.
+- **Linter and formatter configuration** and what it enforces. Avoid duplicate mechanical
+  style findings; a demonstrated correctness defect remains reportable even if tooling
+  can also detect it.
 - **Doc-comment requirements.** When the repository requires a doc on every public member, its
   existence is never slop; only its content can be.
 - **Layer and boundary rules** from `CLAUDE.md`, `AGENTS.md`, `CONTRIBUTING`, or architecture
   docs. S13 architecture findings come only from boundaries the repository states.
-- **Test harnesses** the repository documents. A harness or fake the repository does not
-  document is a finding; the documented ones are not.
-- **Out-of-scope paths:** generated, vendored, golden, third-party, and anything the user excludes.
+- **Test harnesses** and actual consumers. Missing documentation alone does not make a
+  harness or fake invalid; show the behavioral or maintenance problem.
+- **Special handling:** check generators, provenance, and consumers for generated, vendored,
+  golden, fixture, or third-party content; honor explicit user exclusions.
 - **Compatibility promises.** A prerelease removes obsolete shapes; a stable library shims them.
   Legacy aliases are S12 only where no promise exists.
 
@@ -56,7 +59,7 @@ meet a quota. Over-reporting on restating comments and chat voice is a known fai
 
 ## Run the mechanical sweep first
 
-With `<skill>` set to the loaded `wild-code-review` directory, use the matching evidence directory
+With `<skill>` set to the loaded `deep-code-review` directory, use the matching evidence directory
 from [the skill's Report section](../SKILL.md#report) as `<workspace>` for a review the user wants
 kept; otherwise use a temporary workspace, honoring any user or repository location override:
 
@@ -93,8 +96,7 @@ shallower reads and a validator that cannot specialize.
   tests exercise them. An entry point with an obvious failure path and no test is S10 too, and
   reading test bodies alone never surfaces it.
 - Every finding carries path, start and end line, a verbatim snippet of at most four lines, the
-  guideline it violates, a one- or two-sentence `why`, and a one-sentence fix. Severity defaults
-  from the rule; move it one step only with a reason.
+  guideline it violates, a one- or two-sentence `why`, and a one-sentence fix. Severity follows demonstrated impact, with departures from defaults explained.
 - An empty findings list is a correct result for clean code. Do not manufacture findings to
   justify the pass.
 

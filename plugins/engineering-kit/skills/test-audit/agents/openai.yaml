@@ -1,0 +1,6 @@
+interface:
+  display_name: "Test Audit"
+  short_description: "Find redundant tests and preserve regression coverage"
+  default_prompt: "Use $test-audit to identify redundant tests and explain which surviving tests protect each behavior."
+policy:
+  allow_implicit_invocation: false

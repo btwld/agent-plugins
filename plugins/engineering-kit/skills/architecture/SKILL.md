@@ -4,7 +4,7 @@ description: >-
   Use when choosing, evaluating, or remembering a technical design decision: technology
   selection, component boundaries, data ownership, or a chosen API contract. Give a concise
   recommendation and its reason, main trade-off, and conditions for reconsideration. Use
-  clean-sheet-review to reopen an existing solution's whole framing, wild-code-review for
+  clean-sheet-review to reopen an existing solution's whole framing, deep-code-review for
   code defects, and ordinary execution for an approved implementation.
 ---
 

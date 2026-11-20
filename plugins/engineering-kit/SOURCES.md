@@ -18,5 +18,9 @@ Skills, helpers, and fixtures derive from [Leo Farias's skills](https://github.c
 The PR authoring and architecture revisions adapt the corresponding Leo Skills
 workflows at `29f785013573715f2a9575901fcfea6c16af9c9a`.
 
+Deep Code Review and the explicitly callable Test Audit use Leo Farias's local
+1.0.0 workflow revisions (BSD-3-Clause). The existing company review helpers
+remain bundled with Deep Code Review.
+
 Concepta's publisher metadata does not replace the original copyright notices.
 No external source repository or plugin is required to run these skills.

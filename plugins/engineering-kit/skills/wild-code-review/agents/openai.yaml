@@ -1,0 +1,6 @@
+interface:
+  display_name: "Wild Code Review"
+  short_description: "Run the Engineering Kit’s Deep Code Review"
+  default_prompt: "Use $wild-code-review to review this change."
+policy:
+  allow_implicit_invocation: false

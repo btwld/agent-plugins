@@ -13,7 +13,7 @@
     {
       "name": "engineering-kit",
       "source": "./plugins/engineering-kit",
-      "description": "Engineering architecture, implementation planning, unified code and structural review, PR and CI workflows, business rules, and falsifiable verification."
+      "description": "Plan engineering changes, write documentation for people and instructions for agents, prepare pull requests, and review changes for merge readiness."
     },
     {
       "name": "design-kit",

@@ -1,33 +1,25 @@
 # Engineering Kit
 
 Engineering workflows for Codex and Claude Code, installed as
-`engineering-kit@conceptadev`. The kit has 15 workflows and one compatibility command.
+`engineering-kit@conceptadev`. The kit has 16 workflows and two compatibility commands.
 
-## Skills
+## Choose a workflow
 
-| Skill | Outcome |
+| What you want to finish | Where to start |
 | --- | --- |
-| [architecture](skills/architecture/SKILL.md) | A grounded technical choice, API contract design, or architecture decision record |
-| [writing-plans](skills/writing-plans/SKILL.md) | An executable implementation plan from settled requirements |
-| [executing-plans](skills/executing-plans/SKILL.md) | Carry out an existing authorized implementation plan |
-| [wild-code-review](skills/wild-code-review/SKILL.md) | Unified review and codebase audit for defects, regressions, AI slop, structural quality, and change verdicts |
-| [clean-sheet-review](skills/clean-sheet-review/SKILL.md) | Reconsider an existing solution's scope and design from first principles |
-| [code-simplifier](skills/code-simplifier/SKILL.md) | Explicitly requested behavior-preserving refinement and slop removal |
-| [pr-authoring](skills/pr-authoring/SKILL.md) | Prepare a local branch, draft a PR, or publish an authorized PR update |
-| [pr-prep](skills/pr-prep/SKILL.md) | Explicit compatibility command for the preparation step in pr-authoring |
-| [pr-canvas](skills/pr-canvas/SKILL.md) | Interactive HTML pull request walkthrough in the browser |
-| [pr-comments](skills/pr-comments/SKILL.md) | Verified triage and action ordering for active PR review comments |
-| [ci-loop](skills/ci-loop/SKILL.md) | Watch PR checks, diagnose failing CI runs, and iterate until green |
-| [verify](skills/verify/SKILL.md) | Prove or disprove a falsifiable claim with baseline-versus-treatment runtime evidence (`VERIFIED`, `NOT VERIFIED`, `INCONCLUSIVE`) |
-| [reference-implementation](skills/reference-implementation/SKILL.md) | A canonical implementation suitable for reuse |
-| [sbvr](skills/sbvr/SKILL.md) | Structured business vocabulary and rules |
-| [writing-for-agents](skills/writing-for-agents/SKILL.md) | Author and refactor agent-consumed docs (`SKILL.md`, `AGENTS.md`, `CLAUDE.md`, and reference docs) |
-| [writing-for-humans](skills/writing-for-humans/SKILL.md) | Clear human-facing technical prose, capability/user-story specs, and single-source Linear/issue-tracker linking (ASD-STE100) |
+| Write something people need to understand or act on | [Writing for Humans](skills/writing-for-humans/SKILL.md) for READMEs, procedures, issue descriptions, and technical explanations. |
+| Write instructions an agent can carry out | [Writing for Agents](skills/writing-for-agents/SKILL.md) for skills, repository instructions, and agent reference material. For a mixed documentation request, match each artifact to its reader. |
+| Decide whether a change is ready to merge | [Deep Code Review](skills/deep-code-review/SKILL.md). Trace correctness against callers and requirements, challenge suspected findings, then make a separate simplification pass. The result is one review and one readiness verdict. |
+| Decide how to build something | [Architecture](skills/architecture/SKILL.md) for a technical decision, [Writing Plans](skills/writing-plans/SKILL.md) for implementation steps, or [Executing Plans](skills/executing-plans/SKILL.md) to carry out an existing plan. |
+| Prepare and land a pull request | [PR Authoring](skills/pr-authoring/SKILL.md) prepares the branch or drafts the PR. Use [PR Comments](skills/pr-comments/SKILL.md) for existing feedback and [CI Loop](skills/ci-loop/SKILL.md) for failing checks. |
 
-Choose a skill for the requested outcome. Routine coding and reviews need no
-wrapper workflow. `code-simplifier`, `pr-prep`, and `pr-canvas` use explicit-only invocation,
-including their Codex and Claude invocation policies. Other workflows keep their
-existing scope boundaries.
+### Focused requests
+
+- [Test Audit](skills/test-audit/SKILL.md) is explicitly callable for suite-wide redundancy. Every proposed cut needs a surviving test that catches the same regression. [Code Simplifier](skills/code-simplifier/SKILL.md) applies explicitly requested behavior-preserving cleanup.
+- [Verify](skills/verify/SKILL.md) measures a specific behavior claim. [Clean-Sheet Review](skills/clean-sheet-review/SKILL.md) reopens the design decision. [Reference Implementation](skills/reference-implementation/SKILL.md) reviews a canonical example others will copy.
+- [PR Canvas](skills/pr-canvas/SKILL.md) creates a requested interactive walkthrough. [SBVR](skills/sbvr/SKILL.md) formalizes shared business vocabulary and rules.
+
+Existing commands still work. [wild-code-review](skills/wild-code-review/SKILL.md) runs Deep Code Review, and [pr-prep](skills/pr-prep/SKILL.md) runs the preparation step of PR Authoring. Both compatibility names require explicit invocation.
 
 Product Kit owns PRDs, requirements/questions, and WBS delivery breakdowns.
 Engineering planning turns settled scope into implementation steps; it does not

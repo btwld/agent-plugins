@@ -98,5 +98,17 @@
   {
     "query": "Benchmark the old and new cache implementations and tell me which is faster under a 90/10 read-write workload.",
     "should_trigger": false
+  },
+  {
+    "query": "Do a comprehensive review of this stacked PR with a dedicated AI-slop reviewer, check framework idioms against supported versions, and verify API examples and docs.",
+    "should_trigger": true
+  },
+  {
+    "query": "Explain Python TaskGroup and gather with examples. I am learning asyncio, not reviewing a change.",
+    "should_trigger": false
+  },
+  {
+    "query": "Use $test-audit to trim duplicated coverage across the suite.",
+    "should_trigger": false
   }
 ]

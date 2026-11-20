@@ -107,8 +107,10 @@ Finder → `<workspace>/findings/<AGENT_ID>.json`:
 `files_reviewed` lists every slice file with `lines_read` equal to its real line count; a
 partial read is visible and the gate sends it back. `hints_triaged` is required for T and W
 agents: one entry per hint, `{"hint": "path:line", "outcome": "reported" | "not_slop",
-"finding_id": "..." | null, "reason": "..."}`. A finding inside a diff-scoped review that
-points at untouched code carries `"preexisting": true`.
+"finding_id": "..." | null, "reason": "..."}`. Mark genuinely inherited findings
+`"preexisting": true`. For a new defect affecting untouched callers or docs, cite the
+changed causal hunk as the primary location and explain the untouched consequences;
+this preserves causal attribution while satisfying the optional diff-location gate.
 
 Validator → `<workspace>/validations/<AGENT_ID>.json`:
 
@@ -134,7 +136,7 @@ findings only, only in files that appear in the inputs, using the finder schema 
 
 ```bash
 python3 <skill>/scripts/check_findings.py --root . --workspace <workspace> <workspace>/findings/<the five>.json
-git status --short   # any tracked change means an agent edited; revert it and discard that agent's output
+git status --short   # compare with the recorded starting state; preserve existing and concurrent edits
 ```
 
 The gate checks that JSON parses, every slice file was read to its last line, every pattern is in
@@ -183,8 +185,8 @@ The final review contains:
 - proposed, confirmed, downgraded, rejected, reclassified: per lens, per finder, per pattern
 - every confirmed P1 and P2 with path, lines, snippet, and fix
 - P3 clustered by file with counts; single P3s stay in the JSON
-- ten sample rejections with reasons, so the reader can judge the validators
-- validators with a reject rate under 15 percent, flagged
+- material rejected candidates and their counterevidence, when useful; no required count
+- unresolved validation disagreements and their supporting evidence
 - files with zero findings across both lenses
 - the spot-check result
 - files not fully read and why
@@ -195,8 +197,10 @@ in this phase.
 ## 8. Stop conditions
 
 - Two or more malformed outputs in one wave after a retry: stop and report.
-- Any agent modifies a tracked file: `git checkout -- <file>`, discard that agent's output, note it.
+- An unauthorized edit appears: stop mutating work, preserve it and the starting state,
+  identify its provenance, and report the scope violation. Never reset or check out files
+  to undo an agent's work automatically; user or concurrent changes may be present.
 - A finder reports fewer `lines_read` than a file's length twice in a row: split that slice and
   re-run.
-- A validator wave rejects nothing after the strengthened re-run: report the finder output as
-  unvalidated rather than as confirmed.
+- Zero rejected findings is valid when each finding survives evidence-based challenge.
+  Repeat only for a demonstrated evidence or reasoning defect, not a rejection-rate target.
