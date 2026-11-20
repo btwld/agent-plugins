@@ -22,7 +22,7 @@ claude plugin install bitwild-team-kit@conceptadev
 
 Open a fresh session. Try `$deep-code-review` in Codex or `/bitwild-team-kit:deep-code-review` in Claude Code. For ACK schemas, Noir terminal apps, Mix styling, or Remix components, invoke `ack`, `noir`, `mix`, or `remix-flutter` under the same plugin.
 
-The official Flutter plugin supplies general SDK skills and Dart MCP. Install it alongside the team kit when you need those tools. [Official Dart and Flutter setup](docs/external-plugins.md)
+**Working on Dart or Flutter?** From a checkout of this repository, run `./scripts/install-with-flutter.sh codex` or `./scripts/install-with-flutter.sh claude` to install both the team kit and Flutter’s official plugin. Flutter supplies the general SDK skills and Dart MCP. If you already have the team kit, you can also add Flutter directly. [Official Dart and Flutter setup](docs/external-plugins.md)
 
 ## Switch from the previous kits
 
