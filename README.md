@@ -41,4 +41,6 @@ claude plugin validate plugins/bitwild-team-kit --strict
 claude plugin validate . --strict
 ```
 
-Maintain runtime files in the plugin directory. Match versions across provider manifests and use plugin-scoped release tags such as `bitwild-team-kit/v1.0.0`. The [older flattened snapshot](agent-plugins.flattened.md) records an earlier layout. [Source credits and licensing](plugins/bitwild-team-kit/SOURCES.md)
+Both marketplaces load the same `plugins/bitwild-team-kit/` directory. Release its skills together by matching the version in both plugin manifests. For a new kit release, use Claude Code’s dependency-resolution tag format, for example `bitwild-team-kit--v1.0.0`. Each package workflow follows the Dart package version resolved by the consuming project. [Plugin release tags](https://code.claude.com/docs/en/plugins/dependencies#tag-plugin-releases-for-version-resolution)
+
+The [older flattened snapshot](agent-plugins.flattened.md) records an earlier layout. [Source credits and licensing](plugins/bitwild-team-kit/SOURCES.md)

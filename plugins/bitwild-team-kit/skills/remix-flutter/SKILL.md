@@ -43,7 +43,7 @@ description: >-
 - **Registry changes.** Check the pinned catalog and installed ownership records
   before adding or refreshing items. Review a diff before replacing existing
   owned code and retain intentional local changes. For reusable presets or
-  published registries, follow the [upstream registry-authoring skill](https://github.com/btwld/remix/tree/main/skills/building-remix-design-system).
+  published registries, locate the authoring guide at the registry revision. Validate the catalog, install the theme and one component into a fresh consumer using its chosen prefix, and run that consumer’s analyzer and widget test. [Registry authoring at RC.5](https://github.com/btwld/remix/tree/remix-v1.0.0-rc.5/skills/building-remix-design-system)
 - **Host and interaction.** Place the installed theme above the Navigator when
   routes and overlays consume its tokens. Verify the resolved component's host
   requirements. Check overlays for menus and text selection, a Navigator for

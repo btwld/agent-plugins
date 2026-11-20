@@ -18,8 +18,8 @@
       "expected_output": "A version-matched model change and handler and encoding tests covering omitted, null, and present values.",
       "files": [],
       "expectations": [
-        "Checks the prerelease guide and the generated model's source definition.",
-        "Preserves three separate states through parsing, applying the patch, and encoding.",
+        "Uses the resolved beta generator's single .g.dart part and edits the annotated source model.",
+        "Uses JsonMaybe or an equivalent presence-preserving model and verifies missing, null, and populated keys through parsing, applying the patch, and encoding.",
         "Regenerates affected files when needed and reports the checks actually run."
       ]
     }

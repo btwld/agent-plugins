@@ -7,7 +7,7 @@ authoritative for later releases.
 | Published API | Button styler | Theme and installation |
 | --- | --- | --- |
 | Stable `0.2.0` | `RemixButtonStyle` | The package exports `FortalScope` and `FortalButtonStyle` as well as its base widgets. [Released source](https://pub.dev/api/archives/remix-0.2.0.tar.gz) |
-| Prerelease `1.0.0-rc.4` | `ButtonStyler` | Base widgets ship without a theme. The CLI installs editable preset recipes and theme files when wanted. This release requires Flutter 3.44 and Dart 3.12 or newer within its SDK constraints. [Released source](https://github.com/btwld/remix/tree/remix-v1.0.0-rc.4/packages/remix) |
+| Prereleases `1.0.0-rc.4` and `1.0.0-rc.5` | `ButtonStyler` | Base widgets ship without a theme. The CLI installs editable preset recipes and theme files when wanted. Both releases require Flutter 3.44 and Dart 3.12 or newer within their SDK constraints. [Released source](https://github.com/btwld/remix/tree/remix-v1.0.0-rc.5/packages/remix) |
 
 Use the [pub.dev versions page](https://pub.dev/packages/remix/versions) to
 check published candidates before adding dependencies. In an existing app,
@@ -37,7 +37,7 @@ Widget saveButton(VoidCallback save) => RemixButton(
 );
 ```
 
-The 1.0.0-rc.4 implementation uses the component's `ButtonStyler` with Mix
+The RC.4 and RC.5 releases use the component's `ButtonStyler` with Mix
 shorthand supported by the resolved version.
 
 ```dart
@@ -56,7 +56,7 @@ Widget saveButton(VoidCallback save) => RemixButton(
 ```
 
 For other components, consult the exact [stable API](https://pub.dev/documentation/remix/0.2.0/)
-or [release candidate component docs](https://github.com/btwld/remix/tree/remix-v1.0.0-rc.4/docs/components).
+or [release candidate component docs](https://github.com/btwld/remix/tree/remix-v1.0.0-rc.5/docs/components).
 
 ## Preset workflows on the 1.0 release candidate line
 
@@ -68,7 +68,7 @@ report the registry blocker. Direct widgets can still be used when they satisfy
 the task. [CLI release source](https://github.com/btwld/remix/tree/remix_cli-v1.0.0-rc.1/packages/remix_cli)
 
 ```sh
-flutter pub add 'remix:^1.0.0-rc.4'
+flutter pub add 'remix:^1.0.0-rc.5'
 dart pub global activate remix_cli '^1.0.0-rc.1'
 remix init --preset vanilla
 remix add button
