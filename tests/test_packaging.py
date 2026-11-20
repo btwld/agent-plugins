@@ -9,7 +9,7 @@ SKILLS = {
         'accessibility-review', 'ack', 'architecture', 'ci-loop', 'clean-sheet-review',
         'code-simplifier', 'competitive-brief', 'dart-codegen', 'dart-idioms',
         'dartpad-examples', 'deep-code-review', 'design-critique', 'design-system',
-        'design-verification', 'executing-plans', 'frontend-design', 'image-to-code', 'mix',
+        'design-verification', 'executing-plans', 'flutter-setup', 'frontend-design', 'image-to-code', 'mix',
         'noir', 'pr-authoring', 'pr-canvas', 'pr-comments', 'pr-prep', 'product-brainstorming',
         'reference-implementation', 'remix-flutter', 'research-synthesis', 'sbvr', 'test-audit',
         'url-to-code', 'user-research', 'ux-copy', 'ux-friction-research', 'verify',

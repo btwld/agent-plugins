@@ -44,6 +44,8 @@ For a short spec or work breakdown, ask for it in chat. For a saved or generated
 
 ## Dart and Flutter
 
+Invoke [flutter-setup](skills/flutter-setup/SKILL.md) to check or install the official Flutter plugin and verify Dart MCP on the machine running your agent.
+
 Use [dart-codegen](skills/dart-codegen/SKILL.md) for authoring or debugging generators, [dart-idioms](skills/dart-idioms/SKILL.md) for reviewing APIs and lifecycle choices, and [dartpad-examples](skills/dartpad-examples/SKILL.md) for a runnable teaching example.
 
 | Package | When to use it | Example request |
