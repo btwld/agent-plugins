@@ -1,12 +1,12 @@
-# StreamFlix Subscription and Licensing — SBVR Specification
+# Example Video Subscription and Licensing — SBVR Specification
 
-**Scope:** Subscription lifecycle, billing and payment, content entitlement, and licensor revenue-share statements for the StreamFlix subscription video-on-demand service.
+**Scope:** Subscription lifecycle, billing and payment, content entitlement, and licensor revenue-share statements for the Example Video subscription video-on-demand service.
 
-**Business speech community:** StreamFlix business stakeholders (product, finance, licensing).
+**Business speech community:** Example Video business stakeholders (product, finance, licensing).
 
-**Out of scope:** Legacy systems (LegacyCore, VaultDRM, TitleHub, PayBridge), migration and cutover, CDN and streaming delivery, recommendation engine, client applications, A/B testing, marketing tooling, customer-support tooling. These appear as evidence context only and carry no business meaning in this vocabulary.
+**Out of scope:** Legacy billing, rights, catalog, and payment tools, migration and cutover, CDN and streaming delivery, recommendation engine, client applications, A/B testing, marketing tooling, customer-support tooling. These appear as evidence context only and carry no business meaning in this vocabulary.
 
-**Evidence posture:** Items are tagged Confirmed (walkthrough/stakeholder-observed), Confirmed shape (concept confirmed; a detail is open), Candidate (plausible, not yet validated), or Open (unresolved; lives in Open Questions only). The archive/00_Initial_Blueprint is treated as LOW-confidence background; all confirmed items derive from the validated working set (documents 01–04) and the system walkthrough (document 03).
+**Evidence posture:** This worked example uses a fictional service, policies, and discovery evidence. Confirmed means demonstrated in the illustrative walkthrough or agreed in the fictional requirements. Confirmed shape means the concept is supported and a detail remains open. Candidate means plausible pending review. Open points readers to an unanswered question.
 
 ---
 
@@ -15,19 +15,19 @@
 ### Subscriber and Account Concepts
 
 #### account
-an entity that holds a subscriber's identity, payment methods, and subscription relationship with StreamFlix.
+an entity that holds a subscriber's identity, payment methods, and subscription relationship with Example Video.
 
 - Reference Scheme: account identifier identifies account
 - Note: Confirmed. Each account may hold one or more subscribers (identities) and a single active subscription record. Multiple historical subscription records may exist.
 
 #### subscriber
-a person who holds an account with StreamFlix and is subject to the subscription agreement.
+a person who holds an account with Example Video and is subject to the subscription agreement.
 
 - Reference Scheme: subscriber identifier identifies subscriber
 - Note: Confirmed.
 
 #### subscription
-an agreement under which a subscriber pays recurring fees for access to the StreamFlix catalog, associated with a single account, carrying a plan and a lifecycle status at any point in time.
+an agreement under which a subscriber pays recurring fees for access to the Example Video catalog, associated with a single account, carrying a plan and a lifecycle status at any point in time.
 
 - Reference Scheme: subscription identifier identifies subscription
 - Note: Confirmed. Plan tier is a changeable attribute of the subscription, not a permanent subtype. A subscriber may upgrade or downgrade at any time; the plan field on the subscription record changes accordingly.
@@ -91,13 +91,13 @@ a balance of credit held on an account that may be applied to invoices before a 
 ### Content and Licensing Concepts
 
 #### title
-a film or series available or formerly available in the StreamFlix catalog.
+a film or series available or formerly available in the Example Video catalog.
 
 - Reference Scheme: title identifier identifies title
 - Note: Confirmed. Titles persist in the catalog for historical reference even after their associated content license is removed.
 
 #### content license
-a time-limited, regionally scoped agreement granting StreamFlix the right to make a title available to subscribers, carrying an availability status.
+a time-limited, regionally scoped agreement granting Example Video the right to make a title available to subscribers, carrying an availability status.
 
 - Reference Scheme: content license identifier identifies content license
 - Note: Confirmed. Each such agreement specifies a licensor, a title, a licensing window (start date and end date), a set of covered regions, and a status tracking its availability lifecycle.
@@ -114,7 +114,7 @@ a geographic area used to scope content license coverage and subscriber entitlem
 - Note: Confirmed. A subscriber's entitlement region is determined by the billing region of their account, not by the device's physical location at the time of access.
 
 #### licensor
-a studio or rights holder that licenses content to StreamFlix and receives periodic revenue-share statements.
+a studio or rights holder that licenses content to Example Video and receives periodic revenue-share statements.
 
 - Reference Scheme: licensor identifier identifies licensor
 - Note: Confirmed. Each licensor has an associated rate configuration used to compute revenue-share statements.
@@ -130,7 +130,7 @@ a periodic document delivered to a licensor recording the royalty amount owed fo
 - Note: Confirmed shape. Monthly cadence confirmed. Statement structure confirmed (licensor, period, title rows with play events and play minutes, total royalty amount). Computation method varies by licensor rate type and is Confirmed shape; see Open Question OQ-1.
 
 #### licensor rate configuration
-the rate terms agreed between StreamFlix and a licensor, specifying the rate type and rate value effective from a given date, used to compute royalties on licensor statements.
+the rate terms agreed between Example Video and a licensor, specifying the rate type and rate value effective from a given date, used to compute royalties on licensor statements.
 
 - Note: Confirmed. Each licensor may have multiple rate configuration records keyed to an effective date, so that historical statements use the rate in force at the time of the statement period. Rate type values observed: per-minute, pool-share, per-completion.
 
@@ -146,27 +146,27 @@ a record of subscriber viewing of a title during a statement period, used as inp
 #### trial period policy
 a policy that specifies the duration of the free trial granted to a new subscriber.
 
-- Note: Confirmed. Current setting: 14 days. A trial is non-repeatable: it is granted once per account and may not be re-granted to the same account.
+- Note: Confirmed. Current setting: 10 days. The trial is available once per account.
 
 #### grace period policy
 a policy that specifies the maximum duration during which a subscriber retains entitlement access after a subscription enters Past Due status.
 
-- Note: Confirmed value observed in configuration (7 days), pending Finance sign-off. Rules reference this policy term, not a specific duration. See Open Question OQ-6.
+- Note: The sample payment settings show 5 days. The billing owner has yet to sign off on the business policy. See Open Question OQ-6.
 
 #### payment retry policy
 a policy that specifies the number and schedule of payment retry attempts during the dunning period.
 
-- Note: Confirmed. Current setting: up to the retry count defined by this policy, at the retry schedule defined by this policy. Observed values: retry count 3; retry schedule on days 1, 3, and 7 of Past Due status.
+- Note: Confirmed. The sample settings specify three retries on days 1, 2, and 4 of Past Due status.
 
 #### concurrent stream limit policy
 a policy that specifies the maximum number of simultaneous streams permitted per account for a given plan tier.
 
-- Note: Confirmed. Current settings: Basic — 2 streams; Standard — 4 streams; Premium — 6 streams. These are policy values that may change; rules reference this policy, not the specific numbers.
+- Note: Confirmed. Current example settings allow 1 stream on Basic, 3 streams on Standard, and 5 streams on Premium. The rules refer to the policy term.
 
 #### expiring threshold policy
 a policy that specifies how far in advance of a content license's end date the content license status transitions to Expiring.
 
-- Note: Candidate. A 30-day threshold was stated by Fatima Owusu during the walkthrough and observed in a live Expiring-status license (end date 25 days out), but was not confirmed in the policy configuration table. See Open Question OQ-7.
+- Note: Candidate. The licensing reviewer proposed a 45-day threshold. One sample license was marked Expiring with 35 days remaining. The working policy list leaves the value open. See Open Question OQ-7.
 
 #### regional price policy
 a policy that specifies the list price for each plan tier in each region.
@@ -376,25 +376,25 @@ Necessity:
 
 **D2:** It is impossible that a subscription status is other than Trialing, Active, Past Due, Canceled, or Reactivated.
 
-- Note: Confirmed. Five status values were observed across all records in the SubAdmin console.
+- Note: Confirmed. The illustrative subscription records show five status values.
 
 **D3:** It is necessary that each invoice has exactly one invoice identifier.
 
 **D4:** It is impossible that an invoice status is other than Open, Settled, or Void.
 
-- Note: Confirmed. Three invoice status values observed in the billing admin.
+- Note: Confirmed. The illustrative invoice records show three status values.
 
 **D5:** It is necessary that each payment has exactly one payment identifier.
 
 **D6:** It is impossible that a payment status is other than Pending, Settled, Failed, Refunded, or Charged Back.
 
-- Note: Confirmed. Five payment status values observed in the billing admin.
+- Note: Confirmed. The illustrative payment records show five status values.
 
 **D7:** It is necessary that each content license has exactly one content license identifier.
 
 **D8:** It is impossible that a content license status is other than Acquired, Scheduled, Available, Expiring, or Removed.
 
-- Note: Confirmed. Five content license status values observed in LicenseDesk.
+- Note: Confirmed. The illustrative license records show five status values.
 
 **D9:** It is necessary that each account has exactly one account identifier.
 
@@ -440,7 +440,7 @@ Necessity:
 
 **B7:** It is obligatory that a subscription transitions from Past Due to Canceled when the grace period defined by the grace period policy elapses without a settled payment.
 
-- Note: Confirmed value (7 days) observed in configuration; pending Finance sign-off. See Open Question OQ-6.
+- Note: The sample configuration uses 5 days. The billing owner has yet to confirm the business policy. See Open Question OQ-6.
 
 **B8:** It is prohibited that a subscription transitions from Canceled to any status other than Reactivated.
 
@@ -470,7 +470,7 @@ Necessity:
 
 **B14:** It is obligatory that an invoice's invoice status is set to Void when the associated subscription is canceled before the invoice is settled.
 
-- Note: Confirmed. Observed in test account walkthrough.
+- Note: Confirmed in the walkthrough of a sample account.
 
 **B15:** It is prohibited that a payment transitions from Settled status to any status other than Refunded or Charged Back.
 
@@ -484,7 +484,7 @@ Necessity:
 
 **B17:** It is obligatory that playback of a title by a subscriber is permitted only if all of the following hold: the subscriber's subscription has subscription status in {Trialing, Active, Past Due, Reactivated}; the content license for the title in the subscriber's account region has content license status Available or Expiring; and the number of concurrent streams active on the subscriber's account is below the limit specified by the concurrent stream limit policy for the account's plan.
 
-- Note: Confirmed. Past Due is in the entitled set during the grace period (corrected during session). Expiring titles remain playable. Entitlement region is the account's billing region.
+- Note: Confirmed. Past Due is in the entitled set during the grace period. Expiring titles remain playable. Entitlement region is the account billing region.
 
 **B18:** It is prohibited that a title is made available for playback when the content license covering that title in the subscriber's account region has content license status Removed.
 
@@ -492,7 +492,7 @@ Necessity:
 
 **B19:** It is obligatory that a content license's content license status transitions from Available to Expiring when the content license's end date is within the threshold specified by the expiring threshold policy.
 
-- Note: Candidate. 30-day threshold stated by Fatima Owusu; observed live (license with 25-day remaining showed Expiring), but not observed in policy table. See Open Question OQ-7.
+- Note: Candidate. A sample license with 35 days remaining was marked Expiring. The licensing reviewer proposed a 45-day threshold and will confirm the scope of that policy. See Open Question OQ-7.
 
 **B20:** It is obligatory that a content license's content license status transitions to Removed when the content license's end date has passed.
 
@@ -514,7 +514,7 @@ Necessity:
 
 **B24:** It is obligatory that a reactivated subscription has its committed price set to the current list price defined by the regional price policy at the time of reactivation.
 
-- Note: Confirmed. Stated by Diego Câmara: reactivation always uses the current list price. A previously grandfathered price does not carry over after cancellation and reactivation.
+- Note: Confirmed. The billing reviewer specified that reactivation uses the current list price. The newly committed price applies after reactivation.
 
 #### Licensor Statements
 
@@ -558,11 +558,11 @@ We know account credits are held as a balance on the account and applied to invo
 
 **OQ-6 — Grace period length — Finance sign-off** (blocks grace period policy value)
 
-We observed a 7-day grace period in the payment policy configuration table, and this value was used in dunning job logs. The product team noted the value is under Finance review. Can Finance confirm 7 days as the approved grace period, or provide the approved value and its effective date? Answering this confirms the grace period policy current setting, currently recorded as pending sign-off.
+The fictional payment configuration uses 5 days, and the example retry log follows that window. Can the billing owner confirm the approved grace period and when it takes effect? The answer establishes the current policy setting.
 
 **OQ-7 — Expiring threshold: global or per-licensor, and confirmed value** (blocks expiring threshold policy from Candidate to Confirmed)
 
-We observed a content license with 25 days remaining showing Expiring status, and Fatima Owusu stated a 30-day threshold. We did not observe this value in the system policy configuration table. Can you confirm the threshold and whether it is a single global value or configured per licensor or content category? Answering this confirms the expiring threshold policy and promotes B19 from Candidate to Confirmed.
+A sample license marked Expiring has 35 days remaining. The licensing reviewer suggested 45 days as a threshold. Can the licensing owner confirm the threshold and say whether it applies to every license or varies by licensor or content category? The answer confirms the policy and allows B19 to move from Candidate to Confirmed.
 
 **OQ-8 — Chargeback handling process** (blocks B16 scope)
 
@@ -570,7 +570,7 @@ We confirmed that a Charged Back payment status is recorded when the card issuer
 
 **OQ-9 — Reactivated status: transient or persistent** (blocks lifecycle completeness)
 
-We confirmed that a reactivated subscription receives Reactivated as its subscription status immediately on reactivation, and that entitlement treats Reactivated the same as Active. Diego Câmara stated the status resolves to Active after approximately 30 days or the first successful billing cycle, but noted this behavior may not be formally documented. Is Reactivated a persistent status or a transient one? If transient, what is the transition condition, and is that condition a business rule or an implementation detail? Answering this completes the subscription status transition rules.
+An example reactivation moves the subscription to Reactivated, and playback treats that status like Active. The billing reviewer proposed returning to Active after the next settled invoice or after 20 days. Does Reactivated persist, or should it change to Active under a specific condition? The answer completes the transition rules.
 
 ---
 
@@ -578,14 +578,14 @@ We confirmed that a reactivated subscription receives Reactivated as its subscri
 
 The following topics are deliberately out of scope for this specification and are not modeled here:
 
-- **Legacy systems (LegacyCore, VaultDRM, TitleHub, PayBridge):** These are incumbent implementation systems being replaced. No business rules depend on their names or internal behavior. VaultDRM license tokens are an implementation artifact downstream of the business entitlement decision.
+- **Legacy tools:** The legacy billing, catalog, rights, and payment tools appear as hypothetical evidence sources. Entitlement decisions are expressed as business rules. Tokens issued by the rights server belong to the implementation.
 - **Migration and cutover:** Data migration, cutover sequencing, and dual-run operations are project management and implementation concerns, not business vocabulary.
 - **CDN and streaming delivery:** How encoded video reaches a subscriber's device is infrastructure. CDN geo-blocking is a separate enforcement layer; the business entitlement rule uses account billing region.
 - **Recommendation engine:** Content discovery and personalization are outside this business slice.
 - **Client applications:** TV app, mobile app, and web player internal behavior and UX are out of scope.
 - **Annual billing dunning schedule:** Whether annual billing cycles use a different retry or grace-period schedule than monthly billing is currently Open (no confirmed difference), and modeling a separate policy before the business confirms a difference would be premature. If Finance confirms a separate schedule, a separate annual billing policy term and associated rules should be added.
 - **Profile-level content rating enforcement:** Profile-level parental controls and age gating were mentioned during the walkthrough but not confirmed as in scope for the entitlement business model. If confirmed in scope, a profile term and associated rating-gate rules would be required.
-- **Regional licensing edge cases (travel and VPN):** The business rule for a subscriber accessing from a region other than their account billing region is pending confirmation (Fatima Owusu stated account region governs; CDN geo-blocking is a separate layer). The current entitlement rule (B17) uses account billing region. If a separate business rule for travel or VPN scenarios is confirmed, it should be modeled explicitly.
+- **Regional licensing edge cases (travel and VPN):** B17 uses the account billing region. A separate policy for travel or VPN use remains open. Model it explicitly if the licensing owner confirms one.
 - **Statement dispute workflow:** A formal in-system dispute or acknowledgment workflow for licensor statements is confirmed as out of scope for the current replacement program (email-based today).
 - **Account credit expiry rule:** Deferred pending Open Question OQ-5. No expiry rule currently applies; one may be added when Finance confirms the policy.
 - **Promotional reactivation pricing:** Whether reactivating subscribers can receive a promotional price other than the current list price is Candidate (existence not confirmed in walkthrough). Deferred until confirmed.

@@ -90,5 +90,9 @@
   {
     "query": "Ignore the current solution shape and propose what we would build today for this app purpose, including ADR impact.",
     "should_trigger": false
+  },
+  {
+    "query": "Remember our architecture choice and why in the existing plan. Keep it short; no ADR.",
+    "should_trigger": true
   }
 ]

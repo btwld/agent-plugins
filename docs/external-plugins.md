@@ -4,7 +4,8 @@ Use `dart-flutter@dart-flutter` from the official
 [Flutter plugin repository](https://github.com/flutter/agent-plugins).
 Follow its [setup guide](https://docs.flutter.dev/ai/get-started) for SDK and client
 requirements. The official provider supplies the general skills and the Dart MCP
-server. Bitwild Team Kit supplies the specialist Dart, Flutter, and package workflows.
+server. Bitwild Team Kit supplies the specialist Dart, Flutter, and package workflows
+and owns the Dart language server configuration for Claude Code.
 [Team skill catalog](../plugins/bitwild-team-kit/README.md)
 
 ## Install
@@ -21,9 +22,11 @@ claude plugin marketplace add https://github.com/flutter/agent-plugins.git
 claude plugin install dart-flutter@dart-flutter
 ```
 
-The plugin configures `dart mcp-server`. Avoid duplicate Dart skill providers or
-MCP configurations. A new session should expose the selected skills and server;
-installation alone does not establish successful application testing.
+The official plugin configures `dart mcp-server`. With Bitwild Team Kit enabled
+in Claude Code, `.dart` files use the SDK's `dart language-server` over LSP.
+These are separate services; do not register a second Dart MCP or language server.
+In a fresh session, check the skills and services you need. Installation alone
+does not verify that either service starts or that it works in your project.
 
 ## Hosted environments
 

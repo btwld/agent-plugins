@@ -62,5 +62,21 @@
   {
     "query": "Change the database schema.",
     "should_trigger": false
+  },
+  {
+    "query": "Create a new landing-page direction and implement its responsive layout.",
+    "should_trigger": true
+  },
+  {
+    "query": "Develop two dashboard compositions with the same design tokens.",
+    "should_trigger": false
+  },
+  {
+    "query": "Implement this selected screenshot exactly, with no redesign.",
+    "should_trigger": false
+  },
+  {
+    "query": "Recreate this live website faithfully as a local prototype.",
+    "should_trigger": false
   }
 ]
