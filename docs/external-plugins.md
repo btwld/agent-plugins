@@ -8,6 +8,14 @@ server. Bitwild Team Kit supplies the specialist Dart, Flutter, and package work
 and owns the Dart language server configuration for Claude Code.
 [Team skill catalog](../plugins/bitwild-team-kit/README.md)
 
+## Switch from the personal Dart kit
+
+If you use `dart-flutter-kit@leo-skills`, disable or remove it in each client
+before upgrading to Bitwild Team Kit 1.1.0 or installing `dart-flutter@dart-flutter`.
+The old kit registers Dart LSP in Claude Code and Dart MCP. After the switch,
+Bitwild Team Kit provides the only Dart LSP registration in Claude Code, and
+`dart-flutter@dart-flutter` provides the only Dart MCP registration.
+
 ## Install
 
 With the Dart SDK on your client's PATH, use the desired client:

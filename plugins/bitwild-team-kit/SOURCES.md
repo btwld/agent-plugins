@@ -3,10 +3,11 @@
 The following sections retain attribution by former kit. See the Product section for company generators and document assets.
 
 The 1.1.0 consolidation incorporates selected eval coverage from Leo Farias's
-[`leo-skills`](https://github.com/leoafarias/agent-skills/tree/402d25e746735a783cd08a9928b1db35622f5f8b/plugins/leo-skills/skills)
-for `architecture`, `frontend-design`, and `pr-authoring`, fictional examples and
-fixtures for `sbvr` and `writing-plans`, and a fictional project-name example
-for `writing-plans`. These local contributions retain the
+[`leo-skills`](https://github.com/leoafarias/agent-skills/tree/402d25e746735a783cd08a9928b1db35622f5f8b/plugins/leo-skills)
+for `architecture`, `frontend-design`, and `pr-authoring`; parser-fixture tests
+for `reference-implementation`; fictional examples and fixtures for `sbvr` and
+`writing-plans`; and a fictional project-name example for `writing-plans`.
+These local contributions retain the
 [Leo Skills BSD-3-Clause notice](licenses/leo-kit-BSD-3-Clause.txt).
 The earlier upstream notices below still apply to their respective adaptations.
 
