@@ -114,5 +114,17 @@
   {
     "query": "Use pr-authoring to prepare a local reviewer reading order.",
     "should_trigger": true
+  },
+  {
+    "query": "Prepare my unpushed local branch for review without publishing or rewriting commits.",
+    "should_trigger": true
+  },
+  {
+    "query": "watch gh pr checks until CI is green",
+    "should_trigger": false
+  },
+  {
+    "query": "Stage and commit my local changes; do not prepare or open a PR.",
+    "should_trigger": false
   }
 ]

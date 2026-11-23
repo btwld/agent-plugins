@@ -4,14 +4,15 @@
     {
       "id": 1,
       "prompt": "Create an architecture decision for our event bus. We are already on AWS, peak at about 5,000 events per second, require ordering only within one customer, have three engineers, no Kafka operations experience, and need to ship in eight weeks. Compare Kafka and SQS and recommend one.",
-      "expected_output": "A decision-ready ADR that recommends an option from the stated constraints, makes the material trade-offs and consequences explicit, and identifies assumptions that could change the decision.",
+      "expected_output": "A concise recommendation grounded in the stated constraints, with the main reason, trade-off, and conditions for reconsideration; no formal ADR unless requested or required by the repository.",
       "files": [],
       "expectations": [
         "The output makes one clear recommendation and ties it to the eight-week schedule, team experience, AWS environment, throughput, and per-customer ordering requirement.",
         "The output compares Kafka and SQS on operational burden, ordering semantics, throughput, and future flexibility without presenting unverified prices, quotas, throughput ceilings, retention periods, or vendor capabilities as current facts; an uninspected documentation URL does not count as verification.",
         "The output states material consequences, risks, and at least one assumption or threshold that would justify revisiting the decision.",
         "The output does not mention unavailable connector placeholders or require a connected knowledge base or project tracker.",
-        "The output does not invent an author, decider, email address, or approval authority that the prompt did not provide."
+        "The output does not invent an author, decider, email address, or approval authority that the prompt did not provide.",
+        "Does not generate a numbered ADR, formal ADR template, or separate approval workflow merely because the decision is consequential."
       ]
     },
     {
@@ -47,6 +48,28 @@
         "Provides concrete consumer-facing example and observable pagination requirements.",
         "Preserves six-month compatibility and leaves page-size policy open.",
         "Keeps decisions distinct from proposals; no invented compilation, edits, commits, or mandatory handoff."
+      ]
+    },
+    {
+      "id": 5,
+      "prompt": "We chose to keep billing jobs in the existing worker because the team owns both and deployments happen together. The trade-off is coupled scaling. Remember this in our existing implementation plan; do not create an ADR or another document.",
+      "expected_output": "A brief decision note in the supplied plan, or exact proposed note text if the plan is unavailable, without inventing a saved file.",
+      "files": [],
+      "expectations": [
+        "Keeps the choice, reason, coupled-scaling trade-off, and relevant revisit condition concise.",
+        "Uses the existing plan rather than creating a duplicate record or ADR.",
+        "Does not claim a saved edit without access to the plan."
+      ]
+    },
+    {
+      "id": 6,
+      "prompt": "Explicitly write a short formal ADR in text only: we chose to keep billing jobs in the existing worker because the same team owns both and releases them together. Coupled scaling is acceptable until independent capacity is needed. Do not save or implement anything.",
+      "expected_output": "A concise formal ADR because it was explicitly requested, preserving the supplied decision and limiting output to text.",
+      "files": [],
+      "expectations": [
+        "Honors the explicit ADR request without refusing or imposing the ordinary short-note format.",
+        "Does not invent decision owners, approvals, or implementation changes.",
+        "Does not save a file or claim implementation."
       ]
     }
   ]

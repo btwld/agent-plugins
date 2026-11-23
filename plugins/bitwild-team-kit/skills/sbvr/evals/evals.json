@@ -64,14 +64,14 @@
     },
     {
       "id": 6,
-      "prompt": "Create an SBVR for a streaming service replacing its legacy platform. Source notes include subscribers, subscriptions, plan tiers, billing, payments, content licensing, licensor statements, the legacy systems LegacyCore and VaultDRM, a migration program, and unresolved mid-cycle proration handling.",
+      "prompt": "Create an SBVR for a fictional streaming service replacing its legacy platform. The scenario includes subscribers, subscriptions, plan tiers, billing, payments, content licensing and licensor statements. The discovery notes name two example systems, Archive Billing and Legacy Rights, and describe a separate migration project. Mid-cycle proration is unresolved.",
       "expected_output": "A business-meaning SBVR that extracts and classifies candidates before defining vocabulary, models status lifecycles, keeps the real business concepts, and excludes project/implementation/source-system noise.",
       "files": [],
       "expectations": [
         "Extracts and classifies candidates (or applies a belongs-in-SBVR filter) before defining vocabulary, rather than promoting every noun.",
         "Keeps supported business concepts such as subscriber, subscription, plan, invoice, payment, content license, and licensor statement.",
         "Models status-bearing entities (subscription, payment, content license) with the status-enumeration-transition pattern, not as permanent subtypes.",
-        "Excludes LegacyCore, VaultDRM, and migration from core vocabulary unless a business rule directly depends on them, treating them as source/implementation/project artifacts.",
+        "Excludes Archive Billing, Legacy Rights, and migration from core vocabulary unless a business rule directly depends on them, treating them as source/implementation/project artifacts.",
         "Treats unresolved mid-cycle proration as an open/deferred topic rather than inventing a rule, and treats plan tier as a changeable attribute rather than a permanent subtype.",
         "Separates confirmed rules from open/deferred discovery items and surfaces the exclusions for review."
       ]
@@ -113,15 +113,15 @@
     },
     {
       "id": 10,
-      "prompt": "Formalize the billing, entitlement, and parental-control rules of a streaming backend into SBVR, grounded in the code rather than guessed. Locate the actual guards and conditionals structurally (e.g. ast-grep or grep for the status checks in `hasActiveAccess`/`canPlayContent`, the `FREE_PLAY_KINDS` set, the kids-mode maturity cap in `isContentAllowedForProfile`, and the `isLocalStripeMode` 403 guard) and formalize what the code enforces. Where a PRD states a requirement the code does not implement (e.g. a grace-period expiry after `past_due`, refunds, or plan upgrade/downgrade), record it as an open/deferred item rather than inventing a rule. Define vocabulary and fact types, then the rules, in `src/domain/{billing,entitlements,parental,plans}.js`.",
-      "expected_output": "An SBVR document that separates vocabulary, fact types, and rules; grounds each rule in code behavior located structurally; uses valid SBVR modality; distinguishes definitional from behavioral rules; tags code-confirmed rules apart from inferred defaults; and lists PRD-vs-code gaps as open/deferred items instead of fabricating rules. Derived from conceptadev/movie-streaming-app @029ab15.",
+      "prompt": "Use this fictional streaming backend as code evidence. Locate the actual guards in the snippet before modeling billing, playback, and youth-profile rules. The fictional requirements also mention grace-period expiry, refunds, and tier changes. Add unsupported items to the open or deferred list. Define vocabulary and fact types before the rules.\n\nconst PREVIEW_FORMATS = new Set([\"trailer\", \"sample\"]);\nfunction canViewVideo(account, format) {\n  return PREVIEW_FORMATS.has(format) || [\"evaluation\", \"paid\", \"retry\"].includes(account?.status);\n}\nfunction allowsProfileRating(profile, rating) {\n  return profile?.youthOnly ? [\"G\", \"PG\"].includes(rating) : true;\n}\nfunction completeSandboxCheckout(environment) {\n  return environment === \"sandbox\" ? 204 : 404;\n}",
+      "expected_output": "An SBVR document grounded in the fictional code, with vocabulary, fact types, definitional and behavioral rules, code-derived observations, and open or deferred policy questions.",
       "files": [],
       "expectations": [
-        "Separates vocabulary, fact types, and rules and uses valid SBVR keywords such as obligatory, prohibited, permitted, necessary, or impossible.",
-        "Grounds rules in the actual guards and conditionals (active/trialing/past_due access, FREE_PLAY_KINDS, kids-mode PG cap, local-complete 403) located structurally rather than guessed.",
-        "Distinguishes definitional/structural rules from behavioral/operative rules.",
-        "Flags code-only inferred defaults (e.g. unknown-maturity-rating fallback, no-profile bypass, hardcoded PG kids ceiling) rather than presenting them as settled policy.",
-        "Records PRD-vs-code gaps (grace-period expiry, refunds, plan upgrade/downgrade) as open or deferred items and does not invent rules to fill them."
+        "Finds the status, preview, maturity, and sandbox guards in the supplied code before formalizing their meaning.",
+        "Grounds playback rules in preview formats, evaluation/paid/retry access, and the G/PG youth rating limit.",
+        "Distinguishes definitional rules from behavioral rules and keeps sandbox HTTP responses in implementation evidence.",
+        "Labels access with a missing profile and handling of unknown youth ratings as code observations pending policy confirmation.",
+        "Records grace-period expiry, refunds, and tier changes as open or deferred questions without inventing business rules."
       ]
     }
   ]

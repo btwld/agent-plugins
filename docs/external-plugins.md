@@ -4,8 +4,17 @@ Use `dart-flutter@dart-flutter` from the official
 [Flutter plugin repository](https://github.com/flutter/agent-plugins).
 Follow its [setup guide](https://docs.flutter.dev/ai/get-started) for SDK and client
 requirements. The official provider supplies the general skills and the Dart MCP
-server. Bitwild Team Kit supplies the specialist Dart, Flutter, and package workflows.
+server. Bitwild Team Kit supplies the specialist Dart, Flutter, and package workflows
+and owns the Dart language server configuration for Claude Code.
 [Team skill catalog](../plugins/bitwild-team-kit/README.md)
+
+## Switch from the personal Dart kit
+
+If you use `dart-flutter-kit@leo-skills`, disable or remove it in each client
+before upgrading to Bitwild Team Kit 1.1.0 or installing `dart-flutter@dart-flutter`.
+The old kit registers Dart LSP in Claude Code and Dart MCP. After the switch,
+Bitwild Team Kit provides the only Dart LSP registration in Claude Code, and
+`dart-flutter@dart-flutter` provides the only Dart MCP registration.
 
 ## Install
 
@@ -21,9 +30,16 @@ claude plugin marketplace add https://github.com/flutter/agent-plugins.git
 claude plugin install dart-flutter@dart-flutter
 ```
 
-The plugin configures `dart mcp-server`. Avoid duplicate Dart skill providers or
-MCP configurations. A new session should expose the selected skills and server;
-installation alone does not establish successful application testing.
+The official plugin configures `dart mcp-server`. With Bitwild Team Kit enabled
+in Claude Code, `.dart` files use the SDK's `dart language-server` over LSP.
+The language server requires Dart SDK 3.12.0 or newer on Claude Code's PATH.
+Bitwild Team Kit passes `--no-plugins` to prevent loading analyzer plugins
+selected by the workspace. Older SDKs reject the flag, so the language server
+does not start. There is no fallback that enables analyzer plugins.
+
+Dart MCP and Dart LSP are separate services. Do not register a second copy of either service.
+In a fresh session, check the skills and services you need. Installation alone
+does not verify that either service starts or that it works in your project.
 
 ## Hosted environments
 

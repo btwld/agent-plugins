@@ -84,6 +84,17 @@
         "Recommends splitting the PR rather than masking the scope with prose notes alone.",
         "Never hides behavior changes inside history cleanup."
       ]
+    },
+    {
+      "id": 8,
+      "prompt": "Our branch is local and unpushed. It contains three commits: add schema, implement export, and test export. Prepare a short reviewer guide from these supplied facts only; no publication, no history changes, no tools.",
+      "expected_output": "Provides a local reviewer guide without requiring a push or creating a PR.",
+      "files": [],
+      "expectations": [
+        "Does not require the local branch to be pushed before preparing the guide.",
+        "Preserves history and does not claim publication.",
+        "Uses only the supplied schema, export and test scope."
+      ]
     }
   ]
 }
