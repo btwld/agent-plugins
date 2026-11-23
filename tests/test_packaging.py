@@ -52,17 +52,23 @@ class PackagingTests(unittest.TestCase):
         plugin = ROOT / 'plugins/bitwild-team-kit'
         claude = json.loads((plugin / '.claude-plugin/plugin.json').read_text())
         codex = json.loads((plugin / '.codex-plugin/plugin.json').read_text())
-        self.assertEqual(claude['lspServers'], {
-            'dart': {
-                'command': 'dart',
-                'args': ['language-server', '--protocol=lsp', '--client-id=claude-code'],
-                'extensionToLanguage': {'.dart': 'dart'},
-            },
-        })
+        self.assertEqual(set(claude['lspServers']), {'dart'})
+        self.assertEqual(claude['lspServers']['dart']['extensionToLanguage'], {'.dart': 'dart'})
         self.assertNotIn('lspServers', codex)
         for manifest in (claude, codex):
             self.assertNotIn('mcpServers', manifest)
         self.assertFalse((plugin / '.mcp.json').exists())
+
+    def test_dart_language_server_launch_disables_analyzer_plugins(self):
+        manifest = ROOT / 'plugins/bitwild-team-kit/.claude-plugin/plugin.json'
+        server = json.loads(manifest.read_text())['lspServers']['dart']
+        self.assertEqual(server['command'], 'dart')
+        self.assertEqual(server['args'], [
+            'language-server',
+            '--protocol=lsp',
+            '--client-id=claude-code',
+            '--no-plugins',
+        ])
 
     def test_runtime_resources_stay_inside_plugin(self):
         for plugin in (ROOT / 'plugins').iterdir():

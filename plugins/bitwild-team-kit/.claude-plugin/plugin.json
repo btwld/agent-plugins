@@ -10,7 +10,12 @@
   "lspServers": {
     "dart": {
       "command": "dart",
-      "args": ["language-server", "--protocol=lsp", "--client-id=claude-code"],
+      "args": [
+        "language-server",
+        "--protocol=lsp",
+        "--client-id=claude-code",
+        "--no-plugins"
+      ],
       "extensionToLanguage": {
         ".dart": "dart"
       }

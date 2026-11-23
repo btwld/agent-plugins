@@ -32,7 +32,12 @@ claude plugin install dart-flutter@dart-flutter
 
 The official plugin configures `dart mcp-server`. With Bitwild Team Kit enabled
 in Claude Code, `.dart` files use the SDK's `dart language-server` over LSP.
-These are separate services; do not register a second Dart MCP or language server.
+The language server requires Dart SDK 3.12.0 or newer on Claude Code's PATH.
+Bitwild Team Kit passes `--no-plugins` to prevent loading analyzer plugins
+selected by the workspace. Older SDKs reject the flag, so the language server
+does not start. There is no fallback that enables analyzer plugins.
+
+Dart MCP and Dart LSP are separate services. Do not register a second copy of either service.
 In a fresh session, check the skills and services you need. Installation alone
 does not verify that either service starts or that it works in your project.
 
